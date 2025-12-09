@@ -99,6 +99,16 @@
 				"<span class='danger'>I feel a terrible pain in my chest, as if my heart has stopped!</span>")
 		owner.set_heartattack(TRUE)
 		failed = TRUE
+	
+	if(owner && !owner.stat && !(owner.status_flags & GODMODE))
+		var/damaged_frac = clamp(damage / maxHealth, 0.0, 1.0)
+		// damage begins once heart is at least 25% damaged
+		if(damaged_frac > 0.25)
+			var/dmg = round(damaged_frac * 25)
+			if(dmg < 1)
+				dmg = 1
+			owner.adjustOxyLoss(dmg)
+			owner.adjustToxLoss(dmg / 3)
 
 /obj/item/organ/heart/cursed
 	name = "cursed heart"

@@ -399,6 +399,15 @@
 			owner.adjustOxyLoss(25)
 	else
 		failed = FALSE
+
+	if(owner && !owner.stat && !(owner.status_flags & GODMODE))
+		var/damaged_frac = clamp(damage / maxHealth, 0.0, 1.0)
+		// damage begins once lungs are at least 15% damaged
+		if(damaged_frac > 0.15)
+			var/dmg = round(damaged_frac * 15)
+			if(dmg < 1)
+				dmg = 1
+			owner.adjustOxyLoss(dmg)
 	return
 
 /obj/item/organ/lungs/prepare_eat()
