@@ -70,6 +70,7 @@
 
 /mob/living/carbon/human/check_projectile_wounding(obj/projectile/P, def_zone, blocked)
 	..()
+	camera_bullshit(1.25, -100, ELASTIC_EASING, 2, 2)
 	if(ishuman(P.firer))
 		var/mob/living/carbon/human/H = P.firer
 		if(warfare_faction == H.warfare_faction)
@@ -85,6 +86,23 @@
 		testing("projwound")
 		var/newdam = P.damage * (100-blocked)/100
 		playsound(src, list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg'), 100, vary = FALSE)
+
+		//Organ damage
+		if(getorganszone(def_zone) && prob(35 + max(newdam, -12.5)))
+			var/damage_amt = min(P.damage, newdam)
+			if(damage_amt > 0)
+				var/list/victims = list()
+				var/list/possible_victims = shuffle(getorganszone(def_zone).Copy())
+				for(var/obj/item/organ/I in possible_victims)
+					if(I.damage < I.maxHealth && (prob((I.w_class * rand(20,30)) * (1 / max(1, victims.len)))))
+						victims += I
+				if(victims.len)
+					for(var/obj/item/organ/victim in victims)
+						damage_amt /= 2
+						damage_amt -= rand(10,40)
+						victim.applyOrganDamage(damage_amt)
+						//to_chat(world, "[victim] [victim.damage]")
+		
 		if(istype(BP, /obj/item/bodypart/head) && istype(P, /obj/projectile/bullet/reusable/bullet))
 			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 			var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(src))
@@ -126,7 +144,7 @@
 					if(H.client?.hasPerk(/datum/warperk/headhunter))
 						gib()
 						H.playsound_local(get_turf(H), 'sound/misc/notice.ogg')
-						to_chat(H, "<span class='info'>ᛉ PERK ACTIVATED.</span>")
+						to_chat(H, "<span class='info'>⏀ PERK ACTIVATED.</span>")
 			flash_color(client, flash_color = "#af0000ff", flash_time = 3 SECONDS)
 			if(hud_used)
 				var/matrix/skew = matrix()

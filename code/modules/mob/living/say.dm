@@ -257,15 +257,15 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(!client)
 		return
 	var/deaf_message
-	var/deaf_type
+	var/deaf_type = FALSE
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be seperate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
 			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] something but you cannot hear [speaker.p_them()]."
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>I can't hear yourself!</span>"
+		deaf_message = "<span class='notice'>I can't hear myself!</span>"
 		deaf_type = 2 // Since you should be able to hear myself without looking
-
+		
 	// Create map text prior to modifying message for goonchat
 	if(client?.prefs)
 		if (client?.prefs.chat_on_map && stat != UNCONSCIOUS && (client.prefs.see_chat_non_mob || ismob(speaker)) && can_hear())
@@ -344,7 +344,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		if(client?.hasPerk(/datum/warperk/mortalcombat) && (findtext(rendered, "mortal combat") || findtext(rendered, "mortal kombat")))
 			playsound(I, 'sound/misc/mortalkombat.ogg', 65, FALSE, -1)
 		else
-			playsound(I, speech_sound, 65, FALSE, -1)
+			playsound(I, pick(speech_sound), 65, TRUE, 1)
+			ping_sound_through_walls(get_turf(I))
 
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)
 

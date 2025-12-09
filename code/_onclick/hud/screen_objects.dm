@@ -50,7 +50,10 @@
 /atom/movable/screen/text
 	icon = null
 	icon_state = null
+	layer = FLOAT_LAYER
+	plane = HUD_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	screen_loc = "CENTER-7,CENTER-7"
 	maptext_height = 480
 	maptext_width = 480
@@ -86,22 +89,12 @@
 		to_chat(L, "*----*")
 		if(ishuman(usr))
 			var/mob/living/carbon/human/M = usr
-			to_chat(M, "<span class='info'>ᛉ [M.client.equippedPerk.name]</span>")
-			to_chat(M, "<span class='info'>ᛣ [M.client.equippedPerk.desc]</span>")
+			to_chat(M, "<span class='info'>⏀ [M.client.equippedPerk.name]</span>")
+			to_chat(M, "<span class='info'>⏃ [M.client.equippedPerk.desc]</span>")
 			to_chat(M, "*----*")
-			if(M.mind)
-				if(M.mind.language_holder)
-					var/finn
-					for(var/X in M.mind.language_holder.languages)
-						var/datum/language/LA = new X()
-						finn = TRUE
-						to_chat(M, "<span class='info'>[LA.name] - ,[LA.key]</span>")
-					if(!finn)
-						to_chat(M, "<span class='warning'>I don't know any languages.</span>")
-					to_chat(M, "*----*")
 		for(var/X in GLOB.roguetraits)
 			if(HAS_TRAIT(L, X))
-				to_chat(L, "[X] - <span class='info'>[GLOB.roguetraits[X]]</span>")
+				to_chat(L, "• [X] - <span class='info'>[GLOB.roguetraits[X]]</span>")
 				ht = TRUE
 		if(!ht)
 			to_chat(L, "<span class='warning'>I have no special traits.</span>")
@@ -1686,42 +1679,17 @@
 			to_chat(M, "*----*")
 			to_chat(M, "<span class='info'>I'm indifferent. I hate myself, here's all that's bugging me right now. Life sucks.</span>")
 			to_chat(M, "*--------*")
-			var/list/already_printed = list()
-			for(var/datum/stressevent/S in M.positive_stressors)
-				if(S in already_printed)
+			if(!length(M.stressors))
+				to_chat(M, "<span class='info'>I'm not feeling much of anything right now.</span>")
+			for(var/datum/stressevent/stressevent in M.stressors)
+				if(!stressevent.can_show())
 					continue
-				var/cnt = 1
-				for(var/datum/stressevent/CS in M.positive_stressors)
-					if(CS == S)
-						continue
-					if(CS.type == S.type)
-						cnt++
-						already_printed += CS
-				var/ddesc = S.desc
-				if(islist(S.desc))
-					ddesc = pick(S.desc)
-				if(cnt > 1)
-					to_chat(M, "[ddesc] (x[cnt])")
+				var/count = stressevent.stacks
+				var/ddesc = islist(stressevent.desc) ? pick(stressevent.desc) : stressevent.desc
+				if(count > 1)
+					to_chat(M, "[ddesc] (x[count])")
 				else
 					to_chat(M, "[ddesc]")
-			for(var/datum/stressevent/S in M.negative_stressors)
-				if(S in already_printed)
-					continue
-				var/cnt = 1
-				for(var/datum/stressevent/CS in M.negative_stressors)
-					if(CS == S)
-						continue
-					if(CS.type == S.type)
-						cnt++
-						already_printed += CS
-				var/ddesc = S.desc
-				if(islist(S.desc))
-					ddesc = pick(S.desc)
-				if(cnt > 1)
-					to_chat(M, "[ddesc] (x[cnt])")
-				else
-					to_chat(M, "[ddesc]")
-			already_printed = list()
 			to_chat(M, "*--------*")
 		if(modifiers["right"])
 			if(M.get_triumphs() < 2)

@@ -22,7 +22,7 @@
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
-	var/warfare_start_time = 5 // in minutes
+	var/warfare_start_time = 15 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
 	
 	var/stalematecooldown // a cooldown before another stalemate can be held
@@ -41,9 +41,7 @@
 	if(whowon == null)
 		for(var/client/C in GLOB.clients)
 			C << sound(null) // Stop all sounds
-			SEND_SOUND(C, 'sound/music/tension2.ogg')
-			spawn(15 SECONDS)
-				SEND_SOUND(C, sound('sound/music/credits.ogg', volume=30))
+			SEND_SOUND(C, sound('sound/music/whocareswhowon.ogg', volume=50))
 	if(whowon == BLUE_WARTEAM)
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))
@@ -51,12 +49,12 @@
 				if(H.client?.equippedPerk.type == /datum/warperk)
 					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/gren/grenzvictorysong.ogg')
+				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 		for(var/client/C in heartfelts)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/felt/heartdefeatsong.ogg')
+				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 	if(whowon == RED_WARTEAM)
 		for(var/client/C in heartfelts)
 			if(ishuman(C.mob))
@@ -64,12 +62,12 @@
 				if(H.client?.equippedPerk.type == /datum/warperk)
 					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/felt/heartvictorysong.ogg')
+				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/gren/grenzdefeatsong.ogg')
+				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 
 /datum/game_mode/warmongers/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
 	whowon = team
@@ -102,7 +100,7 @@
 /datum/game_mode/warmongers/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
-		sleep(1 MINUTES)
+		sleep(5 SECONDS)
 		CHECK_TICK
 		if(SSwarmongers.warfare_ready_to_die)
 			break

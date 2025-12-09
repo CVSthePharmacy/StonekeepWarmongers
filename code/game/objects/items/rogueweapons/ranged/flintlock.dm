@@ -1,9 +1,9 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
-	name = "barksteel"
-	desc = "A firearm without a bayonet, typically used by marksmen."
+	name = "longbark"
+	desc = "A heavy barker with a magnifying lens, desiged to kill at great distances."
 	icon = 'icons/roguetown/weapons/64.dmi'
-	icon_state = "longgun"
-	item_state = "longgun"
+	icon_state = "musketsniper"
+	item_state = "musketsniper"
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/rifle, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
 	wieldsound = 'sound/combat/musket_wield.ogg'
@@ -22,7 +22,7 @@
 	var/rammed = FALSE
 	var/bayonetable = FALSE
 	var/has_bayonet = FALSE
-	var/has_barkpowder = FALSE
+	var/has_barkenpowder = FALSE
 	var/click_delay = 2
 	var/obj/item/rogue/ramrod/rod
 	bigboy = TRUE
@@ -59,13 +59,18 @@
 	if(has_bayonet)
 		. += "<span class='tutorial'>Use rightclick to remove the bayonet.</span>"
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
-	icon_state = "barotrauma1"
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper
+	desc = "A heavy barker with a magnifying lens, desiged to kill at great distances."
+	icon_state = "musketsniper"
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike)
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
-	icon_state = "ironbarkmarksman"
-	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike)
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
+	icon_state = "musketsniper1"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/scythed
+	desc = "A heavy barker with a magnifying lens, desiged to kill at great distances. This one haphazardly has a scythehead attached to the end of the barrel."
+	icon_state = "musketsniperscythe"
+	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike, /datum/intent/spear/halberd/chop)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/equipped(mob/living/user, slot)
 	. = ..()
@@ -80,9 +85,9 @@
 	force = 15
 	possible_item_intents = list(/datum/intent/use,/datum/intent/mace/strike,/datum/intent/mace/smash)
 
-/obj/item/rogue/barkpowderflask
+/obj/item/rogue/barkenpowderflask
 	name = "powderflask"
-	desc = "A leather pouch containing barkpowder."
+	desc = "A leather pouch containing barkenpowder."
 	icon_state = "powderflask"
 	slot_flags = ITEM_SLOT_NECK
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -121,15 +126,15 @@
 				if(do_after(user, tt SECONDS, TRUE, src))
 					to_chat(user, "<span class='info'>I ram \the [src].</span>")
 					rammed = TRUE
-	if(istype(A, /obj/item/rogue/barkpowderflask))
+	if(istype(A, /obj/item/rogue/barkenpowderflask))
 		if(!user.is_holding(src))
-			to_chat(user, "<span class='warning'>I need to hold \the [src] to add barkpowder!</span>")
+			to_chat(user, "<span class='warning'>I need to hold \the [src] to add barkenpowder!</span>")
 			return
-		if(has_barkpowder == FALSE)
+		if(has_barkenpowder == FALSE)
 			playsound(src.loc, 'sound/foley/equip/rummaging-01.ogg', 100, FALSE, -3)
 			if(do_after(user, tt SECONDS, TRUE, src))
-				to_chat(user, "<span class='info'>I add barkpowder to \the [src].</span>")
-				has_barkpowder = TRUE
+				to_chat(user, "<span class='info'>I add barkenpowder to \the [src].</span>")
+				has_barkenpowder = TRUE
 	else if(istype(A, /obj/item/rogueweapon/huntingknife/bayonet))
 		if(bayonetable == FALSE)
 			to_chat(user, "<span class='warning'>I can't attach a bayonet to this weapon!</span>")
@@ -171,16 +176,17 @@
 				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
-	icon_state = "barotrauma"
-	desc = "A firearm of Fogland design, provided to Heartfelt to fight the Grenzelhofts."
+	name = "Barkmusket"
+	icon_state = "musket"
+	desc = "A barker used to kill at distance, and can be fitted with a bayonet for close encounters."
 	bayonetable = TRUE
 	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
-	desc = "A weapon that is common in the ranks of the armies of Grenzelhoft, it gets the job done."
-	icon_state = "ironbarker"
-	bayonetable = TRUE
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine
+	icon = 'icons/roguetown/weapons/64.dmi'
+	icon_state = "musket1"
+	item_state = "musket1"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
 	. = ..()
@@ -217,8 +223,8 @@
 		return
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
-	name = "barkiron"
-	desc = "A type of barksteel made with cheaper materials, usually used by civilian militias or supplied to policing forces. It is rarely used by infrantrymen, but officer's regard it as more noble than a barksteel."
+	name = "barkpistol"
+	desc = "A lightweight barker small enough to be held in just one hand, favored by officers."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -245,15 +251,22 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "pistol1"
+	item_state = "pistol1"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed // i axed you a question
 	name = "barkaxe"
-	desc = "An abomination devised by the bearded menace themselves. The name is being workshopped currently."
+	desc = "A hefty barkpistol equipped with an axe for close combat."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	icon_state = "pistolaxe"
 	item_state = "pistolaxe"
+	slot_flags = ITEM_SLOT_HIP
 	walking_stick = FALSE
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/axe/chop, /datum/intent/axe/cut)
 
@@ -284,10 +297,13 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user.client)
-		if(has_barkpowder == FALSE)
+		if(has_barkenpowder == FALSE)
 			playsound(src.loc, 'sound/items/match_fail.ogg', 100, FALSE)
 			to_chat(user, "<span class='info'>I dry fire \the [src]!</span>")
 			cocked = FALSE
+			return
+		if(HAS_TRAIT(user, TRAIT_BIGHANDS))
+			to_chat(user, "<span class='info'>I can't use this!</span>")
 			return
 		if(user.client.chargedprog >= 100)
 			spread = 0
@@ -318,14 +334,11 @@
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE
-	has_barkpowder = FALSE
+	has_barkenpowder = FALSE
 	sleep(click_delay)
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	..()
 	var/angle
 	switch(user.dir)
@@ -345,6 +358,54 @@
 	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 50)
 	SSticker.muskshots++
+
+	for(var/mob/M in GLOB.player_list)
+		if(!is_in_zweb(M.z,user.z))
+			continue
+		var/turf/M_turf = get_turf(M)
+		var/far_smith_sound = sound(pick('sound/ambience/distantshot1.ogg','sound/ambience/distantshot2.ogg','sound/ambience/distantshot3.ogg'))
+		if(M_turf)
+			var/dist = get_dist(M_turf, loc)
+			if(dist < 7)
+				continue
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed/alternate
+	name = "barkaxe"
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "pistolaxe1"
+	item_state = "pistolaxe1"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded // i sword what you did there
+	name = "barksword"
+	desc = "A sleek sabre with a miniaturized barkpistol attached, an especially complex and valuable weapon."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "shitsabregun"
+	item_state = "shitsabregun"
+	slot_flags = ITEM_SLOT_HIP
+	walking_stick = FALSE
+	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/sword/cut/sabre, /datum/intent/sword/chop)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
+	name = "barksword"
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "sabregun"
+	item_state = "sabregun"
 
 /obj/item/ammo_box/magazine/internal/shot/musk
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet

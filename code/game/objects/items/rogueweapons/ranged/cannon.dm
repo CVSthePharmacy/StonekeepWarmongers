@@ -2,7 +2,7 @@
 
 /obj/structure/cannon // cannon
 	name = "barkstone"
-	desc = "A large weapon mainly hoisted on warships."
+	desc = "A large weapon, mounted up on heavy-duty tracks, making it somewhat easy to move around even the roughest terrain."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "cannona"
 	anchored = FALSE
@@ -89,7 +89,7 @@
 		if(istype(step, /turf/open/transparent/openspace))
 			turfina = get_step_multiz(step, DOWN)
 		else
-			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg','sound/misc/explode/bottlebomb (3).ogg'))
 
 	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
 	fired_projectile.firer = src
@@ -99,6 +99,17 @@
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 	sleep(4)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
+
+	for(var/mob/M in GLOB.player_list)
+		if(!is_in_zweb(M.z,src.z))
+			continue
+		var/turf/M_turf = get_turf(M)
+		var/far_smith_sound = sound(pick('sound/ambience/distantcannon1.ogg','sound/ambience/distantcannon2.ogg'))
+		if(M_turf)
+			var/dist = get_dist(M_turf, loc)
+			if(dist < 7)
+				continue
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
 	name = "hand barkstone"
@@ -120,7 +131,7 @@
 
 /obj/structure/bombard
 	name = "bombardier"
-	desc = "Artiljerija! Load in a bomb and set the azirath, then light. Use your middle eye to check through the magnifying glass."
+	desc = "A motar capable of launching bombs high into the sky at an angle to come crashing down on the foe, even if they cower behind cover."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bombardier"
 	anchored = FALSE
@@ -238,7 +249,9 @@
 
 	var/obj/effect/warning/G = new(epicenter)
 
-	spawn(5 SECONDS)
+	playsound(epicenter, pick('sound/ambience/rocketfire.ogg','sound/ambience/rocketfire2.ogg'), 100, FALSE, 5)
+
+	spawn(2.1 SECONDS)
 		qdel(G)
 		loaded.forceMove(epicenter)
 		loaded.light()
@@ -267,8 +280,8 @@
 // maxim bb gun
 
 /obj/structure/maxim
-	name = "\improper Maxwell's Barkenweapon"
-	desc = "Oh boy, this'll be complicated to operate, won't it? There is a scroll wheel on it."
+	name = "\improper Gatlyn's Crankbox"
+	desc = "A rapid firing, crank-operated barker mounted on a wheeled carriage so it can be quickly moved around the battlefield."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "machina"
 	anchored = FALSE
@@ -278,12 +291,31 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/list/firesounds = list('sound/combat/Ranged/firebow-shot-01.ogg', 'sound/combat/Ranged/firebow-shot-02.ogg', 'sound/combat/Ranged/firebow-shot-03.ogg')
 	var/bullets = 0 // starts with zero
+	var/maxima_bulletina = 50
 	var/fireangle = 0 // straight forward
 
 	var/obj/effect/point/indicator
 	var/last_scroll_time = 0
 
+/obj/structure/maxim/alt
+	name = "\improper KAITZAR's Organ"
+	desc = "A six-shot firing, crank-operated barker mounted on a wheeled carriage so it can be quickly moved around the battlefield. Nicknamed the 'One man firing squad' by Regimers. Popular method of execution in the capital."
+	icon_state = "machina2"
+	maxima_bulletina = 18
+
+/obj/structure/maxim/alt/attack_hand(mob/user)
+	if(prob(1))
+		to_chat(user, "<span class='info'>The trigger got stuck... try again!</span>")
+		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		return
+	for(var/i=0,i<6,i++)
+		sleep(rand(1,4))
+		fire(user)
+
 /obj/structure/maxim/attackby(obj/item/I, mob/user, params)
+	if(bullets >= maxima_bulletina)
+		to_chat(user, "<span class='info'>None fit anymore.</span>")
+		return
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/bullet))
 		to_chat(user, "<span class='notice'>You begin crushing up the ball...</span>")
 		if(do_after(user, 5 SECONDS, TRUE, src))
@@ -296,6 +328,7 @@
 	if(istype(I, /obj/item/rogue/maxim_ammo))
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 		bullets += 25
+		bullets = min(bullets,maxima_bulletina)
 		qdel(I)
 
 /obj/structure/maxim/examine(mob/user)
@@ -316,7 +349,7 @@
 	A.muzzle_type = null // Fuck you.
 	
 	var/true_angle = fireangle + dir2angle(dir)
-	flick("machina_firea", src)
+	flick("[initial(icon_state)]_firea", src)
 	playsound(src.loc, pick(firesounds), 100, FALSE)
 
 	if(ishuman(user))

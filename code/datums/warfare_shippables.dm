@@ -2,6 +2,7 @@
 	var/name = "shippable"
 	var/list/items = list()
 	var/reinforcement = 1 // on what wave this becomes available on
+	var/faction
 
 /datum/warshippable/smokebombs
 	name = "FIVE SMOKE BOMBS"
@@ -41,7 +42,7 @@
 			)
 
 /datum/warshippable/woodammo
-	name = "WOODEN BALL POUCHES"
+	name = "FRAGMENTATION AMMUNITION POUCHES"
 	items = list(/obj/item/quiver/woodbullets,
 			/obj/item/quiver/woodbullets
 			)
@@ -69,11 +70,17 @@
 	items = list(/obj/structure/cannon)
 
 /datum/warshippable/maxim
-	name = "THE MAXWELL"
+	name = "GATLYN'S CRANKBOX"
 	items = list(/obj/structure/maxim)
+	faction = RED_WARTEAM
+
+/datum/warshippable/maxim/alt
+	name = "KAITZAR'S ORGAN"
+	items = list(/obj/structure/maxim/alt)
+	faction = BLUE_WARTEAM
 
 /datum/warshippable/caltrops
-	name = "TETSUBISHI CALTROPS"
+	name = "CALTROPS"
 	items = list(/obj/item/rogue/caltrop,
 			/obj/item/rogue/caltrop,
 			/obj/item/rogue/caltrop
@@ -92,6 +99,26 @@
 			/obj/item/rogue/sandbagkit,
 			/obj/item/rogue/sandbagkit
 			)
+
+/datum/warshippable/pistolsword
+	name = "FIVE BARKSWORDS"
+	items = list(/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded
+			)
+	faction = RED_WARTEAM
+
+/datum/warshippable/pistolsword/alt
+	name = "FIVE BARKSWORDS"
+	items = list(/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
+			)
+	faction = BLUE_WARTEAM
 
 /datum/warshippable/wood
 	name = "WOOD SUPPLIES"

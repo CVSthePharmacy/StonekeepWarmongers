@@ -18,10 +18,7 @@
 			SEND_SOUND(world, haloalertsound)
 		else
 			for(var/mob/living/carbon/human/M in GLOB.player_list)
-				if(hasvar(M, "warfare_faction") && M.warfare_faction == BLUE_WARTEAM)
-					SEND_SOUND(M, 'sound/vo/wc/gren/grenzroundstart.ogg')
-				if(hasvar(M, "warfare_faction") && M.warfare_faction == RED_WARTEAM)
-					SEND_SOUND(M, 'sound/vo/wc/felt/heartroundstart.ogg')
+				SEND_SOUND(M, 'sound/misc/warstart.ogg')
 
 /datum/warmode/Destroy()
 	. = QDEL_HINT_IWILLGC
@@ -113,7 +110,7 @@
 	blu_spawns = clamp(round(50 * (player_count / base_player_count)), min_blu_spawns, max_blu_spawns)
 
 	START_PROCESSING(SSprocessing, src)
-	blurb = "Grenzelhoft must capture both points! Heartfelt must defend! GRENZELHOFT GETS ONLY [blu_spawns] AVAILABLE SOLDIERS, DEATH IS BAD!!!"
+	blurb = "The Regime must capture both points! The PPU must defend! THE REGIME GETS ONLY [blu_spawns] AVAILABLE SOLDIERS, DEATH IS BAD!!!"
 
 	for(var/area/rogue/assault/cp in world)
 		if(istype(cp))
@@ -144,11 +141,17 @@
 
 /area/rogue/assault/throneroom
 	name = "Thronesroom"
+	droning_sound = 'sound/music/firstwhistle.ogg'
+	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
+	droning_sound_night = 'sound/music/firstwhistle.ogg'
 	capture_rate = 1.5
 	capture_order = 2
 
 /area/rogue/assault/gates
 	name = "Gateshouse"
+	droning_sound = 'sound/music/firstwhistle.ogg'
+	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
+	droning_sound_night = 'sound/music/firstwhistle.ogg'
 	capture_rate = 0.5
 	tocapture_points = 150
 	capture_order = 1

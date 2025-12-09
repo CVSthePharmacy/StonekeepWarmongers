@@ -52,7 +52,6 @@
 /datum/wound/artery/neck/on_mob_gain(mob/living/affected)
 	. = ..()
 	ADD_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
-	affected.adjustOxyLoss(25)
 	if(HAS_TRAIT(affected, TRAIT_CRITICAL_WEAKNESS))
 		affected.death()
 
@@ -63,8 +62,10 @@
 	var/mob/living/carbon/carbon_owner = owner
 	if(!carbon_owner.stat && prob(10))
 		carbon_owner.Jitter(10)
+		carbon_owner.losebreath += 5
+		carbon_owner.adjustOxyLoss(rand(1,10))
 		if(prob(50))
-			playsound(carbon_owner, pick('sound/vo/throat.ogg','sound/vo/throat2.ogg','sound/vo/throat3.ogg'), 100, FALSE)
+			carbon_owner.emote(pick("gasp","choke","breathgasp"))
 		else
 			carbon_owner.emote("deathgurgle")
 

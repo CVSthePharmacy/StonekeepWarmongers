@@ -82,7 +82,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/eye_color = "000"				//Eye color
 	var/voice_color = "a0a0a0"
 	var/detail_color = "000"
-	var/datum/species/pref_species = new /datum/species/human/northern()	//Mutant race
+	var/datum/species/pref_species = new /datum/species/human/northern/standard()	//Mutant race
 	var/datum/patron/selected_patron
 	var/static/datum/patron/default_patron = /datum/patron/divine/astrata
 	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_markings" = "None")
@@ -201,7 +201,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/used_title
 	switch(current_tab)
 		if (0) // Character Settings#
-			used_title = "Draft Notice"
+			used_title = "DRAFT NOTICE"
 
 			// Top-level menu table
 
@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<td style='width:33%;text-align:right'>"
 			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
-			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
+			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA (ZERO)"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
 
 			dat += "</table>"
@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a> <a href='?_src_=prefs;preference=name;task=random'>\[R\]</a>"
 
 			dat += "<BR>"
-			dat += "<b>RACE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
+			dat += "<b>BODYTYPE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
@@ -397,7 +397,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 						dat += "<br>"
 					dat += "<b>Hair Color: </b>  <a href='?_src_=prefs;preference=hair;task=input'>Change</a>"
 					dat += "<br>"
-				dat += "<b>Face Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
+				dat += "<b>Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
+				dat += "<br>"
+				dat += "<b>Accessory:</b> <a href='?_src_=prefs;preference=accessory;task=input'>[accessory]</a>"
 				if(gender == FEMALE)
 					dat += "<br>"
 				dat += "<br></td>"
@@ -1613,8 +1615,6 @@ Slots: [job.spawn_positions]</span>
 						facial_hairstyle = "None"
 					else
 						facial_hairstyle = pref_species.random_facial_hairstyle(gender)
-				if("underwear")
-					underwear = pref_species.random_underwear(gender)
 				if("underwear_color")
 					underwear_color = random_short_color()
 				if("undershirt")
@@ -1677,13 +1677,14 @@ Slots: [job.spawn_positions]</span>
 							ghost_others = GHOST_OTHERS_SIMPLE
 
 				if("name")
-					var/new_name = input(user, "Choose your character's name:", "Identity")  as text|null
+					var/new_name = browser_input_text(user, "What is your name?", "WARMONGERS", real_name, MAX_NAME_LEN, encode = FALSE)
 					if(new_name)
 						new_name = reject_bad_name(new_name)
 						if(new_name)
 							real_name = new_name
 						else
-							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+							to_chat(user, "<font color='red'>That's not your name now, is it? Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					log_character("[parent] changed their characters name to [new_name].")
 
 //				if("age")
 //					var/new_age = input(user, "Choose your character's age:\n([AGE_MIN]-[AGE_MAX])", "Years Dead") as num|null
@@ -1830,7 +1831,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_hair)
 						hairlist += X.name
 					var/new_hairstyle
-					new_hairstyle = input(user, "Choose your character's accessory:", "Jewelry and Trinkets")  as null|anything in hairlist //don't ask
+					new_hairstyle = browser_input_list(user, "Choose your character's accessory:", "Bits and Bobs", hairlist)
 					if(new_hairstyle)
 						accessory = new_hairstyle
 
@@ -1845,7 +1846,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_detail)
 						detaillist += X.name
 					var/new_detail
-					new_detail = input(user, "Choose your character's detail:", "Make me unique")  as null|anything in detaillist //don't ask
+					new_detail = browser_input_list(user, "Choose your character's detail:", "Scars and Stains", detaillist)
 					if(new_detail)
 						detail = new_detail
 
@@ -1881,7 +1882,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "WARMONGERS") as null|anything in crap
+					var/result = browser_input_list(user, "Select a bodytype", "WARMONGERS", crap)
 
 					if(result)
 						//var/newtype = GLOB.species_list[result]
@@ -1903,7 +1904,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/thing in subtypesof(/datum/warperk))//Populate possible aspects list.
 						var/datum/warperk/A = new thing
 						buyables[A.name] = A
-					var/chosen = input(user, "Choose a perk", "WARMONGERS") as null|anything in buyables
+					var/chosen = browser_input_list(user, "Choose a perk", "WARMONGERS", buyables)
 					var/datum/warperk/WP = buyables[chosen]
 					if(WP)
 						var/full_desc = "[WP.desc] ([WP.cost] TRI)"
@@ -2329,7 +2330,7 @@ Slots: [job.spawn_positions]</span>
 								if(!name)
 									name = "Slot[i]"
 								choices[name] = i
-					var/choice = input(user, "CHOOSE A WAR HERO","WARMONGERS") as null|anything in choices
+					var/choice = browser_input_list(user, "CHOOSE A WAR HERO", "WARMONGERS", choices)
 					if(choice)
 						choice = choices[choice]
 						if(!load_character(choice))
@@ -2359,13 +2360,13 @@ Slots: [job.spawn_positions]</span>
 	var/datum/species/chosen_species
 	chosen_species = pref_species.type
 	if(!(pref_species.name in GLOB.roundstart_races))
-		chosen_species = /datum/species/human/northern
-		pref_species = new /datum/species/human/northern
+		chosen_species = /datum/species/human/northern/standard
+		pref_species = new /datum/species/human/northern/standard
 		random_character(gender)
 	if(parent)
 		if(pref_species.patreon_req > parent.patreonlevel())
-			chosen_species = /datum/species/human/northern
-			pref_species = new /datum/species/human/northern
+			chosen_species = /datum/species/human/northern/standard
+			pref_species = new /datum/species/human/northern/standard
 			random_character(gender)
 
 	character.age = age
@@ -2413,7 +2414,7 @@ Slots: [job.spawn_positions]</span>
 	character.underwear = underwear
 //	character.underwear_color = underwear_color
 	character.undershirt = undershirt
-//	character.accessory = accessory
+	character.accessory = accessory
 	character.detail = detail
 	character.socks = socks
 	character.patron = selected_patron
@@ -2470,7 +2471,7 @@ Slots: [job.spawn_positions]</span>
 	if(!namedata)
 		return
 
-	var/raw_name = input(user, "Choose your character's [namedata["qdesc"]]:","Character Preference") as text|null
+	var/raw_name = browser_input_text(user, "Choose your soldier's [namedata["qdesc"]]:", "DRAFT NOTICE")
 	if(!raw_name)
 		if(namedata["allow_null"])
 			custom_names[name_id] = get_default_name(name_id)

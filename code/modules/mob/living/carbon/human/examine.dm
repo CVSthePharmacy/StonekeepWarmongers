@@ -57,9 +57,9 @@
 				used_title = J.f_title
 			if(used_title == "Adventurer")
 				used_title = advjob
-				. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the wandering [race_name] [used_title].")
+				. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the wandering [used_title].")
 			else
-				. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the [race_name] [used_title].")
+				. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the [used_title].")
 		else
 			. = list("<span class='info'>ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name].")
 
@@ -233,7 +233,7 @@
 				msg += "<span class='bloody'>[capitalize(m2)] [english_list(bleeding_limbs)] [bleeding_limbs.len > 1 ? "are" : "is"] [bleed_wording]!</span>"
 		else
 			if(bleed_rate >= 5)
-				msg += "<span class='bloody'><B>[m1] [bleed_wording]</B>!</span>"
+				msg += "<span class='bloody'><B>[m1] [bleed_wording]!</B></span>"
 			else
 				msg += "<span class='bloody'>[m1] [bleed_wording]!</span>"
 

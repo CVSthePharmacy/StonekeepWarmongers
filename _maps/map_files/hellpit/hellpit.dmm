@@ -1,15 +1,27 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"az" = (
+/obj/structure/warobjective/bloodstatue,
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/underworld)
 "aW" = (
 /obj/structure/barricade/sandbags/rogue,
 /obj/structure/barricade/sandbags/rogue{
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "bf" = (
 /obj/structure/bombard,
 /turf/open/floor/rogue/metal/barograte,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "by" = (
 /obj/structure/lever{
 	redstone_id = "bridge3";
@@ -28,30 +40,87 @@
 /obj/item/flint,
 /obj/item/flint,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"bN" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"bS" = (
+/obj/structure/warfarebarrier,
+/turf/open/lava,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "cf" = (
 /obj/structure/stone_tile/slab/burnt,
 /obj/item/clothing/ring/warmongers/magic/gold,
 /turf/open/lava,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "cv" = (
 /obj/effect/decal/cleanable/sigil/E,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "cA" = (
 /obj/effect/landmark/events/haunts,
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "cE" = (
-/obj/structure/warfarebarrier,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/volcanic,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "cM" = (
 /obj/structure/cannon{
 	dir = 1
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "dI" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/ammo_casing/caseless/rogue/cball,
@@ -63,18 +132,49 @@
 /obj/item/flint,
 /obj/item/flint,
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "eq" = (
+/obj/structure/warfarebarrier,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "ev" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/woodcut/steel,
-/obj/item/rogueweapon/woodcut/steel{
-	pixel_y = -6
+/obj/structure/fluff/railing/fence{
+	dir = 8
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = 0
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -15
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -20
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "ez" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
@@ -83,39 +183,76 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "eG" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/underworld)
 "eQ" = (
 /obj/effect/landmark/redreinforcement,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "fB" = (
 /obj/effect/landmark/start/grenzellord{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
-"gh" = (
-/turf/open/lava,
-/area/rogue/underworld)
-"gy" = (
-/obj/structure/warfarebarrier,
-/turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"fJ" = (
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "gF" = (
 /turf/closed/wall/mineral/rogue/stone,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"gS" = (
+/obj/effect/landmark/events/haunts,
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "hx" = (
 /obj/effect/decal/cleanable/sigil/N,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "hA" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/greatsword/zwei,
-/turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/obj/structure/warfarebarrier/red,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "hE" = (
 /obj/structure/winch{
 	gid = "center";
@@ -129,40 +266,79 @@
 	redstone_id = "leftwing"
 	},
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "jd" = (
-/obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "ji" = (
 /obj/effect/decal/cleanable/sigil/NW,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "js" = (
 /obj/structure/rack/rogue,
-/obj/item/quiver/bullets{
-	pixel_x = -4
+/obj/item/quiver/bolts{
+	pixel_x = 10
 	},
-/obj/item/quiver/bullets,
-/obj/item/quiver/bullets{
-	pixel_x = 4
+/obj/item/quiver/bolts{
+	pixel_x = 5
+	},
+/obj/item/quiver/bolts,
+/obj/item/quiver/bolts{
+	pixel_x = -10
+	},
+/obj/item/quiver/bolts{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "jL" = (
 /obj/structure/fluff/statue,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "jQ" = (
 /obj/structure/barricade/sandbags/rogue,
 /obj/structure/barricade/sandbags/rogue{
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "jZ" = (
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "ky" = (
 /obj/structure/lever{
 	redstone_id = "bridge2";
@@ -176,7 +352,11 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "kR" = (
 /obj/structure/winch{
 	gid = "leftwing";
@@ -185,30 +365,46 @@
 	},
 /turf/open/floor/rogue/greenstone,
 /area/rogue/underworld)
-"lc" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/halberd/bardiche,
-/turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
 "lu" = (
 /obj/effect/decal/cleanable/sigil/NE,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "me" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword/uchigatana{
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war,
+/obj/item/rogueweapon/huntingknife/idagger/war{
 	pixel_x = -10
 	},
-/obj/item/rogueweapon/sword/uchigatana{
-	pixel_x = -23
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -5
 	},
-/obj/item/rogueweapon/sword/uchigatana,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "mw" = (
 /obj/structure/stone_tile/slab,
 /turf/open/lava,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "mz" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
@@ -217,32 +413,62 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "mH" = (
 /obj/effect/landmark/events/haunts,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/underworld)
-"mY" = (
-/obj/structure/warfarebarrier,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"mZ" = (
+/obj/structure/roguemachine/musicbox,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "nw" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "nP" = (
 /obj/structure/rack/rogue,
-/obj/item/quiver/bullets{
-	pixel_x = -4
+/obj/item/quiver/bolts{
+	pixel_x = 10
 	},
-/obj/item/quiver/bullets,
-/obj/item/quiver/bullets{
-	pixel_x = 4
+/obj/item/quiver/bolts{
+	pixel_x = 5
+	},
+/obj/item/quiver/bolts,
+/obj/item/quiver/bolts{
+	pixel_x = -5
+	},
+/obj/item/quiver/bolts{
+	pixel_x = -10
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "or" = (
 /obj/effect/landmark/events/haunts,
 /obj/structure/floordoor/gatehatch/inner,
@@ -260,9 +486,21 @@
 /obj/structure/floordoor/gatehatch/outer,
 /turf/open/lava,
 /area/rogue/underworld)
+"pE" = (
+/obj/structure/warfarebarrier,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "qr" = (
 /turf/open/floor/rogue/metal/barograte,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "qw" = (
 /obj/effect/landmark/events/testportal{
 	aportalloc = "controlroom1"
@@ -270,24 +508,32 @@
 /obj/item/clothing/ring/warmongers/magic/unique,
 /turf/open/floor/rogue/greenstone,
 /area/rogue/underworld)
+"rx" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "rR" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "sm" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/mace/spiked{
-	pixel_y = 5
-	},
-/obj/item/rogueweapon/mace/spiked{
-	pixel_y = -2
-	},
-/turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
-"su" = (
-/obj/structure/ladder,
-/turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "tB" = (
 /obj/effect/landmark/events/testportal{
 	aportalloc = "thebattle"
@@ -296,33 +542,72 @@
 /obj/effect/decal/cleanable/sigil,
 /obj/item/rogueweapon/sword/long/vlord,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "tI" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/woodcut/changfu{
-	pixel_x = 5
+/obj/item/rogueweapon/woodcut/steel/war{
+	pixel_x = -7
 	},
-/obj/item/rogueweapon/woodcut/changfu,
+/obj/item/rogueweapon/woodcut/steel/war,
+/obj/item/rogueweapon/woodcut/steel/war{
+	pixel_x = -25
+	},
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "uH" = (
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "vE" = (
 /obj/effect/decal/cleanable/sigil/W,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "vS" = (
 /obj/effect/landmark/start/grenzelinfantry{
 	dir = 8
 	},
 /obj/structure/fluff/testportal,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"wn" = (
+/obj/structure/teambarrier/blue,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "wI" = (
 /obj/effect/decal/cleanable/sigil/SW,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "xf" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
@@ -331,28 +616,67 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "xy" = (
-/obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "xV" = (
 /obj/structure/stone_tile/slab/cracked,
 /turf/open/lava,
-/area/rogue/underworld)
-"yt" = (
-/turf/open/transparent/openspace,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"xZ" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/shield/woodbuckler,
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "zP" = (
-/obj/effect/landmark/events/haunts,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "zW" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "AQ" = (
 /obj/effect/landmark/events/testportal{
 	aportalloc = "controlroom2"
@@ -365,90 +689,160 @@
 	redstone_id = "center"
 	},
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Bs" = (
 /obj/structure/warfarebarrier/red,
+/obj/structure/warfarebarrier/red,
 /turf/open/lava,
-/area/rogue/underworld)
-"BC" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/halberd/naginata,
-/turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "BP" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Cm" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"Dq" = (
 /obj/effect/landmark/events/haunts,
 /obj/structure/warfarebarrier,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Dv" = (
 /obj/structure/barricade/sandbags/rogue,
 /obj/structure/barricade/sandbags/rogue{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
-"DL" = (
-/obj/structure/warfarebarrier/red,
-/turf/open/transparent/openspace,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "DN" = (
 /obj/effect/landmark/start/heartfeltlord,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Eq" = (
 /obj/effect/decal/cleanable/sigil/SE,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "ER" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword/long/greatsword/odachi,
-/turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"FK" = (
+/obj/structure/fluff/statue,
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Gn" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/spear{
-	pixel_x = -22
+/obj/item/rogueweapon/mace/cudgel/war{
+	pixel_x = 5
 	},
-/obj/item/rogueweapon/spear,
-/obj/item/rogueweapon/spear{
-	pixel_x = -10
+/obj/item/rogueweapon/mace/cudgel/war,
+/obj/item/rogueweapon/mace/cudgel/war{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Gu" = (
-/obj/structure/fluff/statue,
-/obj/structure/warfarebarrier,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/obj/structure/roguemachine/musicbox,
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "GC" = (
 /obj/effect/landmark/start/heartfeltinfantry{
 	dir = 4
 	},
 /obj/structure/fluff/testportal,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Hk" = (
-/obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "HH" = (
 /obj/structure/fluff/statue,
-/obj/structure/warfarebarrier/red,
+/obj/structure/warfarebarrier,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "HY" = (
 /obj/structure/gate/vertical/left{
 	gid = "rightwing";
 	redstone_id = "rightwing"
 	},
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Ib" = (
 /turf/open/floor/rogue/greenstone,
 /area/rogue/underworld)
@@ -457,65 +851,122 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "JH" = (
-/obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
-	pixel_x = -5;
-	pixel_y = -28
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = 5;
+	pixel_x = 10
 	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
-	pixel_y = -20;
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -5;
+	pixel_x = 5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
 	pixel_y = -10;
 	pixel_x = -5
 	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -10;
+	pixel_x = 10
+	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "KA" = (
 /obj/item/bomb,
 /turf/open/floor/rogue/metal/barograte,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "KL" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
-	pixel_y = -20;
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = 10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = 5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
 	pixel_x = -10
 	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
-	pixel_y = -10;
-	pixel_x = -10
-	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
-	pixel_x = -10
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "LG" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "LL" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/spear/yari,
-/obj/item/rogueweapon/spear/yari{
-	pixel_x = -10
+/obj/item/rogueweapon/woodcut/war{
+	pixel_x = 5
 	},
-/obj/item/rogueweapon/spear/yari{
-	pixel_x = -23
+/obj/item/rogueweapon/woodcut/war,
+/obj/item/rogueweapon/woodcut/war{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Mh" = (
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/greenstone,
 /area/rogue/underworld)
 "Mt" = (
-/obj/structure/warfarebarrier,
 /turf/open/lava,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"Oe" = (
+/obj/structure/ladder,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Of" = (
 /obj/effect/landmark/events/haunts,
 /obj/structure/floordoor/gatehatch/inner,
@@ -532,33 +983,65 @@
 	},
 /obj/structure/fluff/testportal,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Om" = (
 /obj/structure/stone_tile/slab/burnt,
 /turf/open/lava,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "OC" = (
-/obj/effect/landmark/events/haunts,
-/obj/structure/warfarebarrier/red,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "PO" = (
-/obj/structure/warfarebarrier,
 /turf/open/transparent/openspace,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Qo" = (
+/obj/structure/warfarebarrier,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Qv" = (
 /obj/structure/teambarrier/red,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Qx" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "QG" = (
 /obj/structure/winch{
 	gid = "rightwing";
@@ -570,31 +1053,51 @@
 "Rz" = (
 /obj/structure/cannon,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "RF" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword/cutlass{
-	pixel_x = -1
+/obj/item/rogueweapon/sword/iron/messer/war{
+	pixel_x = 5
 	},
-/obj/item/rogueweapon/sword/cutlass{
-	pixel_x = 3
-	},
-/obj/item/rogueweapon/sword/cutlass{
-	pixel_x = 7
+/obj/item/rogueweapon/sword/iron/messer/war,
+/obj/item/rogueweapon/sword/iron/messer/war{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Sf" = (
 /obj/effect/landmark/start/heartfeltinfantry{
 	dir = 8
 	},
 /obj/structure/fluff/testportal,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Vs" = (
 /obj/structure/cannon,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "VN" = (
 /obj/effect/landmark/events/haunts,
 /obj/structure/floordoor/gatehatch/inner,
@@ -615,10 +1118,11 @@
 "Wh" = (
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/underworld)
-"Wm" = (
-/turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Wp" = (
 /obj/structure/lever{
 	redstone_id = "bridge4";
@@ -629,7 +1133,13 @@
 "Wu" = (
 /obj/effect/landmark/blureinforcement,
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "WG" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
@@ -638,23 +1148,38 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "WM" = (
 /obj/structure/fluff/standingflag/red,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "WO" = (
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/blocks,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Xb" = (
-/obj/structure/rack/rogue,
-/obj/item/rogueweapon/mace/ararebo{
-	pixel_x = -5
+/turf/closed/wall/mineral/rogue/stone{
+	max_integrity = 9999
 	},
-/obj/item/rogueweapon/mace/ararebo,
-/turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Xm" = (
 /obj/effect/landmark/events/haunts,
 /obj/structure/floordoor/gatehatch/inner,
@@ -668,23 +1193,72 @@
 "Xr" = (
 /obj/structure/bars/grille,
 /turf/open/transparent/openspace,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 "Yk" = (
 /obj/structure/fluff/standingflag,
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "Yv" = (
 /obj/structure/teambarrier/blue,
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "YO" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/churchbrick,
-/area/rogue/underworld)
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"Zv" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/shield/pavise,
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "ZH" = (
 /obj/effect/decal/cleanable/sigil/S,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/underworld)
+/area/rogue/indoors/town/arena{
+	dynamic_lighting = 0;
+	droning_sound_current = 'sound/music/root.ogg';
+	droning_sound_dawn = 'sound/music/root.ogg'
+	})
 
 (1,1,1) = {"
 oI
@@ -1132,37 +1706,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1203,37 +1777,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1274,37 +1848,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1345,37 +1919,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 Bs
-gh
-gh
-gh
-gh
-gh
 Mt
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+Mt
+Mt
+Mt
+Mt
+bS
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1416,37 +1990,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-Bs
-Qo
-gF
-gF
-gF
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 Mt
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+Mt
+Bs
+xy
+gF
+gF
+gF
+xy
+bS
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1487,37 +2061,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+xy
+cE
+xy
+gF
+gF
+gF
 xy
 Qo
-gF
-gF
-gF
-Qo
-gy
-Qo
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+xy
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1558,37 +2132,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-Qo
-Qo
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+xy
+xy
+xy
+sm
 Hk
-eG
 gF
 gF
 gF
-eG
-cE
-Qo
-Qo
-Qo
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
+Hk
+rx
+xy
+xy
+xy
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1629,37 +2203,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-Qo
-Qo
-Qo
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+xy
+xy
+xy
 aW
-eG
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 xf
-Qo
-Qo
-Qo
-gh
-gh
-oI
-oI
-oI
-oI
-oI
+xy
+xy
+xy
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1700,37 +2274,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-gh
-gh
-Qo
-Qo
-eG
-eG
-Vs
-eG
-Hk
-eG
-eG
 zP
-eG
-eG
-cE
-eG
+zP
+zP
+zP
+Mt
+Mt
+xy
+xy
+Hk
+Hk
+Vs
+Hk
+sm
+Hk
+Hk
+Cm
+Hk
+Hk
+rx
+Hk
 cM
-eG
-eG
-Qo
-Qo
-gh
-gh
-oI
-oI
-oI
-oI
+Hk
+Hk
+xy
+xy
+Mt
+Mt
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -1771,37 +2345,37 @@ GC
 GC
 oI
 oI
-oI
-oI
-oI
-gh
-gh
-Qo
-Qo
-eG
-eG
-eG
-kJ
-eG
+zP
+zP
+zP
+Mt
+Mt
+xy
+xy
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+Hk
+Hk
+kJ
+Hk
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 mz
-eG
-eG
-eG
-Qo
-Qo
-gh
-gh
-oI
-oI
-oI
+Hk
+Hk
+Hk
+xy
+xy
+Mt
+Mt
+zP
+zP
+zP
 oI
 oI
 Oj
@@ -1833,46 +2407,46 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 oI
 oI
-oI
-oI
-oI
-gh
-Qo
-Qo
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+zP
+zP
+Mt
+xy
+xy
 Hk
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+sm
+Hk
 gF
 gF
 gF
-eG
-cE
-eG
-eG
-eG
-eG
-eG
-eG
-Qo
-Qo
-gh
-oI
-oI
-oI
+Hk
+rx
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+xy
+xy
+Mt
+zP
+zP
+zP
 oI
 oI
 jZ
@@ -1904,52 +2478,52 @@ oI
 oI
 oI
 LL
-Wm
-Wm
-Wm
-ER
-Wm
-Wm
-Wm
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 KL
 oI
-oI
-oI
-gh
-gh
-Qo
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+zP
+Mt
+Mt
+xy
 Hk
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+sm
+Hk
 gF
 gF
 gF
-eG
-cE
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-Qo
-gh
-gh
-oI
-oI
+Hk
+rx
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+xy
+Mt
+Mt
+zP
+zP
 oI
 JH
 jZ
 jZ
 jZ
-hA
+jZ
 jZ
 jZ
 jZ
@@ -1975,56 +2549,56 @@ oI
 oI
 oI
 me
-Wm
-Wm
-Wm
-YO
-Wm
-Wm
-Wm
+OC
+OC
+OC
+xZ
+OC
+OC
+OC
 KL
 oI
-oI
-oI
-gh
-Qo
-Qo
-eG
-eG
-eG
-eG
-eG
-aW
-eG
+zP
+zP
+Mt
+xy
+xy
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+Hk
+Hk
+Hk
+Hk
+aW
+Hk
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 xf
-eG
-eG
-eG
-eG
-eG
-Qo
-Qo
-gh
-oI
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+xy
+xy
+Mt
+zP
+zP
 oI
 JH
 jZ
 jZ
 jZ
-rR
+Zv
 jZ
 jZ
 jZ
-RF
+ev
 oI
 oI
 oI
@@ -2046,52 +2620,52 @@ oI
 oI
 oI
 tI
-Wm
-Wm
-Wm
-YO
-Wm
-Wm
-Wm
+OC
+OC
+OC
+xZ
+OC
+OC
+OC
 js
 oI
-oI
-gh
-gh
-Qo
-eG
-aW
-eG
-eG
-eG
-eG
-Vs
-eG
-Hk
-eG
-eG
 zP
-eG
-eG
-cE
-eG
+Mt
+Mt
+xy
+Hk
+aW
+Hk
+Hk
+Hk
+Hk
+Vs
+Hk
+sm
+Hk
+Hk
+Cm
+Hk
+Hk
+rx
+Hk
 cM
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
 xf
-eG
-Qo
-gh
-gh
-oI
+Hk
+xy
+Mt
+Mt
+zP
 oI
 nP
 jZ
 jZ
 jZ
-rR
+Zv
 jZ
 jZ
 jZ
@@ -2116,57 +2690,57 @@ oI
 oI
 oI
 oI
-Xb
-Wm
-Wm
-Wm
-BC
-Wm
-Wm
-Wm
+bA
+OC
+OC
+LL
+bN
+bN
+OC
+OC
 js
 oI
-oI
-gh
-Qo
-Qo
-eG
-Wh
-eG
-eG
-eG
-eG
-kJ
-eG
+zP
+Mt
+xy
+xy
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+Wh
+Hk
+Hk
+Hk
+Hk
+kJ
+Hk
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 mz
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
 Qx
-eG
-Qo
-Qo
-gh
-oI
+Hk
+xy
+xy
+Mt
+zP
 oI
 nP
 jZ
 jZ
+RF
+RF
+Gn
 jZ
-lc
 jZ
-jZ
-jZ
-sm
+dI
 oI
 oI
 oI
@@ -2187,48 +2761,49 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
+Rz
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+WM
 Qv
-Qo
-Qo
-Qo
-eG
-eG
-kJ
-eG
-eG
-eG
-eG
-eG
-eG
+xy
+xy
+xy
 Hk
-eG
-gF
-gF
-gF
-eG
-cE
-eG
-eG
-eG
-eG
-eG
-eG
+Hk
+kJ
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+sm
+Hk
+Xb
+Xb
+Xb
+Hk
+rx
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 mz
-eG
-eG
-Qo
-Qo
-Qo
+Hk
+Hk
+xy
+xy
+xy
 Yv
+Yk
 jZ
 jZ
 jZ
@@ -2236,8 +2811,7 @@ jZ
 jZ
 jZ
 jZ
-jZ
-jZ
+IH
 oI
 oI
 oI
@@ -2257,48 +2831,48 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Rz
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
+YO
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 Qv
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+FK
+Xb
+Xb
+Xb
+Xb
+Xb
 HH
-gF
-gF
-gF
-gF
-gF
-Gu
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 Yv
 jZ
 jZ
@@ -2306,10 +2880,10 @@ jZ
 jZ
 jZ
 jZ
-IH
 jZ
 jZ
 jZ
+rR
 oI
 oI
 oI
@@ -2327,58 +2901,58 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-bA
-Wm
-Wm
+OC
+OC
+OC
 eQ
-Wm
-Wm
-Wm
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 Qv
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
 jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+ER
 Bo
 ji
 vE
 wI
 Bo
-mY
 eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
 Yv
 jZ
 jZ
 jZ
+jZ
+jZ
+jZ
+jZ
 Wu
-jZ
-jZ
-dI
-jZ
 jZ
 jZ
 jZ
@@ -2398,59 +2972,59 @@ oI
 oI
 oI
 oI
-Wm
-Wm
+OC
+OC
 LG
-Wm
-WM
-Wm
-Wm
-Wm
-Wm
+OC
+OC
+OC
+Gu
+OC
+OC
 DN
-Wm
+OC
 Qv
-eq
-eq
-eq
-eq
-eq
-mH
-eq
-eq
-eq
-eq
-mH
-eq
 jd
-Qo
+jd
+jd
+jd
+jd
+mH
+jd
+jd
+jd
+jd
+mH
+jd
+ER
+xy
 hx
 tB
 ZH
-Qo
-mY
+xy
 eq
+jd
 mH
-eq
-eq
-eq
-eq
+jd
+jd
+jd
+jd
 mH
-eq
-eq
-eq
-eq
-eq
+jd
+jd
+jd
+jd
+jd
 Yv
 jZ
 fB
 jZ
 jZ
+mZ
 jZ
 jZ
-Yk
 jZ
-su
+Oe
 jZ
 jZ
 oI
@@ -2469,58 +3043,58 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-bA
-Wm
-Wm
+OC
+OC
+OC
 eQ
-Wm
-Wm
-Wm
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 Qv
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
 jd
-Qo
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+ER
+xy
 lu
 cv
 Eq
-Qo
-mY
+xy
 eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
-eq
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
 Yv
 jZ
 jZ
 jZ
+jZ
+jZ
+jZ
+jZ
 Wu
-jZ
-jZ
-dI
-jZ
 jZ
 jZ
 jZ
@@ -2541,48 +3115,48 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Rz
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
+YO
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 Qv
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+FK
+Xb
+Xb
+Xb
+Xb
+Xb
 HH
-gF
-gF
-gF
-gF
-gF
-Gu
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 Yv
 jZ
 jZ
@@ -2590,10 +3164,10 @@ jZ
 jZ
 jZ
 jZ
-IH
 jZ
 jZ
 jZ
+rR
 oI
 oI
 oI
@@ -2613,48 +3187,49 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
+Rz
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+WM
 Qv
-Qo
-Qo
-Qo
-eG
-eG
-aW
-eG
-eG
-eG
-eG
-eG
-eG
+xy
+xy
+xy
 Hk
-eG
-gF
-gF
-gF
-eG
-cE
-eG
-eG
-eG
-eG
-eG
-eG
+Hk
+aW
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+sm
+Hk
+Xb
+Xb
+Xb
+Hk
+rx
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 xf
-eG
-eG
-Qo
-Qo
-Qo
+Hk
+Hk
+xy
+xy
+xy
 Yv
+Yk
 jZ
 jZ
 jZ
@@ -2662,8 +3237,7 @@ jZ
 jZ
 jZ
 jZ
-jZ
-jZ
+IH
 oI
 oI
 oI
@@ -2684,57 +3258,57 @@ oI
 oI
 oI
 oI
-Xb
-Wm
-Wm
-Wm
-BC
-Wm
-Wm
-Wm
+bA
+OC
+OC
+LL
+bN
+bN
+OC
+OC
 js
 oI
-oI
-gh
-Qo
-Qo
-eG
-Wh
-eG
-eG
-eG
-eG
-aW
-eG
+zP
+Mt
+xy
+xy
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+Wh
+Hk
+Hk
+Hk
+Hk
+aW
+Hk
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 xf
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
 Qx
-eG
-Qo
-Qo
-gh
-oI
+Hk
+xy
+xy
+Mt
+zP
 oI
 nP
 jZ
 jZ
+RF
+RF
+Gn
 jZ
-lc
 jZ
-jZ
-jZ
-sm
+dI
 oI
 oI
 oI
@@ -2756,52 +3330,52 @@ oI
 oI
 oI
 tI
-Wm
-Wm
-Wm
-YO
-Wm
-Wm
-Wm
+OC
+OC
+OC
+xZ
+OC
+OC
+OC
 js
 oI
-oI
-gh
-gh
-Qo
-eG
-kJ
-eG
-eG
-eG
-eG
-Vs
-eG
-Hk
-eG
-eG
 zP
-eG
-eG
-cE
-eG
+Mt
+Mt
+xy
+Hk
+kJ
+Hk
+Hk
+Hk
+Hk
+Vs
+Hk
+sm
+Hk
+Hk
+Cm
+Hk
+Hk
+rx
+Hk
 cM
-eG
-eG
-eG
-eG
+Hk
+Hk
+Hk
+Hk
 mz
-eG
-Qo
-gh
-gh
-oI
+Hk
+xy
+Mt
+Mt
+zP
 oI
 nP
 jZ
 jZ
 jZ
-rR
+Zv
 jZ
 jZ
 jZ
@@ -2827,56 +3401,56 @@ oI
 oI
 oI
 me
-Wm
-Wm
-Wm
-YO
-Wm
-Wm
-Wm
+OC
+OC
+OC
+xZ
+OC
+OC
+OC
 KL
 oI
-oI
-oI
-gh
-Qo
-Qo
-eG
-eG
-eG
-eG
-eG
-kJ
-eG
+zP
+zP
+Mt
+xy
+xy
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+Hk
+Hk
+Hk
+Hk
+kJ
+Hk
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 mz
-eG
-eG
-eG
-eG
-eG
-Qo
-Qo
-gh
-oI
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+xy
+xy
+Mt
+zP
+zP
 oI
 JH
 jZ
 jZ
 jZ
-rR
+Zv
 jZ
 jZ
 jZ
-RF
+ev
 oI
 oI
 oI
@@ -2898,52 +3472,52 @@ oI
 oI
 oI
 LL
-Wm
-Wm
-Wm
-ER
-Wm
-Wm
-Wm
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 KL
 oI
-oI
-oI
-gh
-gh
-Qo
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+zP
+Mt
+Mt
+xy
 Hk
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+sm
+Hk
 gF
 gF
 gF
-eG
-cE
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-Qo
-gh
-gh
-oI
-oI
+Hk
+rx
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+xy
+Mt
+Mt
+zP
+zP
 oI
 JH
 jZ
 jZ
 jZ
-hA
+jZ
 jZ
 jZ
 jZ
@@ -2969,46 +3543,46 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
+OC
+OC
+OC
+OC
+OC
+OC
+OC
 oI
 oI
-oI
-oI
-oI
-gh
-Qo
-Qo
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+zP
+zP
+Mt
+xy
+xy
 Hk
-eG
+Hk
+Hk
+Hk
+Hk
+Hk
+sm
+Hk
 gF
 gF
 gF
-eG
-cE
-eG
-eG
-eG
-eG
-eG
-eG
-Qo
-Qo
-gh
-oI
-oI
-oI
+Hk
+rx
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+xy
+xy
+Mt
+zP
+zP
+zP
 oI
 oI
 jZ
@@ -3049,37 +3623,37 @@ Sf
 Sf
 oI
 oI
-oI
-oI
-oI
-gh
-gh
-Qo
-Qo
-eG
-eG
-eG
-aW
-eG
+zP
+zP
+zP
+Mt
+Mt
+xy
+xy
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+Hk
+Hk
+aW
+Hk
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 xf
-eG
-eG
-eG
-Qo
-Qo
-gh
-gh
-oI
-oI
-oI
+Hk
+Hk
+Hk
+xy
+xy
+Mt
+Mt
+zP
+zP
+zP
 oI
 oI
 vS
@@ -3120,37 +3694,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-gh
-gh
-Qo
-Qo
-eG
-eG
-Vs
-eG
-Hk
-eG
-eG
 zP
-eG
-eG
-cE
-eG
+zP
+zP
+zP
+Mt
+Mt
+xy
+xy
+Hk
+Hk
+Vs
+Hk
+sm
+Hk
+Hk
+Cm
+Hk
+Hk
+rx
+Hk
 cM
-eG
-eG
-Qo
-Qo
-gh
-gh
-oI
-oI
-oI
-oI
+Hk
+Hk
+xy
+xy
+Mt
+Mt
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3191,37 +3765,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-Qo
-Qo
-Qo
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+xy
+xy
+xy
 kJ
-eG
 Hk
-eG
-eG
-eG
-eG
-eG
-cE
-eG
+sm
+Hk
+Hk
+Hk
+Hk
+Hk
+rx
+Hk
 mz
-Qo
-Qo
-Qo
-gh
-gh
-oI
-oI
-oI
-oI
-oI
+xy
+xy
+xy
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3262,37 +3836,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-Qo
-Qo
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+xy
+xy
+xy
+sm
 Hk
-eG
 gF
 gF
 gF
-eG
-cE
-Qo
-Qo
-Qo
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
+Hk
+rx
+xy
+xy
+xy
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3333,37 +3907,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+xy
+cE
+xy
+gF
+gF
+gF
 xy
 Qo
-gF
-gF
-gF
-Qo
-gy
-Qo
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+xy
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3404,37 +3978,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-Bs
-Qo
-gF
-gF
-gF
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 Mt
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+Mt
+Bs
+xy
+gF
+gF
+gF
+xy
+bS
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3475,37 +4049,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 Bs
-gh
-gh
-gh
-gh
-gh
 Mt
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+Mt
+Mt
+Mt
+Mt
+bS
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3546,37 +4120,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3617,37 +4191,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -3688,37 +4262,37 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -5655,7 +6229,7 @@ oI
 oI
 oI
 oI
-oI
+az
 "}
 (2,1,2) = {"
 oI
@@ -5761,11 +6335,11 @@ oI
 oI
 oI
 oI
-oI
-Qo
-Qo
-Qo
-oI
+zP
+xy
+xy
+xy
+zP
 oI
 oI
 oI
@@ -5815,45 +6389,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-Qo
-Qo
-Qo
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+xy
+xy
+xy
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -5886,45 +6460,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-Qo
-Qo
-Qo
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+xy
+xy
+xy
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -5957,45 +6531,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-Qo
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+xy
+xy
 hJ
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6028,45 +6602,45 @@ oI
 oI
 oI
 oI
-oI
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-eG
-eG
-eG
-eG
-eG
+zP
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+Hk
+Hk
+Hk
+Hk
+Hk
 uH
 uH
 uH
-eG
-eG
-eG
-eG
-eG
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+zP
 oI
 oI
 oI
@@ -6099,45 +6673,45 @@ oI
 oI
 oI
 oI
-oI
-gh
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+Mt
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 uH
 cA
 uH
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-gh
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+Mt
+zP
 oI
 oI
 oI
@@ -6170,45 +6744,45 @@ oI
 oI
 oI
 oI
-oI
-gh
-gh
-gh
-gh
-gh
-oI
-oI
-oI
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+Mt
+Mt
+Mt
+Mt
+Mt
+zP
+zP
+zP
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 uH
 uH
 uH
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-oI
-oI
-oI
-gh
-gh
-gh
-gh
-gh
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+zP
+zP
+zP
+Mt
+Mt
+Mt
+Mt
+Mt
+zP
 oI
 oI
 oI
@@ -6241,45 +6815,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-gh
-gh
-cf
-gh
-gh
-Qo
-Qo
-eG
-eG
 zP
-eG
-eG
-eG
-eG
-yt
-yt
-uH
-uH
-uH
-yt
-yt
-eG
-eG
-eG
-eG
 zP
-eG
-eG
-Qo
-Qo
-gh
-gh
+Mt
+Mt
 cf
-gh
-gh
-oI
-oI
+Mt
+Mt
+xy
+xy
+Hk
+Hk
+Cm
+Hk
+Hk
+Hk
+Hk
+PO
+PO
+uH
+uH
+uH
+PO
+PO
+Hk
+Hk
+Hk
+Hk
+Cm
+Hk
+Hk
+xy
+xy
+Mt
+Mt
+cf
+Mt
+Mt
+zP
+zP
 oI
 oI
 oI
@@ -6312,45 +6886,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-gh
-gh
-gh
-gh
+zP
+zP
+zP
+Mt
+Mt
+Mt
+Mt
 xV
-Qo
-Qo
-eG
-eG
-eG
-eG
-yt
-yt
-yt
-yt
+xy
+xy
+Hk
+Hk
+Hk
+Hk
+PO
+PO
+PO
+PO
 uH
 uH
 uH
-yt
-yt
-yt
-yt
-eG
-eG
-eG
-eG
-Qo
-Qo
+PO
+PO
+PO
+PO
+Hk
+Hk
+Hk
+Hk
+xy
+xy
 Om
-gh
-gh
-gh
-gh
-oI
-oI
-oI
+Mt
+Mt
+Mt
+Mt
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6383,45 +6957,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-gh
-gh
+zP
+zP
+zP
+zP
+Mt
+Mt
 xV
 mw
 Om
-Qo
-eG
-eG
-yt
-yt
-yt
-yt
-yt
-yt
+xy
+Hk
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
 uH
 uH
 uH
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-eG
-Qo
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+Hk
+xy
 xV
 xV
 mw
-gh
-gh
-oI
-oI
-oI
-oI
+Mt
+Mt
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6454,45 +7028,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-Qo
+zP
+zP
+zP
+zP
+xy
 Om
 xV
 mw
-gh
-gh
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Mt
+Mt
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 uH
 uH
 uH
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-gh
-gh
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Mt
+Mt
 mw
 Om
 xV
-gy
-oI
-oI
-oI
-oI
+xy
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6525,45 +7099,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+cE
+xy
+mw
+Mt
+Mt
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Xr
+Xr
+Xr
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Mt
+Mt
+mw
 xy
 Qo
-mw
-gh
-gh
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-Xr
-Xr
-Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-gh
-gh
-mw
-Qo
-gy
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6596,45 +7170,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-eG
+zP
+zP
+zP
 Hk
-Qo
-Qo
-gh
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+sm
+xy
+xy
+Mt
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-gh
-Qo
-Qo
-cE
-eG
-oI
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Mt
+xy
+xy
+rx
+Hk
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6667,45 +7241,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-eG
+zP
+zP
+zP
 Hk
-eG
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+sm
+Hk
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-eG
-cE
-eG
-oI
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+Hk
+rx
+Hk
+zP
+zP
+zP
 oI
 oI
 oI
@@ -6738,45 +7312,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-eG
-eG
-OC
-eG
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+zP
+zP
+Hk
+Hk
+gS
+Hk
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 qr
 qr
 qr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-eG
-Cm
-eG
-eG
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+Hk
+Dq
+Hk
+Hk
+zP
+zP
 oI
 oI
 oI
@@ -6809,45 +7383,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-eG
-eG
+zP
+zP
 Hk
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+sm
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 qr
 qr
 qr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-cE
-eG
-eG
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+rx
+Hk
+Hk
+zP
+zP
 oI
 oI
 oI
@@ -6880,45 +7454,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
+zP
 Hk
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+Hk
+sm
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-cE
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+rx
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -6951,45 +7525,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
+zP
 Hk
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+Hk
+sm
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-cE
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+rx
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7022,45 +7596,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
+zP
 Hk
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+Hk
+sm
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-cE
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+rx
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7093,45 +7667,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-uH
-uH
-uH
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+zP
+Hk
+Hk
+Hk
+hA
 PO
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+uH
+uH
+uH
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7164,45 +7738,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+zP
+Hk
+Hk
+Hk
+hA
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 WG
 zW
 uH
 zW
 jQ
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
 PO
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7228,52 +7802,52 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Qv
-eG
-eG
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+fJ
+Hk
+Hk
+Hk
+hA
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 nw
 KA
 qr
 KA
 WO
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
 PO
-eG
-eG
-eG
-Yv
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Hk
+Hk
+wn
 jZ
 jZ
 jZ
@@ -7299,58 +7873,58 @@ oI
 oI
 oI
 oI
-Wm
+OC
 LG
-Wm
-Wm
-Wm
-Wm
-Wm
-Qv
-eG
-zP
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+OC
+OC
+OC
+OC
+OC
+fJ
+Hk
+Cm
+Hk
+hA
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 nw
 qr
 bf
 qr
 WO
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
 PO
-eG
-zP
-eG
-Yv
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Cm
+Hk
+wn
 jZ
 jZ
 jZ
 jZ
 jZ
-su
+Oe
 jZ
 oI
 oI
@@ -7370,52 +7944,52 @@ oI
 oI
 oI
 oI
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Wm
-Qv
-eG
-eG
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+OC
+OC
+OC
+OC
+OC
+OC
+OC
+fJ
+Hk
+Hk
+Hk
+hA
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 nw
 KA
 qr
 KA
 WO
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
 PO
-eG
-eG
-eG
-Yv
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Hk
+Hk
+wn
 jZ
 jZ
 jZ
@@ -7448,45 +8022,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+zP
+Hk
+Hk
+Hk
+hA
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 ez
 BP
 uH
 BP
 Dv
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
 PO
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7519,45 +8093,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
-DL
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-uH
-uH
-uH
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+zP
+Hk
+Hk
+Hk
+hA
 PO
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+uH
+uH
+uH
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+pE
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7590,45 +8164,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
+zP
 Hk
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+Hk
+sm
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-cE
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+rx
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7661,45 +8235,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
+zP
 Hk
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+Hk
+sm
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-cE
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+rx
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7732,45 +8306,45 @@ oI
 oI
 oI
 oI
-oI
-eG
-eG
-eG
+zP
 Hk
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+Hk
+sm
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-cE
-eG
-eG
-eG
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+rx
+Hk
+Hk
+Hk
+zP
 oI
 oI
 oI
@@ -7803,45 +8377,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-eG
-eG
+zP
+zP
 Hk
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Hk
+sm
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 qr
 qr
 qr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-cE
-eG
-eG
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+rx
+Hk
+Hk
+zP
+zP
 oI
 oI
 oI
@@ -7874,45 +8448,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-eG
-eG
-OC
-eG
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+zP
+zP
+Hk
+Hk
+gS
+Hk
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 qr
 qr
 qr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-eG
-Cm
-eG
-eG
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+Hk
+Dq
+Hk
+Hk
+zP
+zP
 oI
 oI
 oI
@@ -7945,45 +8519,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-eG
+zP
+zP
+zP
 Hk
-eG
-eG
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+sm
+Hk
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-eG
-cE
-eG
-oI
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+Hk
+rx
+Hk
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8016,45 +8590,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-eG
+zP
+zP
+zP
 Hk
-Qo
-Qo
-gh
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+sm
+xy
+xy
+Mt
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 Xr
 Xr
 Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-gh
-Qo
-Qo
-cE
-eG
-oI
-oI
-oI
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Mt
+xy
+xy
+rx
+Hk
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8087,45 +8661,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+cE
+xy
+mw
+Mt
+Mt
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Xr
+Xr
+Xr
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Mt
+Mt
+mw
 xy
 Qo
-mw
-gh
-gh
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-Xr
-Xr
-Xr
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-gh
-gh
-mw
-Qo
-gy
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8158,45 +8732,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-Qo
+zP
+zP
+zP
+zP
+xy
 xV
 xV
 mw
-gh
-gh
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
+Mt
+Mt
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 uH
 uH
 uH
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-yt
-gh
-gh
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+Mt
+Mt
 mw
 xV
 Om
-Qo
-oI
-oI
-oI
-oI
+xy
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8229,45 +8803,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-gh
-gh
+zP
+zP
+zP
+zP
+Mt
+Mt
 xV
 Om
 xV
-Qo
-eG
-eG
-yt
-yt
-yt
-yt
-yt
-yt
+xy
+Hk
+Hk
+PO
+PO
+PO
+PO
+PO
+PO
 uH
 uH
 uH
-yt
-yt
-yt
-yt
-yt
-yt
-eG
-eG
-Qo
+PO
+PO
+PO
+PO
+PO
+PO
+Hk
+Hk
+xy
 xV
 Om
 xV
-gh
-gh
-oI
-oI
-oI
-oI
+Mt
+Mt
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8300,45 +8874,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-gh
-gh
-gh
-gh
+zP
+zP
+zP
+Mt
+Mt
+Mt
+Mt
 mw
-Qo
-Qo
-eG
-eG
-eG
-eG
-yt
-yt
-yt
-yt
+xy
+xy
+Hk
+Hk
+Hk
+Hk
+PO
+PO
+PO
+PO
 uH
 uH
 uH
-yt
-yt
-yt
-yt
-eG
-eG
-eG
-eG
-Qo
-Qo
+PO
+PO
+PO
+PO
+Hk
+Hk
+Hk
+Hk
+xy
+xy
 mw
-gh
-gh
-gh
-gh
-oI
-oI
-oI
+Mt
+Mt
+Mt
+Mt
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8371,45 +8945,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-gh
-gh
-cf
-gh
-gh
-Qo
-Qo
-eG
-eG
 zP
-eG
-eG
-eG
-eG
-yt
-yt
-uH
-uH
-uH
-yt
-yt
-eG
-eG
-eG
-eG
 zP
-eG
-eG
-Qo
-Qo
-gh
-gh
+Mt
+Mt
 cf
-gh
-gh
-oI
-oI
+Mt
+Mt
+xy
+xy
+Hk
+Hk
+Cm
+Hk
+Hk
+Hk
+Hk
+PO
+PO
+uH
+uH
+uH
+PO
+PO
+Hk
+Hk
+Hk
+Hk
+Cm
+Hk
+Hk
+xy
+xy
+Mt
+Mt
+cf
+Mt
+Mt
+zP
+zP
 oI
 oI
 oI
@@ -8442,45 +9016,45 @@ oI
 oI
 oI
 oI
-oI
-gh
-gh
-gh
-gh
-gh
-oI
-oI
-oI
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+Mt
+Mt
+Mt
+Mt
+Mt
+zP
+zP
+zP
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 uH
 uH
 uH
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-oI
-oI
-oI
-gh
-gh
-gh
-gh
-gh
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+zP
+zP
+zP
+Mt
+Mt
+Mt
+Mt
+Mt
+zP
 oI
 oI
 oI
@@ -8513,45 +9087,45 @@ oI
 oI
 oI
 oI
-oI
-gh
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-eG
-eG
-eG
-eG
-eG
-eG
-eG
+zP
+Mt
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
 uH
 cA
 uH
-eG
-eG
-eG
-eG
-eG
-eG
-eG
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-gh
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+Hk
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+Mt
+zP
 oI
 oI
 oI
@@ -8584,45 +9158,45 @@ oI
 oI
 oI
 oI
-oI
-gh
-gh
-gh
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-eG
-eG
-eG
-eG
-eG
+zP
+Mt
+Mt
+Mt
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+Hk
+Hk
+Hk
+Hk
+Hk
 uH
 uH
 uH
-eG
-eG
-eG
-eG
-eG
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-gh
-gh
-gh
-oI
+Hk
+Hk
+Hk
+Hk
+Hk
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+Mt
+Mt
+Mt
+zP
 oI
 oI
 oI
@@ -8655,45 +9229,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-Qo
-Qo
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+xy
+xy
 HY
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8726,45 +9300,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-Qo
-Qo
-Qo
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+xy
+xy
+xy
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8797,45 +9371,45 @@ oI
 oI
 oI
 oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-Qo
-Qo
-Qo
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+xy
+xy
+xy
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
+zP
 oI
 oI
 oI
@@ -8885,11 +9459,11 @@ oI
 oI
 oI
 oI
-oI
-Qo
-Qo
-Qo
-oI
+zP
+xy
+xy
+xy
+zP
 oI
 oI
 oI
