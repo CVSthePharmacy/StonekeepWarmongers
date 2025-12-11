@@ -54,8 +54,9 @@ SUBSYSTEM_DEF(warmongers)
 			H.pixel_y = 200
 			animate(H, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
 
-			H.buckled.pixel_y = 200
-			animate(H.buckled, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+			if(H.buckled)
+				H.buckled.pixel_y = 200
+				animate(H.buckled, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
 
 			spawn(0.35 SECONDS)
 				playsound(H.loc, 'sound/misc/fall.ogg', 100, FALSE, -1)
