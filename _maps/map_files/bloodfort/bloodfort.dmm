@@ -59,6 +59,7 @@
 "gt" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "gz" = (/obj/item/shard,/obj/item/ammo_casing/caseless/rogue/cball,/obj/effect/decal/cleanable/blood/splatter,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "gA" = (/obj/structure/winch{redstone_id = "thronegate"; gid = "thronegate"; dir = 8},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
+"gG" = (/obj/structure/teambarrier/red,/turf/closed/wall/mineral/rogue/decostone,/area/rogue/indoors/town)
 "gH" = (/obj/structure/fluff/hangman{pixel_y = 7; pixel_x = 8},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "gM" = (/obj/structure/stairs/stone,/turf/open/floor/rogue/cobble,/area/rogue/assault/gates{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "gN" = (/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
@@ -79,8 +80,9 @@
 "il" = (/obj/structure/closet/crate/drawer,/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
 "im" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "ix" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
+"iF" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "iI" = (/obj/effect/decal/cleanable/blood/old{pixel_y = -31; pixel_x = 38},/obj/effect/decal/cleanable/blood/gibs/old,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
-"iJ" = (/obj/structure/stairs/stone/church,/obj/structure/teambarrier/red,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
+"iJ" = (/obj/structure/stairs/stone/church,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "iM" = (/obj/structure/table/wood,/obj/item/reagent_containers/glass/bottle/rogue/beer{pixel_x = 12; pixel_y = 16},/obj/item/reagent_containers/glass/bottle/rogue/beer{pixel_x = -6; pixel_y = 12},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "iS" = (/obj/machinery/light/rogue/firebowl/stump,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "iT" = (/obj/structure/stairs/stone/church{dir = 8},/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
@@ -297,7 +299,7 @@
 "Fm" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "Fr" = (/turf/closed/wall/mineral/rogue/decostone,/area/rogue/outdoors)
 "Ft" = (/obj/machinery/light/rogue/firebowl/stump,/turf/open/floor/rogue/wood,/area/rogue/outdoors/town/roofs)
-"Fx" = (/obj/structure/bed/rogue,/turf/open/floor/carpet/inn,/area/rogue/indoors/town)
+"Fx" = (/obj/structure/bed/rogue,/mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled{name = "Rabbie-Rousey"; desc = "The Lord's most favorite Rabble-Rouser, and second most favorite lover."; STACON = 10; STAEND = 15; maxHealth = 350; health = 350},/turf/open/floor/carpet/inn,/area/rogue/indoors/town)
 "Fy" = (/obj/structure/bed/rogue,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "Fz" = (/obj/effect/decal/cleanable/blood/old{pixel_y = -19},/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
 "FA" = (/turf/open/floor/rogue/church,/area/rogue/indoors/town)
@@ -430,6 +432,7 @@
 "TE" = (/obj/structure/barricade/wooden/rogue,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "TT" = (/obj/structure/closet/dirthole/closed/loot,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "TX" = (/obj/machinery/light/rogue/torchholder/c{dir = 1},/turf/closed/wall/mineral/rogue/tent{dir = 1},/area/rogue/indoors/town)
+"TY" = (/obj/structure/mineral_door/wood/deadbolt{dir = 8},/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "TZ" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "Ue" = (/obj/structure/closet/crate/roguecloset,/obj/item/roguestatue/iron,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "Uh" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/blocks,/area/rogue/outdoors)
@@ -697,13 +700,13 @@ czczczczczczczUIUIUIUIUIUIUIczczczczczczczUIUIUIczczczczczczczUIUIUIUIUIUIUIczcz
 czczczczczczczUIUIUIUIUIUIUIczczczczczczczUIUIUIczczczczczczczUIUIUIUIUIUIUIczczczczczczcz
 "}
 (1,1,3) = {"
-kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
-kjkjEIEIkjmfykmfykmfkjkjkjkjkjkjkjrkrkrkrkrkrkrkrkrkrkrkkjkjkjkjkjkjkjmfykmfykmfkjEIEIkjkj
-kjkjEIEIkjABAByeyeABkjkjkjkjkjkjkjrkrkrkrkrkrxrkrkrkrkrkkjkjkjkjkjkjkjAByeyeABABkjEIEIkjkj
-kjkjEIEIZZAByeAdhzyekjEIhrixEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIixhrEIkjyeiMpOyeABJFEIEIkjkj
-kjkjEIEIkjABAByeyeABkjEIEIEIEIKorkrkrkWQrkrkrkrkrkWQrkrkrkGDEIEIEIEIkjAByeyeABABkjEIEIkjkj
-kjkjEIEIkjmJjMmJjMmJkjEIEIEIEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIEIEIEIkjmJHXmJjMmJkjEIEIkjkj
-kjkjuTEIkjkjkjkjkjkjkjuTEIEIkjkjkjkjkjxnkjkjxnkjkjxnkjkjkjkjkjEIEIMrkjkjkjkjkjkjkjEIMrkjkj
+kjkjkjkjgGkjkjkjkjkjgGkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjgGkjkjkjkjkjgGkjkjkjkj
+kjkjEIEIgGmfykmfykmfgGkjkjkjkjkjkjrkrkrkrkrkrkrkrkrkrkrkkjkjkjkjkjkjgGmfykmfykmfgGEIEIkjkj
+kjkjEIEIgGABAByeyeABgGkjkjkjkjkjkjrkrkrkrkrkrxrkrkrkrkrkkjkjkjkjkjkjgGAByeyeABABgGEIEIkjkj
+kjkjEIEIiFAByeAdhzyegGEIhrixEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIixhrEIgGyeiMpOyeABTYEIEIkjkj
+kjkjEIEIgGABAByeyeABgGEIEIEIEIKorkrkrkWQrkrkrkrkrkWQrkrkrkGDEIEIEIEIgGAByeyeABABgGEIEIkjkj
+kjkjEIEIgGmJjMmJjMmJgGEIEIEIEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIEIEIEIgGmJHXmJjMmJgGEIEIkjkj
+kjkjuTEIgGgGgGgGgGgGgGuTEIEIkjkjkjkjkjxnkjkjxnkjkjxnkjkjkjkjkjEIEIMrgGgGgGgGgGgGgGEIMrkjkj
 kjEIEIEIEIEIEIEIEIEIEIEIEIEIEIcPhHCRhHhHmphHhHhHmphHhHCRhHiTEIEIEIEIEIEIEIEIEIEIEIEIEIEIkj
 kjEIEIEIEIEIEIEIEIEIEIEIEIEIEIcPhHhHhHhHhHhHhHhHhHhHhHhHhHiTEIEIEIEIEIEIEIEIEIEIEIEIEIEIkj
 kjEIEIEIEIEIEIEIEIEIEIEIEIEIEIcPhHhHhHJlhHhHhHhHhHJlhHhHhHiTEIEIEIEIEIEIEIEIEIEIEIEIEIEIkj
