@@ -1,4 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ax" = (
+/mob/living/simple_animal/pet/rootchilde,
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "az" = (
 /obj/structure/warobjective/bloodstatue,
 /turf/closed/mineral/rogue/bedrock,
@@ -153,9 +163,6 @@
 	dir = 8
 	},
 /obj/item/rogueweapon/spear/pike{
-	pixel_x = 0
-	},
-/obj/item/rogueweapon/spear/pike{
 	pixel_x = -5
 	},
 /obj/item/rogueweapon/spear/pike{
@@ -163,9 +170,6 @@
 	},
 /obj/item/rogueweapon/spear/pike{
 	pixel_x = -15
-	},
-/obj/item/rogueweapon/spear/pike{
-	pixel_x = -20
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld{
@@ -858,6 +862,29 @@
 	droning_sound_dusk = 'sound/music/calm.ogg';
 	droning_sound_night = 'sound/music/calm.ogg'
 	})
+"IK" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/mace/cudgel/pick{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/mace/cudgel/pick{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/mace/cudgel/pick,
+/obj/item/rogueweapon/mace/cudgel/pick{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/mace/cudgel/pick{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "JH" = (
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
 	pixel_y = 5;
@@ -881,6 +908,23 @@
 	pixel_x = 10
 	},
 /turf/open/floor/rogue/churchmarble,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"Kx" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/scythe,
+/obj/item/rogueweapon/scythe{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/scythe{
+	pixel_x = -22
+	},
+/turf/open/floor/rogue/churchbrick,
 /area/rogue/underworld{
 	droning_sound = 'sound/music/calm.ogg';
 	droning_sound_current = 'sound/music/calm.ogg';
@@ -2485,7 +2529,7 @@ OC
 OC
 OC
 OC
-KL
+js
 oI
 zP
 zP
@@ -2519,7 +2563,7 @@ Mt
 zP
 zP
 oI
-JH
+js
 jZ
 jZ
 jZ
@@ -2550,13 +2594,13 @@ oI
 oI
 me
 OC
-OC
+KL
 OC
 xZ
 OC
+JH
 OC
-OC
-KL
+js
 oI
 zP
 zP
@@ -2590,13 +2634,13 @@ Mt
 zP
 zP
 oI
+js
+jZ
 JH
-jZ
-jZ
 jZ
 Zv
 jZ
-jZ
+KL
 jZ
 ev
 oI
@@ -2621,11 +2665,11 @@ oI
 oI
 tI
 OC
-OC
+KL
 OC
 xZ
 OC
-OC
+JH
 OC
 js
 oI
@@ -2663,13 +2707,13 @@ zP
 oI
 nP
 jZ
-jZ
+JH
 jZ
 Zv
 jZ
+KL
 jZ
-jZ
-ev
+Gn
 oI
 oI
 oI
@@ -2763,11 +2807,11 @@ oI
 oI
 Rz
 OC
+Kx
 OC
 OC
 OC
-OC
-OC
+Kx
 OC
 WM
 Qv
@@ -2805,11 +2849,11 @@ xy
 Yv
 Yk
 jZ
+IK
 jZ
 jZ
 jZ
-jZ
-jZ
+IK
 jZ
 IH
 oI
@@ -2977,7 +3021,7 @@ OC
 LG
 OC
 OC
-OC
+ax
 Gu
 OC
 OC
@@ -3189,11 +3233,11 @@ oI
 oI
 Rz
 OC
+Kx
 OC
 OC
 OC
-OC
-OC
+Kx
 OC
 WM
 Qv
@@ -3231,11 +3275,11 @@ xy
 Yv
 Yk
 jZ
+IK
 jZ
 jZ
 jZ
-jZ
-jZ
+IK
 jZ
 IH
 oI
@@ -3331,11 +3375,11 @@ oI
 oI
 tI
 OC
-OC
+KL
 OC
 xZ
 OC
-OC
+JH
 OC
 js
 oI
@@ -3373,13 +3417,13 @@ zP
 oI
 nP
 jZ
-jZ
+JH
 jZ
 Zv
 jZ
+KL
 jZ
-jZ
-ev
+Gn
 oI
 oI
 oI
@@ -3402,13 +3446,13 @@ oI
 oI
 me
 OC
-OC
+KL
 OC
 xZ
 OC
+JH
 OC
-OC
-KL
+js
 oI
 zP
 zP
@@ -3442,13 +3486,13 @@ Mt
 zP
 zP
 oI
+js
+jZ
 JH
-jZ
-jZ
 jZ
 Zv
 jZ
-jZ
+KL
 jZ
 ev
 oI
@@ -3479,7 +3523,7 @@ OC
 OC
 OC
 OC
-KL
+js
 oI
 zP
 zP
@@ -3513,7 +3557,7 @@ Mt
 zP
 zP
 oI
-JH
+js
 jZ
 jZ
 jZ

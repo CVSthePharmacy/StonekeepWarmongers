@@ -36,9 +36,9 @@
 
 /obj/structure/warobjective/ponr
 	name = "Regimer Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE UNIONISTS TOUCH THIS! But if you're a Unionist... Eh, sure. Why not."
+	desc = "A very important flag."
 	icon = 'icons/shamelessly_stolen.dmi'
-	icon_state = "destruct"
+	icon_state = "ponrblue"
 	anchored = TRUE
 	climbable = FALSE
 	density = TRUE
@@ -77,7 +77,8 @@
 
 /obj/structure/warobjective/ponr/red
 	name = "Union's Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE REGIME TOUCH THIS! But if you're a Regimer... Eh, sure. Why not."
+	desc = "A very important flag."
+	icon_state = "ponrred"
 
 /obj/structure/warobjective/ponr/red/attack_hand(mob/user)
 	. = ..()

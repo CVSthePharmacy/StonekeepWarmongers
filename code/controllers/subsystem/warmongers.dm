@@ -103,8 +103,8 @@ SUBSYSTEM_DEF(warmongers)
 
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, sound(null))
-			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
-			M.clear_fullscreen("graghorror", 5 SECONDS)
+			M.overlay_fullscreen("kill", /atom/movable/screen/fullscreen/kill)
+			M.clear_fullscreen("kill", 5 SECONDS)
 			M.client.verbs -= /client/verb/forcestartvote
 			SSdroning.area_entered(get_area(M), M.client)
 
@@ -184,6 +184,28 @@ SUBSYSTEM_DEF(warmongers)
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine
+		if(WARMONGERS_TECHLEVEL_COWBOY)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+		if(WARMONGERS_TECHLEVEL_AUTO)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
+		if(WARMONGERS_TECHLEVEL_NONE)
+			return null
+
+/proc/GetSniperForWarfarePPU()
+	switch(SSwarmongers.warfare_techlevel)
+		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper
+		if(WARMONGERS_TECHLEVEL_COWBOY)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+		if(WARMONGERS_TECHLEVEL_AUTO)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
+		if(WARMONGERS_TECHLEVEL_NONE)
+			return null
+
+/proc/GetSniperForWarfareRegime()
+	switch(SSwarmongers.warfare_techlevel)
+		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 		if(WARMONGERS_TECHLEVEL_AUTO)

@@ -238,6 +238,30 @@
 /obj/structure/fluff/standingflag,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/dungeon)
+"dk" = (
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = 5;
+	pixel_x = 10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -5;
+	pixel_x = 5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -10;
+	pixel_x = -5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -10;
+	pixel_x = 10
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "dx" = (
 /obj/structure/bars/pipe{
 	dir = 4
@@ -536,6 +560,23 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"hm" = (
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = 10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = 5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "hs" = (
 /obj/structure/fluff/railing/wood{
@@ -1871,6 +1912,24 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/dungeon)
+"xL" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war,
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "xQ" = (
 /obj/structure/bars/pipe{
 	pixel_x = -15
@@ -2326,6 +2385,10 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"BL" = (
+/mob/living/simple_animal/pet/rootchilde,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "BS" = (
 /obj/structure/bars/pipe{
 	dir = 10;
@@ -3597,6 +3660,23 @@
 	dir = 1
 	},
 /turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/outdoors)
+"Pg" = (
+/obj/structure/rack/rogue,
+/obj/item/quiver/bolts{
+	pixel_x = 10
+	},
+/obj/item/quiver/bolts{
+	pixel_x = 5
+	},
+/obj/item/quiver/bolts,
+/obj/item/quiver/bolts{
+	pixel_x = -5
+	},
+/obj/item/quiver/bolts{
+	pixel_x = -10
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Pj" = (
 /obj/structure/bars/pipe{
@@ -5834,7 +5914,7 @@ Ae
 Ae
 IR
 VG
-bS
+xL
 Vl
 Vl
 Vl
@@ -6681,7 +6761,7 @@ Ae
 Ae
 Ae
 Bv
-fe
+dk
 Vl
 ef
 Vl
@@ -6758,9 +6838,9 @@ ny
 ny
 Ae
 Bv
-Hj
+Pg
 Vl
-Vl
+BL
 Vl
 QD
 "}
@@ -6835,7 +6915,7 @@ ny
 ny
 Ae
 Bv
-Tf
+Pg
 Vl
 Vl
 Vl
@@ -6912,7 +6992,7 @@ ny
 ny
 Ae
 Bv
-bS
+hm
 Vl
 VU
 Vl
@@ -7374,7 +7454,7 @@ mS
 YS
 mS
 zV
-fe
+xL
 Hj
 np
 LH
