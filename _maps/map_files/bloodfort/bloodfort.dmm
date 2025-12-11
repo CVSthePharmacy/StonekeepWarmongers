@@ -209,7 +209,7 @@
 "wt" = (/obj/structure/warfarebarrier,/obj/structure/fluff/railing/fence{dir = 1},/obj/structure/fluff/railing/fence{dir = 8},/obj/structure/teambarrier/blue,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "ww" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "wz" = (/obj/effect/decal/cleanable/blood/old{pixel_y = -5; pixel_x = -24},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
-"wB" = (/turf/closed/wall/mineral/rogue/stonebrick{max_integrity = 9999},/area/rogue/outdoors)
+"wB" = (/turf/closed/wall/mineral/rogue/stonebrick{max_integrity = 9999; explosion_block = 50},/area/rogue/outdoors)
 "wS" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "wV" = (/obj/item/roguebin,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "wZ" = (/obj/structure/fluff/railing/wood,/turf/open/transparent/openspace,/area/rogue/outdoors)
