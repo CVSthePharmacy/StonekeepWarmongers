@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(warmongers)
 	var/respawn_cycle = 0
 	var/next_respawn
 	var/last_respawn = 0
-	var/time_between_respawns = 45 SECONDS // in seconds
+	var/time_between_respawns = 1 MINUTES // in seconds
 
 	var/respawning = FALSE
 
@@ -48,7 +48,7 @@ SUBSYSTEM_DEF(warmongers)
 			else
 				H.forceMove(blu.loc)
 				if(H.buckled)
-					H.buckled.forceMove(red.loc)
+					H.buckled.forceMove(blu.loc)
 			H.lay_down()
 
 			H.pixel_y = 200
