@@ -383,7 +383,7 @@
 	force_wielded = 25
 	possible_item_intents = list(SPEAR_THRUST, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
 	gripped_intents = list(SPEAR_THRUST, SPEAR_CUT, SPEAR_BASH)
-	name = "winged pike"
+	name = "winged spear"
 	desc = "A long spear primarily used to halt charges in their tracks."
 	icon_state = "pike"
 	icon = 'icons/roguetown/weapons/64.dmi'

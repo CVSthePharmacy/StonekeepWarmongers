@@ -113,6 +113,11 @@
 	layer = 20.512
 	plane = FULLSCREEN_PLANE
 
+/atom/movable/screen/fullscreen/kill
+	icon_state = "kill"
+	layer = 20.512
+	plane = FULLSCREEN_PLANE
+
 /atom/movable/screen/fullscreen/oxy
 	icon_state = "oxydamageoverlay"
 	layer = UI_DAMAGE_LAYER

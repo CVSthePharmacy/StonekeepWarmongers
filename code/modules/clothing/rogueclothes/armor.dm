@@ -665,22 +665,26 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	icon_state = "dullplate2"
+	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/outrider
 	name = "winged plate"
 	desc = "A fine dullarmor breastplate with affixed wings, the feathers being from plucked geese."
 	icon_state = "wingedplate"
+	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
 	icon_state = "dullplate3"
+	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
 	icon_state = "dullplate4"
+	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
