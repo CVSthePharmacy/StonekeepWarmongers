@@ -496,13 +496,13 @@ SUBSYSTEM_DEF(ticker)
 		if(end_party)
 			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
 		if(SSwarmongers.oneteammode)
-			to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
+			to_chat(world, "<span class='notice'><B>This time you can only play as the Regimians.</B></span>")
 
 	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
 		if(SSwarmongers.oneteammode)
-			C.warfare_faction = "Grenzelhofts"
+			C.warfare_faction = "Regimians"
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
