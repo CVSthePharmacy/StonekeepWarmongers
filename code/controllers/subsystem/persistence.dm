@@ -26,7 +26,6 @@ SUBSYSTEM_DEF(persistence)
 	LoadTrophies()
 	LoadRecentModes()
 	LoadPhotoPersistence()
-	LoadCachedStats()
 	if(CONFIG_GET(flag/use_antag_rep))
 		LoadAntagReputation()
 	LoadRandomizedRecipes()
@@ -292,6 +291,9 @@ SUBSYSTEM_DEF(persistence)
 /datum/controller/subsystem/persistence/proc/CollectStats()
 	var/json_file = file("data/TotalStatistics.json")
 	var/list/file_data = list()
+
+	LoadCachedStats()
+
 	file_data["deaths"] = SSticker.deaths + cached_deaths
 	file_data["muskshots"] = SSticker.muskshots + cached_muskshots
 
