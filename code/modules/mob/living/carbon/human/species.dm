@@ -143,7 +143,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			GLOB.roundstart_races += S.name
 			qdel(S)
 	if(!GLOB.roundstart_races.len)
-		GLOB.roundstart_races += "Humen"
+		GLOB.roundstart_races += "Standard"
+		GLOB.roundstart_races += "Bulky"
+		GLOB.roundstart_races += "Fat"
 	sortList(GLOB.roundstart_races, GLOBAL_PROC_REF(cmp_text_dsc))
 
 /datum/species/proc/check_roundstart_eligible()
