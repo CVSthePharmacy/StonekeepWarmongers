@@ -30,45 +30,39 @@
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
 
-	if(name == "Unknown" || name == "Unknown Man" || name == "Unknown Woman")
-		obscure_name = TRUE
-
 	if(obscure_species)
 		race_name = "incomprehensible thing"
 
 	if(isobserver(user))
 		obscure_name = FALSE
 
-	if(obscure_name)
-		. = list("<span class='info'>ø ------------ ø\nThis is <EM>Unknown</EM>.")
-	else
-		on_examine_face(user)
-		var/used_name = name
-		if(isobserver(user))
-			used_name = real_name
-		if(job)
-			var/datum/job/J = SSjob.GetJob(job)
-			var/used_title
-			if(J)
-				used_title = J.title
-			else
-				used_title = "Ambusher"
-			if(gender == FEMALE && J?.f_title)
-				used_title = J.f_title
-			if(used_title == "Adventurer")
-				used_title = advjob
-				. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the wandering [used_title].")
-			else
-				. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the [used_title].")
+	on_examine_face(user)
+	var/used_name = name
+	if(isobserver(user))
+		used_name = real_name
+	if(job)
+		var/datum/job/J = SSjob.GetJob(job)
+		var/used_title
+		if(J)
+			used_title = J.title
 		else
-			. = list("<span class='info'>ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name].")
+			used_title = "Ambusher"
+		if(gender == FEMALE && J?.f_title)
+			used_title = J.f_title
+		if(used_title == "Adventurer")
+			used_title = advjob
+			. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the wandering [used_title].")
+		else
+			. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the [used_title].")
+	else
+		. = list("<span class='info'>ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name].")
 
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			if(H.warfare_faction != src.warfare_faction)
-				. += "<span class='userdanger'>THEY'RE THE ENEMY! KILL THEM!</span>"
-			else if(HAS_TRAIT(src, TRAIT_NOBLE))
-				. += "<span class='notice'>Our Lord! Protect him!</span>"
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.warfare_faction != src.warfare_faction)
+			. += "<span class='userdanger'>THEY'RE THE ENEMY! KILL THEM!</span>"
+		else if(HAS_TRAIT(src, TRAIT_NOBLE))
+			. += "<span class='notice'>Our Lord! Protect him!</span>"
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
