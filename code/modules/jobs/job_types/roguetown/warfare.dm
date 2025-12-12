@@ -37,11 +37,11 @@
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
 				if(HU.cmode_music == 'sound/music/root.ogg')
-					HU.cmode_music = 'sound/music/drunkandlovingit.ogg'
+					HU.cmode_music = SSwarmongers.red_warteam_cmode_music
 				HU.speech_sound = list('sound/vo/wc/speech_ppr1.ogg', 'sound/vo/wc/speech_ppr2.ogg', 'sound/vo/wc/speech_ppr3.ogg')
 			if(BLUE_WARTEAM)
 				if(HU.cmode_music == 'sound/music/root.ogg')
-					HU.cmode_music = 'sound/music/prayformoreammo.ogg'
+					HU.cmode_music = SSwarmongers.blu_warteam_cmode_music
 				HU.speech_sound = list('sound/vo/wc/speech_regimer1.ogg', 'sound/vo/wc/speech_regimer2.ogg', 'sound/vo/wc/speech_regimer3.ogg')
 		// root.ogg is the default combat music for every mob. it basically checks if combat music was set already, and if not, it sets it. Possibly dumb, but it works and nobody is a coder for this codebase except me :)
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))

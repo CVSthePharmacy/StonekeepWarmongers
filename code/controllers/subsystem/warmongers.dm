@@ -27,6 +27,10 @@ SUBSYSTEM_DEF(warmongers)
 
 	var/oneteammode = FALSE // players only allowed to choose the regime
 
+	var/red_warteam_cmode_music = 'sound/music/drunkandlovingit.ogg'
+	var/blu_warteam_cmode_music = 'sound/music/prayformoreammo.ogg'
+	// generic footsoldier anthems
+
 /datum/controller/subsystem/warmongers/Initialize(start_timeofday)
 	red_airship = locate(/area/rogue/indoors/airship/red)
 	blue_airship = locate(/area/rogue/indoors/airship/blue)
