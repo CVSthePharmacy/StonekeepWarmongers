@@ -110,27 +110,29 @@ SUBSYSTEM_DEF(persistence)
 	saved_modes = json["data"]
 
 /datum/controller/subsystem/persistence/proc/LoadCachedStats()
-	var/json_file = file("data/TotalStatistics.json")
-	if(!fexists(json_file))
-		cached_deaths = 0
-		cached_muskshots = 0
-		cached_grenz_wins = 0
-		cached_heart_wins = 0
-		return
+    var/json_file = "data/TotalStatistics.json"
 
-	var/list/json = json_decode(json_file)
-	if(!islist(json))
-		// fallback defaults if file was corrupted
-		cached_deaths = 0
-		cached_muskshots = 0
-		cached_grenz_wins = 0
-		cached_heart_wins = 0
-		return
+    if(!fexists(json_file))
+        cached_deaths = 0
+        cached_muskshots = 0
+        cached_grenz_wins = 0
+        cached_heart_wins = 0
+        return
 
-	cached_deaths = json["deaths"] || 0
-	cached_muskshots = json["muskshots"] || 0
-	cached_grenz_wins = json["grenz_wins"] || 0
-	cached_heart_wins = json["heart_wins"] || 0
+    var/text = file2text(json_file)
+    var/list/json = json_decode(text)
+
+    if(!islist(json))
+        cached_deaths = 0
+        cached_muskshots = 0
+        cached_grenz_wins = 0
+        cached_heart_wins = 0
+        return
+
+    cached_deaths = json["deaths"] || 0
+    cached_muskshots = json["muskshots"] || 0
+    cached_grenz_wins = json["grenz_wins"] || 0
+    cached_heart_wins = json["heart_wins"] || 0
 
 /datum/controller/subsystem/persistence/proc/LoadAntagReputation()
 	var/json = file2text(FILE_ANTAG_REP)
@@ -300,37 +302,30 @@ SUBSYSTEM_DEF(persistence)
 	WRITE_FILE(json_file, json_encode(file_data))
 
 /datum/controller/subsystem/persistence/proc/CollectStats()
-	var/json_file = file("data/TotalStatistics.json")
-	var/list/file_data = list()
+    var/json_file = "data/TotalStatistics.json"
 
-	LoadCachedStats()
+    LoadCachedStats()
 
-	// ensure runtime safety
-	var/deaths_now = SSticker.deaths || 0
-	var/muskshots_now = SSticker.muskshots || 0
+    var/list/file_data = list()
+    file_data["deaths"] = (SSticker.deaths || 0) + cached_deaths
+    file_data["muskshots"] = (SSticker.muskshots || 0) + cached_muskshots
 
-	file_data["deaths"] = deaths_now + cached_deaths
-	file_data["muskshots"] = muskshots_now + cached_muskshots
+    if(istype(SSticker.mode, /datum/game_mode/warmongers))
+        var/datum/game_mode/warmongers/C = SSticker.mode
+        switch(C.whowon)
+            if(BLUE_WARTEAM)
+                cached_grenz_wins++
+            if(RED_WARTEAM)
+                cached_heart_wins++
+            else
+                // unchanged
 
-	if(istype(SSticker.mode, /datum/game_mode/warmongers))
-		var/datum/game_mode/warmongers/C = SSticker.mode
+    file_data["grenz_wins"] = cached_grenz_wins
+    file_data["heart_wins"] = cached_heart_wins
 
-		switch(C.whowon)
-			if(BLUE_WARTEAM)
-				cached_grenz_wins++
-			if(RED_WARTEAM)
-				cached_heart_wins++
-			else
-				// no change
+    fdel(json_file)
 
-		file_data["grenz_wins"] = cached_grenz_wins
-		file_data["heart_wins"] = cached_heart_wins
-	else
-		file_data["grenz_wins"] = cached_grenz_wins
-		file_data["heart_wins"] = cached_heart_wins
-
-	// overwrite safely
-	WRITE_FILE(json_file, json_encode(file_data))
+    text2file(json_encode(file_data), json_file)
 
 /datum/controller/subsystem/persistence/proc/CollectAntagReputation()
 	var/ANTAG_REP_MAXIMUM = CONFIG_GET(number/antag_rep_maximum)
