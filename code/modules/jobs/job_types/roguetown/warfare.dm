@@ -451,7 +451,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	beltl = null
 	beltr = /obj/item/quiver/bullets
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	backr = GetSniperForWarfarePPU()
 	backl = null
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm
@@ -961,7 +961,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	beltl = null
 	beltr = /obj/item/quiver/bullets
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
+	backr = GetSniperForWarfareRegime()
 	backl = null
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm

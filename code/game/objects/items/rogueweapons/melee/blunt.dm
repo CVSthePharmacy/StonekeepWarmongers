@@ -405,3 +405,19 @@
 	wbalance = 0
 	minstr = 0
 	wdefense = 3
+
+/obj/item/rogueweapon/mace/cudgel/pick
+	force = 20
+	force_wielded = 25
+	name = "pick"
+	icon_state = "pick"
+	desc = "An unwieldy warpick, designed to penetrate armor."
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick)
+	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/dagger/thrust/pick)
+	smeltresult = /obj/item/ash
+	wlength = WLENGTH_NORMAL
+	w_class = WEIGHT_CLASS_NORMAL
+	max_integrity = 180
+	wbalance = 0
+	minstr = 0
+	wdefense = 3
