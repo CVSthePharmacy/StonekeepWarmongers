@@ -116,13 +116,13 @@
 "lI" = (/obj/structure/table/wood,/obj/item/paper{info = "If you fail in this task, please have the common courtesy of killing yourself rather than shaming the Regime with your disgrace. - Speaker Tufel"; icon_state = "paperwrite"},/obj/item/reagent_containers/glass/cup/golden{pixel_x = -10; pixel_y = 3},/obj/machinery/light/rogue/wallfire/candle/l,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "lT" = (/obj/structure/fluff/gallows,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "lU" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
-"mf" = (/obj/structure/mineral_door/wood/fancywood,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
+"mf" = (/obj/structure/mineral_door/wood/fancywood,/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "mk" = (/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "mn" = (/obj/item/reagent_containers/glass/bucket/wooden,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "mo" = (/turf/closed/wall/mineral/rogue/tent,/area/rogue/indoors/town)
 "mp" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "mw" = (/obj/effect/decal/cleanable/blood/old{pixel_x = 3; pixel_y = 4},/obj/effect/decal/cleanable/blood/gibs/old,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
-"mJ" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
+"mJ" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "mP" = (/obj/structure/table/wood/reinforced_alt,/obj/item/rogueweapon/sword/iron/messer/falchwar{pixel_y = 5},/obj/item/flint,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "mS" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/carpet/inn,/area/rogue/indoors/town)
 "mY" = (/obj/machinery/light/rogue/lanternpost/fixed,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
@@ -202,7 +202,7 @@
 "uT" = (/obj/structure/roguewindow/openclose{dir = 2},/obj/structure/teambarrier/red,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "uU" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "vg" = (/obj/structure/fluff/walldeco/beerflag{pixel_y = 32},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
-"vh" = (/obj/structure/mineral_door/wood/deadbolt{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
+"vh" = (/obj/structure/mineral_door/wood/deadbolt{dir = 8},/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "vz" = (/obj/structure/fluff/walldeco/beerflag{pixel_y = -32},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "vA" = (/obj/item/natural/stone{pixel_y = 6; pixel_x = -29},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "vJ" = (/obj/structure/fluff/hangman,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
@@ -509,6 +509,7 @@
 "Yx" = (/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/dirt,/area/rogue/outdoors)
 "YO" = (/obj/effect/decal/cleanable/blood/gibs/old{pixel_y = -18; pixel_x = 9},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "YU" = (/turf/open/floor/rogue/carpet/lord/right,/area/rogue/indoors/town)
+"YV" = (/obj/structure/teambarrier/red,/turf/closed/wall/mineral/rogue/decostone,/area/rogue/indoors/town)
 "Zb" = (/obj/structure/fluff/railing/wood{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors)
 "Zf" = (/obj/structure/fluff/walldeco/beerflag{pixel_y = 32},/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "ZG" = (/obj/structure/flora/roguetree/wise,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
@@ -731,22 +732,22 @@ kjkjkjkjkjkjkjkjkjkjkjMrEIEIkjkjkjkjkjxnkjkjxnkjkjxnkjkjkjkjkjEIEIMrkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIcPhHCRhHhHmphHhHhHmphHhHCRhHiTEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIcPhHhHhHhHhHhHhHhHhHhHhHhHhHiTEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjEIEIEIcPhHhHhHJlhHhHhHhHhHJlhHhHhHiTEIEIEIkjkjkjkjkjkjkjkjkjkjkjkj
-kjkjkjkjkjkjkjkjkjkjkjkjLtkjkjkjiJkjkjkjkjiJiJiJkjkjkjkjiJkjkjkjLtkjkjkjkjkjkjkjkjkjkjkjkj
-FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXBFpOkjftighHigftkjpOBFpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
+kjkjkjkjkjkjkjkjkjkjkjkjLtkjkjYViJkjkjkjkjiJiJiJkjkjkjkjiJYVkjkjLtkjkjkjkjkjkjkjkjkjkjkjkj
+FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIYVpXBFpOkjftighHigftkjpOBFpXYVUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIcwpXpXpXwrhHhHhHhHhHONpXpXpXtUUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXXXkjkjkjkjkjkjkjkjkjXXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXkjGFzLhzQNKRzLXRkjpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIOikjkjkjuTkjkjkjpXpXkjdFhHhHhHhHhHcakjpXpXkjkjkjuTkjkjkjOiUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIUIkjDITZDITZDIkjpXpXkjAhhHhHyhhHhHHXkjpXpXkjDITZDITZDIkjUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIUIkjpzYaYapzpzkjpXpXznpXpXMoMoMopXpXznpXpXkjpzpzYaYapzkjUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIYVpXXXkjkjkjkjkjkjkjkjkjXXpXYVUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIYVpXpXkjGFzLhzQNKRzLXRkjpXpXYVUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIOiYVYVYVuTYVYVYVpXpXkjdFhHhHhHhHhHcakjpXpXYVYVYVuTYVYVYVOiUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIYVDITZDITZDIYVpXpXkjAhhHhHyhhHhHHXkjpXpXYVDITZDITZDIYVUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIYVpzYaYapzpzYVpXpXznpXpXMoMoMopXpXznpXpXYVpzpzYaYapzYVUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIcwYaysAHYapzvhpXpXpXpXXZyeMByOXZpXxrpXpXmJpzYaMGSiYatUUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIUIkjpzYaYapzpzkjpXpXpXpXpXMoMoMopXpXpXpXpXkjpzpzYaYapzkjUIUIUIUIUIFrFrFrFr
-FrFrFrFrFrFrFrUIUIkjuwfauwzzuwkjpXBFpXpXpXpXpXpXpXpXpXBFpXkjuwzzuwzzuwkjUIUIFrFrFrFrFrFrFr
-FrFrFrFrUIUIUIUIUIkjkjkjaSkjkjkjkjkjkjkjkjkjmfkjkjkjkjkjkjkjkjkjaSkjkjkjUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIUIUIUIkjAdlspzpzpzgGJmkjUIUIUIUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIYVpzYaYapzpzYVpXpXpXpXpXMoMoMopXpXpXpXpXYVpzpzYaYapzYVUIUIUIUIUIFrFrFrFr
+FrFrFrFrFrFrFrUIUIYVuwfauwzzuwYVpXBFpXpXpXpXpXpXpXpXpXBFpXYVuwzzuwzzuwYVUIUIFrFrFrFrFrFrFr
+FrFrFrFrUIUIUIUIUIYVYVYVaSYVYVYVYVYVYVYVYVYVmfYVYVYVYVYVYVYVYVYVaSYVYVYVUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIUIUIUIYVAdlspzpzpzgGJmYVUIUIUIUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIUIUIUIcwpzKcpzpzpzpzlCtUUIUIUIUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
-FrFrFrFrFrFrFrUIUIUIFrFrFrFrFrFrFrFrkjHWjMiMkypzpzKnkjFrFrFrFrFrFrFrFrUIUIUIFrFrFrFrFrFrFr
-ININUIUIUIFrFrUIUIUIFrFrUIUIUIUIUIUIkjkjkjkjaSkjkjkjkjUIUIUIUIUIUIFrFrUIUIUIFrFrUIUIUIININ
+FrFrFrFrFrFrFrUIUIUIFrFrFrFrFrFrFrFrYVHWjMiMkypzpzKnYVFrFrFrFrFrFrFrFrUIUIUIFrFrFrFrFrFrFr
+ININUIUIUIFrFrUIUIUIFrFrUIUIUIUIUIUIYVYVYVYVaSYVYVYVYVUIUIUIUIUIUIFrFrUIUIUIFrFrUIUIUIININ
 ININUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIININ
 ININUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIININ
 ININUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIININ
