@@ -121,7 +121,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 
 /// Sound that plays when this wound is applied to a mob
 /datum/wound/proc/get_sound_effect(mob/living/affected, obj/item/bodypart/affected_bodypart)
-	if(critical && prob(10))
+	if(critical && prob(1))
 		return 'sound/combat/tf2crit.ogg'
 	return pick(sound_effect)
 

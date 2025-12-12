@@ -157,21 +157,19 @@
 					added_wound = /datum/wound/puncture/small
 			
 			//Organ damage
-			if(owner.getorganszone(zone_precise) && prob(35 + max(dam, -12.5)))
+			if(owner.getorganszone(zone_precise) && prob(15 + max(dam, -12.5)))
 				var/newdam = dam
 				//to_chat(world, "origin: [newdam]")
 				if(newdam > 0)
 					var/list/victims = list()
 					var/list/possible_victims = shuffle(owner.getorganszone(zone_precise).Copy())
 					for(var/obj/item/organ/I in possible_victims)
-						if(I.damage < I.maxHealth && (prob((I.w_class * rand(20,30)) * (1 / max(1, victims.len)))))
+						if(I.damage < I.maxHealth && (prob((I.w_class * rand(10,15)) * (1 / max(1, victims.len)))))
 							victims += I
 					if(victims.len)
 						for(var/obj/item/organ/victim in victims)
-							newdam /= 2
-							newdam -= rand(10,40)
-							victim.applyOrganDamage(abs(newdam))
-							//to_chat(world, "absolute: [abs(newdam)]")
+							newdam = min(newdam, rand(25,30))
+							victim.applyOrganDamage(max(newdam, 0))
 							testing("[victim]: damage [victim.damage]")
 		if(BCLASS_BITE)
 			switch(dam)
@@ -189,6 +187,22 @@
 					added_wound = pick(/datum/wound/slash,/datum/wound/puncture)
 				if(1 to 10)
 					added_wound = pick(/datum/wound/puncture/small,/datum/wound/slash/small)
+			
+			//Organ damage
+			if(owner.getorganszone(zone_precise) && prob(15 + max(dam, -12.5)))
+				var/newdam = dam
+				//to_chat(world, "origin: [newdam]")
+				if(newdam > 0)
+					var/list/victims = list()
+					var/list/possible_victims = shuffle(owner.getorganszone(zone_precise).Copy())
+					for(var/obj/item/organ/I in possible_victims)
+						if(I.damage < I.maxHealth && (prob((I.w_class * rand(10,15)) * (1 / max(1, victims.len)))))
+							victims += I
+					if(victims.len)
+						for(var/obj/item/organ/victim in victims)
+							newdam = min(newdam, rand(15,20))
+							victim.applyOrganDamage(max(newdam, 0))
+							testing("[victim]: damage [victim.damage]")
 	if(added_wound)
 		added_wound = add_wound(added_wound, silent, crit_message)
 	if(do_crit)

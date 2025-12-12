@@ -106,6 +106,8 @@
 		T.maptext_y = rand(-120,-200)
 		animate(T, alpha = 255, time = 2, easing = EASE_IN)
 		addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), rand(10,15))
+		if(prob(25))
+			flash_fullscreen("redflash3")
 
 /mob/living/carbon/get_stress_amount()
 	if(HAS_TRAIT(src, TRAIT_NOMOOD))
