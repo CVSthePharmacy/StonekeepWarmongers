@@ -163,14 +163,14 @@
 			switch(H.warfare_faction)
 				if(BLUE_WARTEAM)
 					mousecolor = COLOR_BLUE
-					if(user.warfare_faction == BLUE_WARTEAM)
+					if(user?.warfare_faction == BLUE_WARTEAM)
 						showtext = "ALLY"
 					else
 						showtext = "ENEMY"
 				if(RED_WARTEAM)
 					mousecolor = COLOR_RED
 					showtext = "UNIONIST"
-					if(user.warfare_faction == RED_WARTEAM)
+					if(user?.warfare_faction == RED_WARTEAM)
 						showtext = "ALLY"
 					else
 						showtext = "ENEMY"
