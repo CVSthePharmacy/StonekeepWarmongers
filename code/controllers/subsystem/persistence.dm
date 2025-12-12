@@ -112,14 +112,25 @@ SUBSYSTEM_DEF(persistence)
 /datum/controller/subsystem/persistence/proc/LoadCachedStats()
 	var/json_file = file("data/TotalStatistics.json")
 	if(!fexists(json_file))
+		cached_deaths = 0
+		cached_muskshots = 0
+		cached_grenz_wins = 0
+		cached_heart_wins = 0
 		return
+
 	var/list/json = json_decode(json_file)
-	if(!json)
+	if(!islist(json))
+		// fallback defaults if file was corrupted
+		cached_deaths = 0
+		cached_muskshots = 0
+		cached_grenz_wins = 0
+		cached_heart_wins = 0
 		return
-	cached_deaths = json["deaths"]
-	cached_muskshots = json["muskshots"]
-	cached_grenz_wins = json["grenz_wins"]
-	cached_heart_wins = json["heart_wins"]
+
+	cached_deaths = json["deaths"] || 0
+	cached_muskshots = json["muskshots"] || 0
+	cached_grenz_wins = json["grenz_wins"] || 0
+	cached_heart_wins = json["heart_wins"] || 0
 
 /datum/controller/subsystem/persistence/proc/LoadAntagReputation()
 	var/json = file2text(FILE_ANTAG_REP)
@@ -294,23 +305,31 @@ SUBSYSTEM_DEF(persistence)
 
 	LoadCachedStats()
 
-	file_data["deaths"] = SSticker.deaths + cached_deaths
-	file_data["muskshots"] = SSticker.muskshots + cached_muskshots
+	// ensure runtime safety
+	var/deaths_now = SSticker.deaths || 0
+	var/muskshots_now = SSticker.muskshots || 0
+
+	file_data["deaths"] = deaths_now + cached_deaths
+	file_data["muskshots"] = muskshots_now + cached_muskshots
 
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
+
 		switch(C.whowon)
 			if(BLUE_WARTEAM)
-				file_data["grenz_wins"] = ++cached_grenz_wins
-				file_data["heart_wins"] = cached_heart_wins
+				cached_grenz_wins++
 			if(RED_WARTEAM)
-				file_data["heart_wins"] = ++cached_heart_wins
-				file_data["grenz_wins"] = cached_grenz_wins
+				cached_heart_wins++
 			else
-				file_data["heart_wins"] = cached_heart_wins
-				file_data["grenz_wins"] = cached_grenz_wins
+				// no change
 
-	fdel(json_file)
+		file_data["grenz_wins"] = cached_grenz_wins
+		file_data["heart_wins"] = cached_heart_wins
+	else
+		file_data["grenz_wins"] = cached_grenz_wins
+		file_data["heart_wins"] = cached_heart_wins
+
+	// overwrite safely
 	WRITE_FILE(json_file, json_encode(file_data))
 
 /datum/controller/subsystem/persistence/proc/CollectAntagReputation()
