@@ -174,7 +174,7 @@
 						showtext = "ALLY"
 					else
 						showtext = "ENEMY"
-		p.client.mouseovertext.maptext = {"<span style='font-size:8pt;font-family:"Pterra";color:[mousecolor];text-shadow:0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;' class='center maptext '>[showtext]"}
+		p.client.mouseovertext.maptext = {"<span style='font-size:8pt;font-family:"Pterra";color:[mousecolor];text-shadow:0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;' class='center maptext '><b>[showtext]</b>"}
 		p.client.mouseovertext.movethis(PM)
 		p.client.screen |= p.client.mouseovertext
 	return TRUE
@@ -220,11 +220,11 @@
 	var/pix_Y = text2num(screen_loc_Y[2])
 
 	if(hudobj)
-		maptext_y = 28
+		maptext_y = 35
 		maptext_x = -48
 		pix_Y = 0
 	else
-		maptext_y = 28
+		maptext_y = 35
 		maptext_x = -32
 
 	screen_loc = "[screen_loc_X[1]]:[pix_X],[screen_loc_Y[1]]:[pix_Y]"
