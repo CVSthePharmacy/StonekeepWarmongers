@@ -144,7 +144,7 @@
 	droning_sound = 'sound/music/firstwhistle.ogg'
 	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
 	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 1.5
+	capture_rate = 90
 	capture_order = 2
 
 /area/rogue/assault/gates
