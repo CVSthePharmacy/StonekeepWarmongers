@@ -399,7 +399,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 					dat += "<br>"
 //				dat += "<b>Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
 //				dat += "<br>"
-				dat += "<b>Accessory:</b> <a href='?_src_=prefs;preference=accessory;task=input'>[accessory]</a>"
+//				dat += "<b>Accessory:</b> <a href='?_src_=prefs;preference=accessory;task=input'>[accessory]</a>"
 				if(gender == FEMALE)
 					dat += "<br>"
 				dat += "<br></td>"
@@ -1825,15 +1825,15 @@ Slots: [job.spawn_positions]</span>
 						undershirt = new_undershirt
 
 
-				if("accessory")
-					var/list/spec_hair = pref_species.get_spec_accessory_list(gender)
-					var/list/hairlist = list()
-					for(var/datum/sprite_accessory/X in spec_hair)
-						hairlist += X.name
-					var/new_hairstyle
-					new_hairstyle = browser_input_list(user, "Choose your character's accessory:", "Bits and Bobs", hairlist)
-					if(new_hairstyle)
-						accessory = new_hairstyle
+//				if("accessory")
+//					var/list/spec_hair = pref_species.get_spec_accessory_list(gender)
+//					var/list/hairlist = list()
+//					for(var/datum/sprite_accessory/X in spec_hair)
+//						hairlist += X.name
+//					var/new_hairstyle
+//					new_hairstyle = browser_input_list(user, "Choose your character's accessory:", "Bits and Bobs", hairlist)
+//					if(new_hairstyle)
+//						accessory = new_hairstyle
 
 //				if("detail_color")
 //					var/new_underwear_color = input(user, "Choose your detail's color:", "Strange Ink") as color|null
