@@ -588,13 +588,13 @@
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		var/winner = alert("Who's the winner?", "End Round", "Grenzelhofts", "Heartfelts", "Stalemate")
+		var/winner = alert("Who's the winner?", "End Round", "Regime", "Unionists", "Stalemate")
 		var/datum/game_mode/warmongers/W = SSticker.mode
 		if(istype(W))
 			switch(winner)
-				if("Grenzelhofts")
+				if("Regime")
 					W.do_war_end(null, BLUE_WARTEAM)
-				if("Heartfelts")
+				if("Unionists")
 					W.do_war_end(null, RED_WARTEAM)
 				if("Stalemate")
 					W.do_war_end()

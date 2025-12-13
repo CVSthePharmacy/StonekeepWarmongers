@@ -722,12 +722,12 @@ GLOBAL_VAR_INIT(mobids, 1)
 				stat("BATTLE TIME: [DisplayTimeText(world.time - SSticker.round_start_time, 1)]")
 				stat("ASPECT: [SSticker.round_aspect.name]")
 			if(istype(W) && istype(W.warmode, /datum/warmode/tdm))
-				stat("REGIMIAN DEATHS: [SSticker.grenzelhoft_deaths]")
-				stat("UNIONIST DEATHS: [SSticker.heartfelt_deaths]")
+				stat("REGIMIAN DEATHS: [SSticker.regime_deaths]")
+				stat("UNIONIST DEATHS: [SSticker.unionist_deaths]")
 				stat("TOTALITY: [SSticker.deaths]")
 			if(istype(W) && istype(W.warmode, /datum/warmode/assault))
 				var/datum/warmode/assault/ASS = W.warmode
-				stat("REGIMIAN REINFORCEMENTS: [ASS.blu_spawns - SSticker.grenzelhoft_deaths]")
+				stat("REGIMIAN REINFORCEMENTS: [ASS.blu_spawns - SSticker.regime_deaths]")
 			if(istype(loc.loc, /area/rogue/indoors/airship))
 				var/timeto = SSwarmongers.next_respawn - round_duration_in_ticks
 				var/next_respawn = SSwarmongers.respawning ? "Now" : "[round(timeto/10)] seconds"

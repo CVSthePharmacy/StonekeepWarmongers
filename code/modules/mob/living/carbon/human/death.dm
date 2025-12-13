@@ -36,9 +36,9 @@
 		SSticker.deaths++
 		switch(warfare_faction)
 			if(RED_WARTEAM)
-				SSticker.heartfelt_deaths++
+				SSticker.unionist_deaths++
 			if(BLUE_WARTEAM)
-				SSticker.grenzelhoft_deaths++
+				SSticker.regime_deaths++
 
 	if(HAS_TRAIT(src, TRAIT_JESTER))
 		if(aspect_chosen(/datum/round_aspect/halo))
@@ -74,16 +74,16 @@
 			var/datum/warmode/noreturn/NR = C.warmode
 			if(NR.blu_flag == src)
 				NR.blu_flag = null
-				to_chat(world, "<span class='userdanger'>GRENZELHOFTS FLAG DROPPED.</span>")
+				to_chat(world, "<span class='userdanger'>REGIMIAN FLAG DROPPED.</span>")
 			if(NR.red_flag == src)
 				NR.red_flag = null
-				to_chat(world, "<span class='userdanger'>HEARTFELTS FLAG DROPPED.</span>")
+				to_chat(world, "<span class='userdanger'>UNIONIST FLAG DROPPED.</span>")
 			if(aspect_chosen(/datum/round_aspect/halo))
 				SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warmongers/red/lord))
 			testing("Red lord is dead!")
-			for(var/client/X in C.heartfelts)
+			for(var/client/X in C.unionists)
 				var/mob/living/carbon/human/V = X.mob
 				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
 				if(aspect_chosen(/datum/round_aspect/halo))
@@ -93,7 +93,7 @@
 				V.add_stress(/datum/stressevent/deadlord)
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warmongers/blu/lord))
 			testing("Blue lord is dead!")
-			for(var/client/X in C.grenzels)
+			for(var/client/X in C.regimians)
 				var/mob/living/carbon/human/V = X.mob
 				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
 				if(aspect_chosen(/datum/round_aspect/halo))

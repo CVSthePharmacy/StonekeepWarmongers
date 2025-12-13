@@ -254,9 +254,9 @@
 				var/team
 				switch(H.warfare_faction)
 					if(BLUE_WARTEAM)
-						team = C.grenzels
+						team = C.regimians
 					if(RED_WARTEAM)
-						team = C.heartfelts
+						team = C.unionists
 				for(var/mob/M in team)
 					if(M.can_hear())
 						to_chat(M, "<br><span class='alert'>Incoming team message: [message]</span>")

@@ -79,10 +79,10 @@
 /datum/warmode/tdm/process()
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
-		if(SSticker.grenzelhoft_deaths >= win_kills)
+		if(SSticker.regime_deaths >= win_kills)
 			C.do_war_end(null, RED_WARTEAM)
 			STOP_PROCESSING(SSprocessing, src)
-		if(SSticker.heartfelt_deaths >= win_kills)
+		if(SSticker.unionist_deaths >= win_kills)
 			C.do_war_end(null, BLUE_WARTEAM)
 			STOP_PROCESSING(SSprocessing, src)
 		if(SSticker.deaths >= stalemate_kills)
@@ -121,7 +121,7 @@
 /datum/warmode/assault/process()
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
-		if(SSticker.grenzelhoft_deaths >= blu_spawns)
+		if(SSticker.regime_deaths >= blu_spawns)
 			C.do_war_end(null, RED_WARTEAM)
 			STOP_PROCESSING(SSprocessing, src)
 		if(current_capture_point > total_capture_points)

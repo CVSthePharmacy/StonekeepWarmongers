@@ -892,9 +892,9 @@
 				client.warfare_faction = w_faction
 			switch(w_faction)
 				if(RED_WARTEAM)
-					C.heartfelts |= client
+					C.unionists |= client
 				if(BLUE_WARTEAM)
-					C.grenzels |= client
+					C.regimians |= client
 	testing(w_faction)
 
 /mob/living/carbon/human/proc/formation_check()

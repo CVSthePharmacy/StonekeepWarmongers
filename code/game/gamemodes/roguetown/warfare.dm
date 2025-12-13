@@ -19,8 +19,8 @@
 	var/obj/item/clothing/head/roguetown/warmongers/crownblu/blucrown
 	var/blu_bonus = 5 // reinforcement points
 
-	var/list/heartfelts = list() // clients
-	var/list/grenzels = list()
+	var/list/unionists = list() // clients
+	var/list/regimians = list()
 
 	var/warfare_start_time = 15 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
@@ -43,27 +43,27 @@
 			C << sound(null) // Stop all sounds
 			SEND_SOUND(C, sound('sound/music/whocareswhowon.ogg', volume=50))
 	if(whowon == BLUE_WARTEAM)
-		for(var/client/C in grenzels)
+		for(var/client/C in regimians)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				if(H.client?.equippedPerk.type == /datum/warperk)
 					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
-		for(var/client/C in heartfelts)
+		for(var/client/C in unionists)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 	if(whowon == RED_WARTEAM)
-		for(var/client/C in heartfelts)
+		for(var/client/C in unionists)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				if(H.client?.equippedPerk.type == /datum/warperk)
 					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
-		for(var/client/C in grenzels)
+		for(var/client/C in regimians)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H << sound(null) // Stop all sounds

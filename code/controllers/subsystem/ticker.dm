@@ -76,8 +76,8 @@ SUBSYSTEM_DEF(ticker)
 	//**ROUNDEND STATS**
 	var/deaths = 0			//total deaths in the round
 
-	var/heartfelt_deaths = 0
-	var/grenzelhoft_deaths = 0
+	var/unionist_deaths = 0
+	var/regime_deaths = 0
 
 	var/blood_lost = 0
 	var/tri_gained = 0
