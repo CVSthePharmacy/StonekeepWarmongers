@@ -95,8 +95,8 @@
 	name = "strike"
 	blade_class = BCLASS_BLUNT
 	attack_verb = list("strikes", "hits")
-	hitsound = list('sound/combat/hits/blunt/shovel_hit2.ogg')
-	swingdelay = 5
+	hitsound = list('sound/misc/deadbell.ogg')
+	swingdelay = 3
 	penfactor = 5
 	icon_state = "instrike"
 	misscost = 5
@@ -104,9 +104,9 @@
 /datum/intent/flail/strike/bellsmash
 	name = "smash"
 	chargetime = 5
-	no_early_release = TRUE
+	no_early_release = FALSE
 	penfactor = 80
-	recovery = 10
+	recovery = 5
 	damfactor = 1.2
 	chargedloop = /datum/looping_sound/flailswing
 	keep_looping = TRUE

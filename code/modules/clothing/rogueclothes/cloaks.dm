@@ -904,9 +904,23 @@
 /obj/item/clothing/cloak/war/ppr/scarf
 	name = "red scarf"
 	desc = "A red scarf worn by muckrakers and landworkers in the PPU, proudly covered in bier stains and dirt."
-	icon_state = "ppr_scarf"
+	icon_state = "pprscarf"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
-	allowed_race = list("standard", "fat", "bulky")
+	allowed_race = list("standard")
+
+/obj/item/clothing/cloak/war/ppr/scarf/fat
+	name = "red scarf"
+	desc = "A red scarf worn by muckrakers and landworkers in the PPU, proudly covered in bier stains and dirt."
+	icon_state = "pprscarffat"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("fat")
+
+/obj/item/clothing/cloak/war/ppr/scarf/bulky
+	name = "red scarf"
+	desc = "A red scarf worn by muckrakers and landworkers in the PPU, proudly covered in bier stains and dirt."
+	icon_state = "pprscarfbulky"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("bulky")
 
 /obj/item/clothing/cloak/war/ppr/cloak
 	name = "red cloak"
@@ -914,7 +928,23 @@
 	icon_state = "ppucloak"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
 	allowed_sex = list(MALE, FEMALE)
-	allowed_race = list("standard", "bulky")
+	allowed_race = list("standard")
+
+/obj/item/clothing/cloak/war/ppr/cloak/fat
+	name = "red cloak"
+	desc = "A long red cloak, the height of patriotism."
+	icon_state = "ppucloakfat"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_sex = list(MALE, FEMALE)
+	allowed_race = list("fat")
+
+/obj/item/clothing/cloak/war/ppr/cloak/bulky
+	name = "red cloak"
+	desc = "A long red cloak, the height of patriotism."
+	icon_state = "ppucloakbulky"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_sex = list(MALE, FEMALE)
+	allowed_race = list("bulky")
 
 /obj/item/clothing/cloak/war/regime/cloak
 	name = "green cloak"
@@ -924,12 +954,42 @@
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = list("standard", "bulky")
 
+/obj/item/clothing/cloak/war/regime/cloak/fat
+	name = "green cloak"
+	desc = "A long green cloak, the height of zealotry."
+	icon_state = "regimecloakfat"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_sex = list(MALE, FEMALE)
+	allowed_race = list("fat")
+
+/obj/item/clothing/cloak/war/regime/cloak/bulky
+	name = "green cloak"
+	desc = "A long green cloak, the height of zealotry."
+	icon_state = "regimecloakbulky"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_sex = list(MALE, FEMALE)
+	allowed_race = list("bulky")
+
 /obj/item/clothing/cloak/war/regime/scarf
 	name = "green scarf"
 	desc = "A green scarf. It was originally going to be a different coler but the dye union held a strike in protest. As such green was chosen."
-	icon_state = "regimer_scarf"
+	icon_state = "regimerscarf"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
-	allowed_race = list("standard", "fat", "bulky")
+	allowed_race = list("standard")
+
+/obj/item/clothing/cloak/war/regime/scarf/fat
+	name = "green scarf"
+	desc = "A green scarf. It was originally going to be a different coler but the dye union held a strike in protest. As such green was chosen."
+	icon_state = "regimerscarffat"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("fat")
+
+/obj/item/clothing/cloak/war/regime/scarf/bulky
+	name = "green scarf"
+	desc = "A green scarf. It was originally going to be a different coler but the dye union held a strike in protest. As such green was chosen."
+	icon_state = "regimerscarfbulky"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("bulky")
 
 /obj/item/clothing/cloak/war/regime/parchment
 	name = "parchment"
@@ -937,7 +997,23 @@
 	icon_state = "parchmentcloak"
 	allowed_sex = list("female", "male")
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
-	allowed_race = list("standard", "fat", "bulky")
+	allowed_race = list("standard")
+
+/obj/item/clothing/cloak/war/regime/parchment/fat
+	name = "parchment"
+	desc = "Sacred texts of the Regime, the only armor you will ever need."
+	icon_state = "parchmentcloakfat"
+	allowed_sex = list("female", "male")
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("fat")
+
+/obj/item/clothing/cloak/war/regime/parchment/bulky
+	name = "parchment"
+	desc = "Sacred texts of the Regime, the only armor you will ever need."
+	icon_state = "parchmentcloakbulky"
+	allowed_sex = list("female", "male")
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("bulky")
 
 /obj/item/clothing/cloak/hussarcloak
 	name = "hussar coat"
@@ -951,6 +1027,35 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
+	allowed_race = list("standard")
+
+/obj/item/clothing/cloak/hussarcloak/fat
+	name = "hussar coat"
+	desc = "A heavy coat commonly worn hanging over the shoulder by Hussars."
+	icon_state = "hussarcoatfat"
+	item_state = "hussarcoatfat"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	boobed = TRUE
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
+	allowed_race = list("fat")
+
+/obj/item/clothing/cloak/hussarcloak/bulky
+	name = "hussar coat"
+	desc = "A heavy coat commonly worn hanging over the shoulder by Hussars."
+	icon_state = "hussarcoatbulky"
+	item_state = "hussarcoatbulky"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	boobed = TRUE
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
+	allowed_race = list("bulky")
 
 /obj/item/clothing/cloak/quackcloak
 	name = "quack cloak"

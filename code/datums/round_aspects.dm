@@ -106,7 +106,7 @@
 
 /datum/round_aspect/linefocus
 	name = "Line Focused Warfare"
-	description = "Barksteels take longer to reload!"
+	description = "Barkshottes take longer to reload!"
 
 /datum/round_aspect/explodabarrels
 	name = "Explodabarrels"

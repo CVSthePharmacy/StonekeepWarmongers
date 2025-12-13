@@ -1163,18 +1163,27 @@
 	desc = "A sack haphazardly made into a hood."
 	icon_state = "hood"
 	item_state = "hood"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/roguetown/war/hood/red
 	name = "hood"
 	icon_state = "hoodred"
 	item_state = "hoodred"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
 	name = "hooded helmet"
 	desc = "A dulliron helmet hidden beneath a red hood."
 	icon_state = "hoodredmask"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
@@ -1184,6 +1193,9 @@
 
 /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
 	icon_state = "hoodredmask1"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
@@ -1193,6 +1205,7 @@
 	desc = "A makeshift hood worn by the truly worthy."
 	icon_state = "stitchhood"
 	item_state = "stitchhood"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
@@ -1203,6 +1216,8 @@
 	name = "stitched-hood"
 	icon_state = "stitchhood2"
 	item_state = "stitchhood2"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/roguetown/war/wickerhelm
@@ -1210,12 +1225,16 @@
 	desc = "A padded helmet worn by those who work the hives, adequate against stingers, not so much against bullets."
 	icon_state = "wickerhelm"
 	item_state = "wickerhelm"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/roguetown/helmet/war/smiler
 	name = "smiling helm"
 	desc = "A hooded helmet with a grinning smile."
 	icon_state = "smiler"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
@@ -1267,6 +1286,7 @@
 	desc = "A tall hat, worn to establish an air of professionalism."
 	icon_state = "tallhat"
 	item_state = "tallhat"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
@@ -1277,6 +1297,7 @@
 	desc = "A helmet underneath a tall red hood."
 	icon_state = "nimrod1"
 	item_state = "nimrod1"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
