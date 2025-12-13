@@ -285,7 +285,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/formation
 	name = "In Formation"
-	desc = "<span class='nicegreen'>I'm in formation. So synchronized! I'm in awe, I can reload barksteels faster.</span>"
+	desc = "<span class='nicegreen'>I'm in formation. So synchronized! I'm in awe, I can reload barkshottes faster.</span>"
 	icon_state = "formation"
 
 /datum/status_effect/buff/formation

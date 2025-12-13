@@ -76,251 +76,465 @@
 	// try to spell
 	// you do not need to define _s or _l sub-states, game automatically does this for you
 
-/datum/sprite_accessory/hair/bald
+/datum/sprite_accessory/hair/baldn
 	name = "Bald"
 	icon_state = "hair_bald"
-	specuse = list("fat", "standard", "bulky")
+	specuse = list("standard", "fat")
 	gender = MALE
 
-/datum/sprite_accessory/hair/skinhead
+/datum/sprite_accessory/hair/skinheadn
 	name = "Shaved"
 	icon_state = "hair_skinhead"
-	specuse = list("fat", "standard", "bulky")
+	specuse = list("standard", "fat")
 	gender = MALE
 	under_layer = TRUE
 
-/datum/sprite_accessory/hair/gelled
-	name = "Slicked Back"
-	icon_state = "hair_gelled"
-	gender = MALE
-	specuse = list("human", "dwarf", "tiefling")
-
-/datum/sprite_accessory/hair/pirate
-	name = "Pirate"
-	icon_state = "hair_pirate"
-	gender = MALE
-	under_layer = TRUE
-	specuse = list("human", "dwarf", "tiefling")
-
-/datum/sprite_accessory/hair/mponytail
+/datum/sprite_accessory/hair/mponytailn
 	name = "Tied"
 	icon_state = "hair_ponytail"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/heroic
+/datum/sprite_accessory/hair/heroicn
 	name = "Heroic"
 	icon_state = "hair_business2"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/noble
+/datum/sprite_accessory/hair/noblen
 	name = "Noble"
 	icon_state = "hair_business"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/mohawk
+/datum/sprite_accessory/hair/mohawkn
 	name = "Berserker"
 	icon_state = "hair_shavedmohawk"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 	under_layer = TRUE
 
-/datum/sprite_accessory/hair/bedhead
+/datum/sprite_accessory/hair/bedheadn
 	name = "Helmet Hair"
 	icon_state = "hair_bedhead"
 	gender = MALE
-	specuse = list("human", "dwarf", "tiefling")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/bowlcut
+/datum/sprite_accessory/hair/bowlcutn
 	name = "Bowlcut"
 	icon_state = "hair_bowlcut2"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/father
+/datum/sprite_accessory/hair/fathern
 	name = "Forged"
 	icon_state = "hair_father"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 	under_layer = TRUE
 
-/datum/sprite_accessory/hair/thinning
+/datum/sprite_accessory/hair/thinningn
 	name = "Cavehead"
 	icon_state = "hair_thinning"
 	gender = MALE
-	specuse = list("dwarf","human")
+	specuse = list("standard", "fat")
 	under_layer = TRUE
 
-/datum/sprite_accessory/hair/thinningrear
+/datum/sprite_accessory/hair/thinningrearn
 	name = "Dome"
 	icon_state = "hair_thinningrear"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 	under_layer = TRUE
 
-/datum/sprite_accessory/hair/baldfade
+/datum/sprite_accessory/hair/baldfaden
 	name = "Scribe"
 	icon_state = "hair_baldfade"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 	under_layer = TRUE
 
-/datum/sprite_accessory/hair/merc
+/datum/sprite_accessory/hair/mercn
 	name = "Mercenary"
 	icon_state = "hair_forelock"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/rogue
+/datum/sprite_accessory/hair/roguen
 	name = "Rogue"
 	icon_state = "hair_rogue"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/hair_tied
+/datum/sprite_accessory/hair/hair_tiedn
 	name = "Tiedlong"
 	icon_state = "hair_tied"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/hair_romantic
+/datum/sprite_accessory/hair/hair_romanticn
 	name = "Romantic"
 	icon_state = "hair_romantic"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/hair_runt
+/datum/sprite_accessory/hair/hair_runtn
 	name = "Runt"
 	icon_state = "hair_runt"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/hair_son
+/datum/sprite_accessory/hair/hair_sonn
 	name = "Sun"
 	icon_state = "hair_son"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/hair_bog
+/datum/sprite_accessory/hair/hair_bogn
 	name = "Bog"
 	icon_state = "hair_bog"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/hair_aristocrat
+/datum/sprite_accessory/hair/hair_aristocratn
 	name = "Aristocrat"
 	icon_state = "hair_majestic"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
+/datum/sprite_accessory/hair/baldb
+	name = "Scalped"
+	icon_state = "hair_baldb"
+	specuse = list("bulky")
+	gender = MALE
+
+/datum/sprite_accessory/hair/skinheadb
+	name = "Skinned"
+	icon_state = "hair_skinheadb"
+	specuse = list("bulky")
+	gender = MALE
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/mponytailb
+	name = "Tied Low"
+	icon_state = "hair_ponytailb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/heroicb
+	name = "Hero"
+	icon_state = "hair_business2b"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/nobleb
+	name = "Upstart"
+	icon_state = "hair_businessb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/mohawkb
+	name = "Brave"
+	icon_state = "hair_shavedmohawkb"
+	gender = MALE
+	specuse = list("bulky")
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/bedheadb
+	name = "Unkempt"
+	icon_state = "hair_bedheadb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/bowlcutb
+	name = "Bowl"
+	icon_state = "hair_bowlcut2b"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fatherb
+	name = "Anvil"
+	icon_state = "hair_fatherb"
+	gender = MALE
+	specuse = list("bulky")
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/thinningb
+	name = "Thinned"
+	icon_state = "hair_thinningb"
+	gender = MALE
+	specuse = list("bulky")
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/thinningrearb
+	name = "Skullcap"
+	icon_state = "hair_thinningrearb"
+	gender = MALE
+	specuse = list("bulky")
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/baldfadeb
+	name = "Balding"
+	icon_state = "hair_baldfadeb"
+	gender = MALE
+	specuse = list("bulky")
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/mercb
+	name = "Lock"
+	icon_state = "hair_forelockb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/rogueb
+	name = "Villain"
+	icon_state = "hair_rogueb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/hair_tiedb
+	name = "Tied Up"
+	icon_state = "hair_tiedb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/hair_romanticb
+	name = "Lowling"
+	icon_state = "hair_romanticb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/hair_runtb
+	name = "Tangle"
+	icon_state = "hair_runtb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/hair_sonb
+	name = "Son"
+	icon_state = "hair_sonb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/hair_bogb
+	name = "Boggard"
+	icon_state = "hair_bogb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/hair_aristocratb
+	name = "Lord"
+	icon_state = "hair_majesticb"
+	gender = MALE
+	specuse = list("bulky")
 
 /////////////////////////////
 // GIRLY Hair Definitions  //
 /////////////////////////////
 
-/datum/sprite_accessory/hair/shorthair
+/datum/sprite_accessory/hair/shorthairn
 	name = "Curly Short"
 	icon_state = "fhair_shorthairg"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/vlongfringe
+/datum/sprite_accessory/hair/vlongfringen
 	name = "Plain Long"
 	icon_state = "fhair_vlongfringe"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/beehive
+/datum/sprite_accessory/hair/beehiven
 	name = "Updo"
 	icon_state = "fhair_beehive"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fhair_barmaid
+/datum/sprite_accessory/hair/fhair_barmaidn
 	name = "Maiden"
 	icon_state = "fhair_barmaid"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fpony
+/datum/sprite_accessory/hair/fponyn
 	name = "Tied Ponytail"
 	icon_state = "fhair_longstraightponytail"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fmess
+/datum/sprite_accessory/hair/fmessn
 	name = "Messy"
 	icon_state = "fhair_messy"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/ftwin
+/datum/sprite_accessory/hair/ftwinn
 	name = "Tails"
 	icon_state = "fhair_twintail"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fbuns
+/datum/sprite_accessory/hair/fbunsn
 	name = "Buns"
 	icon_state = "fhair_doublebun"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fbob
+/datum/sprite_accessory/hair/fbobn
 	name = "Bob"
 	icon_state = "fhair_bob"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/ftomboy
+/datum/sprite_accessory/hair/ftomboyn
 	name = "Tomboy"
 	icon_state = "hair_runt"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/famazon
+/datum/sprite_accessory/hair/famazonn
 	name = "Barbarian"
 	icon_state = "fhair_amazon"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fbuns
+/datum/sprite_accessory/hair/fbunsn
 	name = "Loose Braid"
 	icon_state = "fhair_tressshoulder"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fmys
+/datum/sprite_accessory/hair/fmysn
 	name = "Mystery"
 	icon_state = "fhair_himecut2"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fhomely
+/datum/sprite_accessory/hair/fhomelyn
 	name = "Homely"
 	icon_state = "fhair_homely"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fqueen
+/datum/sprite_accessory/hair/fqueenn
 	name = "Queenly"
 	icon_state = "fhair_bob2"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/fpix
+/datum/sprite_accessory/hair/fpixn
 	name = "Pixie"
 	icon_state = "fhair_pixie"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
 
-/datum/sprite_accessory/hair/faristo
+/datum/sprite_accessory/hair/fariston
 	name = "Aristocrat"
 	icon_state = "fhair_majestic"
 	gender = FEMALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("standard", "fat")
+
+/datum/sprite_accessory/hair/shorthairb
+	name = "Curly"
+	icon_state = "fhair_shorthairgb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/vlongfringeb
+	name = "Stately"
+	icon_state = "fhair_vlongfringeb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/beehiveb
+	name = "Updo"
+	icon_state = "fhair_beehiveb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fhair_barmaidb
+	name = "Wench"
+	icon_state = "fhair_barmaidb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fponyb
+	name = "Tied High"
+	icon_state = "fhair_longstraightponytailb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fmessb
+	name = "Uncouth"
+	icon_state = "fhair_messyb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/ftwinb
+	name = "Twin Tails"
+	icon_state = "fhair_twintailb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fbunsb
+	name = "Double Buns"
+	icon_state = "fhair_doublebunb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fbobb
+	name = "Bobbed"
+	icon_state = "fhair_bobb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/ftomboyb
+	name = "Boyish"
+	icon_state = "hair_runtb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/famazonb
+	name = "Savage"
+	icon_state = "fhair_amazonb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fbunsb
+	name = "Braided"
+	icon_state = "fhair_tressshoulderb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fmysb
+	name = "Tidy"
+	icon_state = "fhair_himecut2b"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fhomelyb
+	name = "Mother"
+	icon_state = "fhair_homelyb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fqueenb
+	name = "Sovereign"
+	icon_state = "fhair_bob2b"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/fpixb
+	name = "Short"
+	icon_state = "fhair_pixieb"
+	gender = FEMALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/hair/faristob
+	name = "Lady"
+	icon_state = "fhair_majesticb"
+	gender = FEMALE
+	specuse = list("bulky")
 
 /*
 /datum/sprite_accessory/hair/felfhair_fatherless
@@ -343,108 +557,203 @@
 	gender = FEMALE
 	specuse = ALL_RACES_LIST
 
-/datum/sprite_accessory/facial_hair/shaved
+/datum/sprite_accessory/facial_hair/shavedn
 	name = "None"
 	icon_state = "facial_shaven"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/fiveoclockm
+/datum/sprite_accessory/facial_hair/fiveoclockmn
 	name = "Mustache"
 	icon_state = "facial_5oclockmoustache"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/chin
+/datum/sprite_accessory/facial_hair/chinn
 	name = "Clean Chin"
 	icon_state = "facial_chin"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/pipe
+/datum/sprite_accessory/facial_hair/pipen
 	name = "Pipesmoker"
 	icon_state = "facial_pipe"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/hermit
+/datum/sprite_accessory/facial_hair/hermitn
 	name = "Wise Hermit"
 	icon_state = "facial_moonshiner"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/knightly
+/datum/sprite_accessory/facial_hair/knightlyn
 	name = "Knightly"
 	icon_state = "facial_knightly"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/viking
+/datum/sprite_accessory/facial_hair/vikingn
 	name = "Raider"
 	icon_state = "facial_viking"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/vandyke
+/datum/sprite_accessory/facial_hair/vandyken
 	name = "Rumata"
 	icon_state = "facial_vandyke"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/burns
+/datum/sprite_accessory/facial_hair/burnsn
 	name = "Sideburns"
 	icon_state = "facial_burns"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-
-/datum/sprite_accessory/facial_hair/chops
+/datum/sprite_accessory/facial_hair/chopsn
 	name = "Choppe"
 	icon_state = "facial_muttonmus"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/fullbeard
+/datum/sprite_accessory/facial_hair/fullbeardn
 	name = "Full Beard"
 	icon_state = "facial_fullbeard"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/cousin
+/datum/sprite_accessory/facial_hair/cousinn
 	name = "Fullest Beard"
 	icon_state = "facial_brokenman"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/manly
+/datum/sprite_accessory/facial_hair/manlyn
 	name = "Drinker"
 	icon_state = "facial_manly"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/pick
+/datum/sprite_accessory/facial_hair/pickn
 	name = "Pick"
 	icon_state = "facial_longbeard"
 	gender = MALE
-	specuse = list("fat", "standard", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/know
+/datum/sprite_accessory/facial_hair/known
 	name = "Knowledge"
 	icon_state = "facial_wise"
 	gender = MALE
-	specuse = list("standard", "fat", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/brew
+/datum/sprite_accessory/facial_hair/brewn
 	name = "Brew"
 	icon_state = "facial_moonshiner"
 	gender = MALE
-	specuse = list("fat", "standard", "bulky")
+	specuse = list("fat", "standard")
 
-/datum/sprite_accessory/facial_hair/ranger
+/datum/sprite_accessory/facial_hair/rangern
 	name = "Ranger"
 	icon_state = "facial_dwarf"
 	gender = MALE
-	specuse = list("fat", "standard", "bulky")
+	specuse = list("fat", "standard")
+
+/datum/sprite_accessory/facial_hair/shavedb
+	name = "None"
+	icon_state = "facial_shavenb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/fiveoclockmb
+	name = "Stache"
+	icon_state = "facial_5oclockmoustacheb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/chinb
+	name = "Clean"
+	icon_state = "facial_chinb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/pipeb
+	name = "Chin & Burns"
+	icon_state = "facial_pipeb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/knightlyb
+	name = "Upper Classman"
+	icon_state = "facial_knightlyb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/vikingb
+	name = "Helmsman"
+	icon_state = "facial_vikingb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/vandykeb
+	name = "Rumata"
+	icon_state = "facial_vandykeb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/burnsb
+	name = "Burns"
+	icon_state = "facial_burnsb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/chopsb
+	name = "Side Choppe"
+	icon_state = "facial_muttonmusb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/fullbeardb
+	name = "Big"
+	icon_state = "facial_fullbeardb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/cousinb
+	name = "Fullest"
+	icon_state = "facial_brokenmanb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/manlyb
+	name = "Full"
+	icon_state = "facial_manlyb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/pickb
+	name = "Long"
+	icon_state = "facial_longbeardb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/knowb
+	name = "Longer"
+	icon_state = "facial_wiseb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/brewb
+	name = "Long Chin"
+	icon_state = "facial_moonshinerb"
+	gender = MALE
+	specuse = list("bulky")
+
+/datum/sprite_accessory/facial_hair/rangerb
+	name = "Braids"
+	icon_state = "facial_dwarfb"
+	gender = MALE
+	specuse = list("bulky")
 
 ///////////////////////////
 // Accessory Definitions //

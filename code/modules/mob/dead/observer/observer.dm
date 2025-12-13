@@ -62,8 +62,8 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 
 /mob/dead/observer/Stat()
 	..()
-	stat("REGIMIAN CASUALTIES: [SSticker.regime_deaths]")
-	stat("UNIONIST CASUALTIES: [SSticker.unionist_deaths]")
+	stat("REGIME CASUALTIES: [SSticker.grenzelhoft_deaths]")
+	stat("UNION CASUALTIES: [SSticker.heartfelt_deaths]")
 	stat("TOTAL: [SSticker.deaths]")
 
 /mob/dead/observer/rogue

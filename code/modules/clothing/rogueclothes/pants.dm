@@ -263,7 +263,25 @@
 	icon = 'icons/roguetown/clothing/pants.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("standard")
+
+/obj/item/clothing/under/roguetown/trou/war/panties/fat
+	name = "panties"
+	icon_state = "pantiesfat"
+	desc = "Comfortable undergarments. Far too large to be worn by the less rotund."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
 	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/panties/bulky
+	name = "panties"
+	icon_state = "pantiesbulky"
+	desc = "Comfortable undergarments. Far too large to be worn by the less rotund."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
 
 /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 	name = "pantaloons"
@@ -327,3 +345,21 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
 	allowed_race = list("standard")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/fancypants/fat
+	name = "fancy pants"
+	icon_state = "hussarpantsfat"
+	desc = "Clean, fine pants with white piping."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/fancypants/bulky
+	name = "fancy pants"
+	icon_state = "hussarpantsbulky"
+	desc = "Clean, fine pants with white piping."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
