@@ -162,13 +162,13 @@
 			var/mob/living/carbon/human/H = src
 			switch(H.warfare_faction)
 				if(BLUE_WARTEAM)
-					mousecolor = COLOR_BLUE
+					mousecolor = COLOR_RED
 					if(user?.warfare_faction == BLUE_WARTEAM)
 						showtext = "ALLY"
 					else
 						showtext = "ENEMY"
 				if(RED_WARTEAM)
-					mousecolor = COLOR_RED
+					mousecolor = COLOR_BLUE
 					showtext = "UNIONIST"
 					if(user?.warfare_faction == RED_WARTEAM)
 						showtext = "ALLY"

@@ -14,7 +14,6 @@
 	var/t_his = p_their()
 	var/t_has = p_have()
 	var/t_is = p_are()
-	var/obscure_name
 	var/race_name = dna.species.name
 
 	var/m1 = "[t_He] [t_is]"
@@ -25,16 +24,8 @@
 		m2 = "my"
 		m3 = "I have"
 
-	if(isliving(user))
-		var/mob/living/L = user
-		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA))
-			obscure_name = TRUE
-
 	if(obscure_species)
 		race_name = "incomprehensible thing"
-
-	if(isobserver(user))
-		obscure_name = FALSE
 
 	on_examine_face(user)
 	var/used_name = name

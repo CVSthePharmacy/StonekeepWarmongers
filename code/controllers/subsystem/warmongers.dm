@@ -53,7 +53,7 @@ SUBSYSTEM_DEF(warmongers)
 				H.forceMove(blu.loc)
 				if(H.buckled)
 					H.buckled.forceMove(blu.loc)
-			H.lay_down()
+			//H.lay_down()
 
 			H.pixel_y = 200
 			animate(H, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)

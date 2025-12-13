@@ -1094,7 +1094,7 @@
 
 /obj/item/rogue/caltrop
 	name = "caltrop"
-	desc = "."
+	desc = "Spiky. IT COULD BE spiker. Maybe with bomb?"
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "tetsubishi"
 	var/obj/item/bomb/loaded_bomb = null

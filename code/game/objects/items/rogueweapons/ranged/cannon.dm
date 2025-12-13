@@ -30,6 +30,7 @@
 		playsound(src, 'sound/combat/cannon_loading.ogg', 35)
 		if(!do_after(user, 5 SECONDS, TRUE, src))
 			return
+		user.dropItemToGround(I, TRUE, TRUE)
 		I.forceMove(src)
 		loaded = I
 		user.visible_message("<span class='notice'>\The [user] loads \the [I] into \the [src].</span>")
@@ -201,6 +202,7 @@
 		playsound(src, 'sound/combat/cannon_loading.ogg', 35)
 		if(!do_after(user, 5 SECONDS, TRUE, src))
 			return
+		user.dropItemToGround(I, TRUE, TRUE)
 		I.forceMove(src)
 		loaded = I
 		user.visible_message("<span class='notice'>\The [user] loads \the [I] into \the [src].</span>")
@@ -322,6 +324,7 @@
 			to_chat(user, "<span class='info'>You break the ball into five small pellets and load them into the machine.</span>")
 			playsound(src, 'sound/foley/trap_arm.ogg', 65)
 			bullets += 5
+			user.dropItemToGround(I, TRUE, TRUE)
 			qdel(I)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
 		to_chat(user, "<span class='notice'>Too big to fit... you'll need to smash that.</span>") // Nobody is gonna get this, but this is a reference to There is No Game: Wrong Dimension in the credits level!
@@ -329,6 +332,7 @@
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 		bullets += 25
 		bullets = min(bullets,maxima_bulletina)
+		user.dropItemToGround(I, TRUE, TRUE)
 		qdel(I)
 
 /obj/structure/maxim/examine(mob/user)

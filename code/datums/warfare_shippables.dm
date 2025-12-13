@@ -30,9 +30,11 @@
 			/obj/item/bomb
 			)
 
+/*
 /datum/warshippable/crownpointer
 	name = "CROWN POINTER"
 	items = list(/obj/item/pinpointer/crown)
+*/
 
 /datum/warshippable/firebombs
 	name = "THREE FIRE BOMBS"
@@ -144,3 +146,24 @@
 			/obj/structure/fluff/explodabarrel,
 			/obj/structure/fluff/explodabarrel
 			)
+
+/datum/warshippable/surger
+	name = "SURGERS BAGS TWO"
+	items = list(/obj/item/storage/backpack/rogue/satchel/surgbag,
+				/obj/item/storage/backpack/rogue/satchel/surgbag)
+
+/datum/warshippable/bottles
+	name = "FIVE BOOTLES"
+	items = list(/obj/item/reagent_containers/glass/bottle/rogue,
+				/obj/item/reagent_containers/glass/bottle/rogue,
+				/obj/item/reagent_containers/glass/bottle/rogue,
+				/obj/item/reagent_containers/glass/bottle/rogue,
+				/obj/item/reagent_containers/glass/bottle/rogue)
+
+/datum/warshippable/bandages
+	name = "FIVE BANDANAGES"
+	items = list(/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth)

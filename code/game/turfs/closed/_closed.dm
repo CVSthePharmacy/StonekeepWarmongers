@@ -263,6 +263,23 @@
 	icon = 'icons/turf/shuttleold.dmi'
 	icon_state = "block"
 
+/turf/closed/indestructible/castlewall
+	name = "STURDY brick wall"
+	desc = "Several bricks form this wall. IT IS STURDY.... FUCK."
+	icon = 'icons/turf/walls/stonebrick.dmi'
+	icon_state = "stonebrick"
+	smooth = SMOOTH_MORE
+	wallclimb = FALSE
+	blade_dulling = DULLING_BASH
+	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
+	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
+	canSmoothWith = list(/turf/closed/wall/mineral/rogue/stonebrick, /turf/closed/wall/mineral/rogue/wooddark, /turf/closed/indestructible/castlewall)
+	above_floor = /turf/open/floor/rogue/blocks
+	baseturfs = list(/turf/open/floor/rogue/blocks)
+	neighborlay = "dirtedge"
+	climbdiff = 4
+	damage_deflection = 20
+
 /turf/closed/indestructible/sandstone
 	name = "sandstone wall"
 	desc = ""
