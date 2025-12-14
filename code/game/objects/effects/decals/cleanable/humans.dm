@@ -25,8 +25,12 @@
 	bloodiness = BLOOD_AMOUNT_PER_DECAL
 	beauty = -100
 	nomouseover = TRUE
+	plane = GAME_PLANE //makes the blood visible over a wall.
 	appearance_flags = NO_CLIENT_COLOR
 	var/blood_timer
+
+/obj/effect/decal/cleanable/blood/NeverShouldHaveComeHere(turf/T)
+	return isgroundlessturf(T)
 
 /obj/effect/decal/cleanable/blood/attack_hand(mob/living/user)
 	. = ..()
@@ -86,8 +90,8 @@
 	icon_state = "[icon_state]-old" //change from the normal blood icon selected from random_icon_states in the parent's Initialize to the old dried up blood.
 
 /obj/effect/decal/cleanable/blood/splatter
-	icon_state = "gibbl1"
-	random_icon_states = list("gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5", "splatter1", "splatter2", "splatter3", "splatter4", "splatter5", "splatter6")
+	icon_state = "splatter1"
+	random_icon_states = list("splatter1", "splatter2", "splatter3", "splatter4", "splatter5", "splatter6","floor12")
 	var/drips = 1
 
 /obj/effect/decal/cleanable/blood/splatter/replace_decal(obj/effect/decal/cleanable/C) // Returns true if we should give up in favor of the pre-existing decal

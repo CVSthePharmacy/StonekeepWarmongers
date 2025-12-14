@@ -47,6 +47,17 @@
 			get_closed_turf_in_dir(center, WEST))
 	listclearnulls(.)
 
+/proc/get_adjacent_closed_turfs_diag(atom/center)
+	. = list(get_closed_turf_in_dir(center, NORTH),
+		get_closed_turf_in_dir(center, SOUTH),
+		get_closed_turf_in_dir(center, EAST),
+		get_closed_turf_in_dir(center, WEST),
+		get_closed_turf_in_dir(center, SOUTHWEST),
+		get_closed_turf_in_dir(center, NORTHHWEST),
+		get_closed_turf_in_dir(center, SOUTHEAST),
+		get_closed_turf_in_dir(center, NORTHEAST))
+	listclearnulls(.)
+
 /proc/get_open_turf_in_dir(atom/center, dir)
 	var/turf/open/T = get_ranged_target_turf(center, dir, 1)
 	if(istype(T))

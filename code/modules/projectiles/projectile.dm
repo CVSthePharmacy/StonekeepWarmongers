@@ -194,6 +194,11 @@
 			new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
 		L.add_splatter_floor(target_loca)
 
+		var/list/walls = get_adjacent_closed_turfs_diag(L)
+		for(var/turf/closed/T in walls)
+			if(istype(T) && prob(50))
+				L.add_splatter_floor(T)
+
 	if(impact_effect_type && !hitscan)
 		new impact_effect_type(target_loca, hitx, hity)
 
