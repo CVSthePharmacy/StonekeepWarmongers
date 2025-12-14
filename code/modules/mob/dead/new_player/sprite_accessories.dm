@@ -791,11 +791,6 @@
 	gender = FEMALE
 	specuse = list("standard", "bulky")
 
-/datum/sprite_accessory/accessories/mask
-	name = "Straps"
-	icon_state = "straps"
-	specuse = list("fat", "standard", "bulky")
-
 /datum/sprite_accessory/accessories/eyeglasses
 	name = "Eyeglasses"
 	icon_state = "eyeglasses"
