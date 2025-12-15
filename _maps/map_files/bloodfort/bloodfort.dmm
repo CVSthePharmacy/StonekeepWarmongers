@@ -22,7 +22,7 @@
 "cM" = (/obj/structure/rack/rogue/shelf/biggest,/obj/item/reagent_containers/glass/bottle/rogue/beer,/obj/item/reagent_containers/glass/bottle/rogue/beer{pixel_x = 7},/obj/item/reagent_containers/glass/bottle/rogue/beer{pixel_x = -7},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "cO" = (/obj/structure/bed/rogue,/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "cP" = (/obj/structure/stairs/stone/church{dir = 4},/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
-"cQ" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
+"cQ" = (/obj/machinery/light/rogue/firebowl/standing{density = 0},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "cV" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "cZ" = (/obj/item/chair/stool/bar/rogue,/obj/effect/decal/cleanable/blood/old{pixel_y = 5},/turf/open/floor/rogue/twig,/area/rogue/indoors/town)
 "da" = (/turf/closed/mineral/random/rogue/high,/area/rogue/outdoors)
@@ -516,6 +516,7 @@
 "ZG" = (/obj/structure/flora/roguetree/wise,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "ZP" = (/obj/item/shard,/turf/open/floor/rogue/blocks,/area/rogue/assault/gates{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "ZW" = (/obj/structure/ladder,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
+"ZY" = (/obj/structure/fluff/walldeco/bigpainting/beast{pixel_x = -15},/turf/open/transparent/openspace,/area/rogue/indoors/town)
 "ZZ" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 
 (1,1,1) = {"
@@ -622,8 +623,8 @@ bmbmbmbmbmbmbmxmxmNAxmxmxmxmbmbmbmbmbmbmbmSBSBVNbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbm
 "}
 (1,1,2) = {"
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgbgbgbgbgbgbgbgbgbgbgbgbgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaVbMSqaqEuOQrqaMSVbqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaqaqacQqEGTQrcQqaqaqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaVbMScQqEuOQrcQMSVbqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaqaqaqaqEGTQrqaqaqaqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaqaqaqaqEkKQrqaqaqaqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaqaqaqaqEGTQrqaqaqaqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaqaqaqaqEGTQrqaqaqaqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
@@ -724,7 +725,7 @@ czczczczczczczUIUIUIUIUIUIUIczczczczczczczUIUIUIczczczczczczczczczczczczczczczcz
 "}
 (1,1,3) = {"
 kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
-kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjrkrkrkrkrkrkrkrkrkrkrkkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
+kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjrkrkrkrkrkZYrkrkrkrkrkkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjrkrkrkrkrkrxrkrkrkrkrkkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjhrixEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIixhrkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIKorkrkrkWQrkrkrkrkrkWQrkrkrkGDEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
