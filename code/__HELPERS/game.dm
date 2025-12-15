@@ -53,7 +53,7 @@
 		get_closed_turf_in_dir(center, EAST),
 		get_closed_turf_in_dir(center, WEST),
 		get_closed_turf_in_dir(center, SOUTHWEST),
-		get_closed_turf_in_dir(center, NORTHHWEST),
+		get_closed_turf_in_dir(center, NORTHWEST),
 		get_closed_turf_in_dir(center, SOUTHEAST),
 		get_closed_turf_in_dir(center, NORTHEAST))
 	listclearnulls(.)
