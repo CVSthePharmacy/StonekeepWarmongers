@@ -335,7 +335,9 @@ SUBSYSTEM_DEF(ticker)
 			var/datum/round_aspect/A = thing
 			if(!A.adminonly)
 				possibilities += A
-		var/chosen = pick(possibilities)
+				possibilities[A] = A.weight
+				//to_chat(world, "[A.name] [possibilities[A]]")
+		var/chosen = pickweight(possibilities)
 		round_aspect = new chosen
 		round_aspect.apply()
 

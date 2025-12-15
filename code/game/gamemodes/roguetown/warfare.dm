@@ -46,8 +46,9 @@
 		for(var/client/C in regimians)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
-				if(H.client?.equippedPerk.type == /datum/warperk)
+				if(H.client?.equippedPerk.type == /datum/warperk) // extra triumph
 					H.adjust_triumphs(1)
+				H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 		for(var/client/C in unionists)
@@ -59,8 +60,9 @@
 		for(var/client/C in unionists)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
-				if(H.client?.equippedPerk.type == /datum/warperk)
+				if(H.client?.equippedPerk.type == /datum/warperk) // extra triumph
 					H.adjust_triumphs(1)
+				H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/music/whocareswhowon.ogg')
 		for(var/client/C in regimians)

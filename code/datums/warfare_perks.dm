@@ -1,6 +1,6 @@
 /datum/warperk
 	var/name = "Ordinary Person"
-	var/desc = "I'm just a regular guy. I'll gain a TRIUMPH if my team wins."
+	var/desc = "I'm just a regular guy. I'll gain an extra TRIUMPH if my team wins."
 	var/cost = 0
 
 /datum/warperk/proc/apply(var/mob/living/carbon/human/H) // for special shit ig

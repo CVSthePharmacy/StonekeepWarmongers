@@ -99,8 +99,8 @@
 	var/base_player_count = 16
 
 	var/blu_spawns = 100
-	var/min_blu_spawns = 40
-	var/max_blu_spawns = 200
+	var/min_blu_spawns = 20
+	var/max_blu_spawns = 60
 
 	var/list/capture_points = list()
 	var/total_capture_points = 0
