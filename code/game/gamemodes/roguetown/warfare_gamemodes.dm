@@ -169,38 +169,29 @@
 
 /area/rogue/assault/process()
 	var/datum/game_mode/warmongers/C = SSticker.mode
-	if(C?.warmode)
-		if(!istype(C?.warmode, /datum/warmode/assault))
-			STOP_PROCESSING(SSprocessing, src)
-			return
-	else
+	if(!C?.warmode)
 		return
-	var/datum/warmode/assault/ASS = C.warmode // hehe
 
-	// Check if this point can be captured based on order
-	if(capture_order != ASS.current_capture_point)
-		capturable = FALSE
-	else
-		capturable = TRUE
+	if(!istype(C.warmode, /datum/warmode/assault))
+		STOP_PROCESSING(SSprocessing, src)
+		return
+
+	var/datum/warmode/assault/ASS = C.warmode
+
+	// Capture order check
+	capturable = (capture_order == ASS.current_capture_point)
 
 	for(var/mob/living/carbon/human/H in src)
-		if(!istype(H))
-			continue
-
-		if(H.warfare_faction == BLUE_WARTEAM)
-			if(H.stat == CONSCIOUS)
+		if(H.stat == CONSCIOUS && H.client)
+			if(H.warfare_faction == BLUE_WARTEAM)
 				grenz |= H
-			else if(H.stat != CONSCIOUS)
-				grenz -= H
-			else if(!H.client)
-				grenz -= H
-		else if(H.warfare_faction == RED_WARTEAM)
-			if(H.stat == CONSCIOUS)
+				heart -= H
+			else if(H.warfare_faction == RED_WARTEAM)
 				heart |= H
-			else if(H.stat != CONSCIOUS)
-				heart -= H
-			else if(!H.client)
-				heart -= H
+				grenz -= H
+		else
+			grenz -= H
+			heart -= H
 
 	if(capturable)
 		if(grenz.len > heart.len)
