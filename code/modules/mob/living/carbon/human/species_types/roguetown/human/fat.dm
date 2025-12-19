@@ -43,7 +43,7 @@
 /datum/species/human/northern/fat/check_roundstart_eligible()
 	return TRUE
 
-/datum/species/human/northern/bulky/get_skin_list()
+/datum/species/human/northern/fat/get_skin_list()
 	return sortList(list(
 		"Frostbit" = SKIN_COLOR_ICECAP,
 		"Wrack" = SKIN_COLOR_ARCTIC,

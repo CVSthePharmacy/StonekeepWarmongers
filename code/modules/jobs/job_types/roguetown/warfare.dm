@@ -38,14 +38,12 @@
 			if(RED_WARTEAM)
 				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = SSwarmongers.red_warteam_cmode_music
-				HU.speech_sound = list('sound/vo/wc/speech_ppr1.ogg', 'sound/vo/wc/speech_ppr2.ogg', 'sound/vo/wc/speech_ppr3.ogg')
+				HU.speech_sound = list('sound/vo/wc/speech_ppu.ogg')
 			if(BLUE_WARTEAM)
 				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = SSwarmongers.blu_warteam_cmode_music
-				HU.speech_sound = list('sound/vo/wc/speech_regimer1.ogg', 'sound/vo/wc/speech_regimer2.ogg', 'sound/vo/wc/speech_regimer3.ogg')
+				HU.speech_sound = list('sound/vo/wc/speech_regimer.ogg')
 		// root.ogg is the default combat music for every mob. it basically checks if combat music was set already, and if not, it sets it. Possibly dumb, but it works and nobody is a coder for this codebase except me :)
-		if(HAS_TRAIT(HU, TRAIT_NOBLE))
-			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 		HU.client.preload_sounds()
 
 // Lord Procs
@@ -224,10 +222,6 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
-		H.charflaw = new /datum/charflaw/noeyer()
-		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
-			qdel(H.wear_mask)
-			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/eyepatch, SLOT_WEAR_MASK)
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
@@ -776,10 +770,6 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
-		H.charflaw = new /datum/charflaw/noeyer()
-		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
-			qdel(H.wear_mask)
-			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/eyepatch, SLOT_WEAR_MASK)
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 

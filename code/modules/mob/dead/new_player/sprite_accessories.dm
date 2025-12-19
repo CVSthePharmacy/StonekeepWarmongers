@@ -551,14 +551,14 @@
 	icon = 'icons/roguetown/mob/facial.dmi'
 	gender = MALE
 
-/datum/sprite_accessory/facial_hair/none
+/datum/sprite_accessory/facial_hair/nonen
 	name = "None"
 	icon_state = ""
 	gender = FEMALE
 	specuse = ALL_RACES_LIST
 
 /datum/sprite_accessory/facial_hair/shavedn
-	name = "None"
+	name = "Nothing"
 	icon_state = "facial_shaven"
 	gender = MALE
 	specuse = list("fat", "standard")
@@ -806,46 +806,6 @@
 	icon_state = "eyepatch_l"
 	specuse = list("fat", "standard", "bulky")
 
-/datum/sprite_accessory/accessories/pipe
-	name = "Pipe"
-	icon_state = "pipe"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/pipe/lit
-	name = "Pipe (lit)"
-	icon_state = "pipe_lit"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/pipe2
-	name = "Pipe 2"
-	icon_state = "pipe2"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/pipe2/lit
-	name = "Pipe 2 (lit)"
-	icon_state = "pipe2_lit"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/cigarette
-	name = "Cigarette"
-	icon_state = "spliff"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/cigarette/lit
-	name = "Cigarette (lit)"
-	icon_state = "spliff_lit"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/stogie
-	name = "Cigar"
-	icon_state = "stogie"
-	specuse = list("fat", "standard", "bulky")
-
-/datum/sprite_accessory/accessories/stogie/lit
-	name = "Cigar (lit)"
-	icon_state = "stogie_lit"
-	specuse = list("fat", "standard", "bulky")
-
 ///////////////////////////
 // Detail Definitions //
 ///////////////////////////
@@ -884,7 +844,12 @@
 	name = "Scar2"
 	icon_state = "scar2"
 	specuse = list("fat", "standard", "bulky")
-	
+
+/datum/sprite_accessory/detail/scarl
+	name = "Scar3"
+	icon_state = "scar3"
+	specuse = list("fat", "standard", "bulky")
+
 /datum/sprite_accessory/detail/burnface_r
 	name = "Burns (r)"
 	icon_state = "burnface_r"

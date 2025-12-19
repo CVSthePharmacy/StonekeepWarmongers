@@ -57,7 +57,7 @@
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				warcry = "FOR DAH BEEZER!"
-				sound2play = sound('sound/vo/wc/speech_ppr_taunt.ogg')
+				sound2play = sound('sound/vo/wc/speech_ppu_taunt.ogg')
 			if(BLUE_WARTEAM)
 				warcry = "PRAISE IT!"
 				sound2play = sound('sound/vo/wc/speech_regimer_taunt.ogg')

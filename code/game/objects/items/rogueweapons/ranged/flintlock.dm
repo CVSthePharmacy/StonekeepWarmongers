@@ -32,7 +32,7 @@
 	force = 10
 	cartridge_wording = "ball"
 	recoil = 3
-	load_sound = 'sound/foley/nockarrow.ogg'
+	load_sound = 'sound/foley/musket_load.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg', 'sound/combat/Ranged/muskshot4.ogg', 'sound/combat/Ranged/muskshot5.ogg', 'sound/combat/Ranged/muskshot6.ogg')
 	fire_sound_volume = 500
 	vary_fire_sound = TRUE
@@ -131,7 +131,7 @@
 			to_chat(user, "<span class='warning'>I need to hold \the [src] to add barkenpowder!</span>")
 			return
 		if(has_barkenpowder == FALSE)
-			playsound(src.loc, 'sound/foley/equip/rummaging-01.ogg', 100, FALSE, -3)
+			playsound(src.loc, 'sound/foley/powder.ogg', 100, FALSE, -3)
 			if(do_after(user, tt SECONDS, TRUE, src))
 				to_chat(user, "<span class='info'>I add barkenpowder to \the [src].</span>")
 				has_barkenpowder = TRUE
@@ -165,7 +165,7 @@
 			H.put_in_hands(rod)
 			rod = null
 			to_chat(H, "<span class='info'>I remove the ramrod from \the [src].</span>")
-			playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
+			playsound(src.loc, 'sound/foley/ramrodremoval.ogg', 100, FALSE, -1)
 		else
 			if(istype(H.get_active_held_item(), /obj/item/rogue/ramrod))
 				var/obj/item/rogue/ramrod/rrod = H.get_active_held_item()
@@ -173,7 +173,7 @@
 				rod = rrod
 				H.update_a_intents()
 				to_chat(H, "<span class='info'>I put \the [rrod] into \the [src].</span>")
-				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
+				playsound(src.loc, 'sound/foley/ramrodentry.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	name = "Barkmusket"
@@ -217,7 +217,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/ShiftMiddleClick(mob/user)
 	if(cocked == FALSE)
-		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		playsound(src.loc, 'sound/foley/muskclick.ogg', 100, FALSE)
 		to_chat(user, "<span class='info'>I cock \the [src].</span>")
 		cocked = TRUE
 		return
@@ -291,7 +291,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_with_empty_chamber(mob/living/user)
 	if(!cocked)
 		return
-	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+	playsound(src.loc, 'sound/combat/Ranged/muskfire.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE // just in case
 
@@ -331,7 +331,7 @@
 		return
 	if(!rammed)
 		return
-	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+	playsound(src.loc, 'sound/combat/Ranged/muskfire.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE
 	has_barkenpowder = FALSE

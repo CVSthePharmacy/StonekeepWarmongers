@@ -859,24 +859,31 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		//detail
 		if(H.detail)
 			var/datum/sprite_accessory/detail/detail = GLOB.detail_list[H.detail]
-			var/mutable_appearance/accessory_overlay
 			if(detail)
-				accessory_overlay = mutable_appearance(detail.icon, "[detail.icon_state]_BODY", -BODY_LAYER)
-				accessory_overlay = mutable_appearance(detail.icon, "[detail.icon_state]_FRONT", -BODY_FRONT_LAYER+1)
+				// Create both BODY and FRONT overlays and add both so details render correctly in all cases
+				var/mutable_appearance/detail_overlay_body = mutable_appearance(detail.icon, "[detail.icon_state]_BODY", -BODY_LAYER)
+				var/mutable_appearance/detail_overlay_front = mutable_appearance(detail.icon, "[detail.icon_state]_FRONT", -BODY_FRONT_LAYER+1)
 				if(!detail.use_static)
 					if(detail.color_src == HAIR)
-						accessory_overlay.color = "#[H.hair_color]"
+						detail_overlay_body.color = "#[H.hair_color]"
+						detail_overlay_front.color = "#[H.hair_color]"
 					else
-						accessory_overlay.color = "#" + H.detail_color
+						detail_overlay_body.color = "#" + H.detail_color
+						detail_overlay_front.color = "#" + H.detail_color
 				if(H.gender == FEMALE)
 					if(OFFSET_FACE_F in H.dna.species.offset_features)
-						accessory_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE_F][1]
-						accessory_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE_F][2]
+						detail_overlay_body.pixel_x += H.dna.species.offset_features[OFFSET_FACE_F][1]
+						detail_overlay_body.pixel_y += H.dna.species.offset_features[OFFSET_FACE_F][2]
+						detail_overlay_front.pixel_x += H.dna.species.offset_features[OFFSET_FACE_F][1]
+						detail_overlay_front.pixel_y += H.dna.species.offset_features[OFFSET_FACE_F][2]
 				else
 					if(OFFSET_FACE in H.dna.species.offset_features)
-						accessory_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
-						accessory_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
-				standing += accessory_overlay
+						detail_overlay_body.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
+						detail_overlay_body.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
+						detail_overlay_front.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
+						detail_overlay_front.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
+				standing += detail_overlay_body
+				standing += detail_overlay_front
 
 		if(H.accessory)
 			var/datum/sprite_accessory/accessories/accessory = GLOB.accessories_list[H.accessory]
