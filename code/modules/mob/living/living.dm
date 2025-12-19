@@ -594,9 +594,8 @@
 /mob/living/verb/succumb()
 	set name = "Succumb"
 	set category = "Emotes"
-	
+
 	if (InCritical() || health <= 0 || (blood_volume < BLOOD_VOLUME_SURVIVE))
-		log_message("Has [whispered ? "whispered his final words" : "succumbed to death"] while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
 		adjustOxyLoss(201)
 		updatehealth()
 //		if(!whispered)
