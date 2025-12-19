@@ -334,7 +334,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set category = "HELP"
 	var/contents
 
-	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	usr.playsound_local(usr, 'sound/misc/type3.ogg', 65, FALSE)
 	contents += "<center>Dr. Urist's Discount Medical School<BR>"
 	contents += "--------------</center><BR>"
 	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A CRANKeR is a tool used to get you more drugs. Put in a limb and a bottle. Crank it by clicking it in your hand and then grab the potion you attached to it with MMB; which is now filled with cool new drugs! You can choose which drug to manufacture by using RMB. Oh yeah, it also gives the Lord a support point to redeem for new toys. Pretty cool."
@@ -352,7 +352,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		return
 	var/list/json = json_decode(file2text(json_file))
 	
-	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	usr.playsound_local(usr, 'sound/misc/type1.ogg', 65, FALSE)
 	contents += "<center>"
 	contents += "<b>BATTLE-WIDE STATISTICS</b><BR>"
 	contents += "A.K.A, ARE WE WINNING?<BR>"
@@ -368,14 +368,23 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	popup.open()
 
 /client/verb/combat()
-	set name = "ADV. COMBAT"
+	set name = "BASIC INSTRUCTIONS"
 	set category = "HELP"
 	var/contents
 
-	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
-	contents += "<center>Drill Sergeant Dornan's Basic Combat Training<BR>"
+	usr.playsound_local(usr, 'sound/misc/type.ogg', 65, FALSE)
+	contents += "<center>Basic Barker Operation<BR>"
 	contents += "--------------</center><BR>"
-	contents += "Headshots most of the time do not deal lethal damage. If you hit a headshot as an untrained marksman, you will only knock the person's helmet off and cause some blunt force trauma. This rarely results in death by itself. If the target is not wearing a helmet or any other kind of headwear they will die instantly and you'll feel accoomplished. Another way to kill your opponent is to bayonet charge them. Wield your barksteel, change to STAB intent and RUN into your opponent. If you ever happen to be in the situation where you are the person being charged, switch to SNEAK intent to suplex the weapon out of their hands."
+	contents += "To operate a barkshotte, follow this order of preparation:\
+				First, add barkenpowder to the weapon, this can also be done after you insert ammunition\
+				Second, insert ammunition down the barrel\
+				Third, using a ramrod, push the shot down the barrel until it is firmly seated inside\
+				Lastly, bring the clicker back, the weapon is now ready to be fired\
+				You are now ready to fire the barker, press the stock against your shoulder and aim down the barrel,\
+				wait a good second or so to line up your shot and finally squeeze the trigger.\
+				\
+				Do note that some weapons, such as more advanced ones, do not neccessarily follow this method, but the overall\
+				operation is similar enough."
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()
@@ -637,34 +646,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		else
 			W.forcestartcooldown = world.time + 10 MINUTES
 			SSvote.initiate_vote("forcestart", "The God of War")
-
-/client/verb/accessibility()
-	set name = "Accessibility"
-	set category = "Options"
-	set desc = ""
-
-	if(!prefs)
-		return
-	if(prefs.visibility_accessibility == FALSE)
-		var/alerto = alert(src, "This toggle is used for disabling the screen effects of grain and CRT lines. If you disable this, the game may look like absolute dogshit in the visual department. Do you heed my warning, traveler?", "WARMONGERS", "Disable", "Keep it On")
-		if(alerto != "Disable")
-			to_chat(src, "AUTHENTIC MODE... PREVAILS")
-			return
-		prefs.visibility_accessibility = TRUE
-		prefs.save_preferences()
-		to_chat(src, "AUTHENTIC MODE... OFF")
-		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 0
-		for(var/atom/movable/screen/grain/S in screen)
-			S.alpha = 0
-	else
-		prefs.visibility_accessibility = FALSE
-		prefs.save_preferences()
-		to_chat(src, "AUTHENTIC MODE... ON")
-		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 80
-		for(var/atom/movable/screen/grain/S in screen)
-			S.alpha = 75
 
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"

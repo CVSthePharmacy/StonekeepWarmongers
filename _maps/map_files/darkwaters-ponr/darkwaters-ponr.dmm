@@ -29,6 +29,7 @@
 "eN" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "eP" = (/obj/machinery/light/rogue/torchholder/r{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "eZ" = (/obj/structure/bed/rogue/inn/double,/obj/item/bedsheet/rogue/double_pelt,/turf/open/floor/rogue/wood,/area/rogue/indoors)
+"fs" = (/obj/machinery/light/rogue/torchholder,/turf/closed/wall/mineral/rogue/wooddark/vertical,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "ft" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "fu" = (/obj/structure/mineral_door/wood/donjon{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "fF" = (/obj/structure/table/wood/reinforced_alt{icon_state = "map4"},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
@@ -74,6 +75,7 @@
 "lH" = (/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "lI" = (/obj/item/reagent_containers/glass/cup/silver,/obj/structure/table/wood/crafted,/turf/open/floor/rogue/woodturned,/area/rogue/indoors)
 "mc" = (/obj/effect/shadow,/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"mj" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/obj/structure/teambarrier/red,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "mK" = (/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "mO" = (/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "mX" = (/obj/machinery/light/rogue/lanternpost/fixed/compact{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
@@ -82,7 +84,7 @@
 "nz" = (/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "nB" = (/obj/structure/fermenting_barrel/waterwine,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "nC" = (/obj/effect/landmark/start/heartfeltinfantry,/obj/structure/bed/rogue/shit,/obj/structure/fluff/walldeco/beerflag{pixel_x = 30},/turf/open/floor/rogue/woodturned,/area/rogue/indoors)
-"nF" = (/obj/structure/fluff/walldeco/regimeflag{pixel_x = 30},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"nF" = (/obj/structure/fluff/walldeco/regimeflag{pixel_x = 30},/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "nM" = (/obj/structure/chair/wood/rogue{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/indoors)
 "ob" = (/obj/structure/closet/crate/chest,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "oi" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood,/area/rogue/indoors)
@@ -97,6 +99,7 @@
 "pk" = (/obj/effect/shadow,/obj/effect/shadow{dir = 8},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "pm" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "pn" = (/obj/machinery/light/rogue/torchholder/l{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/indoors)
+"pD" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/obj/structure/teambarrier/red,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "pF" = (/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "pY" = (/obj/structure/fermenting_barrel/beer,/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "ql" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
@@ -134,7 +137,7 @@
 "uX" = (/obj/machinery/light/rogue/torchholder,/turf/closed/wall/mineral/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "vg" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "vj" = (/obj/structure/cannon{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
-"vu" = (/obj/structure/bars/grille{dir = 8},/obj/effect/landmark/redreinforcement,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"vu" = (/obj/effect/landmark/redreinforcement,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "vx" = (/obj/structure/chair/wood/rogue{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "vL" = (/obj/structure/table/wood/plain,/obj/item/reagent_containers/glass/cup/wooden{pixel_x = 9; pixel_y = 5},/obj/item/reagent_containers/glass/cup/wooden{pixel_x = -8},/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "vO" = (/obj/structure/bars/grille{dir = 8},/obj/structure/fluff/walldeco/regimeflag{pixel_x = 30},/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
@@ -142,7 +145,7 @@
 "wy" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "wB" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "wG" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
-"wJ" = (/obj/structure/bars/grille{dir = 8},/obj/effect/landmark/blureinforcement,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"wJ" = (/obj/structure/teambarrier/red,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "xc" = (/obj/structure/warfarebarrier/red,/obj/structure/fluff/railing/border{dir = 9},/obj/structure/fluff/railing/border{dir = 5},/turf/open/floor/rogue/plank,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "xj" = (/obj/structure/mineral_door/wood/fancywood,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "xt" = (/turf/open/chasm,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
@@ -156,6 +159,7 @@
 "yX" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "za" = (/obj/structure/fluff/standingflag/red,/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "zc" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"zF" = (/obj/effect/landmark/blureinforcement,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "zJ" = (/obj/structure/fluff/standingflag,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "Ad" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "Ar" = (/turf/closed/wall/mineral/rogue/wooddark/horizontal,/area/rogue/indoors)
@@ -178,6 +182,7 @@
 "Dq" = (/obj/structure/chair/wood/rogue,/turf/open/floor/rogue/woodturned,/area/rogue/indoors)
 "DA" = (/turf/closed/wall/mineral/rogue/wooddark,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "DH" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"DI" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/obj/structure/teambarrier/blue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "DJ" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "DL" = (/obj/structure/table/wood/reinforced_alt{icon_state = "map2"},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "Ee" = (/obj/structure/fluff/wheel{pixel_x = -10; pixel_y = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
@@ -213,8 +218,10 @@
 "JC" = (/obj/structure/warfarebarrier,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "JF" = (/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "JH" = (/turf/closed/wall/mineral/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
+"JP" = (/obj/machinery/light/rogue/torchholder{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "Kg" = (/obj/structure/closet/crate/chest/gold,/obj/item/roguegem{pixel_x = -9},/obj/item/roguegem/green{pixel_x = -2; pixel_y = -6},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors)
 "Kp" = (/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/obj/structure/fluff/walldeco/painting/beezer{pixel_x = -30},/turf/open/floor/rogue/wood,/area/rogue/indoors)
+"Lv" = (/obj/structure/teambarrier/blue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "Ly" = (/obj/structure/warfarebarrier,/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
 "LD" = (/obj/item/reagent_containers/glass/cup/silver,/obj/structure/table/wood/crafted,/turf/open/floor/rogue/wood,/area/rogue/indoors)
 "Ms" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach{droning_sound_current = 'sound/music/stew.ogg'; droning_sound_dawn = 'sound/music/stew.ogg'})
@@ -336,13 +343,13 @@ yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZxUxUexjJgKjJjJgKwywywywywywywywygKjJjJqzwywydUdUhIhIhIhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZTvwywywyhGhGhGhGhGiDiDiDiDiDiDiDiDhGhGhGiDiDXddUpYxTseDqpnhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZTvjJiDHUHUhGhGhGeNeNiDiDHUHUHUHUiDiDeNeNhGiDiDXddUjWFqLDTmrEPMhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZTvjJiDHUHUhGhGhGhGeNHUiDHUHUHUHUHUiDeNeNhGiDiDXddUjWFqLDTmrEPMhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZTviDhGiDiDiDhGhGhGOqhGiDiDVQeJeJeJiDiDhGOqhGiDiDiDOSmOnMvxnMmOdLpYhIGUyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZTviDiDwGiDiDiDhGhGhGJHobiDiDYzyEyEXdiDiDobJHhGiDiDljhIzadLmOdLmOdLpYaXGUyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEwBljiDiDwGacJHEWhGjjJHJHJHZziDULyEyEXdCxWPJHJHJHsNiDiDWhmOdLyJdLqMQImOaXGUyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECofXiDiDwGiDiDiDhGhGhGJHobiDiDYzyEyEXdiDiDobJHhGiDiDljhIzadLmOdLmOdLmOaXGUyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECofXiDhGiDiDiDhGhGhGQDhGiDiDyBqlqlqliDiDhGQDhGiDiDiDOSmODquMDqmOdLeZhIGUyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECofXRbiDaAaAhGhGhGUFUFiDiDaAaAaAaAiDiDUFUFhGiDiDXddUBBlICQlIrEPMhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECofXRbiDaAaAhGhGhGhGUFaAiDaAaAaAaAaAiDUFUFhGiDiDXddUBBlICQlIrEPMhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECofXubububhGhGhGhGhGiDiDiDiDiDiDiDiDhGhGhGiDiDXddUmOnMvxnMtEhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECosrsrfXzcjARbRbjAubiDububiDubububjARbhGDpububdUdUhIhIhIhIdUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUGUGUGUGUGUuNGUGUGUGUGUuNGUGUuNGUGUGUGUGUGUGUGUGUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
@@ -353,7 +360,7 @@ yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZAMusghghghghUKghghghghghgh
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZAMAMAMusghghghghghghghghghghghghghghghghghXeXeXeghghtjhIfGfGYCDLUQIzawoWhImKyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEAMAMAMvjghghghUKghpcpcpcpcghghXeXeXepmEmEmEmghpcpcpcpcpcghlAElhYfGfGfGcqfGQZfGhImKyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEAMAMusghghghghghghghghpcpcpcpcpcpcghWqIDghrbyEyEXdpcpcpcpcpcpcghzJhIhIePfGcqcqcqfGfGMFmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyErKghghghBtghghghghXBghghpcpcMMpcpcvOfZlBfZIRrbyEyEXdpcpcpcwJpcMMghghghxjfGcqcqcqcqcqfGMFmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyErKghghghBtghghghghXBghghpcpcMMpcpcvOfZlBfZIRrbyEyEXdpcpcpcpcpcMMghghghxjfGcqcqcqcqcqfGMFmKyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEAdAdjEghghghghghghghghpcpcpcpcpcpcghWqIDghrbyEyEXdpcpcpcpcpcpcghzJhIhIePfGcqcqcqfGteMFmKyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEAdAdAdvjghghghUKghpcpcpcpcghghEvEvEvSaYJYJYJghpcpcpcpcpcghlAElhYfGfGfGcqfGfGnkhImKyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoAdAdAdDHghghghghghghghghghghghghghghghghghEvEvEvghghWthIrefGfGlGfGIzGMQzhImKyEyEyEyEyEyEyEyEyEyEyEyEyE
@@ -376,11 +383,11 @@ yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUGUGUGUGUGUGUGU
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUGUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoFYEiDiDiDiDiDaUjYyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEXdiDiDiDiDiDiDrhaUjYyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEXdiDiDiDiDiDiDiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyEoZyXwyehwywywywyiDwywywywywyehwywyyBqlqlJkqYjJhGjJIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEoZBnBnlChGpcJHpchGpcpchGpcpcpchGpcJHpchGpcpciDiDqYhGhGhGIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEHPEeiDiDhcJHJHJHEYpcpchGvupcpcjjJHJHJHEYpcpciDiDiDhGymhGiDCxiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyECoDJDJFIhGpcuXpchGpcpchGpcpcpchGpcuXpchGpcpciDiDqYhGhGhGIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyECogqubiDububububiDubububububiDububfVeJeJYEqYRbhGRbIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyEoZyXwyehwywyiDDAfZfsfZDAiDwyJPiDiDyBqlqlJkqYjJhGjJIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEoZBnBnlChGpcJHpchGhGpDhGhGhGmjhGpcJHpchGpcpciDiDqYhGhGhGIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEHPEeiDiDhcJHJHJHEYhGwJhGvuhGwJjjJHJHJHEYpcpciDiDiDhGymhGiDCxiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyECoDJDJFIhGpcuXpchGhGpDhGOqhGmjhGpcuXpchGpcpciDiDqYhGhGhGIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyECogqubiDububiDDAfZfZfZDAiDububiDiDfVeJeJYEqYRbhGRbIeiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEXdiDiDiDiDiDiDiDiDhlyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEXdiDiDiDiDiDiDrhtTGhyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUGUGUyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEZwJkiDiDiDiDiDtTGhyEyEyEyEyEyEyEyEyEyEyEyEyEyE
@@ -388,15 +395,15 @@ yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEGUGUGUGUGUGUGUGU
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEXNyEyEXNyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAMAMAMAsAMAMAsAMLyyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEHPzJghghghghlAghDAmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoDJMsghghghghghfZfZfZDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZhMghghghghXBghIDfZWqINyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZlClAghXeXeXeghghghgocEmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEWqyEyEyEyEyEyEyEyEyEyEyEyEHPghghghghghghghghghWqDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEfZlBfZyEyEyEyEyEyEyEyEyEyEyEHPjVghghghBtghghghnFWqWqmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEWqyEyEyEyEyEyEyEyEyEyEyEyEHPghghghghghghghghghWqDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoFIlAghEvEvEvghghghgocEmKyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoMsghghghghXBghIDfZWqmXyEyEyEyEyEyEyEyEyEyEyEyEyE
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZBnhMghghghghghfZfZfZDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoDJMsghghDAfZfZDAfZfZDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZhMghghXBLvghWqIDfZWqINyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZlClAghghghDIghghghgocEmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEWqyEyEyEyEyEyEyEyEyEyEyEyEHPghghghghghDIghghghWqDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEfZlBfZyEyEyEyEyEyEyEyEyEyEyEHPjVghBtghghLvghzFnFWqWqmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEWqyEyEyEyEyEyEyEyEyEyEyEyEHPghghghghghDIghghghWqDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoFIlAghghghDIghghghgocEmKyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyECoMsghghXBLvghWqIDfZWqmXyEyEyEyEyEyEyEyEyEyEyEyEyE
+yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEoZBnhMghghDAfZfZDAfZfZDAmKyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEHPzJghghghghlAghDAmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFAdAdAdAdAdAdAdAdDfyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
 yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE

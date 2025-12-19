@@ -59,6 +59,11 @@ map darkstone
 	votable
 endmap
 
+map darkpebble
+	#voteweight 1.5
+	votable
+endmap
+
 map hellpit
 	#voteweight 1.5
 	votable

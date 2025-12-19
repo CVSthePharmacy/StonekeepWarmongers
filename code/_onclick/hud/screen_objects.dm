@@ -1883,7 +1883,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 10
+	alpha = 0
 //	layer = 20.5
 //	plane = 20
 	layer = 13
@@ -1896,7 +1896,7 @@
 	name = ""
 	screen_loc = ui_backhudl
 	mouse_opacity = 0
-	alpha = 25
+	alpha = 0
 	layer = 13
 	plane = 0
 	blend_mode = 3

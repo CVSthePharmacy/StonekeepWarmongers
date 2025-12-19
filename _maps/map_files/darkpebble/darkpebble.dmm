@@ -262,6 +262,18 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"dn" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "dx" = (
 /obj/structure/bars/pipe{
 	dir = 4
@@ -823,6 +835,16 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"jL" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "jT" = (
 /obj/structure/bars/pipe{
 	dir = 6;
@@ -879,6 +901,18 @@
 "kv" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"kC" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 1
+	},
 /area/rogue/indoors{
 	droning_sound = 'sound/music/bounty.ogg';
 	droning_sound_current = 'sound/music/bounty.ogg';
@@ -1184,6 +1218,18 @@
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"nV" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "oc" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/blocks,
@@ -1332,6 +1378,18 @@
 	},
 /turf/open/transparent/openspace/airless,
 /area/rogue/outdoors)
+"qF" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "qH" = (
 /obj/structure/bars/pipe{
 	dir = 1;
@@ -1628,11 +1686,6 @@
 /obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine{
 	pixel_y = -7;
 	pixel_x = -9
-	},
-/obj/item/roguecoin/mongrel{
-	pixel_y = -10;
-	pixel_x = -1;
-	quantity = 19
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors{
@@ -1995,6 +2048,18 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"yw" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "yD" = (
 /obj/structure/table/wood/reinforced,
 /obj/structure/fluff/millstone,
@@ -2336,6 +2401,18 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"Bp" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "Br" = (
 /obj/structure/bars/pipe{
 	dir = 9;
@@ -2597,13 +2674,10 @@
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
 "DX" = (
-/obj/structure/table/wood/large/corner_alt,
-/obj/item/roguecoin/mongrel{
-	pixel_y = 8;
-	pixel_x = -1;
-	quantity = 5
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 1
 	},
-/turf/open/floor/rogue/tile,
 /area/rogue/indoors{
 	droning_sound = 'sound/music/bounty.ogg';
 	droning_sound_current = 'sound/music/bounty.ogg';
@@ -2802,16 +2876,10 @@
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/roguecoin/mongrel{
-	pixel_y = 8;
-	pixel_x = -1
-	},
 /obj/item/candle/yellow/lit/infinite{
 	pixel_y = 2;
 	pixel_x = -4
 	},
-/obj/item/roguecoin/mongrel,
-/obj/item/roguecoin/mongrel,
 /turf/open/floor/rogue/woodturned/nosmooth,
 /area/rogue/indoors{
 	droning_sound = 'sound/music/bounty.ogg';
@@ -3304,6 +3372,16 @@
 /obj/item/natural/stone,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors)
+"Lv" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "LA" = (
 /obj/structure/bars/pipe{
 	dir = 9;
@@ -3712,11 +3790,6 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/salami/slice{
 	pixel_y = -4
 	},
-/obj/item/roguecoin/mongrel{
-	pixel_y = -10;
-	pixel_x = -1;
-	quantity = 5
-	},
 /obj/item/toy/cards/deck{
 	pixel_y = -5;
 	pixel_x = 22
@@ -3894,6 +3967,18 @@
 "Ru" = (
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors)
+"RB" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
 "RC" = (
 /obj/structure/table/wood/reinforced_alt,
 /obj/item/book/rogue/bibble,
@@ -4023,6 +4108,18 @@
 	pixel_x = -3
 	},
 /turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ss" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 1
+	},
 /area/rogue/indoors{
 	droning_sound = 'sound/music/bounty.ogg';
 	droning_sound_current = 'sound/music/bounty.ogg';
@@ -4714,6 +4811,16 @@
 "Zq" = (
 /obj/structure/fermenting_barrel/wine,
 /turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Zr" = (
+/obj/structure/teambarrier/blue,
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey,
 /area/rogue/indoors{
 	droning_sound = 'sound/music/bounty.ogg';
 	droning_sound_current = 'sound/music/bounty.ogg';
@@ -13115,7 +13222,7 @@ PX
 PX
 gm
 zB
-DX
+lA
 aI
 PX
 gm
@@ -13951,22 +14058,22 @@ mS
 zV
 OB
 OB
-rn
-mS
-mS
-mS
-mS
-mS
-mS
-mS
-mS
-zV
+Zr
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+dn
 sO
-rn
-mS
-mS
-mS
-mS
+Zr
+RB
+RB
+RB
+RB
 mS
 zV
 PX
@@ -14028,7 +14135,7 @@ cP
 Bv
 OB
 OB
-SC
+Ss
 IR
 LX
 LX
@@ -14043,7 +14150,7 @@ TK
 LX
 LX
 LX
-cP
+nV
 ny
 Dm
 zV
@@ -14105,7 +14212,7 @@ SC
 Bv
 OB
 OB
-SC
+Ss
 Bv
 RR
 HR
@@ -14120,7 +14227,7 @@ NZ
 RR
 HR
 RR
-SC
+Ss
 ny
 ny
 Dm
@@ -14182,7 +14289,7 @@ SC
 Bv
 OB
 OB
-TK
+kC
 VG
 Rq
 pW
@@ -14197,7 +14304,7 @@ HR
 Rq
 HR
 Rq
-SC
+Ss
 IR
 LX
 LX
@@ -14274,7 +14381,7 @@ HR
 HR
 HR
 HR
-SC
+Ss
 Bv
 eQ
 XA
@@ -14336,7 +14443,7 @@ SC
 Bv
 OB
 OB
-rn
+Zr
 zV
 HR
 HR
@@ -14351,7 +14458,7 @@ HR
 HR
 HR
 HR
-SC
+Ss
 Bv
 ox
 mo
@@ -14413,7 +14520,7 @@ SC
 Bv
 OB
 Lj
-SC
+Ss
 Bv
 Rq
 HR
@@ -14428,7 +14535,7 @@ HR
 Rq
 pW
 Rq
-SC
+Ss
 Bv
 XA
 zO
@@ -14490,7 +14597,7 @@ SC
 Bv
 OB
 cM
-SC
+Ss
 Bv
 jz
 HR
@@ -14505,7 +14612,7 @@ HR
 jz
 HR
 jz
-SC
+Ss
 Dm
 mS
 mS
@@ -14567,7 +14674,7 @@ SC
 Bv
 OB
 cM
-SC
+Ss
 Dm
 mS
 mS
@@ -14582,7 +14689,7 @@ mS
 mS
 mS
 mS
-mJ
+yw
 IR
 LX
 LX
@@ -14644,7 +14751,7 @@ SC
 Bv
 OB
 hF
-SC
+Ss
 IR
 LX
 LX
@@ -14655,11 +14762,11 @@ Bv
 YZ
 TK
 cP
-IR
-LX
-LX
-LX
-cP
+Lv
+Bp
+Bp
+Bp
+nV
 Bv
 KA
 cO
@@ -14721,7 +14828,7 @@ SC
 Bv
 OB
 OB
-SC
+Ss
 Bv
 Ni
 HR
@@ -14732,7 +14839,7 @@ Bv
 HR
 HR
 SC
-Bv
+jL
 Az
 NZ
 qw
@@ -14798,7 +14905,7 @@ SC
 Bv
 de
 Lj
-SC
+Ss
 Bv
 Yb
 HR
@@ -14809,7 +14916,7 @@ Bv
 HR
 HR
 SC
-Bv
+jL
 Sb
 HR
 qw
@@ -14875,7 +14982,7 @@ SC
 Bv
 OB
 cM
-SC
+Ss
 Bv
 OD
 YL
@@ -14886,7 +14993,7 @@ VG
 Km
 HR
 SC
-Dm
+DX
 zV
 YZ
 rn
@@ -14952,7 +15059,7 @@ SC
 Bv
 OB
 cM
-SC
+Ss
 vX
 YL
 YL
@@ -14963,8 +15070,8 @@ HR
 HR
 HR
 SC
-IR
-VG
+Lv
+qF
 OB
 TK
 LX
@@ -15029,7 +15136,7 @@ SC
 Bv
 OB
 cM
-SC
+Ss
 Bv
 OD
 YL
@@ -15106,7 +15213,7 @@ SC
 Bv
 OB
 cM
-SC
+Ss
 Bv
 ad
 HR
@@ -15183,7 +15290,7 @@ SC
 Bv
 OB
 hF
-SC
+Ss
 Bv
 lg
 HR
@@ -15260,7 +15367,7 @@ SC
 Bv
 tp
 pa
-SC
+Ss
 Dm
 mS
 mS
@@ -15272,7 +15379,7 @@ HR
 TK
 cP
 Dm
-zV
+dn
 OB
 OB
 rn
@@ -15337,7 +15444,7 @@ TK
 VG
 pa
 pa
-TK
+kC
 LX
 LX
 LX
@@ -15349,7 +15456,7 @@ HR
 gK
 SC
 ny
-Bv
+jL
 wG
 Qn
 SC
@@ -15426,7 +15533,7 @@ HR
 GL
 SC
 ny
-Bv
+jL
 kt
 xQ
 SC
@@ -15491,7 +15598,7 @@ rn
 zV
 pa
 pa
-rn
+Zr
 zV
 EI
 HR
@@ -15503,7 +15610,7 @@ HR
 Sl
 SC
 ny
-Bv
+jL
 wG
 Dp
 SC
@@ -15568,7 +15675,7 @@ mJ
 Bv
 pa
 pa
-SC
+Ss
 Dm
 mS
 mS
@@ -15580,7 +15687,7 @@ mS
 mS
 mJ
 ny
-Bv
+jL
 ri
 ak
 SC
@@ -15645,19 +15752,19 @@ LX
 VG
 pa
 pa
-TK
-LX
-LX
-LX
-LX
-LX
-LX
-LX
-LX
-LX
-LX
-LX
-VG
+kC
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+qF
 wG
 TQ
 SC

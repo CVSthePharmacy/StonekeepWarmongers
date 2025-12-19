@@ -308,7 +308,7 @@
 /obj/structure/maxim/alt/attack_hand(mob/user)
 	if(prob(1))
 		to_chat(user, "<span class='info'>The trigger got stuck... try again!</span>")
-		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		playsound(src.loc, 'sound/foley/muskclick.ogg', 100, FALSE)
 		return
 	for(var/i=0,i<6,i++)
 		sleep(rand(1,4))
@@ -344,7 +344,7 @@
 
 /obj/structure/maxim/proc/fire(mob/user)
 	if(!bullets)
-		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		playsound(src.loc, 'sound/foley/muskclick.ogg', 100, FALSE)
 		return
 	var/turf/T = get_turf(src)
 	//var/turf/target = get_ranged_target_turf(src, dir, 7) // seven7
@@ -389,7 +389,7 @@
 /obj/structure/maxim/attack_hand(mob/user)
 	if(prob(1))
 		to_chat(user, "<span class='info'>The trigger got stuck... try again!</span>")
-		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		playsound(src.loc, 'sound/foley/muskclick.ogg', 100, FALSE)
 		return
 	fire(user)
 

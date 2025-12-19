@@ -369,7 +369,7 @@
 "Qf" = (/obj/machinery/light/rogue/torchholder/c,/obj/structure/chair/wood/rogue/fancy{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "Qn" = (/obj/structure/fluff/railing/wood{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors)
 "Qq" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
-"QP" = (/obj/structure/rogue/trophy/deer{pixel_y = 32; pixel_x = -32},/obj/structure/closet/crate/chest{pixel_y = 15},/obj/item/roguecoin/mongrel{quantity = 19},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
+"QP" = (/obj/structure/rogue/trophy/deer{pixel_y = 32; pixel_x = -32},/obj/structure/closet/crate/chest{pixel_y = 15},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "QU" = (/obj/structure/table/wood/reinforced_alt,/obj/structure/bars{icon_state = "barsbent"; layer = 2.81},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "QW" = (/obj/structure/mineral_door/wood/deadbolt,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
 "QZ" = (/obj/structure/roguetent,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)

@@ -9,7 +9,7 @@
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc)
 	wieldsound = 'sound/combat/musket_wield.ogg'
-	dry_fire_sound = 'sound/combat/Ranged/muskclick.ogg'
+	dry_fire_sound = 'sound/foley/muskclick.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -29,7 +29,7 @@
 	cartridge_wording = "ball"
 	droprot = TRUE
 	recoil = 4
-	load_sound = 'sound/foley/nockarrow.ogg'
+	load_sound = 'sound/foley/revolvaload.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
 	fire_sound_volume = 500
 	equip_sound = 'sound/foley/gun_equip.ogg'
@@ -73,11 +73,11 @@
 			chambered = B
 			flunked = FALSE
 			to_chat(user, "<span class='info'>I pull the lever back up, chambering \the [src].</span>")
-			playsound(user, 'sound/foley/trap_arm.ogg', 75)
+			playsound(user, 'sound/foley/cock.ogg', 75)
 		else
 			flunked = TRUE
 			to_chat(user, "<span class='info'>I pull the lever down, preparing to chamber \the [src].</span>")
-			playsound(user, 'sound/foley/trap.ogg', 75)
+			playsound(user, 'sound/foley/uncock.ogg', 75)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/attack_right(mob/user)
 	. = ..()
@@ -167,7 +167,7 @@
 	icon_state = "shitvolver"
 	possible_item_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
 	wieldsound = 'sound/combat/musket_wield.ogg'
-	dry_fire_sound = 'sound/combat/Ranged/muskclick.ogg'
+	dry_fire_sound = 'sound/foley/drypis.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
@@ -187,7 +187,7 @@
 	droprot = TRUE
 	cartridge_wording = "ball"
 	recoil = 4
-	load_sound = 'sound/foley/nockarrow.ogg'
+	load_sound = 'sound/foley/revolvaload.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
 	fire_sound_volume = 500
 	equip_sound = 'sound/foley/gun_equip.ogg'
@@ -219,7 +219,7 @@
 	if(B)
 		chambered = B
 		to_chat(user, "<span class='info'>I pull the clicker down, chambering \the [src].</span>")
-		playsound(user, 'sound/combat/Ranged/muskclick.ogg', 100)
+		playsound(user, 'sound/foley/piscock.ogg', 100)
 		flick("shitvolver_anim", src)
 		update_icon()
 
@@ -301,7 +301,7 @@
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc)
 	wieldsound = 'sound/combat/musket_wield.ogg'
-	dry_fire_sound = 'sound/combat/Ranged/muskclick.ogg'
+	dry_fire_sound = 'sound/foley/muskclick.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
