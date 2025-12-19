@@ -591,13 +591,10 @@
 	visible_message("<span class='name'>[src]</span> points at [A].", "<span class='notice'>I point at [A].</span>")
 	return TRUE
 
-/mob/living/verb/succumb(whispered as null, reaper as null)
+/mob/living/verb/succumb()
 	set name = "Succumb"
 	set category = "Emotes"
-	if(stat == DEAD)
-		return
-	if(!reaper)
-		return
+	
 	if (InCritical() || health <= 0 || (blood_volume < BLOOD_VOLUME_SURVIVE))
 		log_message("Has [whispered ? "whispered his final words" : "succumbed to death"] while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
 		adjustOxyLoss(201)
