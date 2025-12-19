@@ -221,10 +221,12 @@
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				H.cmode_music = SSwarmongers.red_warteam_cmode_music
-				to_chat(src, "<span class='info'>Our OFFICIAL has decided that we need a new song to guide our battles.</span>")
+				if(warfare_faction == H.warfare_faction)
+					to_chat(H, "<span class='info'>Our OFFICIAL has decided that we need a new song to guide our battles.</span>")
 			if(BLUE_WARTEAM)
 				H.cmode_music = SSwarmongers.blu_warteam_cmode_music
-				to_chat(src, "<span class='info'>Our COMMANDER has decided that we need a new song to guide our battles.</span>")
+				if(warfare_faction == H.warfare_faction)
+					to_chat(H, "<span class='info'>Our COMMANDER has decided that we need a new song to guide our battles.</span>")
 
 ///////////////////////////// RED ///////////////////////////////////////
 

@@ -162,7 +162,7 @@
 					var/ttime =  round(((L.succumb_timer + 20 SECONDS) - world.time) / 10)
 					to_chat(L, "<span class='redtext'>I'm not dead enough yet. [ttime]</span>")
 				else
-					L.succumb(reaper = TRUE)
+					L.succumb()
 
 /atom/movable/screen/fullscreen/crit/death
 	icon_state = "DD"
