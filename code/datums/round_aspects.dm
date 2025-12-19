@@ -27,8 +27,8 @@
 	description = "All soldiers are put through rigorous training to ensure they are emotionless."
 
 /datum/round_aspect/stronglords
-	name = "Strong Lords"
-	description = "Everyone knows the crown-bearer should be the strongest man in the platoon."
+	name = "Strong Commanders"
+	description = "Everyone knows the commander should be the strongest man in the platoon."
 	weight = 5
 
 /datum/round_aspect/squishyhumans
@@ -73,7 +73,7 @@
 
 /datum/round_aspect/supplypoints
 	name = "Favors in the Right Places"
-	description = "Because the Lords both have favors to the qartermaster guilds, they both get five supply points on the start of the battle."
+	description = "Because the commanders both have favors to the qartermaster guilds, they both get five supply points on the start of the battle."
 	weight = 7
 
 /datum/round_aspect/supplypoints/apply()
@@ -111,7 +111,7 @@
 
 /datum/round_aspect/veteranlords
 	name = "Veteran Affairs"
-	description = "The lords aren't wusses. They fought wars before."
+	description = "The commanders aren't wusses. They fought wars before."
 	weight = 6
 
 /datum/round_aspect/bloodybastards

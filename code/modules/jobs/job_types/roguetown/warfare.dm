@@ -178,6 +178,54 @@
 			C.blu_bonus++
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 
+/mob/living/carbon/human/proc/warfare_music()
+	set name = "CUSTOME COMBATTE MUSIC (10 TRI)"
+	set category = "LORD"
+
+	var/alert = browser_alert(src, "THIS SHALL TAKE AWAY 10 TRIUMPHS AND GIVE YOUR TEAM SPECIAL COMBATTE MUSIC OF YOUR OWN CHOICE. DO YOU CONSENT?", "WARMONGERS", list("Yes","No"))
+	if(alert == "No")
+		return
+
+	if(get_triumphs() < 10)
+		to_chat(src, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+		return
+
+	var/infile = input(src, "CHOOSE A NEW SONG", src) as null|file
+
+	if(!infile)
+		return
+
+	var/filename = "[infile]"
+	var/file_ext = lowertext(copytext(filename, -4))
+	var/file_size = length(infile)
+
+	if(file_ext != ".ogg")
+		to_chat(src, "<span class='warning'>SONG MUST BE OGG-IGINAL.</span>")
+		return
+	if(file_size > 1687552)
+		to_chat(src, "<span class='warning'>TOO BIG. 1 MEGS OR LESS.</span>")
+		return
+	fcopy(infile,"data/jukeboxuploads/[ckey]/[filename]")
+	switch(warfare_faction)
+		if(RED_WARTEAM)
+			SSwarmongers.red_warteam_cmode_music = file("data/jukeboxuploads/[ckey]/[filename]")
+			to_chat(src, "<span class='notice'>THERE HAS BEEN A SUCCESS. PRAISE BE TO THE MUSIC BY THE NAME OF [uppertext(filename)]!!!</span>")
+			adjust_triumphs(-10)
+		if(BLUE_WARTEAM)
+			SSwarmongers.blu_warteam_cmode_music = file("data/jukeboxuploads/[ckey]/[filename]")
+			to_chat(src, "<span class='notice'>THERE HAS BEEN A SUCCESS. PRAISE BE TO THE MUSIC BY THE NAME OF [uppertext(filename)]!!!</span>")
+			adjust_triumphs(-10)
+		else
+			to_chat(src, "Something is wrong. THERE ARE BUGS UNDER MY SKIN")
+	for(var/mob/living/carbon/human/H in GLOB.human_list)
+		switch(H.warfare_faction)
+			if(RED_WARTEAM)
+				H.cmode_music = SSwarmongers.red_warteam_cmode_music
+				to_chat(src, "<span class='info'>Our OFFICIAL has decided that we need a new song to guide our battles.</span>")
+			if(BLUE_WARTEAM)
+				H.cmode_music = SSwarmongers.blu_warteam_cmode_music
+				to_chat(src, "<span class='info'>Our COMMANDER has decided that we need a new song to guide our battles.</span>")
+
 ///////////////////////////// RED ///////////////////////////////////////
 
 /datum/job/roguetown/warmongers/red
@@ -204,7 +252,8 @@
 		/mob/living/carbon/human/proc/warfare_command,
 		/mob/living/carbon/human/proc/warfare_inspire,
 		/mob/living/carbon/human/proc/warfare_shop,
-		/mob/living/carbon/human/proc/warfare_points
+		/mob/living/carbon/human/proc/warfare_points,
+		/mob/living/carbon/human/proc/warfare_music
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
@@ -753,7 +802,8 @@
 		/mob/living/carbon/human/proc/warfare_command,
 		/mob/living/carbon/human/proc/warfare_inspire,
 		/mob/living/carbon/human/proc/warfare_shop,
-		/mob/living/carbon/human/proc/warfare_points
+		/mob/living/carbon/human/proc/warfare_points,
+		/mob/living/carbon/human/proc/warfare_music
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode

@@ -306,7 +306,7 @@
 
 /turf/open/floor/rogue/dirt/road
 	name = "dirt"
-	desc = "The dirt is pocked with the scars of countless steps."
+	desc = "The dirt is pocked with the scars of countless wars."
 	icon_state = "road"
 	layer = MID_TURF_LAYER
 	footstep = FOOTSTEP_SAND
@@ -318,9 +318,6 @@
 	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
 	neighborlay = "dirtedge"
 	slowdown = 0
-
-/turf/open/floor/rogue/dirt/road/attack_right(mob/user)
-	return
 
 /turf/open/floor/rogue/dirt/road/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)
@@ -422,7 +419,7 @@
 
 /turf/open/floor/rogue/volcanic
 	name = "dirt"
-	desc = "The dirt is pocked with the scars of countless steps."
+	desc = "The dirt is pocked with the scars of countless wars."
 	icon_state = "lavafloor"
 	layer = MID_TURF_LAYER
 	footstep = FOOTSTEP_SAND

@@ -371,8 +371,6 @@
 // ............... D ..................
 /datum/emote/living/dance
 	key = "dance"
-	key_third_person = "dances"
-	message = "dances."
 	restraint_check = TRUE
 	emote_type = EMOTE_VISIBLE
 	
