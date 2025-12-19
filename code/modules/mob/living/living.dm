@@ -592,7 +592,8 @@
 	return TRUE
 
 /mob/living/verb/succumb(whispered as null, reaper as null)
-	set hidden = TRUE
+	set name = "Succumb"
+	set category = "Emotes"
 	if(stat == DEAD)
 		return
 	if(!reaper)
