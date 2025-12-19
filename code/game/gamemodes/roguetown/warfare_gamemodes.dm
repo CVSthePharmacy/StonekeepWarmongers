@@ -190,14 +190,14 @@
 		if(H.warfare_faction == BLUE_WARTEAM)
 			if(H.stat == CONSCIOUS)
 				grenz |= H
-			else if(H.stat > 0)
+			else if(H.stat != CONSCIOUS)
 				grenz -= H
 			else if(!H.client)
 				grenz -= H
 		else if(H.warfare_faction == RED_WARTEAM)
 			if(H.stat == CONSCIOUS)
 				heart |= H
-			else if(H.stat > 0)
+			else if(H.stat != CONSCIOUS)
 				heart -= H
 			else if(!H.client)
 				heart -= H
