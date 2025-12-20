@@ -226,7 +226,7 @@
 			if(BLUE_WARTEAM)
 				H.cmode_music = SSwarmongers.blu_warteam_cmode_music
 				if(warfare_faction == H.warfare_faction)
-					to_chat(H, "<span class='info'>Our COMMANDER has decided that we need a new song to guide our battles.</span>")
+					to_chat(H, "<span class='info'>Our LORD has decided that we need a new song to guide our battles.</span>")
 
 ///////////////////////////// RED ///////////////////////////////////////
 
@@ -701,7 +701,6 @@
 	backpack_contents = list(/obj/item/bomb/mollie=6)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -716,6 +715,7 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.cmode_music = 'sound/music/soberandhatingit.ogg'
+		ADD_TRAIT(H, TRAIT_UNTRAINED, TRAIT_GENERIC)
 
 //// MEDIC ////
 
@@ -1034,7 +1034,7 @@
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/war/stitchhood/alternate
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -1048,7 +1048,7 @@
 		H.change_stat("endurance", 4)
 		H.change_stat("constitution", 1)
 		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
-	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_UNTRAINED, TRAIT_GENERIC)
 
 //// HUSSAR ////
 
@@ -1120,7 +1120,6 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
-	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 //// SNIPER ////
 
