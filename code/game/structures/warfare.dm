@@ -212,7 +212,7 @@
 // Shopkeepers, back now with improvements!
 
 /obj/structure/shopkeep
-	name = "\improper Shopkeeper"
+	name = "\improper KAITZAR-Sponzored Shopkeeper"
 	desc = "A merchant, he has some things to sell. He is hanging from an airship by chain... he won't stick around for long."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "shop"
@@ -227,7 +227,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/structure/shopkeep/red
-	name = "Lé Shopekeepe"
+	name = "\improper Beezer's Favorite Chef Shopkeeper"
 	faction = RED_WARTEAM
 
 /obj/structure/shopkeep/proc/leave()

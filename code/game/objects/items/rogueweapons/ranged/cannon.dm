@@ -364,7 +364,7 @@
 	A.preparePixelProjectile(target, T)
 	A.firer = user
 	A.fired_from = src
-	A.fire(true_angle)
+	A.fire(true_angle - rand(5,-5))
 	bullets--
 
 	//new /obj/effect/temp_visual/small_smoke/halfsecond(get_turf(src))

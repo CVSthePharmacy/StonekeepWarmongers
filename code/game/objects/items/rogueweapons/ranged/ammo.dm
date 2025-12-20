@@ -284,6 +284,8 @@
 	embedchance = 100
 	obj_flags = CAN_BE_HIT
 	woundclass = BCLASS_BULLET
+	hitscan = TRUE
+	tracer_type = /obj/effect/projectile/tracer/bullet
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
 	armor_penetration = 75

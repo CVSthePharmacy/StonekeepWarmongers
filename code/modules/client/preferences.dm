@@ -1911,6 +1911,9 @@ Slots: [job.spawn_positions]</span>
 							if(user.get_triumphs() < WP.cost)
 								to_chat(user, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
 								return
+							if(!istype(warperk, WP.type))
+								user.client.haspaid = FALSE
+								to_chat(user, "<span class='warning'>PERK Ownership WIPED.</span>")
 							warperk = WP
 							to_chat(user, "<span class='info'><b>[WP.name] ([WP.cost])</b></span>")
 							to_chat(user, "<span class='info'>[WP.desc]</span>")

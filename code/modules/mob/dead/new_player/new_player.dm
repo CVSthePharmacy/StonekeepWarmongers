@@ -672,7 +672,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 	if(WP)
 		if(H.get_triumphs() < WP.cost)
 			to_chat(H, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
-			H.client.equippedPerk = null
+			H.client.equippedPerk = new /datum/warperk
 			return
 		if(!H.client.haspaid)
 			H.adjust_triumphs(-WP.cost)
