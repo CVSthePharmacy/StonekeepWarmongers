@@ -189,7 +189,7 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine
 		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/boltaction
 		if(WARMONGERS_TECHLEVEL_AUTO)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
 		if(WARMONGERS_TECHLEVEL_NONE)
@@ -200,7 +200,7 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper
 		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/sniper
 		if(WARMONGERS_TECHLEVEL_AUTO)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
 		if(WARMONGERS_TECHLEVEL_NONE)
@@ -211,7 +211,7 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
 		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/boltaction/sniper
 		if(WARMONGERS_TECHLEVEL_AUTO)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
 		if(WARMONGERS_TECHLEVEL_NONE)
@@ -231,6 +231,6 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate
 		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/boltashot
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
