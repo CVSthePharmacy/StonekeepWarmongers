@@ -1,5 +1,5 @@
 /obj/effect/sunlight
-	var/brightness = 10
+	var/brightness = 25
 	light_power = 1
 	light_color = "#2f1313"
 	layer = BELOW_MOB_LAYER
