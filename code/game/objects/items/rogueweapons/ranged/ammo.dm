@@ -375,11 +375,7 @@
 /obj/projectile/bullet/reusable/cannonball/process()
 	. = ..()
 	if(prob(40))
-		var/obj/effect/particle_effect/smoke/transparent/S = new(get_turf(src))
-		var/matrix/M = matrix()
-		M.Turn(rand(-360,360))
-		M.Scale(1.5,1.5)
-		animate(S, 5 SECONDS, transform=M)
+		new /obj/effect/particle_effect/smoke/transparent(get_turf(src))
 
 /obj/projectile/bullet/reusable/cannonball/on_hit(atom/target,blocked = FALSE)
 	if(iscarbon(target))
