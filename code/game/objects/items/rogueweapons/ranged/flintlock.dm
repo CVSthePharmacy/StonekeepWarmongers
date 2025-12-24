@@ -302,8 +302,10 @@
 			to_chat(user, "<span class='info'>I dry fire \the [src]!</span>")
 			cocked = FALSE
 			return
-		if(HAS_TRAIT(user, TRAIT_BIGHANDS))
-			to_chat(user, "<span class='info'>I can't use this!</span>")
+		if(HAS_TRAIT(user, TRAIT_UNTRAINED))
+			to_chat(user, "<span class='info'>I don't know how this works.</span>")
+			playsound(src.loc, 'sound/items/match_fail.ogg', 100, FALSE)
+			cocked = FALSE
 			return
 		if(user.client.chargedprog >= 100)
 			spread = 0
