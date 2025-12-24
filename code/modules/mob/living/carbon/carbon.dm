@@ -860,6 +860,9 @@
 		overlay_fullscreen("DDZ", /atom/movable/screen/fullscreen/crit/zeth)
 	else if(IsUnconscious())
 		overlay_fullscreen("UNCON", /atom/movable/screen/fullscreen/crit/uncon)
+	else if(stat >= SOFT_CRIT)
+		overlay_fullscreen("DD", /atom/movable/screen/fullscreen/crit/death)
+		overlay_fullscreen("DDZ", /atom/movable/screen/fullscreen/crit/zeth/nocd)
 	else
 		if(succumb_timer)
 			succumb_timer = 0
