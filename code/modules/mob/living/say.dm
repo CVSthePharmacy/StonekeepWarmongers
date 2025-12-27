@@ -59,13 +59,10 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	"÷" = MODE_VOCALCORDS
 ))
 
-/proc/contains_cyrillic(t as text) // Удалите это, если создаете русский сервер!
-	for(var/i = 1, i <= length(t), i++)
-		var/c = copytext(t, i, i+1)
-		var/code = text2ascii(c)
-		if((code >= 0x410 && code <= 0x44F) || code == 0x401 || code == 0x451)
-			return TRUE
-	return FALSE
+var/regex/cyrillic_re = new(@"\u0400-\u04FF")
+
+proc/contains_cyrillic(t as text) // Удалите это, если создаете русский сервер!
+    return cyrillic_re.Find(t)
 
 /mob/living/proc/Ellipsis(original_msg, chance = 50, keep_words)
 	if(chance <= 0)
