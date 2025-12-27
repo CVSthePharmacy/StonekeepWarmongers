@@ -932,6 +932,7 @@
 	backl = /obj/item/storage/backpack/rogue/backpack/war/regime
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion/alternate
 	if(H.mind)

@@ -393,7 +393,7 @@
 
 /obj/item/rogueweapon/mace/cudgel/war
 	force = 15
-	force_wielded = 20
+	force_wielded = 35
 	name = "masher"
 	icon_state = "masher"
 	desc = "A stick with a leather grip and a spiked head, good for mashing up brains."
