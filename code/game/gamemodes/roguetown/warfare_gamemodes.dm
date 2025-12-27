@@ -193,6 +193,13 @@
 			grenz -= H
 			heart -= H
 
+	for(var/mob/living/carbon/human/H in grenz) // my last fucking idea for this, because it just refuses to remove people from lists. if this doesnt work, im considering removing the gamemode all together
+		if(get_area(H) != src)
+			grenz -= H
+	for(var/mob/living/carbon/human/H in heart)
+		if(get_area(H) != src)
+			heart -= H
+
 	if(capturable)
 		if(grenz.len > heart.len)
 			if(ASS.attack_progress < tocapture_points)
