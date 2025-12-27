@@ -59,6 +59,14 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	"÷" = MODE_VOCALCORDS
 ))
 
+/proc/contains_cyrillic(t as text) // Удалите это, если создаете русский сервер!
+	for(var/i = 1, i <= length(t), i++)
+		var/c = copytext(t, i, i+1)
+		var/code = text2ascii(c)
+		if((code >= 0x410 && code <= 0x44F) || code == 0x401 || code == 0x451)
+			return TRUE
+	return FALSE
+
 /mob/living/proc/Ellipsis(original_msg, chance = 50, keep_words)
 	if(chance <= 0)
 		return "..."
@@ -98,7 +106,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(!message || message == "")
 		return
 
-	if(ic_blocked && SSticker.current_state != GAME_STATE_FINISHED) // to allow slang like 'lol' in OOC after game end
+	if(ic_blocked && SSticker.current_state != GAME_STATE_FINISHED || contains_cyrillic(message)) // to allow slang like 'lol' in OOC after game end. THIS FILTERS RUSSIAN FROM THE SERVER!
 		to_chat(src, "<span class='danger'>AAAAGH! MY HEAD HURTS FROM THE WORDS I TRIED TO UTTER!</span>")
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
 		playsound_local(get_turf(src), 'sound/lobotomy.ogg', 60)
