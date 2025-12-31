@@ -1904,6 +1904,10 @@ Slots: [job.spawn_positions]</span>
 						buyables[A.name] = A
 					var/chosen = browser_input_list(user, "Choose a perk", "WARMONGERS", buyables)
 					var/datum/warperk/WP = buyables[chosen]
+					if(!chosen)
+						warperk = new /datum/warperk
+						to_chat(user, "<span class='info'>Ordinary it is, then.</span>")
+						return
 					if(WP)
 						var/full_desc = "[WP.desc] ([WP.cost] TRI)"
 						var/alerto = alert(user, full_desc, WP.name, "Confirm", "Cancel")
