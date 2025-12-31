@@ -2785,7 +2785,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		else
 			to_chat(H, "<span class='notice'>I beat my wings and begin to hover gently above the ground...</span>")
 			H.set_resting(FALSE, TRUE)
-/*
+
 /datum/species/proc/knockback(obj/item/I, mob/living/target, mob/living/user, nodmg)
 	if(!istype(I))
 		if(!target.resting)
@@ -2839,4 +2839,3 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/modifier = -distance
 	if(!prob(STASPD+skill_modifier+modifier))
 		Paralyze(15)
-*/

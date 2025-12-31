@@ -144,7 +144,7 @@
 	droning_sound = 'sound/music/firstwhistle.ogg'
 	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
 	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 90
+	capture_rate = 90 // might eb too much. 1 second to capture or something idk im not a math guy
 	capture_order = 2
 
 /area/rogue/assault/gates
@@ -152,8 +152,8 @@
 	droning_sound = 'sound/music/firstwhistle.ogg'
 	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
 	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 0.5
-	tocapture_points = 150
+	capture_rate = 5
+	tocapture_points = 150 // 30 seconds to capture if my math is correct
 	capture_order = 1
 
 /area/rogue/assault/proc/on_capture(var/team = BLUE_WARTEAM)

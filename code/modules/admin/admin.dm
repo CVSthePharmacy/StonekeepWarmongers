@@ -769,6 +769,10 @@
 	set name = "Recall Crown"
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
+	if(!istype(W.warmode, /datum/warmode/lords))
+		to_chat(usr, "This is useless.")
+		return
+
 	var/pick = input(usr, "Which crown do you recall?", "WARMONGERS") as null|anything in list("Red","Blue")
 
 	if(!pick)
@@ -807,6 +811,10 @@
 	set category = "Debug"
 	set name = "TP2Crown"
 	var/datum/game_mode/warmongers/W = SSticker.mode
+
+	if(!istype(W.warmode, /datum/warmode/lords))
+		to_chat(usr, "This is useless.")
+		return
 
 	var/pick = input(usr, "Which crown?", "WARMONGERS") as null|anything in list("Red","Blue")
 

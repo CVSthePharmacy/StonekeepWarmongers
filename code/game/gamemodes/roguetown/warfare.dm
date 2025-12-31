@@ -22,7 +22,7 @@
 	var/list/unionists = list() // clients
 	var/list/regimians = list()
 
-	var/warfare_start_time = 15 // in minutes
+	var/warfare_start_time = 5 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
 	
 	var/stalematecooldown // a cooldown before another stalemate can be held

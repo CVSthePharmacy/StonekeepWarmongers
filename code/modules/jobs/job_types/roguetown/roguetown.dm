@@ -74,5 +74,5 @@
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/badmin(U))
 	else if(H.client?.holder)
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/gold/admin(U))
-	if(check_bypasslist(H.ckey))
+	else if(check_bypasslist(H.ckey))
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/silver/veteran(U))
