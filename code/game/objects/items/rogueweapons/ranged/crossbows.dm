@@ -51,19 +51,19 @@
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 	warnoffset = 20
-	chargetime = 7
+	chargetime = 4
 
 /datum/intent/shoot/musket/rifle
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 9
 	warnoffset = 20
-	chargetime = 4
+	chargetime = 2
 
 /datum/intent/shoot/musket/peter
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 	warnoffset = 20
-	chargetime = 4
+	chargetime = 2
 
 /datum/intent/shoot/musket/arc
 	name = "arc"
@@ -92,7 +92,7 @@
 	return chargetime
 
 /datum/intent/shoot/musket/pistol/get_chargetime()
-	return 4
+	return 2
 
 /datum/intent/arc/crossbow
 	chargetime = 1

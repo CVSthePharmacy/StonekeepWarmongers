@@ -137,7 +137,7 @@
 	desc = "Dangerous fire in a ceramic coating."
 	icon_state = "firebomb"
 	light_impact = 0
-	flame_impact = 4
+	flame_impact = 3
 
 /obj/item/bomb/fire/explode(skipprob)
 	STOP_PROCESSING(SSfastprocess, src)
@@ -160,7 +160,7 @@
 /obj/item/bomb/fire/weak
 	name = "cheap fire bomb"
 	desc = "This out seems to kinda suck."
-	flame_impact = 3
+	flame_impact = 2
 
 /obj/item/bomb/homemade
 	prob2fail = 30
@@ -175,7 +175,7 @@
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "clearbomb"
 	light_impact = 0
-	flame_impact = 5
+	flame_impact = 4
 
 /obj/item/bomb/mollie/explode(skipprob)
 	STOP_PROCESSING(SSfastprocess, src)
