@@ -71,8 +71,7 @@ SUBSYSTEM_DEF(vote)
 					choices[GLOB.master_mode] += non_voters.len
 					if(choices[GLOB.master_mode] >= greatest_votes)
 						greatest_votes = choices[GLOB.master_mode]
-			else if(mode == "map")
-				/* fuck the non-voters.
+			/*else if(mode == "map") fuck the non-voters.
 				for (var/non_voter_ckey in non_voters)
 					var/client/C = non_voters[non_voter_ckey]
 					if(C.prefs.preferred_map)

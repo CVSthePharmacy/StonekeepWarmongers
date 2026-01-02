@@ -623,8 +623,8 @@
 					return
 				if(L.rogstam <= 0)
 					return
-				if(NR.blu_flag == src || NR.red_flag == src)
-					to_chat(H, "<span class='warning'>GAH! This flag is too heavy!</span>")
+				if(NR.blu_flag == L || NR.red_flag == L)
+					to_chat(L, "<span class='warning'>GAH! This flag is too heavy!</span>")
 					return
 				if(ishuman(L))
 					var/mob/living/carbon/human/H = L
