@@ -179,8 +179,7 @@
 		var/mob/living/L = usr
 		if(L.stat != DEAD)
 			if(alert("Are you done living?", "", "Yes", "No") == "Yes")
-				if(L.getOxyLoss() >= 100)
-					L.death()
+				L.death()
 
 /atom/movable/screen/fullscreen/crit/death
 	icon_state = "DD"
