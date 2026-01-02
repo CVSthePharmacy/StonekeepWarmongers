@@ -607,6 +607,9 @@
 		return
 
 /mob/proc/toggle_rogmove_intent(intent, silent = FALSE)
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	var/datum/warmode/noreturn/NR = C.warmode
+
 	switch(intent)
 		if(MOVE_INTENT_SNEAK)
 			m_intent = MOVE_INTENT_SNEAK
@@ -619,6 +622,9 @@
 				if(L.rogfat >= L.maxrogfat)
 					return
 				if(L.rogstam <= 0)
+					return
+				if(NR.blu_flag == src || NR.red_flag == src)
+					to_chat(H, "<span class='warning'>GAH! This flag is too heavy!</span>")
 					return
 				if(ishuman(L))
 					var/mob/living/carbon/human/H = L
