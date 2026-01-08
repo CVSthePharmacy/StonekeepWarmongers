@@ -74,10 +74,16 @@
 			var/datum/warmode/noreturn/NR = C.warmode
 			if(NR.blu_flag == src)
 				NR.blu_flag = null
-				to_chat(world, "<span class='userdanger'>REGIMIAN FLAG DROPPED.</span>")
+				for(var/client/unio in C.unionists)
+					to_chat(unio, "<span class='warning'>The enemy flag has returned to their base.</span>")
+				for(var/client/reg in C.regimians)
+					to_chat(reg, "<span class='info'>Our flag has returned to our base.</span>")
 			if(NR.red_flag == src)
 				NR.red_flag = null
-				to_chat(world, "<span class='userdanger'>UNIONIST FLAG DROPPED.</span>")
+				for(var/client/reg in C.regimians)
+					to_chat(reg, "<span class='warning'>The enemy flag has returned to their base.</span>")
+				for(var/client/unio in C.unionists)
+					to_chat(unio, "<span class='info'>Our flag has returned to our base.</span>")
 			if(aspect_chosen(/datum/round_aspect/halo))
 				SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 

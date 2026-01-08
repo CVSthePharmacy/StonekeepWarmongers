@@ -46,34 +46,52 @@
 	gametype = /datum/warmode/noreturn
 
 /obj/structure/warobjective/ponr/attack_hand(mob/user)
-	. = ..()
 	var/mob/living/carbon/human/H
 	var/datum/game_mode/warmongers/C = SSticker.mode
 	var/datum/warmode/noreturn/NR = C.warmode
 	if(ishuman(user))
 		H = user
 
-	if(NR.wealreadywon)
-		return
-	if(NR.blu_flag)
-		to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
+	if(NR.red_flag == H)
+		NR.red_flag = null
+		NR.blu_captures++
+		if(NR.blu_captures >= NR.captures_required)
+			C.do_war_end(H, BLUE_WARTEAM)
+		for(var/client/reg in C.regimians)
+			to_chat(reg, "<span class='info'>We have captured their flag! [NR.blu_captures]/[NR.captures_required]</span>")
+			if(aspect_chosen(/datum/round_aspect/halo))
+				SEND_SOUND(reg, 'sound/vo/halo/flag_cap.mp3')
+			else
+				SEND_SOUND(reg, 'sound/misc/flag_captured.ogg')
+		for(var/client/unio in C.unionists)
+			to_chat(unio, "<span class='warning'>They've captured our flag. [NR.blu_captures]/[NR.captures_required]</span>")
+			SEND_SOUND(unio, 'sound/misc/hel.ogg')
 		return
 
-	if(NR.red_flag == H)
-		NR.wealreadywon = TRUE
-		C.do_war_end(H, BLUE_WARTEAM)
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, 'sound/vo/halo/flag_cap.mp3')
-		return
-	
 	if(H.warfare_faction == BLUE_WARTEAM)
 		to_chat(H, "<span class='info'>This belongs to us.</span>")
 		return
 
+	if(NR.blu_flag)
+		to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
+		return
+
 	NR.blu_flag = H
-	to_chat(world, "<span class='userdanger'>REGIME FLAG TAKEN.</span>")
-	if(aspect_chosen(/datum/round_aspect/halo))
-		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
+	for(var/client/unio in C.unionists)
+		to_chat(unio, "<span class='userdanger'>We have taken the enemy flag!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(unio, 'sound/vo/halo/flag_take.mp3')
+		else
+			SEND_SOUND(unio, 'sound/misc/flag_taken.ogg')
+	for(var/client/reg in C.regimians)
+		if(prob(1))
+			to_chat(reg, "<span class='userdanger'>WADAFAK BITCH! OUR FLAG WAS TAKEN!!!</span>")
+		else
+			to_chat(reg, "<span class='userdanger'>OUR FLAG HAS BEEN TAKEN!!!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(reg, 'sound/vo/halo/flag_stolen.mp3')
+		else
+			SEND_SOUND(unio, 'sound/misc/hello.ogg')
 
 /obj/structure/warobjective/ponr/red
 	name = "Union's Point of No Return"
@@ -81,34 +99,52 @@
 	icon_state = "ponrred"
 
 /obj/structure/warobjective/ponr/red/attack_hand(mob/user)
-	. = ..()
 	var/mob/living/carbon/human/H
 	var/datum/game_mode/warmongers/C = SSticker.mode
 	var/datum/warmode/noreturn/NR = C.warmode
 	if(ishuman(user))
 		H = user
 
-	if(NR.wealreadywon)
-		return
-	if(NR.red_flag)
-		to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
+	if(NR.blu_flag == H)
+		NR.blu_flag = null
+		NR.red_captures++
+		if(NR.red_captures >= NR.captures_required)
+			C.do_war_end(H, RED_WARTEAM)
+		for(var/client/unio in C.unionists)
+			to_chat(unio, "<span class='info'>We have captured their flag! [NR.red_captures]/[NR.captures_required]</span>")
+			if(aspect_chosen(/datum/round_aspect/halo))
+				SEND_SOUND(unio, 'sound/vo/halo/flag_cap.mp3')
+			else
+				SEND_SOUND(unio, 'sound/misc/flag_captured.ogg')
+		for(var/client/reg in C.regimians)
+			to_chat(reg, "<span class='warning'>They've captured our flag. [NR.red_captures]/[NR.captures_required]</span>")
+			SEND_SOUND(reg, 'sound/misc/hel.ogg')
 		return
 
-	if(NR.blu_flag == H)
-		NR.wealreadywon = TRUE
-		C.do_war_end(H, RED_WARTEAM)
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, 'sound/vo/halo/flag_cap.mp3')
-		return
-	
 	if(H.warfare_faction == RED_WARTEAM)
 		to_chat(H, "<span class='info'>This belongs to us.</span>")
 		return
 
+	if(NR.red_flag)
+		to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
+		return
+
 	NR.red_flag = H
-	to_chat(world, "<span class='userdanger'>UNION FLAG TAKEN.</span>")
-	if(aspect_chosen(/datum/round_aspect/halo))
-		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
+	for(var/client/reg in C.regimians)
+		to_chat(reg, "<span class='userdanger'>We have taken the enemy flag!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(reg, 'sound/vo/halo/flag_take.mp3')
+		else
+			SEND_SOUND(reg, 'sound/misc/flag_taken.ogg')
+	for(var/client/unio in C.unionists)
+		if(prob(1))
+			to_chat(unio, "<span class='userdanger'>WADAFAK BITCH! OUR FLAG WAS TAKEN!!!</span>")
+		else
+			to_chat(unio, "<span class='userdanger'>OUR FLAG HAS BEEN TAKEN!!!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(unio, 'sound/vo/halo/flag_stolen.mp3')
+		else
+			SEND_SOUND(unio, 'sound/misc/hello.ogg')
 
 // LD
 

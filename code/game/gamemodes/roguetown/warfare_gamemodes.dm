@@ -45,6 +45,11 @@
 	var/mob/living/carbon/human/blu_flag
 	var/mob/living/carbon/human/red_flag
 
+	var/blu_captures = 0 // how many times the blu team has captured the red teams flags
+	var/red_captures = 0
+
+	var/captures_required = 3 // captures required to win the game. you win at 3.
+
 /datum/warmode/noreturn/beginround()
 	. = ..()
 	START_PROCESSING(SSprocessing, src)

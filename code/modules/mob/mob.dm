@@ -725,7 +725,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 				stat("REGIMIAN DEATHS: [SSticker.regime_deaths]")
 				stat("UNIONIST DEATHS: [SSticker.unionist_deaths]")
 				stat("TOTALITY: [SSticker.deaths]")
-			if(istype(W) && istype(W.warmode, /datum/warmode/assault))
+			if((istype(W) && istype(W.warmode, /datum/warmode/assault)) && SSwarmongers.warfare_ready_to_die)
 				var/datum/warmode/assault/ASS = W.warmode
 				stat("REGIMIAN REINFORCEMENTS: [ASS.blu_spawns - SSticker.regime_deaths]")
 			if(istype(loc.loc, /area/rogue/indoors/airship))
