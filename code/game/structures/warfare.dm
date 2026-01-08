@@ -54,6 +54,8 @@
 
 	if(NR.red_flag == H)
 		NR.red_flag = null
+		H.filters = list()
+
 		NR.blu_captures++
 		if(NR.blu_captures >= NR.captures_required)
 			C.do_war_end(H, BLUE_WARTEAM)
@@ -77,6 +79,7 @@
 		return
 
 	NR.blu_flag = H
+	H.add_filter("flag_highlight",1,list("type"="drop_shadow","color"=COLOR_BLUE,"size"=3))
 	for(var/client/unio in C.unionists)
 		to_chat(unio, "<span class='userdanger'>We have taken the enemy flag!</span>")
 		if(aspect_chosen(/datum/round_aspect/halo))
@@ -91,7 +94,7 @@
 		if(aspect_chosen(/datum/round_aspect/halo))
 			SEND_SOUND(reg, 'sound/vo/halo/flag_stolen.mp3')
 		else
-			SEND_SOUND(unio, 'sound/misc/hello.ogg')
+			SEND_SOUND(reg, 'sound/misc/hello.ogg')
 
 /obj/structure/warobjective/ponr/red
 	name = "Union's Point of No Return"
@@ -107,6 +110,8 @@
 
 	if(NR.blu_flag == H)
 		NR.blu_flag = null
+		H.filters = list()
+
 		NR.red_captures++
 		if(NR.red_captures >= NR.captures_required)
 			C.do_war_end(H, RED_WARTEAM)
@@ -130,6 +135,7 @@
 		return
 
 	NR.red_flag = H
+	H.add_filter("flag_highlight",1,list("type"="drop_shadow","color"=COLOR_RED,"size"=3))
 	for(var/client/reg in C.regimians)
 		to_chat(reg, "<span class='userdanger'>We have taken the enemy flag!</span>")
 		if(aspect_chosen(/datum/round_aspect/halo))

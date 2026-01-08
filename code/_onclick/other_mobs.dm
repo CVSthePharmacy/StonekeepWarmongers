@@ -298,6 +298,10 @@
 				if(A == src || A == src.loc)
 					return
 				if(src.get_num_legs() < 2)
+					to_chat(src, "<span class='warning'>I lack the equipment for that sort of ordeal.</span>")
+					return
+				if(NR.blu_flag == src || NR.red_flag == src)
+					to_chat(src, "<span class='warning'>GAH! This flag is too heavy!</span>")
 					return
 				if(pulledby && pulledby != src)
 					to_chat(src, "<span class='warning'>I'm being grabbed.</span>")
@@ -309,6 +313,7 @@
 					return
 				if(A.z != src.z)
 					if(!HAS_TRAIT(src, TRAIT_ZJUMP))
+						to_chat(src, "<span class='warning'>I can't jump THAT high!</span>")
 						return
 				changeNext_move(mmb_intent.clickcd)
 				face_atom(A)

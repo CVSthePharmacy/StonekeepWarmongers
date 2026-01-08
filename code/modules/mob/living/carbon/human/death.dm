@@ -74,12 +74,14 @@
 			var/datum/warmode/noreturn/NR = C.warmode
 			if(NR.blu_flag == src)
 				NR.blu_flag = null
+				filters = list()
 				for(var/client/unio in C.unionists)
 					to_chat(unio, "<span class='warning'>The enemy flag has returned to their base.</span>")
 				for(var/client/reg in C.regimians)
 					to_chat(reg, "<span class='info'>Our flag has returned to our base.</span>")
 			if(NR.red_flag == src)
 				NR.red_flag = null
+				filters = list()
 				for(var/client/reg in C.regimians)
 					to_chat(reg, "<span class='warning'>The enemy flag has returned to their base.</span>")
 				for(var/client/unio in C.unionists)
