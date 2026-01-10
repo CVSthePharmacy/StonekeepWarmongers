@@ -300,9 +300,12 @@
 				if(src.get_num_legs() < 2)
 					to_chat(src, "<span class='warning'>I lack the equipment for that sort of ordeal.</span>")
 					return
-				if(NR.blu_flag == src || NR.red_flag == src)
-					to_chat(src, "<span class='warning'>GAH! This flag is too heavy!</span>")
-					return
+				var/datum/game_mode/warmongers/C = SSticker.mode
+				if(istype(C.warmode, /datum/warmode/noreturn))
+					var/datum/warmode/noreturn/NR = C.warmode
+					if(NR.blu_flag == src || NR.red_flag == src)
+						to_chat(src, "<span class='warning'>GAH! This flag is too heavy!</span>")
+						return
 				if(pulledby && pulledby != src)
 					to_chat(src, "<span class='warning'>I'm being grabbed.</span>")
 					return
