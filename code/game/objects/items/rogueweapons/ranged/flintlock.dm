@@ -307,16 +307,16 @@
 			playsound(src.loc, 'sound/items/match_fail.ogg', 100, FALSE)
 			cocked = FALSE
 			return
-		if(user.client.chargedprog >= 100)
+		if(user.client.chargedprog >= 80)
 			spread = 0
 		else
-			spread = 150 - (150 * (user.client.chargedprog / 100))
+			spread = 125 - (125 * (user.client.chargedprog / 100))
 	else
 		spread = 0
 	for(var/obj/item/ammo_casing/CB in get_ammo_list(FALSE, TRUE))
 		var/obj/projectile/BB = CB.BB
 		if(user.client)
-			if(user.client.chargedprog >= 100)
+			if(user.client.chargedprog >= 75)
 				BB.accuracy += 20 //better accuracy for fully aiming
 				BB.bonus_accuracy += 2
 			if(user.STAPER > 8)
