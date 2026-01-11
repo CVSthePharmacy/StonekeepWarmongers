@@ -29,8 +29,7 @@
 		update_stress()
 		handle_nausea()
 		if(blood_volume > BLOOD_VOLUME_SURVIVE)	
-			var/obj/item/organ/lungs/lungs = owner.getorganslot(ORGAN_SLOT_LUNGS)
-			if(!heart_attacking && lungs.damage >= 30)
+			if(!heart_attacking && !has_wound(/datum/wound/lungs))
 				adjustOxyLoss(-1.6)
 			else
 				if(getOxyLoss() < 20)

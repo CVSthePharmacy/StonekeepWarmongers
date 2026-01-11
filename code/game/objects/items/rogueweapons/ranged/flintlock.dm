@@ -123,7 +123,7 @@
 		if(chambered)
 			if(!rammed)
 				playsound(src.loc, 'sound/combat/ramrod_working.ogg', 100, FALSE, -3)
-				if(do_after(user, tt SECONDS, TRUE, src))
+				if(move_after(user, tt SECONDS, TRUE, src))
 					to_chat(user, "<span class='info'>I ram \the [src].</span>")
 					rammed = TRUE
 	if(istype(A, /obj/item/rogue/barkenpowderflask))
@@ -132,7 +132,7 @@
 			return
 		if(has_barkenpowder == FALSE)
 			playsound(src.loc, 'sound/foley/powder.ogg', 100, FALSE, -3)
-			if(do_after(user, tt SECONDS, TRUE, src))
+			if(move_after(user, tt SECONDS, TRUE, src))
 				to_chat(user, "<span class='info'>I add barkenpowder to \the [src].</span>")
 				has_barkenpowder = TRUE
 	else if(istype(A, /obj/item/rogueweapon/huntingknife/bayonet))
