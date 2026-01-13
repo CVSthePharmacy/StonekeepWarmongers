@@ -270,7 +270,7 @@
 	if(bclass in GLOB.stab_bclasses)
 		used = round(damage_dividend * 20 + (dam / 4), 1)
 		if(user && istype(user.rmb_intent, /datum/rmb_intent/aimed))
-			used += 5
+			used += 20
 		if(prob(used + 15))
 			attempted_wounds += pick(/datum/wound/lungs, /datum/wound/heartbreak)
 	for(var/wound_type in shuffle(attempted_wounds))
