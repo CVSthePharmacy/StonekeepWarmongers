@@ -623,9 +623,10 @@
 					return
 				if(L.rogstam <= 0)
 					return
-				if(NR.blu_flag == L || NR.red_flag == L)
-					to_chat(L, "<span class='warning'>GAH! This flag is too heavy!</span>")
-					return
+				if(istype(NR, /datum/warmode/noreturn))
+					if(NR.blu_flag == L || NR.red_flag == L)
+						to_chat(L, "<span class='warning'>GAH! This flag is too heavy!</span>")
+						return
 				if(ishuman(L))
 					var/mob/living/carbon/human/H = L
 					if(!H.check_armor_skill())

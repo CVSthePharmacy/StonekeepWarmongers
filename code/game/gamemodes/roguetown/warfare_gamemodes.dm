@@ -101,9 +101,9 @@
 
 	var/attack_progress = 0
 	var/current_capture_point = 1
-	var/base_player_count = 16
+	var/base_player_count = 8
 
-	var/blu_spawns = 100
+	var/blu_spawns = 60
 	var/min_blu_spawns = 20
 	var/max_blu_spawns = 60
 
@@ -111,7 +111,8 @@
 	var/total_capture_points = 0
 
 /datum/warmode/assault/beginround()
-	var/player_count = length(GLOB.clients)
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	var/player_count = length(C.unionists) // It's based on enemy count because well... unionists kill regimians
 	blu_spawns = clamp(round(50 * (player_count / base_player_count)), min_blu_spawns, max_blu_spawns)
 
 	START_PROCESSING(SSprocessing, src)
@@ -121,6 +122,9 @@
 		if(istype(cp))
 			capture_points += cp
 			total_capture_points++
+	for(var/obj/effect/landmark/assaultrespawn/defender/DDD)
+		if(DDD.respawn_id == "first") // I'm going to kill myself.
+			SSwarmongers.landmark_respawn_id_defender = "first"
 	..()
 
 /datum/warmode/assault/process()
@@ -135,6 +139,7 @@
 
 /area/rogue/assault
 	name = "Capture Point"
+	safe_from_mortar = TRUE
 	var/list/grenz = list()
 	var/list/heart = list()
 	var/capture_sound = 'sound/misc/stolen.ogg'
@@ -144,22 +149,8 @@
 	var/capture_order = 0
 	var/capturable = FALSE
 
-/area/rogue/assault/throneroom
-	name = "Thronesroom"
-	droning_sound = 'sound/music/firstwhistle.ogg'
-	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
-	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 90 // might eb too much. 1 second to capture or something idk im not a math guy
-	capture_order = 2
-
-/area/rogue/assault/gates
-	name = "Gateshouse"
-	droning_sound = 'sound/music/firstwhistle.ogg'
-	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
-	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 5
-	tocapture_points = 150 // 30 seconds to capture if my math is correct
-	capture_order = 1
+	var/respawn_id_on_cap_attacker // Use a landmark with this ID
+	var/respawn_id_on_cap_defender
 
 /area/rogue/assault/proc/on_capture(var/team = BLUE_WARTEAM)
 	return
@@ -217,9 +208,15 @@
 			to_chat(world, "<span class='userdanger'>[uppertext("[BLUE_WARTEAM] HAVE CAPTURED THE [src]")]!</span>")
 			holder = BLUE_WARTEAM
 			ASS.attack_progress = 0
+			ASS.blu_spawns += 20 // To help incentivize unionists to not just sit on their ass doing nothing
 			on_capture(holder)
 			SEND_SOUND(world, capture_sound)
 			ASS.current_capture_point++
+
+			if(respawn_id_on_cap_attacker)
+				SSwarmongers.landmark_respawn_id_attacker = respawn_id_on_cap_attacker
+			if(respawn_id_on_cap_defender)
+				SSwarmongers.landmark_respawn_id_defender = respawn_id_on_cap_defender
 
 /area/rogue/assault/Entered(atom/movable/M)
 	. = ..()
@@ -267,3 +264,34 @@
 
 /area/rogue/indoors/airship/blue
 	icon_state = "blue"
+
+// BLOODFORT
+
+/area/rogue/assault/throneroom
+	name = "Thronesroom"
+	droning_sound = 'sound/music/firstwhistle.ogg'
+	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
+	droning_sound_night = 'sound/music/firstwhistle.ogg'
+	capture_rate = 90 // might eb too much. 1 second to capture or something idk im not a math guy
+	capture_order = 2
+
+/area/rogue/assault/gates
+	name = "Gateshouse"
+	droning_sound = 'sound/music/firstwhistle.ogg'
+	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
+	droning_sound_night = 'sound/music/firstwhistle.ogg'
+	capture_rate = 5
+	tocapture_points = 150 // 30 seconds to capture if my math is correct
+	capture_order = 1
+
+// BDAY
+
+/area/rogue/assault/waterfort
+	name = "Waterfort"
+	droning_sound = 'sound/music/firstwhistle.ogg'
+	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
+	droning_sound_night = 'sound/music/firstwhistle.ogg'
+	capture_rate = 5
+	tocapture_points = 150 // 30 seconds to capture if my math is correct
+	capture_order = 1
+	respawn_id_on_cap_attacker = "Watershouse"

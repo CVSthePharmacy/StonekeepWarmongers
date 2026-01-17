@@ -382,15 +382,12 @@
 	var/list/shit = list()
 	shit += "<br><span class='bold'>Δ--------------------Δ</span><br>"
 	shit += "<br><font color='#d4ff00'><span class='bold'>Weapons Shot:</span></font> [muskshots]"
+	shit += "<br><font color='#ffbf00'><span class='bold'>Explosions Exploded:</span></font> [explosions]"
 	shit += "<br><font color='#680000'><span class='bold'>Unionist Deaths:</span></font> [unionist_deaths]"
 	shit += "<br><font color='#001a68'><span class='bold'>Regimian Deaths:</span></font> [regime_deaths]"
 	shit += "<br><font color='#000000'><span class='bold'>Total Deaths:</span></font> [deaths]"
 	shit += "<br><font color='#af2323'><span class='bold'>Blood spilt:</span></font> [round(blood_lost / 100, 1)]L"
 	shit += "<br><font color='#af2323'><span class='bold'>Teeth lost:</span></font> [lostteeth]"
-//	if(cuckers.len)
-//		shit += "<br><font color='#4e488a'><span class='bold'>Adulterers:</span></font> "
-//		for(var/x in cuckers.len)
-//			shit += "[x]"
 	if(GLOB.confessors.len)
 		shit += "<br><font color='#93cac7'><span class='bold'>Confessors:</span></font> "
 		for(var/x in GLOB.confessors)

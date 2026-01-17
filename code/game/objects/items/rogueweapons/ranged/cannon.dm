@@ -158,6 +158,13 @@
 		var/turf/epicenter = locate(x,newy,z)
 		if(istype(epicenter, /turf/open/transparent/openspace))
 			epicenter = get_step_multiz(epicenter, DOWN)
+		var/area/rogue/A = get_area(epicenter)
+		if(A.safe_from_mortar)
+			to_chat(user, "<span class='danger'>I can't see shit. Seems like I can't shoot there.</span>")
+			return
+		if(!epicenter)
+			to_chat(user, "<span class='danger'>I can't see shit. These coordinates must be bad.</span>")
+			return
 
 		to_chat(user, "<span class='notice'>I try to look through the magnifying glass on \the [src].</span>")
 		if(do_after(user, 2 SECONDS, TRUE, src))
@@ -229,6 +236,19 @@
 		return ..()
 
 /obj/structure/bombard/proc/fire()
+	var/oldy = y
+	var/newy = oldy + plusy
+
+	var/turf/epicenter = locate(x,newy,z)
+	if(istype(epicenter, /turf/open/transparent/openspace))
+		epicenter = epicenter.below()
+	var/area/rogue/A = get_area(epicenter)
+
+	if(A.safe_from_mortar)
+		sleep(2)
+		visible_message("<span class='danger'>\The [src] stutters and sputters! Seems like there's some ancient force preventing anything being bombarded on the target coordinates...</span>")
+		return
+
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
@@ -241,13 +261,6 @@
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("bombardier_firea", src)
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
-	
-	var/oldy = y
-	var/newy = oldy + plusy
-
-	var/turf/epicenter = locate(x,newy,z)
-	if(istype(epicenter, /turf/open/transparent/openspace))
-		epicenter = epicenter.below()
 
 	var/obj/effect/warning/G = new(epicenter)
 

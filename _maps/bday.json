@@ -1,7 +1,8 @@
 {
-    "map_name": "PONR-Sandblasted",
-    "map_path": "map_files/sandblasted",
-    "map_file": "sandblasted.dmm",
+    "map_name": "ASLT-Battle Day",
+    "map_path": "map_files/bday",
+    "map_file": "bday2.dmm",
+	"traits": [{"Up": 1}, {"Down": -1}],
 	"minetype": null,
 	"space_empty_levels": 0,
 	"space_ruin_levels": 0,

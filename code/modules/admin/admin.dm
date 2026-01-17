@@ -764,6 +764,26 @@
 	else
 		to_chat(usr, "red lord not found")
 		
+/datum/admins/proc/readoutrespawnpoints()
+	set category = "Debug"
+	set name = "Readout rspwn landmarks"
+
+	if(SSwarmongers.landmark_respawn_id_attacker)
+		for(var/obj/effect/landmark/assaultrespawn/ASSR in GLOB.landmarks_list)
+			if(ASSR.respawn_id != SSwarmongers.landmark_respawn_id_attacker)
+				continue
+			to_chat(usr, "attacker: [get_turf(ASSR)]")
+	else
+		to_chat(usr, "attacker: null")
+
+	if(SSwarmongers.landmark_respawn_id_defender)
+		for(var/obj/effect/landmark/assaultrespawn/defender/ASSR in GLOB.landmarks_list)
+			if(ASSR.respawn_id != SSwarmongers.landmark_respawn_id_defender)
+				continue
+			to_chat(usr, "defender: [get_turf(ASSR)]")
+	else
+		to_chat(usr, "defender: null")
+
 /datum/admins/proc/recallcrown()
 	set category = "Debug"
 	set name = "Recall Crown"
