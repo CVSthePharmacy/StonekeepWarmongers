@@ -108,6 +108,8 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	for(var/client/C in GLOB.clients)
 		var/real_key = C.holder ? "([key])" : ""
+		if(prefs.anonymize == FALSE)
+			real_key = ""
 		if(C.prefs.chat_toggles & CHAT_OOC)
 			msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
 			if(holder)
@@ -204,7 +206,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	for(var/client/C in GLOB.clients)
 		var/real_key = C.holder ? "([key])" : ""
 		if(C.prefs.chat_toggles & CHAT_OOC)
-			if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
+			if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead) && !C.holder)
 				continue
 
 			msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"

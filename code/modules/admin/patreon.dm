@@ -243,9 +243,11 @@ GLOBAL_LIST_EMPTY(anonymize)
 //		to_chat(src, "<span class='warning'>Whitelisted players only.</span>")
 //		return
 	if(client.prefs.anonymize == TRUE)
+		/*
 		if(GLOB.respawncounts[client.ckey])
 			to_chat(src, "<span class='warning'>You have already spawned.</span>")
 			return
+		*/
 		client.prefs.anonymize = FALSE
 		client.prefs.save_preferences()
 		to_chat(src, "Anonymous... DISABLED")
