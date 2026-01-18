@@ -17,7 +17,9 @@
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
 "ai" = (
-/obj/structure/bars/passage,
+/obj/structure/bars/passage{
+	redstone_id = "gate1"
+	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "al" = (
@@ -114,6 +116,10 @@
 "bI" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/sand,
+/area/rogue/outdoors)
+"bR" = (
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "bW" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -232,6 +238,11 @@
 /obj/effect/spawner/roguemap/grass_low,
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/indoors)
+"dA" = (
+/obj/effect/landmark/start/heartfeltinfantry,
+/obj/machinery/light/rogue/wallfire/candle/r,
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/town)
 "dD" = (
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town)
@@ -419,6 +430,10 @@
 /obj/item/natural/rock,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors)
+"gS" = (
+/obj/machinery/light/rogue/wallfire/candle,
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/town)
 "gT" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 1
@@ -548,7 +563,7 @@
 /area/rogue/outdoors)
 "jb" = (
 /obj/structure/flora/roguetree/burnt,
-/turf/open/floor/rogue/cobble,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "jm" = (
 /obj/effect/landmark/events/haunts,
@@ -640,6 +655,9 @@
 	},
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/outdoors)
+"kv" = (
+/turf/closed/wall/mineral/rogue/decostone/long,
+/area/rogue/outdoors)
 "kx" = (
 /turf/open/floor/rogue/church,
 /area/rogue/outdoors)
@@ -649,6 +667,10 @@
 "kY" = (
 /obj/effect/sunlight/ultra,
 /turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors)
+"le" = (
+/obj/structure/chair/bench/ancientlog,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "li" = (
 /obj/effect/landmark/events/haunts,
@@ -706,11 +728,19 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/blocks/newstone,
 /area/rogue/indoors/town)
+"mI" = (
+/obj/machinery/light/rogue/wallfire/candle,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/town)
 "mN" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 31
 	},
 /turf/open/floor/rogue/woodturned,
+/area/rogue/indoors/town)
+"mP" = (
+/obj/machinery/light/rogue/wallfire/candle/r,
+/turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
 "mV" = (
 /obj/effect/turf_decal/arrows/red{
@@ -718,6 +748,11 @@
 	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
+"nh" = (
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/assault/waterfort{
+	respawn_id_on_cap_defender = "Restart"
+	})
 "no" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue/assault/waterfort)
@@ -736,6 +771,10 @@
 	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"nL" = (
+/obj/machinery/light/rogue/wallfire/candle/r,
+/turf/open/floor/rogue/carpet,
+/area/rogue/indoors/town)
 "nM" = (
 /obj/structure/roguewindow/openclose,
 /obj/machinery/light/rogue/wallfire/candle/l,
@@ -834,7 +873,7 @@
 /area/rogue/indoors/town)
 "oL" = (
 /obj/effect/spawner/roguemap/grass_low,
-/turf/open/floor/rogue/cobble,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "oP" = (
 /obj/structure/closet/crate/chest,
@@ -975,6 +1014,11 @@
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"qz" = (
+/obj/effect/landmark/events/haunts,
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/floor/rogue/carpet,
+/area/rogue/indoors/town)
 "qC" = (
 /obj/structure/chair/bench/church/mid,
 /turf/open/floor/rogue/blocks,
@@ -1095,12 +1139,16 @@
 /obj/structure/table/wood,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town)
+"sz" = (
+/obj/structure/fluff/statue/femalestatue,
+/turf/open/floor/rogue/churchrough,
+/area/rogue/indoors/town)
 "sF" = (
 /obj/structure/maxim,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors)
 "sJ" = (
-/obj/structure/lever/wall,
+/obj/machinery/light/rogue/wallfire/candle,
 /turf/closed/wall/mineral/rogue/wood,
 /area/rogue/indoors/town)
 "sL" = (
@@ -1446,6 +1494,11 @@
 /obj/structure/roguewindow/stained,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"zp" = (
+/turf/closed/wall/mineral/rogue/decostone/end{
+	dir = 8
+	},
+/area/rogue/outdoors)
 "zq" = (
 /turf/open/floor/rogue/metal,
 /area/rogue/assault/throneroom)
@@ -1482,6 +1535,9 @@
 /obj/effect/landmark/start/heartfeltinfantry,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town)
+"AS" = (
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors)
 "Bh" = (
 /obj/item/rogue/maxim_ammo,
 /obj/item/rogue/maxim_ammo,
@@ -1607,6 +1663,11 @@
 /obj/effect/sunlight/ultra,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
+"Ei" = (
+/obj/effect/landmark/start/heartfeltinfantry,
+/obj/machinery/light/rogue/wallfire/candle,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/town)
 "Em" = (
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/wood/nosmooth,
@@ -1674,7 +1735,7 @@
 /obj/structure/lever{
 	redstone_id = "saigabars"
 	},
-/turf/open/floor/rogue/cobble,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "ET" = (
 /obj/structure/flora/newtree,
@@ -2099,7 +2160,7 @@
 /area/rogue/indoors)
 "Ng" = (
 /obj/machinery/light/rogue/firebowl/church,
-/turf/open/floor/rogue/cobble,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "Ni" = (
 /obj/effect/landmark/events/haunts,
@@ -2475,7 +2536,7 @@
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
 "Ty" = (
-/obj/structure/fluff/statue/gargoyle,
+/obj/structure/fluff/statue/gargoyle/moss,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "TE" = (
@@ -2507,6 +2568,10 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"TZ" = (
+/obj/structure/fluff/statue/gargoyle/moss/candles,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors)
 "Ud" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
@@ -2542,6 +2607,13 @@
 "UL" = (
 /obj/structure/mineral_door/wood/deadbolt,
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/town)
+"US" = (
+/obj/structure/lever/wall{
+	pixel_x = 32;
+	redstone_id = "gate1"
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
 "UV" = (
 /turf/open/floor/rogue/rooftop{
@@ -2694,6 +2766,11 @@
 /obj/structure/fluff/walldeco/psybanner/red,
 /turf/closed/wall/mineral/rogue/wood,
 /area/rogue/indoors/town)
+"Ya" = (
+/turf/closed/wall/mineral/rogue/decostone/long{
+	dir = 1
+	},
+/area/rogue/outdoors)
 "Yb" = (
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/indoors)
@@ -3052,7 +3129,7 @@ Vx
 Vx
 Vx
 Vx
-Vx
+cN
 Vx
 Vx
 Vx
@@ -3300,10 +3377,10 @@ Qh
 (3,1,1) = {"
 YI
 Vx
-WF
-WF
+AS
+AS
 Vx
-cN
+AS
 Vx
 hc
 Vx
@@ -3311,17 +3388,17 @@ Vx
 Vx
 Vx
 Vx
-WF
-WF
-WF
+AS
+AS
+AS
 Vx
 Vx
 Vx
 iU
 iU
-WF
-OM
-WF
+AS
+le
+AS
 WF
 WF
 WF
@@ -3552,8 +3629,8 @@ Qh
 (4,1,1) = {"
 YI
 Vx
-WF
-WF
+AS
+AS
 Vx
 Vx
 Vx
@@ -3561,20 +3638,20 @@ Vx
 hc
 lW
 oL
-WF
+AS
 hc
 hc
 hc
 hc
 Vx
-WF
+AS
 oL
 Zz
 oL
-WF
-WF
-WF
-WF
+AS
+AS
+AS
+AS
 OM
 WF
 WF
@@ -3812,8 +3889,8 @@ QS
 QS
 QS
 Vx
-WF
-WF
+AS
+AS
 Vx
 Vx
 Vx
@@ -5857,10 +5934,10 @@ tw
 qW
 Tg
 fP
-fP
-fP
-fP
-fP
+kv
+kv
+kv
+kv
 fP
 Vx
 iU
@@ -6113,7 +6190,7 @@ kx
 kx
 kx
 kx
-fP
+Ya
 Vx
 qP
 Vx
@@ -6365,7 +6442,7 @@ PD
 Jr
 kx
 Mb
-fP
+Ya
 Vx
 qP
 Vx
@@ -6575,7 +6652,7 @@ Qh
 "}
 (16,1,1) = {"
 YI
-WF
+AS
 hc
 QS
 QS
@@ -6869,7 +6946,7 @@ PD
 PD
 Jr
 kx
-fP
+Ya
 ce
 Vx
 qP
@@ -7121,7 +7198,7 @@ PD
 ig
 ig
 RD
-fP
+zp
 Vx
 Vx
 qP
@@ -7360,7 +7437,7 @@ Vx
 Vx
 Oo
 Vx
-WF
+AS
 WF
 Vx
 Vx
@@ -7605,13 +7682,13 @@ mV
 TE
 ph
 RX
-WF
-WF
-WF
-WF
-WF
+AS
+AS
+AS
+AS
+AS
 Oo
-WF
+AS
 WF
 WF
 WF
@@ -7636,12 +7713,12 @@ WF
 WF
 WF
 WF
-WF
-WF
+AS
+AS
 rp
-WF
-WF
-WF
+AS
+AS
+AS
 rp
 Mi
 Mi
@@ -7857,13 +7934,13 @@ ph
 ph
 ph
 BO
-WF
-WF
-Ty
+AS
+AS
+TZ
 Ng
-WF
+AS
 Zc
-WF
+AS
 Ty
 WF
 WF
@@ -7883,16 +7960,16 @@ WF
 WF
 WF
 WF
-WF
+AS
 ve
 WF
-WF
-OM
-WF
-WF
+AS
+le
+AS
+AS
 Mi
-WF
-WF
+AS
+AS
 Mi
 Mi
 Mi
@@ -8087,7 +8164,7 @@ Qh
 "}
 (22,1,1) = {"
 YI
-WF
+AS
 Vx
 Vx
 Vx
@@ -8109,12 +8186,12 @@ ph
 ph
 ph
 RX
-WF
-WF
-WF
-WF
-WF
-Zc
+AS
+AS
+AS
+AS
+AS
+bR
 WF
 WF
 WF
@@ -8137,13 +8214,13 @@ WF
 WF
 WF
 WF
+AS
 WF
-WF
-WF
-WF
+AS
+AS
 Mi
-WF
-WF
+AS
+AS
 Mi
 Mi
 Mi
@@ -8591,8 +8668,8 @@ Qh
 "}
 (24,1,1) = {"
 YI
-WF
-WF
+AS
+AS
 hc
 Vx
 Vx
@@ -8843,8 +8920,8 @@ Qh
 "}
 (25,1,1) = {"
 YI
-WF
-WF
+AS
+AS
 Vx
 Vx
 Vx
@@ -8934,7 +9011,7 @@ Kw
 XQ
 XQ
 rB
-XQ
+nh
 Es
 XQ
 XQ
@@ -9096,7 +9173,7 @@ Qh
 (26,1,1) = {"
 YI
 Vx
-hc
+oL
 nO
 Vx
 Vx
@@ -9123,7 +9200,7 @@ hy
 Vx
 Vx
 cN
-cN
+Vx
 WF
 WF
 Vx
@@ -10357,7 +10434,7 @@ Qh
 YI
 Vx
 cN
-WF
+AS
 hc
 Vx
 QS
@@ -10884,7 +10961,7 @@ BO
 Vx
 Vx
 Vx
-WF
+AS
 Zc
 WF
 WF
@@ -11135,8 +11212,8 @@ BO
 ex
 Vx
 cN
-WF
-WF
+AS
+AS
 Zc
 WF
 Vx
@@ -11366,7 +11443,7 @@ YI
 nO
 Vx
 Vx
-WF
+AS
 hc
 hc
 QS
@@ -11387,7 +11464,7 @@ Vx
 Vx
 Vx
 Vx
-WF
+AS
 Vx
 Oo
 Vx
@@ -11410,7 +11487,7 @@ Cv
 OE
 Cv
 Cv
-Yx
+sz
 Yx
 Sa
 iU
@@ -11637,9 +11714,9 @@ Vx
 cN
 Vx
 Vx
-WF
+AS
 Vx
-WF
+AS
 Vx
 Oo
 hc
@@ -11870,7 +11947,7 @@ YI
 nO
 nO
 Vx
-WF
+AS
 Vx
 hc
 Vx
@@ -11883,16 +11960,16 @@ Vx
 Vx
 Vx
 Vx
-WF
-WF
+AS
+AS
 Vx
-WF
-WF
-WF
+AS
+AS
+AS
 Vx
 Vx
 Vx
-WF
+AS
 Oo
 Vx
 Vx
@@ -12122,10 +12199,10 @@ YI
 nO
 nO
 nO
-WF
+AS
 Vx
 hc
-WF
+AS
 Vx
 Vx
 cN
@@ -12134,17 +12211,17 @@ Vx
 Vx
 Vx
 Vx
-WF
+AS
 ES
-WF
+AS
 Vx
-WF
-WF
+AS
+AS
 cN
 Vx
 cN
-WF
-WF
+AS
+AS
 Oo
 Vx
 Vx
@@ -15146,13 +15223,13 @@ hx
 qW
 hx
 BO
-Cp
+mI
 Gj
 Gj
 BO
 BO
 BO
-Cp
+mI
 Gj
 Cp
 BO
@@ -15662,7 +15739,7 @@ BO
 BO
 BO
 zr
-Vs
+dA
 Gj
 Gj
 Gj
@@ -15920,7 +15997,7 @@ Mf
 BO
 BO
 BO
-Gj
+gS
 Cp
 Cp
 Ep
@@ -16166,7 +16243,7 @@ ph
 ph
 ph
 ph
-TE
+qz
 ph
 ph
 ph
@@ -16414,11 +16491,11 @@ ph
 ph
 ph
 ph
+nL
 ph
 ph
 ph
-ph
-ph
+nL
 ph
 ph
 ph
@@ -16660,7 +16737,7 @@ BO
 BO
 BO
 BO
-BO
+sJ
 BO
 ph
 ph
@@ -17936,7 +18013,7 @@ BO
 cf
 cf
 BO
-ph
+im
 BO
 vz
 vz
@@ -19188,7 +19265,7 @@ Cp
 ph
 ph
 BO
-fx
+Ei
 Gj
 Gj
 Gj
@@ -19690,16 +19767,16 @@ bt
 Cp
 ph
 Cp
-Cp
+US
 BO
-fx
+Ei
 Gj
 bt
 Gj
 Gj
 Gj
 BO
-ph
+im
 TE
 ph
 ph
@@ -19939,7 +20016,7 @@ BO
 BO
 BO
 BO
-BO
+sJ
 yf
 BO
 sJ
@@ -20448,7 +20525,7 @@ Cp
 Gj
 Gj
 Gj
-Cp
+mP
 ph
 ph
 ph
