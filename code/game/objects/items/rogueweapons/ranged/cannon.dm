@@ -92,25 +92,24 @@
 		else
 			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg','sound/misc/explode/bottlebomb (3).ogg'))
 
-	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
-	fired_projectile.firer = src
-	fired_projectile.fired_from = src
-	fired_projectile.fire(dir2angle(dir))
-	QDEL_NULL(loaded)
-	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
-	sleep(4)
-	new /obj/effect/particle_effect/smoke(get_turf(src))
-
 	for(var/mob/M in GLOB.player_list)
 		if(!is_in_zweb(M.z,src.z))
 			continue
 		var/turf/M_turf = get_turf(M)
-		var/far_smith_sound = sound(pick('sound/ambience/distantcannon1.ogg','sound/ambience/distantcannon2.ogg'))
+		var/far_smith_sound = sound(pick('sound/ambience/distantcannon1.ogg','sound/ambience/distantcannon2.ogg','sound/ambience/distantcannon3.ogg'))
 		if(M_turf)
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 100, 1, get_rand_frequency(), falloff = 1, S = far_smith_sound)
+	QDEL_NULL(loaded)
+	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE, 6)
+	new /obj/effect/particle_effect/smoke(get_turf(src))
+	sleep(4)
+	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
+	fired_projectile.firer = src
+	fired_projectile.fired_from = src
+	fired_projectile.fire(dir2angle(dir))
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
 	name = "hand barkstone"
