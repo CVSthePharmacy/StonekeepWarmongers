@@ -10,9 +10,9 @@ html, body {
 	color: #c9c1ba;
 }
 body {
-	background: #000000;
+	background: #2e2a1b;
 	font-family: Pterra;
-	font-size: 13px;
+	font-size: 16px;
 	color: #c9c1ba;
 	line-height: 1.2;
 	overflow-x: hidden;
@@ -353,7 +353,6 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .emote					{color: #b1bb9f; font-size: 75%;}
 
 .crit					{color: #c71d76;}
-.userdanger				{color: #c71d76;	font-weight: bold;	font-size: 120%;}
 .danger					{color: #b9322b;	font-weight: bold;}
 .warning				{color: #bb4e28;	font-size: 75%;}
 .boldwarning			{color: #bb4e28;	font-weight: bold}
@@ -496,3 +495,37 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 /* HELPER CLASSES */
 .text-normal {font-weight: normal;	font-style: normal;}
 .hidden {display: none;	visibility: hidden;}
+
+.emote { color: #b1bb9f; }
+
+.userdanger {
+	color: #c71d76;
+	font-weight: bold;
+	font-size: 120%;
+	font-family: "GenericTypewriter", Pterra;
+}
+
+.tutorial { color: #f1d669; font-size: 75%; }
+
+.nicegreenbold { color: #9bccd0; font-weight: bold; }
+
+.human { font-family: "Honoka Mincho", Pterra; }
+
+.typewrite { font-family: "GenericTypewriter", Pterra; }
+
+.elf { font-family: "Dauphin", cursive, Pterra; }
+
+.dwarf { font-family: "MasonAlternate", Pterra; }
+
+.sandspeak { font-family: "Arabolical", Pterra; }
+
+.delf { font-family: "Dauphin", Pterra; }
+
+.hellspeak { font-family: "Nosfer", Pterra; }
+
+.undead { font-family: "FriskyVampire", Pterra; }
+
+.singing {
+	font-family: "Trebuchet MS", cursive, sans-serif;
+	font-style: italic;
+}
