@@ -565,16 +565,15 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		//"v4shim.css"          = 'html/font-awesome/css/v4-shims.min.css'
 	)
 
-/datum/asset/simple/blackedstone_class_menu_slop_layout
+/datum/asset/simple/stonekeep_class_menu_slop_layout
 	verify = FALSE
 	assets = list(
 		"try4.png" = 'icons/roguetown/misc/try4.png',
 		"try4_border.png" = 'icons/roguetown/misc/try4_border.png',
-		"slop_menustyle2.css" = 'html/browser/slop_menustyle2.css',
-		"haha_skull.gif" = 'icons/roguetown/misc/haha_skull.gif'
+		"slop_menustyle2.css" = 'html/browser/slop_menustyle2.css'
 	)
 
-/datum/asset/simple/blackedstone_triumph_buy_menu_slop_layout
+/datum/asset/simple/stonekeep_triumph_buy_menu_slop_layout
 	verify = FALSE
 	assets = list(
 		"try5.png" = 'icons/roguetown/misc/try5.png',
@@ -598,19 +597,15 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		"hell.ttf" = 'interface/fonts/languages/hell.ttf',
 		"orc.ttf" = 'interface/fonts/languages/orc.ttf',
 		"sand.ttf" = 'interface/fonts/languages/sand.ttf',
-		"undead.ttf" = 'interface/fonts/languages/undead.ttf',
-		"draconic.ttf" = 'interface/fonts/languages/draconic.ttf',
-		"fae.ttf" = 'interface/fonts/languages/fae.ttf',
-		"lupian.ttf" = 'interface/fonts/languages/lupian.ttf',
-		"felid.ttf" = 'interface/fonts/languages/felid.ttf'
+		"undead.ttf" = 'interface/fonts/languages/undead.ttf'
 	)
 
 /datum/asset/spritesheet/goonchat
 	name = "chat"
 
 /datum/asset/spritesheet/goonchat/register()
-/*	InsertAll("emoji", 'icons/emoji.dmi')
-
+	InsertAll("emoji", 'icons/emoji.dmi')
+/*
 	// pre-loading all lanugage icons also helps to avoid meta
 	InsertAll("language", 'icons/misc/language.dmi')
 	// catch languages which are pulling icons from another file
