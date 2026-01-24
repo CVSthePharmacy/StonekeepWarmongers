@@ -112,7 +112,6 @@
 	var/surgery_flags = get_surgery_flags()
 	if(surgery_flags & SURGERY_CLAMPED)
 		return min(bleed_rate, 0.5)
-	bleed_rate = bleed_rate - (owner.STACON / 10)
 	return bleed_rate
 
 /// Called after a bodypart is attacked so that wounds and critical effects can be applied
