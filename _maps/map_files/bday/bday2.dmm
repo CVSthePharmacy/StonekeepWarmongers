@@ -140,6 +140,10 @@
 /obj/item/rogue/maxim_ammo,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors)
+"bZ" = (
+/obj/effect/shadow/dense,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "ce" = (
 /obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/grass,
@@ -419,6 +423,7 @@
 	endTurfX = 40;
 	endTurfY = 250
 	},
+/obj/effect/shadow/dense,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "gG" = (
@@ -1010,6 +1015,13 @@
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/blocks,
 /area/rogue/assault/waterfort)
+"qt" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/obj/effect/shadow/dense,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "qx" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood/nosmooth,
@@ -1217,6 +1229,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
+/obj/effect/shadow/dense,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "tS" = (
@@ -1583,6 +1596,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
+/obj/effect/shadow/dense,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "Ch" = (
@@ -1638,6 +1652,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 5
 	},
+/obj/effect/shadow/dense,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "Dx" = (
@@ -2759,6 +2774,13 @@
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town)
+"XM" = (
+/obj/structure/fluff/railing/border{
+	dir = 5
+	},
+/obj/effect/shadow/dense,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "XQ" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/assault/waterfort)
@@ -13200,7 +13222,7 @@ hx
 hx
 hx
 hx
-hx
+bZ
 gB
 "}
 (2,1,2) = {"
@@ -13452,8 +13474,8 @@ hx
 hx
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (3,1,2) = {"
 qW
@@ -13704,8 +13726,8 @@ hx
 hx
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (4,1,2) = {"
 qW
@@ -13956,8 +13978,8 @@ hx
 hx
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (5,1,2) = {"
 qW
@@ -14208,8 +14230,8 @@ jB
 hx
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (6,1,2) = {"
 qW
@@ -14460,8 +14482,8 @@ jB
 hx
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (7,1,2) = {"
 qW
@@ -14712,8 +14734,8 @@ jB
 PS
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (8,1,2) = {"
 qW
@@ -14964,8 +14986,8 @@ Wz
 jB
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (9,1,2) = {"
 qW
@@ -15216,8 +15238,8 @@ Wz
 jB
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (10,1,2) = {"
 qW
@@ -15468,8 +15490,8 @@ Wz
 jB
 hx
 hx
-hx
-hx
+bZ
+bZ
 "}
 (11,1,2) = {"
 qW
@@ -15720,8 +15742,8 @@ Wz
 PP
 PS
 hx
-hx
-hx
+bZ
+bZ
 "}
 (12,1,2) = {"
 BO
@@ -15972,8 +15994,8 @@ Hk
 Wz
 jB
 hx
-hx
-hx
+bZ
+bZ
 "}
 (13,1,2) = {"
 BO
@@ -16224,8 +16246,8 @@ Wz
 Wz
 Iz
 PS
-hx
-hx
+bZ
+bZ
 "}
 (14,1,2) = {"
 BO
@@ -16476,8 +16498,8 @@ si
 Wz
 Wz
 jB
-hx
-hx
+bZ
+bZ
 "}
 (15,1,2) = {"
 BO
@@ -16728,8 +16750,8 @@ si
 Wz
 Wz
 jB
-hx
-hx
+bZ
+bZ
 "}
 (16,1,2) = {"
 BO
@@ -16980,8 +17002,8 @@ si
 Wz
 Wz
 jB
-hx
-hx
+bZ
+bZ
 "}
 (17,1,2) = {"
 BO
@@ -17232,8 +17254,8 @@ si
 Wz
 Wz
 cL
-PS
-hx
+XM
+bZ
 "}
 (18,1,2) = {"
 qW
@@ -17484,8 +17506,8 @@ Wz
 Wz
 Hk
 Wz
-jB
-hx
+qt
+bZ
 "}
 (19,1,2) = {"
 qW
@@ -17736,8 +17758,8 @@ Wz
 Wz
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (20,1,2) = {"
 qW
@@ -17989,7 +18011,7 @@ Wz
 Wz
 Wz
 Dd
-hx
+bZ
 "}
 (21,1,2) = {"
 qW
@@ -18240,8 +18262,8 @@ UD
 Wz
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (22,1,2) = {"
 qW
@@ -18493,7 +18515,7 @@ Wz
 Wz
 Wz
 Dd
-hx
+bZ
 "}
 (23,1,2) = {"
 qW
@@ -18744,8 +18766,8 @@ qH
 Wz
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (24,1,2) = {"
 qW
@@ -18997,7 +19019,7 @@ Wz
 Wz
 Wz
 Dd
-hx
+bZ
 "}
 (25,1,2) = {"
 qW
@@ -19248,8 +19270,8 @@ wI
 Wz
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (26,1,2) = {"
 qW
@@ -19500,8 +19522,8 @@ wI
 Wz
 Hk
 Wz
-jB
-hx
+qt
+bZ
 "}
 (27,1,2) = {"
 qW
@@ -19753,7 +19775,7 @@ Wz
 Wz
 Wz
 Ca
-hx
+bZ
 "}
 (28,1,2) = {"
 qW
@@ -20005,7 +20027,7 @@ Wz
 Wz
 Wz
 Dd
-hx
+bZ
 "}
 (29,1,2) = {"
 qW
@@ -20256,8 +20278,8 @@ si
 UD
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (30,1,2) = {"
 qW
@@ -20509,7 +20531,7 @@ UD
 Wz
 Wz
 Dd
-hx
+bZ
 "}
 (31,1,2) = {"
 qW
@@ -20760,8 +20782,8 @@ si
 UD
 Wz
 kY
-jB
-hx
+qt
+bZ
 "}
 (32,1,2) = {"
 qW
@@ -21012,8 +21034,8 @@ si
 Wz
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (33,1,2) = {"
 qW
@@ -21264,8 +21286,8 @@ Wz
 Wz
 Wz
 Wz
-jB
-hx
+qt
+bZ
 "}
 (34,1,2) = {"
 qW
@@ -21517,7 +21539,7 @@ Wz
 jQ
 Ku
 ty
-hx
+bZ
 "}
 (35,1,2) = {"
 qW
@@ -21768,8 +21790,8 @@ dI
 pQ
 pQ
 Ku
-hx
-hx
+bZ
+bZ
 "}
 (36,1,2) = {"
 qW
@@ -22020,8 +22042,8 @@ YA
 ox
 jQ
 pQ
-hx
-hx
+bZ
+bZ
 "}
 (37,1,2) = {"
 qW
@@ -22272,8 +22294,8 @@ Wz
 Wz
 JJ
 pQ
-hx
-hx
+bZ
+bZ
 "}
 (38,1,2) = {"
 qW
@@ -22524,8 +22546,8 @@ Wz
 Wz
 Gb
 LM
-hx
-hx
+bZ
+bZ
 "}
 (39,1,2) = {"
 qW
@@ -22776,8 +22798,8 @@ Wz
 qe
 dc
 LM
-hx
-hx
+bZ
+bZ
 "}
 (40,1,2) = {"
 qW
@@ -23028,6 +23050,6 @@ Ox
 Pf
 ug
 YE
-hx
-hx
+bZ
+bZ
 "}

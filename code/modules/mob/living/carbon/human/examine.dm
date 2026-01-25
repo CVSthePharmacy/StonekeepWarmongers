@@ -66,7 +66,7 @@
 		if(istype(wear_shirt, /obj/item/clothing/suit))
 			var/obj/item/clothing/suit/U = wear_shirt
 			if(U.attached_accessory)
-				accessory_msg += " with \icon[U.attached_accessory] <span class='notice'>\a [U.attached_accessory]</span>"
+				accessory_msg += " with \icon[icon(U.attached_accessory.icon, U.attached_accessory.icon_state)] <span class='notice'>\a [U.attached_accessory]</span>"
 		. += "[m3] [wear_shirt.get_examine_string(user)][accessory_msg]."
 
 	//head
