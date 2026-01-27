@@ -436,10 +436,11 @@ GLOBAL_VAR_INIT(mobids, 1)
 		face_atom(A)
 		visible_message("<span class='emote'>[src] looks at [A].</span>")
 	var/list/result = A.examine(src)
-	if(result)
-		to_chat(src, result.Join("\n"))
+	if(LAZYLEN(result))
+		for(var/i in 1 to (length(result) - 1))
+			result[i] += "\n"
+		to_chat(src, examine_block("<span class='info'>[result.Join()]</span>"))
 	SEND_SIGNAL(src, COMSIG_MOB_EXAMINATE, A)
-
 /**
   * Point at an atom
   *

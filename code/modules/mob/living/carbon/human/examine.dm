@@ -42,11 +42,11 @@
 			used_title = J.f_title
 		if(used_title == "Adventurer")
 			used_title = advjob
-			. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the wandering [used_title].")
+			. = list("<span class='info'>ø This is <EM>[used_name]</EM>, the wandering [used_title]. ø")
 		else
-			. = list("<span class='info'>ø ------------ ø\nThis is <EM>[used_name]</EM>, the [used_title].")
+			. = list("<span class='info'>ø This is <EM>[used_name]</EM>, the [used_title]. ø")
 	else
-		. = list("<span class='info'>ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name].")
+		. = list("<span class='info'>ø This is the <EM>[used_name]</EM>, the [race_name]. ø")
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -430,7 +430,6 @@
 					"<a href='?src=[REF(src)];hud=s;add_comment=1'>\[Add comment\]</a>"), "")
 //	else if(isobserver(user) && traitstring)
 //		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
-	. += "ø ------------ ø</span>"
 
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()

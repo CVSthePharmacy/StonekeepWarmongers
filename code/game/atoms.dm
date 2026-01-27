@@ -456,7 +456,7 @@
   * COMSIG_ATOM_GET_EXAMINE_NAME signal
   */
 /atom/proc/get_examine_name(mob/user)
-	. = "\a [src]"
+	. = "\a <b>[src]</b>"
 	var/list/override = list(gender == PLURAL ? "some" : "a", " ", "[name]")
 	if(article)
 		. = "[article] [src]"

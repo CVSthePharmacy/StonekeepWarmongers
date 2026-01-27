@@ -8,6 +8,7 @@
  *			Misc
  */
 
+#define examine_block(str) ("<div class='chat_box examine_block'>" + str + "</div>")
 
 
 /proc/format_table_name(table as text)
