@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(summoned_guns, list(
 	/obj/item/gun/ballistic/automatic/c20r,
 	/obj/item/gun/ballistic/automatic/l6_saw,
 	/obj/item/gun/ballistic/automatic/m90,
+	/obj/item/gun/energy/alien,
 	/obj/item/gun/energy/e_gun/dragnet,
 	/obj/item/gun/energy/e_gun/turret,
 	/obj/item/gun/energy/pulse/carbine,

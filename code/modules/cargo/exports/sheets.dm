@@ -48,6 +48,11 @@
 	unit_name = "gondola hide"
 	export_types = list(/obj/item/stack/sheet/animalhide/gondola)
 
+/datum/export/stack/skin/xeno
+	cost = 500
+	unit_name = "alien hide"
+	export_types = list(/obj/item/stack/sheet/animalhide/xeno)
+
 // Common materials.
 // For base materials, see materials.dm
 
@@ -87,3 +92,10 @@
 	cost = 0.2
 	unit_name = "cable piece"
 	export_types = list(/obj/item/stack/cable_coil)
+
+// Weird Stuff
+
+/datum/export/stack/abductor
+	cost = 1000
+	message = "of alien alloy"
+	export_types = list(/obj/item/stack/sheet/mineral/abductor)

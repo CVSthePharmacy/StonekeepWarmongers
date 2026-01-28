@@ -617,6 +617,10 @@
 			L.toggle_cmode()
 			update_icon()
 
+/atom/movable/screen/act_intent/alien
+	icon = 'icons/mob/screen_alien.dmi'
+	screen_loc = ui_movi
+
 /atom/movable/screen/act_intent/robot
 	icon = 'icons/mob/screen_cyborg.dmi'
 	screen_loc = ui_borg_intents
@@ -1352,6 +1356,10 @@
 	. += mutable_appearance('icons/mob/roguehud64.dmi', "m-l_inhand")
 	. += mutable_appearance(overlay_icon, "m_[hud.mymob.zone_selected]")
 
+/atom/movable/screen/zone_sel/alien
+	icon = 'icons/mob/screen_alien.dmi'
+	overlay_icon = 'icons/mob/screen_alien.dmi'
+
 /atom/movable/screen/zone_sel/robot
 	icon = 'icons/mob/screen_cyborg.dmi'
 
@@ -1377,6 +1385,10 @@
 	name = "health"
 	icon_state = "health0"
 	screen_loc = ui_health
+
+/atom/movable/screen/healths/alien
+	icon = 'icons/mob/screen_alien.dmi'
+	screen_loc = ui_alien_health
 
 /atom/movable/screen/healths/robot
 	icon = 'icons/mob/screen_cyborg.dmi'
