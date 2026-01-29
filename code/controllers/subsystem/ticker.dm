@@ -149,7 +149,7 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
-	login_music = pick('sound/music/warmongrels.ogg', 'sound/music/smellofblackpowder.ogg', 'sound/music/drama.ogg', 'sound/music/thomas.ogg', 'sound/music/draft.ogg', 'sound/music/parade.ogg')
+	login_music = pick('sound/music/warmongrels.ogg', 'sound/music/smellofblackpowder.ogg', 'sound/music/drama.ogg', 'sound/music/thomas.ogg', 'sound/music/draft.ogg', 'sound/music/parade.ogg', 'sound/music/pines.ogg', 'sound/music/rising.ogg')
 	SSevents.getHoliday()
 
 	/*
