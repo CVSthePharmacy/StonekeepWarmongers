@@ -49,14 +49,13 @@
 
 /obj/item/ship_in_a_bottle
 	name = "ship in a bottle"
-	desc = ""
+	desc = "You're not sure how they get the ships in these things, but you're pretty sure you know how to get it out."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "ship_bottle"
 
 /obj/item/ship_in_a_bottle/attack_self(mob/user)
-	to_chat(user, "<span class='notice'>You're not sure how they get the ships in these things, but you're pretty sure you know how to get it out.</span>")
-	playsound(user.loc, 'sound/blank.ogg', 100, TRUE)
-	new /obj/vehicle/ridden/lavaboat/dragon(get_turf(src))
+	playsound(user.loc,'sound/items/uncork.ogg', 100, TRUE)
+	new /obj/vehicle/ridden/lavaboat/dragon/warmongers(get_turf(src))
 	qdel(src)
 
 /obj/vehicle/ridden/lavaboat/dragon
@@ -70,3 +69,9 @@
 	D.vehicle_move_delay = 1
 	D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(1, 2), TEXT_SOUTH = list(1, 2), TEXT_EAST = list(1, 2), TEXT_WEST = list( 1, 2)))
 	D.keytype = null
+
+/obj/vehicle/ridden/lavaboat/dragon/warmongers // idfk
+	name = "\proper boardret"
+	gender = FEMALE
+	desc = "A variable boardret, for boardretting."
+	allowed_turf = /turf/open/water

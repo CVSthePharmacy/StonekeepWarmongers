@@ -1299,6 +1299,7 @@
 /obj/structure/table/wood/reinforced_alt{
 	icon_state = "map2"
 	},
+/obj/item/ship_in_a_bottle,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
 "uU" = (
@@ -1961,6 +1962,16 @@
 "Jr" = (
 /obj/item/natural/stone,
 /turf/open/floor/rogue/church,
+/area/rogue/outdoors)
+"Jw" = (
+/obj/vehicle/ridden/lavaboat/dragon/warmongers{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors)
+"JC" = (
+/obj/item/ship_in_a_bottle,
+/turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
 "JH" = (
 /obj/structure/bars/grille{
@@ -5393,7 +5404,7 @@ Ch
 Ch
 Ch
 Wz
-Wz
+JC
 Ch
 Ch
 Ch
@@ -5895,7 +5906,7 @@ Ch
 Ch
 Ch
 Ch
-Wz
+JC
 Wz
 Hk
 Ch
@@ -6148,7 +6159,7 @@ Ch
 Ch
 Wz
 Wz
-Wz
+JC
 Ch
 Ch
 Ch
@@ -6398,7 +6409,7 @@ Ch
 Ch
 Ch
 Ch
-Wz
+Jw
 Wz
 Ch
 Ch
@@ -6652,7 +6663,7 @@ Ch
 Ch
 Wz
 Wz
-Ch
+Wz
 Ch
 Ch
 Ch
@@ -6901,10 +6912,10 @@ Ch
 Ch
 Ch
 Ch
-Ch
 Wz
-Ch
-Ch
+Wz
+Wz
+Wz
 Ch
 Ch
 Ch
@@ -7153,10 +7164,10 @@ Ch
 Ch
 Ch
 Ch
-Ch
+Jw
 Wz
-Ch
-Ch
+Wz
+Wz
 Ch
 Ch
 Ch
@@ -8166,7 +8177,7 @@ Wz
 Wz
 Wz
 Wz
-Ch
+Wz
 Ch
 Ch
 Ch
@@ -8418,7 +8429,7 @@ Wz
 Wz
 Wz
 Wz
-Ch
+Wz
 Ch
 Ch
 Ch
@@ -8670,8 +8681,8 @@ Ch
 Wz
 Wz
 Wz
-Ch
-Ch
+Wz
+Wz
 Ch
 Ch
 Ud
@@ -8922,8 +8933,8 @@ Wz
 Wz
 Wz
 Wz
-Ch
-Ch
+Wz
+Wz
 Ch
 Ch
 Ud
@@ -9174,7 +9185,7 @@ Wz
 Wz
 Wz
 Wz
-Ch
+Wz
 Ch
 Ch
 Ch
@@ -9683,7 +9694,7 @@ Ch
 Ch
 Ch
 Ud
-Wz
+JC
 Wz
 Wz
 BN
@@ -9930,12 +9941,12 @@ Ch
 Wz
 Wz
 Wz
-Ch
+Wz
 Ch
 Ch
 Ch
 Qs
-Wz
+JC
 Wz
 Wz
 Wz
@@ -10188,7 +10199,7 @@ Ch
 Ch
 Ud
 Wz
-Wz
+JC
 Wz
 Wz
 LW

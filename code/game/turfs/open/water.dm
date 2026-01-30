@@ -44,7 +44,7 @@
 	var/swimdir = FALSE
 
 /turf/open/water/bruh
-	slowdown = 0
+	slowdown = 4
 
 /turf/open/water/proc/dryup()
 	if(water_volume <= 0)
