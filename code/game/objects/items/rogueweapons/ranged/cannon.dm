@@ -249,7 +249,7 @@
 		return
 
 	for(var/mob/living/carbon/H in hearers(7, src))
-		shake_camera(H, 6, 5)
+		shake_camera(H, 1, 1)
 		H.blur_eyes(4)
 		if(prob(30))
 			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
@@ -289,7 +289,7 @@
 	ARE.Turn(rand(50,350))
 	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 
-	new /obj/effect/particle_effect/smoke(get_turf(src))
+	//new /obj/effect/particle_effect/smoke(get_turf(src)) // i want to show the cool animation
 
 // maxim bb gun
 
