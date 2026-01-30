@@ -6,6 +6,7 @@
 	if(message)
 		var/list/accent_words = strings("spellcheck.json", "spellcheck")
 
+		var/mob/living/carbon/human/H
 		if(ismob(source))
 			H = source
 		for(var/key in accent_words)
@@ -52,5 +53,7 @@
 		var/ending = copytext(message, -1)
 		if(!(ending in list("!", ".", ")", "'", ",", "?", ":", ";")))
 			message = "[message]."
+
+		message = strip_html(message)
 
 	speech_args[SPEECH_MESSAGE] = trim(message)
