@@ -412,8 +412,10 @@ proc/contains_cyrillic(t as text) // Удалите это, если созда�
 	if(derpspeech)
 		message = derpspeech(message, stuttering)
 
+	/*
 	if(stuttering)
 		message = stutter(message)
+	*/
 
 	if(slurring)
 		message = slur(message)
