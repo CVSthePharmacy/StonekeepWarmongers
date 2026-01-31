@@ -56,6 +56,6 @@
 		if(!(ending in list("!", ".", ")", "'", ",", "?", ":", ";")))
 			message = "[message]."
 
-		message = strip_html(message)
+		//message = strip_html(message)
 
 	speech_args[SPEECH_MESSAGE] = trim(message)
