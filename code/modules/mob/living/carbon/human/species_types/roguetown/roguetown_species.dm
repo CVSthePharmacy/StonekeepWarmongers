@@ -52,7 +52,7 @@
 					message = replacetextEx(message, " [capitalize(key)]", " [capitalize(value)]")
 					message = replacetextEx(message, " [key]", " [value]")
 	
-		var/ending = copytext(message, -1)
+		var/ending = copytext_char(message, -1)
 		if(!(ending in list("!", ".", ")", "'", ",", "?", ":", ";")))
 			message = "[message]."
 
