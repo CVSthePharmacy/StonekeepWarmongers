@@ -2,7 +2,7 @@
 	name = "objective"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/gametype = /datum/warmode
-	var/qdel_on_init = FALSE
+	var/invis_on_init = FALSE // whether to set invisibility, density and opacity on init
 
 /obj/structure/warobjective/Initialize()
 	. = ..()
@@ -15,9 +15,10 @@
 	C.warmode = WM
 	WM.objective = src
 
-	if(qdel_on_init)
-		WM.objective = null
-		qdel(src)
+	if(invis_on_init)
+		invisibility = INVISIBILITY_ABSTRACT
+		density = FALSE
+		opacity = FALSE
 
 // TDM
 
@@ -27,7 +28,6 @@
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "psy" //ironic...
 	pixel_x = -32
-	resistance_flags = INDESTRUCTIBLE
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 	gametype = /datum/warmode/tdm
