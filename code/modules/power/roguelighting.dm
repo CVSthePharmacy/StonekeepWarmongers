@@ -140,6 +140,7 @@
 //fires
 /obj/machinery/light/rogue
 	icon = 'icons/roguetown/misc/lighting.dmi'
+	overlayicon = 'icons/roguetown/misc/lighting.dmi'
 	brightness = 8
 	nightshift_allowed = FALSE
 	fueluse = 60 MINUTES
@@ -206,8 +207,15 @@
 	update_icon()
 
 /obj/machinery/light/rogue/update_icon()
+	cut_overlays()
 	if(on)
 		icon_state = "[base_state]1"
+
+		var/mutable_appearance/glowybit = mutable_appearance(overlayicon, overlaystate, ABOVE_LIGHTING_LAYER, ABOVE_LIGHTING_PLANE)
+		glowybit.alpha = CLAMP(light_power*250, 30, 200)
+		glowybit.dir = src.dir
+		glowybit.filters = filter(type="bloom", size=3, offset = 0.5, alpha = 220)
+		add_overlay(glowybit)
 	else
 		icon_state = "[base_state]0"
 
@@ -327,6 +335,7 @@
 	name = "brazier"
 	icon = 'icons/roguetown/misc/lighting.dmi'
 	icon_state = "stonefire1"
+	overlaystate = "stumpfire_fire"
 	density = TRUE
 //	pixel_y = 10
 	base_state = "stonefire"
@@ -375,20 +384,20 @@
 /obj/machinery/light/rogue/firebowl/stump
 	icon_state = "stumpfire1"
 	base_state = "stumpfire"
+	overlaystate = "stumpfire_fire"
 
 /obj/machinery/light/rogue/firebowl/church
 	icon_state = "churchfire1"
 	base_state = "churchfire"
 
-
 /obj/machinery/light/rogue/firebowl/standing
 	name = "standing fire"
 	icon_state = "standing1"
 	base_state = "standing"
+	overlaystate = "standing_fire"
 	bulb_colour = "#ff9648"
 	cookonme = FALSE
 	crossfire = FALSE
-
 
 /obj/machinery/light/rogue/firebowl/standing/blue
 	bulb_colour = "#b9bcff"
@@ -469,6 +478,7 @@
 	name = "sconce"
 	icon_state = "torchwall1"
 	base_state = "torchwall"
+	overlaystate = "torchwall_fire"
 	brightness = 5
 	density = FALSE
 	var/obj/item/flashlight/flare/torch/torchy
@@ -530,9 +540,15 @@
 		playsound(src.loc, 'sound/foley/torchfixturetake.ogg', 100)
 
 /obj/machinery/light/rogue/torchholder/update_icon()
+	cut_overlays()
 	if(torchy)
 		if(on)
 			icon_state = "[base_state]1"
+
+			var/mutable_appearance/glowybit = mutable_appearance(overlayicon, overlaystate, ABOVE_LIGHTING_LAYER, ABOVE_LIGHTING_PLANE)
+			glowybit.alpha = CLAMP(light_power*250, 30, 200)
+			glowybit.filters = filter(type="bloom", size=3, offset = 0.5, alpha = 220)
+			add_overlay(glowybit)
 		else
 			icon_state = "[base_state]0"
 	else

@@ -51,6 +51,8 @@
 	name = "ship in a bottle"
 	desc = "You're not sure how they get the ships in these things, but you're pretty sure you know how to get it out."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
+	droprot = TRUE
+	dropshrink = 0.5
 	icon_state = "ship_bottle"
 
 /obj/item/ship_in_a_bottle/attack_self(mob/user)
@@ -75,3 +77,10 @@
 	gender = FEMALE
 	desc = "A variable boardret, for boardretting."
 	allowed_turf = /turf/open/water
+
+/obj/vehicle/ridden/lavaboat/dragon/warmongers/Moved(atom/OldLoc, Dir)
+	. = ..()
+	if(istype(OldLoc, /turf/open/water))
+		var/obj/effect/particle_effect/water/ship/S = new(get_turf(OldLoc))
+		S.dir = turn(dir, 180)
+		animate(S, 5, alpha=0)

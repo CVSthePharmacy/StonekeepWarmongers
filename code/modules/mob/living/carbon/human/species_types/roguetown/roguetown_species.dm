@@ -6,9 +6,11 @@
 	if(message)
 		var/list/accent_words = strings("spellcheck.json", "spellcheck")
 
+		/*
 		var/mob/living/carbon/human/H
 		if(ismob(source))
 			H = source
+		*/
 		for(var/key in accent_words)
 			var/value = accent_words[key]
 			if(islist(value))
