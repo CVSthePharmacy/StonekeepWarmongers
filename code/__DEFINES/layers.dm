@@ -10,10 +10,9 @@
 #define PLANE_SPACE_PARALLAX -90
 
 #define OPENSPACE_LAYER 17 //Openspace layer over all
-#define OPENSPACE_PLANE -9 //Openspace plane below all turfs
-#define OPENSPACE_BACKDROP_PLANE -8
+#define OPENSPACE_PLANE -6 //Openspace plane below all turfs
+#define OPENSPACE_BACKDROP_PLANE -5
 
-#define WALL_PLANE -7
 #define FLOOR_PLANE -4
 #define GAME_PLANE -3
 #define GAME_PLANE_FOV_HIDDEN -2
@@ -113,36 +112,24 @@
 #define CAMERA_STATIC_PLANE 19
 #define CAMERA_STATIC_LAYER 19
 
-#define ATOMS_FOV_SHADOWS_PLANE 23
-#define WALLS_FOV_PLANE_0 24
-#define WALLS_FOV_PLANE_1 25
-#define WALLS_FOV_PLANE_2 26
-#define WALLS_FOV_PLANE_3 27
-#define WALLS_FOV_PLANE_4 28
-#define WALLS_FOV_PLANE_5 29
-#define WALLS_FOV_PLANE_6 30
-#define WALLS_FOV_PLANE_7 31
-#define WALLS_FOV_PLANE_8 32
-#define WALLS_FOV_PLANE_9 33
-
 //HUD layer defines
 
 
-#define FULLSCREEN_PLANE 34
+#define FULLSCREEN_PLANE 20
 #define FLASH_LAYER 20
 #define FULLSCREEN_LAYER 20.1
 #define UI_DAMAGE_LAYER 20.2
 #define BLIND_LAYER 20.3
 #define CRIT_LAYER 20.4
-#define CURSE_LAYER 23.5
-#define BACKHUD_LAYER 23.6
+#define CURSE_LAYER 20.5
+#define BACKHUD_LAYER 20.6
 
-#define HUD_PLANE 35
-#define HUD_LAYER 24
-#define ABOVE_HUD_PLANE 36
-#define ABOVE_HUD_LAYER 25
+#define HUD_PLANE 21
+#define HUD_LAYER 21
+#define ABOVE_HUD_PLANE 22
+#define ABOVE_HUD_LAYER 22
 
-#define SPLASHSCREEN_LAYER 26
-#define SPLASHSCREEN_PLANE 37
+#define SPLASHSCREEN_LAYER 23
+#define SPLASHSCREEN_PLANE 23
 
 #define FOV_EFFECTS_LAYER 10000
