@@ -1200,8 +1200,8 @@
 //// MEDIC ////
 
 /datum/advclass/blu/medic
-	name = "Medic"
-	tutorial = "Sanitaters feel like gravediggers, considering they deal with more corpses than wounded soldiers. Still, they do their part however they can."
+	name = "Butcher"
+	tutorial = "The Butchery Guild, renowned across the Regime for their knifework, also dabbles in the medikel. For truly, what difference is there between a creechur and a man on the inside?"
 	outfit = /datum/outfit/job/roguetown/blumedic
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
