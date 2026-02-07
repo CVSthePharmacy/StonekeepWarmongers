@@ -438,7 +438,7 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 3
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redoutrider/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -629,7 +629,7 @@
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
-	maximum_possible_slots = 3
+	maximum_possible_slots = -1
 	reinforcements_wave = 3
 	allowed_races = ALL_RACES_LIST_NAMES
 
@@ -961,8 +961,8 @@
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = 3
-	reinforcements_wave = 3
+	maximum_possible_slots = -1
+	reinforcements_wave = 2
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluzealot/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -1019,7 +1019,7 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 3
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluhussar/pre_equip(mob/living/carbon/human/H, visualsOnly)
