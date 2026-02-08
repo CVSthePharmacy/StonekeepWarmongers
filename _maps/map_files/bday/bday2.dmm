@@ -113,6 +113,11 @@
 /obj/effect/landmark/start/grenzelinfantry,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"bB" = (
+/obj/effect/spawner/roguemap/grass_low,
+/obj/structure/flora/roguetree/burnt,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "bI" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/sand,
@@ -514,11 +519,12 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town)
 "ie" = (
-/obj/effect/landmark/assaultrespawn/defender{
-	respawn_id = "first"
+/obj/effect/shadow{
+	dir = 4
 	},
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors)
+/obj/structure/flora/roguetree/burnt,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "if" = (
 /obj/structure/fluff/walldeco/regimeflag{
 	pixel_y = 30
@@ -1134,6 +1140,10 @@
 /obj/effect/spawner/roguemap/grass_low,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"sd" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "sg" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 8
@@ -1502,6 +1512,7 @@
 /area/rogue/indoors/town)
 "zm" = (
 /obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/blue,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "zo" = (
@@ -1883,6 +1894,13 @@
 	endTurfY = 250
 	},
 /turf/closed/indestructible/castlewall,
+/area/rogue/outdoors)
+"HW" = (
+/obj/effect/shadow{
+	dir = 4
+	},
+/obj/structure/flora/roguetree/burnt,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Ie" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -2319,6 +2337,12 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/indoors/town)
+"Pb" = (
+/obj/effect/landmark/assaultrespawn/defender{
+	respawn_id = "first"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "Pd" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
@@ -3274,7 +3298,7 @@ Yb
 Yb
 Yb
 Yb
-Yb
+KE
 Yb
 Yb
 Yb
@@ -3523,13 +3547,13 @@ Vx
 Vx
 Yb
 Yb
-Yb
-Yb
-Yb
-Yb
-Yb
-Yb
-Yb
+KE
+KE
+KE
+KE
+KE
+KE
+KE
 Yb
 Yb
 Yb
@@ -3774,14 +3798,14 @@ tj
 Vx
 Vx
 Vx
+KE
+KE
 Yb
 Yb
 Yb
-Yb
-Yb
-Yb
-Yb
-Yb
+KE
+KE
+KE
 KE
 KE
 KE
@@ -4011,7 +4035,7 @@ dp
 dp
 dp
 dp
-dp
+Tg
 dp
 tj
 tj
@@ -4762,7 +4786,7 @@ iU
 iU
 dp
 dp
-dp
+Tg
 dp
 dp
 dp
@@ -5268,7 +5292,7 @@ dp
 dp
 dp
 dp
-dp
+Tg
 dp
 dp
 dp
@@ -6022,7 +6046,7 @@ Vx
 dp
 dp
 dp
-dp
+Tg
 dp
 dp
 dp
@@ -6278,7 +6302,7 @@ dp
 dp
 dp
 dp
-dp
+Tg
 dp
 dp
 tj
@@ -7549,7 +7573,7 @@ hg
 iU
 iU
 Nn
-iU
+Pb
 hg
 Nn
 iU
@@ -7814,7 +7838,7 @@ Yb
 Yb
 Yb
 Yb
-ie
+KE
 KE
 Yb
 Yb
@@ -10232,7 +10256,7 @@ QS
 QS
 QS
 BO
-aD
+LI
 Gd
 BO
 lt
@@ -10272,7 +10296,7 @@ PB
 PB
 iU
 iU
-Vx
+cN
 EZ
 Gj
 Gj
@@ -10523,8 +10547,8 @@ Zz
 iU
 PB
 iU
-iU
-Vx
+KG
+cN
 rN
 ou
 Gj
@@ -10580,7 +10604,7 @@ hc
 Vx
 Vx
 Vx
-Yb
+KE
 Yb
 Yb
 Yb
@@ -10750,9 +10774,9 @@ WF
 Vx
 hc
 Vx
+sd
 Vx
-Vx
-qW
+sd
 ds
 iU
 YH
@@ -10774,9 +10798,9 @@ Zz
 hc
 Vx
 iU
-iU
-iU
-Vx
+KG
+KG
+cN
 rN
 ou
 Gu
@@ -10795,7 +10819,7 @@ Vx
 Zz
 iU
 iU
-Vx
+cN
 iU
 Vx
 Vx
@@ -10804,7 +10828,7 @@ Vx
 dp
 dp
 dp
-dp
+Tg
 dp
 dp
 dp
@@ -10832,9 +10856,9 @@ Vx
 tj
 Vx
 Vx
-Yb
-Yb
-Yb
+KE
+KE
+KE
 Yb
 Yb
 KE
@@ -11003,8 +11027,8 @@ Vx
 cN
 Vx
 hc
-Vx
-qW
+sd
+iU
 iU
 sV
 Lv
@@ -11026,9 +11050,9 @@ iU
 Zz
 iU
 Nk
-iU
-iU
-Vx
+KG
+KG
+cN
 rN
 rN
 rN
@@ -11046,9 +11070,9 @@ oB
 Vx
 Vx
 iU
-Vx
-iU
-Vx
+cN
+KG
+cN
 Vx
 Vx
 Vx
@@ -11084,10 +11108,10 @@ tj
 Vx
 Vx
 Vx
-Yb
-Yb
-Yb
-Yb
+KE
+KE
+KE
+KE
 Yb
 KE
 Yb
@@ -11278,7 +11302,7 @@ PB
 iU
 iU
 iU
-iU
+KG
 PB
 Vx
 Vx
@@ -11297,11 +11321,11 @@ hc
 Vx
 iU
 Vx
-iU
-iU
-Vx
-Vx
-Vx
+KG
+KG
+cN
+cN
+cN
 Vx
 Vx
 dp
@@ -11337,9 +11361,9 @@ Vx
 Vx
 Yb
 Yb
-Yb
-Yb
-Yb
+KE
+KE
+KE
 KE
 KE
 KE
@@ -11549,12 +11573,12 @@ Nk
 iU
 iU
 Zz
-Vx
-Vx
-Vx
-Vx
-Vx
-Vx
+cN
+cN
+cN
+cN
+cN
+cN
 Vx
 dp
 dp
@@ -11801,16 +11825,16 @@ iU
 iU
 iU
 hc
-Vx
-Vx
-Vx
-Vx
+cN
+cN
+cN
+cN
 dp
 dp
 dp
 dp
 dp
-dp
+Tg
 dp
 dp
 dp
@@ -12051,11 +12075,11 @@ ce
 Vx
 Vx
 iU
-iU
-hc
-Vx
-Vx
-Vx
+KG
+bB
+cN
+cN
+cN
 dp
 dp
 dp
@@ -12066,7 +12090,7 @@ dp
 dp
 dp
 dp
-dp
+Tg
 dp
 dp
 tj
@@ -12301,13 +12325,13 @@ hc
 Vx
 Vx
 Vx
+cN
 Vx
-Vx
-Vx
-hc
-Vx
-Vx
-Vx
+cN
+bB
+cN
+cN
+cN
 dp
 dp
 dp
@@ -12553,13 +12577,13 @@ Vx
 Vx
 Vx
 ce
+cN
 Vx
-Vx
-Vx
-Vx
-Vx
-Vx
-Vx
+cN
+cN
+cN
+cN
+cN
 dp
 dp
 dp
@@ -12792,27 +12816,27 @@ Vi
 Vi
 Vi
 Nm
-YQ
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
-Wv
+HW
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
+ie
 qW
 qW
 qW

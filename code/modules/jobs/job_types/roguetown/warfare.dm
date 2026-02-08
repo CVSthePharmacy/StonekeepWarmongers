@@ -320,8 +320,8 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 5, TRUE)
 		H.change_stat("strength", 2)
 		H.change_stat("intelligence", 3)
@@ -844,8 +844,8 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 5, TRUE)
 		H.change_stat("strength", 2)
 		H.change_stat("intelligence", 3)
@@ -1200,7 +1200,7 @@
 //// MEDIC ////
 
 /datum/advclass/blu/medic
-	name = "Butcher"
+	name = "Harmacist"
 	tutorial = "The Butchery Guild, renowned across the Regime for their knifework, also dabbles in the medikel. For truly, what difference is there between a creechur and a man on the inside?"
 	outfit = /datum/outfit/job/roguetown/blumedic
 	allowed_sexes = list(MALE, FEMALE)
