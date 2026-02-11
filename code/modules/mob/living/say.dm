@@ -348,6 +348,7 @@ proc/contains_cyrillic(t as text) // Удалите это, если созда�
 	if(speech_sound)
 		if(client?.hasPerk(/datum/warperk/mortalcombat) && (findtext(rendered, "mortal combat") || findtext(rendered, "mortal kombat")))
 			playsound(I, 'sound/misc/mortalkombat.ogg', 65, FALSE, -1)
+			client.unlock_achievement(new /datum/achievement/wronggame())
 		else
 			playsound(I, pick(speech_sound), 65, TRUE, 1, vary = FALSE)
 			ping_sound_through_walls(get_turf(I))

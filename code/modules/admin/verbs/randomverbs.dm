@@ -171,6 +171,7 @@
 				spawn(5 SECONDS)
 					if(crashout)
 						SEND_SOUND(C, 'sound/vo/highcommand_crashout.ogg')
+						C.unlock_achievement(new /datum/achievement/highcom_crashout())
 					else
 						SEND_SOUND(C, sound("sound/vo/highcommand_[rand(1,3)].ogg"))
 					to_chat(C, "<span class='userdanger'>THE KAITZAR'S RIGHT HAND MAN [pick("HAS THE PODIUM", "IS NOW SPEAKING", "SPEAKS TO YOU")]!</span><br>")
@@ -182,6 +183,7 @@
 				spawn(5 SECONDS)
 					if(crashout)
 						SEND_SOUND(C, 'sound/vo/highcommand_crashout.ogg')
+						C.unlock_achievement(new /datum/achievement/highcom_crashout())
 					else
 						SEND_SOUND(C, sound("sound/vo/highcommand_[rand(1,3)].ogg"))
 					to_chat(C, "<span class='userdanger'>THE BEEZER'S LEFT HAND MAN [pick("HAS THE PODIUM", "IS NOW SPEAKING", "SPEAKS TO YOU")]!</span><br>")

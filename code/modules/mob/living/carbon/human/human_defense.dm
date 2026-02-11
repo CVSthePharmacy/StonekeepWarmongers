@@ -510,6 +510,7 @@
 			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
 				SEND_SOUND(src, sound('sound/foley/shellshock.ogg', volume = 75))
 				adjustEarDamage(30, 120)
+				unlock_achievement(new /datum/achievement/coduty())
 			Unconscious(20)							//short amount of time for follow up attacks against elusive enemies like wizards
 			Knockdown(25)
 

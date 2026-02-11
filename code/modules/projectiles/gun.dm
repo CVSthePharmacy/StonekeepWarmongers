@@ -314,6 +314,8 @@
 	if(semicd)
 		return
 
+	user.unlock_achievement(new /datum/achievement/firstshot())
+
 	var/sprd = 0
 	var/randomized_gun_spread = 0
 	var/rand_spr = rand()

@@ -45,6 +45,14 @@
 	opacity = FALSE
 	gametype = /datum/warmode/noreturn
 
+/obj/structure/warobjective/ponr/Initialize()
+	. = ..()
+	START_PROCESSING(src, SSprocessing)
+
+/obj/structure/warobjective/ponr/process()
+	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.
+		W.dismantle_wall()
+
 /obj/structure/warobjective/ponr/attack_hand(mob/user)
 	var/mob/living/carbon/human/H
 	var/datum/game_mode/warmongers/C = SSticker.mode

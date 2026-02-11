@@ -73,6 +73,7 @@
 		if(levels >= 2)
 			if(!M.has_status_effect(/datum/status_effect/buff/spawn_protection))
 				adjust_triumphs(1)
+				unlock_achievement(new /datum/achievement/goombastomp())
 				M.gib(TRUE)
 		else
 			M.AdjustKnockdown(levels * 20)

@@ -78,6 +78,9 @@
 		warmode.winner = crownguy
 		warmode.winner.adjust_triumphs(5)
 
+		if(HAS_TRAIT(warmode.winner, TRAIT_NOBLE)) // assume this guy is a lord
+			warmode.winner.unlock_achievement(new /datum/achievement/respected_captain())
+
 /datum/game_mode/warmongers/proc/begin_autobalance_loop()
 	set waitfor = 0
 	while(1)

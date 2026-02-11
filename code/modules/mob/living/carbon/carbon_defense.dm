@@ -120,7 +120,8 @@
 				new /obj/effect/gibspawner/generic(get_turf(src))
 				if(ishuman(P.firer))
 					var/mob/living/carbon/human/H = P.firer
-					if(get_dist(H,src) >= 8)
+					H.unlock_achievement(new /datum/achievement/headshot())
+					if(get_dist(H,src) >= 6)
 						if(HAS_TRAIT(H, TRAIT_SNIPER))
 							H.adjust_triumphs(2)
 						else

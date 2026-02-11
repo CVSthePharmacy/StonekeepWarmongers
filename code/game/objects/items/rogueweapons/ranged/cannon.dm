@@ -42,7 +42,7 @@
 		if(LR.on)
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
-			fire()
+			fire(user)
 	if(istype(I, /obj/item/flint))
 		var/obj/item/flint/F = I
 		if(!loaded || !SSwarmongers.warfare_ready_to_die)
@@ -51,7 +51,7 @@
 		F.afterattack(src, user, TRUE)
 		playsound(src.loc, 'sound/items/firelight.ogg', 100)
 		user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
-		fire()
+		fire(user)
 	else
 		return ..()
 
@@ -68,7 +68,7 @@
 		shootingdown = !shootingdown
 		playsound(src.loc, 'sound/foley/winch.ogg', 100, extrarange = 3)
 
-/obj/structure/cannon/proc/fire()
+/obj/structure/cannon/proc/fire(var/mob/firer)
 	if(!loaded)
 		return
 	for(var/mob/living/carbon/H in hearers(7, src))
@@ -79,8 +79,9 @@
 			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 4)
-		H.throw_at(turfa, 4, 1, null, FALSE)
+		H.throw_at(turfa, 40, 1, null, FALSE)
 		H.take_overall_damage(45)
+		H.unlock_achievement(new /datum/achievement/backblast())
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_firea", src)
 
@@ -107,7 +108,7 @@
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 	sleep(4)
 	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
-	fired_projectile.firer = src
+	fired_projectile.firer = firer
 	fired_projectile.fired_from = src
 	fired_projectile.fire(dir2angle(dir))
 
@@ -255,8 +256,9 @@
 			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
-		H.throw_at(turfa, 3, 1, null, FALSE)
+		H.throw_at(turfa, 10, 1, null, FALSE)
 		H.take_overall_damage(45)
+		H.unlock_achievement(new /datum/achievement/backblast())
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("bombardier_firea", src)
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)

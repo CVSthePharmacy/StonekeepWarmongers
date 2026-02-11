@@ -237,7 +237,14 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
-/proc/GetSidearmForWarfarePPU()
+/proc/GetSidearmForWarfarePPU(var/isofficer = FALSE)
+	var/datum/game_mode/warmongers/W = SSticker.mode
+	if(isofficer && W.reinforcementwave == 4)
+		if(prob(50))
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed
+		else
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded
+
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
@@ -246,7 +253,14 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
-/proc/GetSidearmForWarfareRegime()
+/proc/GetSidearmForWarfareRegime(var/isofficer = FALSE)
+	var/datum/game_mode/warmongers/W = SSticker.mode
+	if(isofficer && W.reinforcementwave == 4)
+		if(prob(50))
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed/alternate
+		else
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
+
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate

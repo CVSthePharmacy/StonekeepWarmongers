@@ -572,6 +572,8 @@
 
 /datum/outfit/job/roguetown/redofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+	var/datum/game_mode/warmongers/W = SSticker.mode
+
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 	if(H.dna.species.id == "fat")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
@@ -595,11 +597,12 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
-	beltl = /obj/item/rogueweapon/sword/sabre/shofficer
+	if(W.reinforcementwave != 4)
+		beltl = /obj/item/rogueweapon/sword/sabre/shofficer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
-	beltr = GetSidearmForWarfarePPU()
+	beltr = GetSidearmForWarfarePPU(TRUE)
 	backr = /obj/item/quiver/bullets
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm
@@ -630,7 +633,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 3
+	reinforcements_wave = 2
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -748,6 +751,9 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+	
+	ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -1154,6 +1160,8 @@
 
 /datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+	var/datum/game_mode/warmongers/W = SSticker.mode
+
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 	if(H.dna.species.id == "fat")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
@@ -1173,11 +1181,12 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
-	beltl = /obj/item/rogueweapon/sword/sabre/officer
+	if(W.reinforcementwave != 4)
+		beltl = /obj/item/rogueweapon/sword/sabre/officer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
-	beltr = GetSidearmForWarfareRegime()
+	beltr = GetSidearmForWarfareRegime(TRUE)
 	backr = /obj/item/quiver/bullets
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm
@@ -1253,6 +1262,9 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+
+	ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 
 /obj/item/rogue/caltrop
 	name = "caltrop"

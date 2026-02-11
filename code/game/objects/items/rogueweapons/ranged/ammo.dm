@@ -378,8 +378,17 @@
 		new /obj/effect/particle_effect/smoke/transparent(get_turf(src))
 
 /obj/projectile/bullet/reusable/cannonball/on_hit(atom/target,blocked = FALSE)
-	if(iscarbon(target))
-		var/mob/living/carbon/M = target
+	if(ishuman(target))
+		var/mob/living/carbon/human/M = target
+		var/mob/living/carbon/human/human_firer
+		if(ishuman(firer))
+			human_firer = firer
+		if(M == firer)
+			M.unlock_achievement(new /datum/achievement/cannonblast_self())
+		else if(M.warfare_faction == human_firer.warfare_faction)
+			human_firer.unlock_achievement(new /datum/achievement/cannonblast())
+			to_chat(human_firer, "<span class='warning'>I just decimated a teammate.</span>")
+			to_chat(M, "<span class='userdanger'>I just got decimated by a teammate.</span>")
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
 	explosion(get_turf(target), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg','sound/misc/explode/bottlebomb (3).ogg'))

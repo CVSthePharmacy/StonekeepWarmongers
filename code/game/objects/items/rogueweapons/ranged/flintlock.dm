@@ -323,11 +323,12 @@
 				BB.accuracy += (user.STAPER - 8) * 4 //each point of perception above 8 increases standard accuracy by 4.
 				BB.bonus_accuracy += (user.STAPER - 8) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.
 			if(user.lying)
-				BB.bonus_accuracy += 5
-			if(user.rogue_sneaking && !user.lying)
+				BB.accuracy += 30
+				BB.bonus_accuracy += 50
+			if(user.rogue_sneaking)
 				BB.bonus_accuracy += 2
 			if(has_bayonet == TRUE)
-				BB.bonus_accuracy -=3
+				BB.bonus_accuracy -= 3
 		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 2)
 	if(!cocked)
 		return

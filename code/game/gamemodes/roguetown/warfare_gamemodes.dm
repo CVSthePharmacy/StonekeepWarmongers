@@ -50,14 +50,6 @@
 
 	var/captures_required = 3 // captures required to win the game. you win at 3.
 
-/datum/warmode/noreturn/beginround()
-	. = ..()
-	START_PROCESSING(SSprocessing, src)
-
-/datum/warmode/noreturn/process()
-	for(var/turf/closed/wall/W in RANGE_TURFS(2, objective)) //no cheating by just boxing in the statue, that is super lame.
-		W.dismantle_wall()
-
 /datum/warmode/tdm
 	name = "Last Stand"
 	shorthand = "TDM"
@@ -154,6 +146,18 @@
 
 /area/rogue/assault/proc/on_capture(var/team = BLUE_WARTEAM)
 	return
+
+/area/rogue/assault/on_capture(team)
+	. = ..()
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	if(!C?.warmode)
+		return
+	var/datum/warmode/assault/ASR = C.warmode
+	
+	if(ASR.current_capture_point > ASR.total_capture_points)
+		for(var/mob/living/carbon/human/H in src)
+			if(HAS_TRAIT(H, TRAIT_NOBLE))
+				H.unlock_achievement(new /datum/achievement/respected_captain())
 
 /area/rogue/assault/New()
 	. = ..()

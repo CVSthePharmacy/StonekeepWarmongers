@@ -201,6 +201,9 @@
 						dropItemToGround(G)
 						visible_message("<span class='warning'>[L] suplexes [src]'s bayonet charge and makes them drop their gun!")
 						Immobilize(20)
+
+						L.unlock_achievement(new /datum/achievement/stealthed())
+						unlock_achievement(new /datum/achievement/skillissue())
 						
 						flash_fullscreen("whiteflash")
 						L.flash_fullscreen("whiteflash")
@@ -215,6 +218,7 @@
 					H.Immobilize(20)
 					playsound(H, 'sound/combat/hits/bladed/genstab (3).ogg', 100, FALSE, -1)
 					chest.add_wound(/datum/wound/puncture, FALSE, FALSE)
+					unlock_achievement(new /datum/achievement/stunlock())
 					bayoneted = TRUE
 			visible_message("<span class='warning'>[src] charges into [L][bayoneted ? " WITH A BAYONET" : ""]!</span>", "<span class='warning'>I charge into [L][bayoneted ? " WITH A BAYONET" : ""]!</span>")
 			return TRUE

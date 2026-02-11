@@ -189,6 +189,7 @@
 				"<span class='userdanger'>[user] rips off my [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", "<span class='hear'>I hear a sickening sound of pugilism!</span>", COMBAT_MESSAGE_RANGE, user)
 			user.stop_pulling(TRUE)
 			user.put_in_active_hand(limb_grabbed, TRUE, TRUE)
+			user.unlock_achievement(new /datum/achievement/doomslayer())
 
 			var/obj/item/bodypart/affecting = C.get_bodypart(BODY_ZONE_CHEST)
 			if(affecting && limb_grabbed.dismember_wound)
