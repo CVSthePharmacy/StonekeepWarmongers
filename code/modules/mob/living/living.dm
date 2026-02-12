@@ -55,11 +55,14 @@
 	for(var/i in 2 to levels)
 		i++
 		points += "!"
-	visible_message("<span class='danger'>[src] falls down[points]</span>", \
-					"<span class='danger'>I fall down[points]</span>")
 	playsound(src.loc, 'sound/foley/zfall.ogg', 100, FALSE)
 	if(!isgroundlessturf(T))
 		ZImpactDamage(T, levels)
+		visible_message("<span class='danger'>[src] falls down[points]</span>", \
+				"<span class='danger'>I fall down[points]</span>")
+	else
+		visible_message("<span class='info'>[src] falls down.</span>", \
+				"<span class='info'>I fall down.</span>")
 	return ..()
 
 /mob/living/proc/ZImpactDamage(turf/T, levels)
