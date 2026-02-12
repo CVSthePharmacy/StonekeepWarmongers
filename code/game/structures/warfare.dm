@@ -47,7 +47,7 @@
 
 /obj/structure/warobjective/ponr/Initialize()
 	. = ..()
-	START_PROCESSING(src, SSprocessing)
+	START_PROCESSING(SSprocessing, src)
 
 /obj/structure/warobjective/ponr/process()
 	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.

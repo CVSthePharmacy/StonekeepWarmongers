@@ -23,14 +23,14 @@
 	var/announced = FALSE
 
 /client/proc/unlock_achievement(var/datum/achievement/A)
-	if(IsGuestKey(src.key))
+	if(IsGuestKey(ckey))
 		return
 	for(var/X in achievement_holder.achievements)
 		var/datum/achievement/AA = X
 		if(A.name == AA.name) //I don't think a name check is very safe here, we should type check instead.
 			return
 	achievement_holder.achievements |= A
-	var/savefile/F = new /savefile("data/player_saves/[copytext(key, 1, 2)]/[key]/achievements.sav")//Store the achievemnt in the file.
+	var/savefile/F = new /savefile("data/player_saves/[copytext(ckey, 1, 2)]/[ckey]/achievements.sav")//Store the achievemnt in the file.
 	achievement_holder.Write(F)
 	var/H
 	switch(A.difficulty)
@@ -41,9 +41,10 @@
 		if (DIFF_HARD)
 			H = "red"
 	if (A.announced)
-		to_chat(world, "<b>Achievement Unlocked! [src.key] unlocked the '<font color = [H]>[A.name]</font color>' achievement.</b></font>")
+		to_chat(world, "<b>Achievement Unlocked! [ckey] unlocked the '<font color = [H]>[A.name]</font color>' achievement.</b></font>")
 	else
 		to_chat(src, "<b>Achievement Unlocked! You unlocked the '<font color = [H]>[A.name]</font color>' achievement.</b></font>")
+	mob.playsound_local(get_turf(mob), 'sound/achievement.ogg', 70, FALSE)
 	if(A.description)
 		to_chat(src, "<i>[A.description]</i>")
 
@@ -53,17 +54,18 @@
 
 /mob/verb/show_achievements()
 	set name = "Show Achievements"
-	set category = "OOC"
+	set category = "Options"
 
 	if(!client)//How they check achievements without client? No idea. But I'm staying sane.
 		return
 
-	if(IsGuestKey(src.key)) //How did they even connect without being logged in? No idea. But better safe than sorry.
+	if(IsGuestKey(ckey)) //How did they even connect without being logged in? No idea. But better safe than sorry.
 		to_chat(src, "<b>Guests don't get achievements.</b>")
 		return
 
 	var/count = 0
-	to_chat(src, "<b>Achievements:</b>\n")
+	var/list/achievements = list()
+	achievements += "<b>Achievements:</b>\n"
 
 	for(var/X in client.achievement_holder.achievements)
 		var/datum/achievement/A = X //Typeless loops are faster than typed ones. Or os TG told me anyway. *shrug*
@@ -76,10 +78,14 @@
 				H = "green"
 			if (DIFF_HARD)
 				H = "red"
-		to_chat(src, "<b>[count]:<font color = [H]> [A.name]</font color></b></font>")
+		achievements += "<b>[count]:<font color = [H]> [A.name]</font color></b></font>\n"
 		if(A.description)
-			to_chat(src, "<i>[A.description]</i>\n")
+			achievements += "<i>[A.description]</i>\n"
 		else
-			to_chat(src, "\n")
+			achievements += "\n"
 	if(count)
-		to_chat(src, "---\n<b>TOTAL ACHIEVEMENTS: [count]</b>")
+		achievements += "---\n<b>TOTAL ACHIEVEMENTS: [count]</b>"
+	else
+		achievements += "<i>You have zero achievements in your line of duty... yet.</i>"
+
+	to_chat(src, examine_block("<span class='info'>[achievements.Join()]</span>"))
