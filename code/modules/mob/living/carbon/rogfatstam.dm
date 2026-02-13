@@ -130,6 +130,9 @@
 		emote("fatigue", forced = TRUE)
 		if(stress > 15)
 			addtimer(CALLBACK(src, TYPE_PROC_REF(/mob, do_freakout_scream)), rand(30,50))
+	freak_out_camera()
+
+/mob/living/carbon/proc/freak_out_camera()
 	if(hud_used)
 		var/matrix/skew = matrix()
 		skew.Scale(2)
