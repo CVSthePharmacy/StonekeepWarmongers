@@ -160,6 +160,10 @@
 	var/msg = input("Message:", text("Enter the text you wish to appear to [team]:")) as text|null
 
 	var/crashout = alert(src, "Is this a crashout message?", "WARMOGNERS", "Yes", "No")
+	if(crashout == "Yes")
+		crashout = TRUE
+	else
+		crashout = FALSE
 
 	if (!msg)
 		return
