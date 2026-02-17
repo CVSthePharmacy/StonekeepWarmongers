@@ -584,10 +584,10 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine // fucking unbalanced bullshit that shouldnt exist.
-	name = "double-barkerbuss"
-	desc = "Two barkerbuss's haphazardly combined to produce this unholy weapon."
+	name = "SUPERMACHINE"
+	desc = "UNHOLY"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	icon_state = "doubleblunder"
+	icon_state = "machine"
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc)
 	wieldsound = 'sound/combat/musket_wield.ogg'

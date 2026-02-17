@@ -132,7 +132,7 @@
 
 /obj/structure/bombard
 	name = "bombardier"
-	desc = "A motar capable of launching bombs high into the sky at an angle to come crashing down on the foe, even if they cower behind cover."
+	desc = "A metal tube capable of launching bombs high into the sky at an angle to come crashing down on the foe, even if they cower behind cover."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bombardier"
 	anchored = FALSE
@@ -142,6 +142,11 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/plusy = 0 // no pussy jokes.
 	var/obj/item/bomb/loaded
+
+/obj/structure/bombard/alt // regime
+	name = "mortard"
+	desc = "A metallic-like tube capable of launching bombs high into the clouds at an angle to come crashing down on the fellows or foes depending on your mood, even if they cover behind cower."
+	icon_state = "bombardier_alt"
 	
 /obj/structure/bombard/Moved(atom/OldLoc, Dir)
 	. = ..()
@@ -260,7 +265,7 @@
 		H.take_overall_damage(45)
 		H.unlock_achievement(new /datum/achievement/backblast())
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
-	flick("bombardier_firea", src)
+	flick("[initial(icon_state)]_firea", src)
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 
 	var/obj/effect/warning/G = new(epicenter)

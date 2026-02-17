@@ -391,6 +391,7 @@
 	item_state = "shitsabregun"
 	slot_flags = ITEM_SLOT_HIP
 	walking_stick = FALSE
+	associated_skill = /datum/skill/combat/swords
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/sword/cut/sabre, /datum/intent/sword/chop)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/getonmobprop(tag)

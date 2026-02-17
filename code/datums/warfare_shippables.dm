@@ -66,6 +66,12 @@
 /datum/warshippable/bombard
 	name = "BOMBARDIER"
 	items = list(/obj/structure/bombard)
+	faction = RED_WARTEAM
+
+/datum/warshippable/bombard/alt
+	name = "MORTARD"
+	items = list(/obj/structure/bombard/alt)
+	faction = BLUE_WARTEAM
 
 /datum/warshippable/cannon
 	name = "BARKSTONE"

@@ -8,7 +8,7 @@
 "gf" = (/obj/structure/bed/rogue/inn/hay,/turf/open/floor/rogue/twig,/area/rogue/outdoors/desert)
 "gl" = (/obj/structure/warfarebarrier/red,/obj/effect/shadow{dir = 4},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "gT" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/desert)
-"hC" = (/obj/structure/bombard{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
+"hC" = (/obj/structure/bombard/alt{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "hP" = (/obj/structure/table/wood/treestump/burnt{pixel_x = -32},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "iJ" = (/obj/effect/landmark/start/grenzellord{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "kK" = (/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
