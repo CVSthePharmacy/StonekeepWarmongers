@@ -346,7 +346,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 /client/verb/viewstats()
 	set name = "View Persistent Data"
-	set category = "Options"
+	set category = "Control"
 	var/contents
 	
 	var/json_file = file("data/TotalStatistics.json")
@@ -624,7 +624,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 /client/verb/stalemate()
 	set name = "Propose STALEMATE"
-	set category = "Options"
+	set category = "Control"
 	set desc = ""
 	
 	var/sure = alert(usr, "Are you a coward?", "WARMONGERS", "Yes", "No")
@@ -642,7 +642,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 /client/verb/forcestartvote()
 	set name = "Propose FORCE START"
-	set category = "Options"
+	set category = "Control"
 	set desc = ""
 	if(SSwarmongers.warfare_ready_to_die)
 		to_chat(usr, "<B>FOOL</B>")

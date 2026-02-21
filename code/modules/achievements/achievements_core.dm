@@ -54,7 +54,7 @@
 
 /mob/verb/show_achievements()
 	set name = "Show Achievements"
-	set category = "Options"
+	set category = "Control"
 
 	if(!client)//How they check achievements without client? No idea. But I'm staying sane.
 		return
