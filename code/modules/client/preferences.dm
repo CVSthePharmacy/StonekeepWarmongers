@@ -134,6 +134,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/action_buttons_screen_locs = list()
 
 	var/domhand = 2
+	var/helmetless = FALSE
 	var/alignment = ALIGNMENT_TN
 	var/datum/warperk/warperk
 
@@ -399,6 +400,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<b>Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
 				dat += "<br>"
 				dat += "<b>Accessory:</b> <a href='?_src_=prefs;preference=accessory;task=input'>[accessory]</a>"
+				dat += "<br>"
+				dat += "<span title='This is a cosmetic change.'><b>Helmetless:</b></span> <a href='?_src_=prefs;preference=helmetless'>[helmetless == 1 ? "YES" : "NO"]</a>"
 				if(gender == FEMALE)
 					dat += "<br>"
 				dat += "<br></td>"
@@ -2123,6 +2126,8 @@ Slots: [job.spawn_positions]</span>
 						domhand = 2
 					else
 						domhand = 1
+				if("helmetless")
+					helmetless = !helmetless
 				if("alignment")
 ///					to_chat(user, "<font color='puple'>Alignment is how you communicate to the Game Masters if your character follows a certain set of behavior restrictions. This allows you to </font>")
 					var/new_alignment = input(user, "Alignment is how you communicate to the Game Masters and other players the intent of your character. Your character will be under less administrative scrutiny for evil actions if you choose evil alignments, but you will experience subtle disadvantages. Alignment is overwritten for antagonists.", "Alignment") as null|anything in ALL_ALIGNMENTS_LIST

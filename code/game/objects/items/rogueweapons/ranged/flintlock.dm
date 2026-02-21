@@ -430,7 +430,9 @@
 	desc = "Named for it's ability to cause quite the blunder."
 	icon_state = "blunder"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/gun
-	gripped_intents = list(/datum/intent/shoot/musket/shotgun, /datum/intent/mace/smash/warhamm)
+	gripped_intents = list(/datum/intent/shoot/musket/shotgun, /datum/intent/mace/heavy/smash)
+	force = 10
+	force_wielded = 20
 	bayonetable = FALSE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/examine(mob/user)
