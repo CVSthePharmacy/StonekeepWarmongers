@@ -176,7 +176,7 @@
 				playsound(src.loc, 'sound/foley/ramrodentry.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
-	name = "Barkmusket"
+	name = "barkmusket"
 	icon_state = "musket"
 	desc = "A barker used to kill at distance, and can be fitted with a bayonet for close encounters."
 	bayonetable = TRUE
@@ -237,7 +237,7 @@
 	click_delay = 2.4
 	experimental_onback = TRUE
 	gripsprite = FALSE
-	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/strike/wood)
+	possible_item_intents = list(/datum/intent/shoot/musket/pistol, /datum/intent/shoot/musket/arc, /datum/intent/mace/strike/wood)
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
@@ -268,7 +268,7 @@
 	item_state = "pistolaxe"
 	slot_flags = ITEM_SLOT_HIP
 	walking_stick = FALSE
-	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/axe/chop, /datum/intent/axe/cut)
+	possible_item_intents = list(/datum/intent/shoot/musket/pistol, /datum/intent/shoot/musket/arc, /datum/intent/axe/chop, /datum/intent/axe/cut)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/attack_self(mob/living/user)
 	return
@@ -418,3 +418,35 @@
 	caliber = "musketball"
 	max_ammo = 1
 	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/internal/shot/gun // get it? shotgun?
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet/shotgun
+	caliber = "bagball"
+	max_ammo = 1
+	start_empty = TRUE
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun
+	name = "blunderbark"
+	desc = "Named for it's ability to cause quite the blunder."
+	icon_state = "blunder"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/gun
+	gripped_intents = list(/datum/intent/shoot/musket/shotgun, /datum/intent/mace/smash/warhamm)
+	bayonetable = FALSE
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/examine(mob/user)
+	. = ..()
+	. += "<span class='tutorial'>SNEAK while using this weapon to make sure you don't get blown (to hell and) back.</span>"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread)
+	. = ..()
+	if(!user.rogue_sneaking)
+		var/turf/turfa = get_ranged_target_turf(user, turn(dir, 180), 40)
+		user.throw_at(turfa, 40, 1, null, TRUE)
+		user.take_overall_damage(65)
+		user.unlock_achievement(new /datum/achievement/backblast())
+		user.visible_message("<span class='danger'>\The [user] is thrown back from \the [src]'s recoil!</span>")
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate
+	name = "nockbark"
+	desc = "Named for it's ability to cause quite the nock...  bark. This joke really doesn't fucking work, does it?"
+	icon_state = "nockgun"

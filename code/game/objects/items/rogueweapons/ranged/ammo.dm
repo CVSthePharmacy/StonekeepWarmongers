@@ -317,8 +317,8 @@
 	jitter = 5
 	eyeblur = 3
 	icon = 'icons/roguetown/weapons/ammo.dmi'
-	icon_state = "woodenball_proj"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet/wood
+	icon_state = "pellets_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet/shotgun
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
 	armor_penetration = 40
@@ -342,10 +342,11 @@
 	desc = "A round iron shot, simple and spherical. Not as malleable as lead though."
 	projectile_type = /obj/projectile/bullet/reusable/bullet/iron
 
-/obj/item/ammo_casing/caseless/rogue/bullet/wood
-	name = "fragmentation ball"
-	desc = "A small wooden ball. It shatters into multiple pellets when shot."
-	icon_state = "woodenball"
+/obj/item/ammo_casing/caseless/rogue/bullet/shotgun
+	name = "bagball"
+	desc = "A round lead shot that has a bag of small fragments attached to it. Safe to say, this will ruin someone's day."
+	caliber = "bagball"
+	icon_state = "cluster"
 	pellets = 7
 	variance = 25
 	projectile_type = /obj/projectile/bullet/fragment

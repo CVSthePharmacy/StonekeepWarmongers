@@ -425,8 +425,69 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 
+//// BPLUNDERER - SHOTGUNNER////
 
-//// OUTRIDER ////
+/datum/advclass/red/shotgunner
+	name = "Bplunderer"
+	tutorial = "Elite shocktroops that deny the existence of those filthy Regimian scum by firing their blunderbarks, Unionist ministries haven't yet decided if their name should be a pun on 'blunder' or 'plunder' yet."
+	outfit = /datum/outfit/job/roguetown/redshotgunner
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 2
+	allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/redshotgunner/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	if(H.dna.species.id == "fat")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
+	if(H.dna.species.id == "bulky")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
+	if(H.dna.species.id == "fat")
+		cloak = /obj/item/clothing/cloak/war/ppr/scarf/fat
+	if(H.dna.species.id == "bulky")
+		cloak = /obj/item/clothing/cloak/war/ppr/scarf/bulky
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	if(H.dna.species.id == "fat")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
+	if(H.dna.species.id == "bulky")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
+	if(prob(50))
+		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun
+	backl = /obj/item/quiver/shitgunner
+	neck = /obj/item/rogue/barkenpowderflask
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
+	backpack_contents = list(/obj/item/bomb/mollie=6)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("perception", -1)
+		H.change_stat("endurance", 2)
+		H.change_stat("constitution", -1) // less constitution because this guy actually has armor and the other guy doesnt
+		H.change_stat("speed", 1)
+		H.cmode_music = 'sound/music/soberandhatingit.ogg'
+
+//// OUTRIDER - CAVALRY////
 
 /datum/advclass/red/outrider
 	name = "Outrider"
@@ -957,11 +1018,11 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 
-//// ZEALOT ////
+//// ZEALOT - SHOTGUNNER////
 
-/datum/advclass/blu/zealot //High stamina, speed, and damage. However, no gun skills, and really not that well armored.
+/datum/advclass/blu/zealot //High stamina, speed, and damage. However really not that well armored.
 	name = "Zealot"
-	tutorial = "Elite shocktroops which excel with dicing apart enemies with ferocity, but they are poorly armored, and unable to use firearms due to lack of training."
+	tutorial = "Elite shocktroops which excel with dicing apart enemies with ferocity using their nockbarks,  they are poorly armored however."
 	outfit = /datum/outfit/job/roguetown/bluzealot
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -992,15 +1053,14 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
-	backr = /obj/item/rogueweapon/flail/bigbell
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate
+	backl = /obj/item/quiver/shitgunner
+	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/war/stitchhood
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/war/stitchhood/alternate
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
@@ -1009,11 +1069,11 @@
 		H.change_stat("strength", 3)
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 4)
-		H.change_stat("constitution", 1)
+		H.change_stat("constitution", 4)
+		H.change_stat("speed", 1)
 		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
-	ADD_TRAIT(H, TRAIT_UNTRAINED, TRAIT_GENERIC)
 
-//// HUSSAR ////
+//// HUSSAR - CAVALRY////
 
 /datum/advclass/blu/hussar
 	name = "Hussar"

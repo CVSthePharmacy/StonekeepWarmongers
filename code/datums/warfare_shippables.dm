@@ -43,12 +43,6 @@
 			/obj/item/bomb/fire
 			)
 
-/datum/warshippable/woodammo
-	name = "FRAGMENTATION AMMUNITION POUCHES"
-	items = list(/obj/item/quiver/woodbullets,
-			/obj/item/quiver/woodbullets
-			)
-
 /datum/warshippable/normalammo
 	name = "LEAD BALL POUCHES"
 	items = list(/obj/item/quiver/bullets,

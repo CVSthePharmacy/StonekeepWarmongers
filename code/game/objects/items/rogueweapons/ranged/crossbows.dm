@@ -53,6 +53,16 @@
 	warnoffset = 20
 	chargetime = 4
 
+/datum/intent/shoot/musket/shotgun
+	chargedrain = 3 // heavy piece of shit
+	charging_slowdown = 1
+	severity = "mobwarning_hi"
+
+/datum/intent/shoot/musket/pistol
+	chargedrain = 1 // ???
+	charging_slowdown = 2 // dodge more easily
+	severity = "mobwarning_lo"
+
 /datum/intent/shoot/musket/rifle
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 9
@@ -90,9 +100,6 @@
 		else
 			return 0.1
 	return chargetime
-
-/datum/intent/shoot/musket/pistol/get_chargetime()
-	return 2
 
 /datum/intent/arc/crossbow
 	chargetime = 1
