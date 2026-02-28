@@ -19,7 +19,10 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
 	var/ooccolor = "#c43b23"
 	var/asaycolor = "#ff4500"			//This won't change the color for current admins, only incoming ones.
+	
 	var/triumphs = 0
+	var/frags = 0
+	
 	var/enable_tips = TRUE
 	var/tip_delay = 500 //tip delay in milliseconds
 

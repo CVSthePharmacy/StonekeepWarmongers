@@ -384,6 +384,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 
 /area/rogue/indoors/town/safe
 	safe_from_mortar = TRUE
+	dynamic_lighting = FALSE
 
 /area/rogue/outdoors/exposed/town
 	icon_state = "town"
