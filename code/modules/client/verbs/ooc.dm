@@ -365,6 +365,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	contents += "<b>REGIME VICTORIES:</b> [json["grenz_wins"]]<BR>"
 	contents += "<b>UNION VICTORIES:</b> [json["heart_wins"]]<BR>"
 	contents += "<b>MOST TRIUMPHANT SOLDIER: [SStriumphs.triumph_leaderboard[1]]</b> "
+	contents += "<b>LORD FRAGGER THE WORTHY: [SStriumphs.frag_leaderboard[1]]</b> "
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()

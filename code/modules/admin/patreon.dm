@@ -237,7 +237,7 @@ GLOBAL_LIST_EMPTY(anonymize)
 	if(get_playerquality(client.ckey) <= -5)
 		client.prefs.anonymize = FALSE
 		client.prefs.save_preferences()
-		to_chat(src, "<span class='warning'>Your PQ is too low!</span>")
+		to_chat(src, "<span class='warning'>Your IQ is too low!</span>")
 		return
 //	if(!check_whitelist(client.ckey))
 //		to_chat(src, "<span class='warning'>Whitelisted players only.</span>")

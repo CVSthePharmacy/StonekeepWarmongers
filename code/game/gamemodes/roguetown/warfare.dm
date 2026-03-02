@@ -81,17 +81,6 @@
 		if(HAS_TRAIT(warmode.winner, TRAIT_NOBLE)) // assume this guy is a lord
 			warmode.winner.unlock_achievement(new /datum/achievement/respected_captain())
 
-/datum/game_mode/warmongers/proc/begin_autobalance_loop()
-	set waitfor = 0
-	while(1)
-		CHECK_TICK
-		if(SSwarmongers.oneteammode)
-			break
-		CHECK_TICK
-		for(var/mob/dead/new_player/P in GLOB.player_list)
-			CHECK_TICK
-			P.autobalance()
-
 /datum/game_mode/warmongers/proc/supplies()
 	set waitfor = 0
 	while(1)

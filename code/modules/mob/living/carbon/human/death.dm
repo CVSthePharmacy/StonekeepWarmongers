@@ -137,6 +137,18 @@
 
 	dna.species.spec_death(gibbed, src)
 	
+	if(lastattackerckey)
+		for(var/mob/living/carbon/human/ATK in GLOB.human_list)
+			if(ATK.real_name == lastattacker)
+				if(ATK.warfare_faction != warfare_faction)
+					spawn(5)// sometimes it shows up before the injury text
+						to_chat(ATK, "\n<font color='pink'>1 FRAG(s) gained.</font>")
+					SStriumphs.frag_adjust(1, lastattackerckey)
+				else
+					SStriumphs.frag_adjust(-1, lastattackerckey)
+					spawn(5)// same here
+						to_chat(ATK, "\n<font color='pink'>Friendly fire will not be tolerated!</font>")
+
 	if(aspect_chosen(/datum/round_aspect/exploding))
 		gib(TRUE)
 	

@@ -310,9 +310,9 @@
 /obj/projectile/bullet/fragment
 	name = "fragment"
 	desc = "Haha. You're not able to see this!"
-	damage = 10
+	damage = 25
 	damage_type = BRUTE
-	woundclass = BCLASS_STAB
+	woundclass = BCLASS_BULLET
 	range = 50
 	jitter = 5
 	eyeblur = 3

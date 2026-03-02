@@ -220,7 +220,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			// FIRST ROW
 			dat += "<td style='width:33%;text-align:left'>"
 			dat += "<a href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a><br>"
-			dat += "<a href='?_src_=prefs;preference=playerquality;task=menu'><b>KARMA:</b></a> [get_playerquality(user.ckey, text = TRUE)]"
+			dat += "<a href='?_src_=prefs;preference=showoff_frags;task=menu'><b>FRAG(s):</b></a> [user.get_frags() ? "[user.get_frags()]" : "NOOB (ZERO)"]"
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:right'>"
@@ -1497,6 +1497,19 @@ Slots: [job.spawn_positions]</span>
 						continue
 
 					to_chat(C, "<span class='info'><b>[keyname]</b> shows off their [SStriumphs.get_triumphs(user.ckey)] TRIUMPHs!</span>")
+	
+	else if(href_list["preference"] == "showoff_frags")
+		var/chice = alert(usr, "Show off your FRAGS?", "WARMONGERS","YES", "NO")
+		if(chice == "YES")
+			var/keyname = user.ckey
+			if(user.ckey in GLOB.anonymize)
+				keyname = get_fake_key(user.ckey)
+			for(var/client/C in GLOB.clients)
+				if(C.prefs.chat_toggles & CHAT_OOC)
+					if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
+						continue
+
+					to_chat(C, "<span class='info'><b>[keyname]</b> flexes their [SStriumphs.get_frags(user.ckey)] FRAGs!</span>")
 
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)
