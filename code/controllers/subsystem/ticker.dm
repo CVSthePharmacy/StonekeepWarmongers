@@ -493,15 +493,18 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	var/datum/game_mode/warmongers/W = SSticker.mode
-	for(var/client/C in GLOB.clients)	
-		if(W.regimians.len < W.unionists.len)
-			C.warfare_faction = BLUE_WARTEAM
-			W.regimians += C
+	for(var/client/C in GLOB.clients)
+		if(!SSwarmongers.oneteammode)
+			if(W.regimians.len < W.unionists.len)
+				C.warfare_faction = BLUE_WARTEAM
+				W.regimians += C
+			else
+				C.warfare_faction = RED_WARTEAM
+				W.unionists += C
+			to_chat(C, "<span class='tutorial'>You were automatically balanced to the [C.warfare_faction] team.</span>")
 		else
-			C.warfare_faction = RED_WARTEAM
-			W.unionists += C
-		else
-			C.warfare_faction = "Regimians"
+			C.warfare_faction = "Regimians"		
+
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
@@ -515,8 +518,6 @@ SUBSYSTEM_DEF(ticker)
 			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
 		if(SSwarmongers.oneteammode)
 			to_chat(world, "<span class='notice'><B>This time you can only play as the Regimians.</B></span>")
-		else
-			to_chat(C, "<span class='tutorial'>You were automatically balanced to the [C.warfare_faction] team.</span>")
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING
