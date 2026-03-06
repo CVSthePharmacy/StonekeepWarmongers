@@ -503,7 +503,7 @@ SUBSYSTEM_DEF(ticker)
 				W.unionists += C
 			to_chat(C, "<span class='tutorial'>You were automatically balanced to the [C.warfare_faction] team.</span>")
 		else
-			C.warfare_faction = "Regimians"		
+			C.warfare_faction = "Regimians"
 
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
