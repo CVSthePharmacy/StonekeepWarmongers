@@ -1100,10 +1100,10 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(!SSwarmongers.oneteammode)
 		if(W.regimians.len < W.unionists.len)
-			C.warfare_faction = BLUE_WARTEAM
+			warfare_faction = BLUE_WARTEAM
 			W.regimians += src
 		else
-			C.warfare_faction = RED_WARTEAM
+			warfare_faction = RED_WARTEAM
 			W.unionists += src
 		to_chat(src, "<span class='tutorial'>You were automatically balanced to the [warfare_faction] team.</span>")
 	else
