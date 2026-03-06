@@ -442,7 +442,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread)
 	. = ..()
 	if(!user.rogue_sneaking)
-		var/turf/turfa = get_ranged_target_turf(user, turn(dir, 180), 40)
+		var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 40)
 		user.throw_at(turfa, 40, 1, null, TRUE)
 		user.take_overall_damage(65)
 		user.unlock_achievement(new /datum/achievement/backblast())
