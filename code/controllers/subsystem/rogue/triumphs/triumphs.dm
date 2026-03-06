@@ -251,6 +251,8 @@ SUBSYSTEM_DEF(triumphs)
 		if(fexists(target_file))
 			fdel(target_file)
 
+		saving_data["frag_count"] = frag_amount_cache[target_ckey]
+
 		WRITE_FILE(target_file, json_encode(saving_data))
 
 	// handle the leaderboard here too i guess
