@@ -651,7 +651,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		return
 
 	//we check if our hat or helmet hides our facial hair.
-	if(H.head && !H.client.prefs.helmetless)
+	if(H.head && !H.client?.prefs?.helmetless)
 		var/obj/item/I = H.head
 		if(isclothing(I))
 			var/obj/item/clothing/C = I
