@@ -493,22 +493,49 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	var/datum/game_mode/warmongers/W = SSticker.mode
-	for(var/client/C in shuffle(GLOB.clients))
-		if(!SSwarmongers.oneteammode)
-			if(W.regimians.len < W.unionists.len)
-				C.warfare_faction = BLUE_WARTEAM
-				W.regimians += C
-			else
-				C.warfare_faction = RED_WARTEAM
-				W.unionists += C
-			to_chat(C, "<span class='tutorial'>You were automatically balanced to the [C.warfare_faction] team.</span>")
-		else
-			C.warfare_faction = "Regimians"
+	
+	var/list/players = GLOB.clients.Copy()
+	var/list/best_reg = list()
+	var/list/best_uni = list()
+	var/best_diff = INFINITY
 
+	for(var/attempt in 1 to 40)  // 40 attempts is usually more than enough
+		var/list/shuf = shuffle(players)
+		var/list/reg = list()
+		var/list/uni = list()
+
+		for(var/client/C in shuf)
+			if(reg.len <= uni.len)
+				reg += C
+			else
+				uni += C
+
+		var/diff = abs(reg.len - uni.len)
+		if(diff < best_diff)
+			best_diff = diff
+			best_reg = reg
+			best_uni = uni
+		if(diff <= 1)
+			break
+
+	// Assign the best result
+	for(var/client/C in best_reg)
+		C.warfare_faction = BLUE_WARTEAM
+		to_chat(C, "<span class='tutorial'>You were automatically balanced to the [BLUE_WARTEAM].</span>")
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
 			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 100, FALSE)
+	for(var/client/C in best_uni)
+		C.warfare_faction = RED_WARTEAM
+		to_chat(C, "<span class='tutorial'>You were automatically balanced to the [RED_WARTEAM].</span>")
+		if(end_party)
+			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
+		else
+			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 100, FALSE)
+
+	W.regimians = best_reg
+	W.unionists = best_uni
 
 	spawn(10)
 		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
