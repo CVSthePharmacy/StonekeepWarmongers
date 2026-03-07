@@ -439,7 +439,7 @@
 	. = ..()
 	. += "<span class='tutorial'>SNEAK while using this weapon to make sure you don't get blown (to hell and) back.</span>"
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread)
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	. = ..()
 	if(!user.rogue_sneaking)
 		var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 40)
