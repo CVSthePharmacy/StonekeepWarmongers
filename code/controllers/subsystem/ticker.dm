@@ -493,7 +493,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	var/datum/game_mode/warmongers/W = SSticker.mode
-	for(var/client/C in GLOB.clients)
+	for(var/client/C in shuffle(GLOB.clients))
 		if(!SSwarmongers.oneteammode)
 			if(W.regimians.len < W.unionists.len)
 				C.warfare_faction = BLUE_WARTEAM

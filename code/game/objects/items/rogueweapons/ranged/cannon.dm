@@ -103,7 +103,6 @@
 			if(dist < 7)
 				continue
 			M.playsound_local(M_turf, null, 100, 1, get_rand_frequency(), falloff = 1, S = far_smith_sound)
-	QDEL_NULL(loaded)
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE, 6)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 	sleep(4)
@@ -111,6 +110,7 @@
 	fired_projectile.firer = firer
 	fired_projectile.fired_from = src
 	fired_projectile.fire(dir2angle(dir))
+	QDEL_NULL(loaded)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
 	name = "hand barkstone"

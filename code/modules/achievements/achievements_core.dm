@@ -27,7 +27,7 @@
 		return
 	for(var/X in achievement_holder.achievements)
 		var/datum/achievement/AA = X
-		if(A.name == AA.name) //I don't think a name check is very safe here, we should type check instead.
+		if(istype(A, AA.type))
 			return
 	achievement_holder.achievements |= A
 	var/savefile/F = new /savefile("data/player_saves/[copytext(ckey, 1, 2)]/[ckey]/achievements.sav")//Store the achievemnt in the file.
@@ -68,6 +68,9 @@
 	achievements += "<b>Achievements:</b>\n"
 
 	for(var/X in client.achievement_holder.achievements)
+		if(isnull(X))
+			client.achievement_holder.achievements -= X
+			continue
 		var/datum/achievement/A = X //Typeless loops are faster than typed ones. Or os TG told me anyway. *shrug*
 		var/H
 		count++
