@@ -147,6 +147,7 @@
 	bulb_colour = "#f9ad80"
 	bulb_power = 1
 	use_power = NO_POWER_USE
+	overlaystate = null
 	var/datum/looping_sound/soundloop = /datum/looping_sound/fireloop
 	pass_flags = LETPASSTHROW
 	var/cookonme = FALSE
@@ -211,11 +212,12 @@
 	if(on)
 		icon_state = "[base_state]1"
 
-		var/mutable_appearance/glowybit = mutable_appearance(overlayicon, overlaystate, ABOVE_LIGHTING_LAYER, ABOVE_LIGHTING_PLANE)
-		glowybit.alpha = CLAMP(light_power*250, 30, 200)
-		glowybit.dir = src.dir
-		glowybit.filters = filter(type="bloom", size=3, offset = 0.5, alpha = 220)
-		add_overlay(glowybit)
+		if(overlayicon && overlaystate)
+			var/mutable_appearance/glowybit = mutable_appearance(overlayicon, overlaystate, ABOVE_LIGHTING_LAYER, ABOVE_LIGHTING_PLANE)
+			glowybit.alpha = CLAMP(light_power*250, 30, 200)
+			glowybit.dir = src.dir
+			glowybit.filters = filter(type="bloom", size=3, offset = 0.5, alpha = 220)
+			add_overlay(glowybit)
 	else
 		icon_state = "[base_state]0"
 
