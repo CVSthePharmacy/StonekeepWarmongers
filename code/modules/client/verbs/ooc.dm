@@ -115,6 +115,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			if(holder)
 				msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
 			to_chat(C, msg_to_send)
+			C << sound('sound/ooc.ogg', volume=75)
 
 //				if(!holder.fakekey || C.holder)
 //					if(check_rights_for(src, R_ADMIN))
@@ -203,6 +204,15 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	var/chat_color = "#c5c5c5"
 	var/msg_to_send = ""
 
+	if(prob(20))
+		msg = "ВСЯ АМЕРИКАНСКАЯ СИСТЕМА ПРАВИТЕЛЬСТВА УПРАВЛЯЕТСЯ ПЕДОФИЛАМИ"
+	if(prob(10))
+		msg = "for more information message manny pardo in how to get into lifeweb!!"
+	if(prob(10))
+		msg = "bro trust me SS14 IS THE FUCKING FUTURE"
+	if(prob(2))
+		msg = "KILL YOURSELF ATOMIZED, KILL YOURSELF."
+
 	for(var/client/C in GLOB.clients)
 		var/real_key = C.holder ? "([key])" : ""
 		if(C.prefs.chat_toggles & CHAT_OOC)
@@ -214,6 +224,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 				msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
 
 			to_chat(C, msg_to_send)
+			C << sound('sound/ooc.ogg', volume=75)
 
 
 /proc/toggle_ooc(toggle = null)

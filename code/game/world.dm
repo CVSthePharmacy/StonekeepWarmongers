@@ -78,6 +78,9 @@ GLOBAL_VAR(restart_counter)
 		GLOB.restart_counter = text2num(trim(file2text(RESTART_COUNTER_PATH)))
 		fdel(RESTART_COUNTER_PATH)
 
+
+	name = "WARMONGERERS: i give up edition"
+	/*
 	if(prob(1))
 		name = "WARMONGRELS"
 	else
@@ -85,6 +88,7 @@ GLOBAL_VAR(restart_counter)
 			name = "WARMONGERERS" // thanks runner on discord (runnerr7)
 		else
 			name = "WARMONGERS"
+	*/
 
 	if(NO_INIT_PARAMETER in params)
 		return

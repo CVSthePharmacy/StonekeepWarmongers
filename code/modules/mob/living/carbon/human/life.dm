@@ -27,6 +27,8 @@
 	if (notransform)
 		return
 
+	cmode_music = 'sound/DZINY.ogg'
+
 	. = ..()
 
 	if (QDELETED(src))
