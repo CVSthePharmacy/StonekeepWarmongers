@@ -82,7 +82,7 @@
 	if(.)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	playsound(loc, 'sound/misc/beep.ogg', 75 FALSE, -1)
+	playsound(loc, 'sound/misc/beep.ogg', 75, FALSE, -1)
 	if(!playing)
 		if(curfile)
 			playing = TRUE
