@@ -10,14 +10,6 @@
   *
   * The world /New() is the root of where a round itself begins
   */
-
-/world/Tick()
-	. = ..()
-	if(prob(1))
-		if(prob(1))
-			to_chat(world, "I HOPE YOU'ERE HAVING FUN!!!")
-			world << sound('sound/give-it-up-for-day-15.mp3')
-
 /world
 	mob = /mob/dead/new_player
 	turf = /turf/closed

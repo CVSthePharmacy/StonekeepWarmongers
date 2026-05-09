@@ -91,10 +91,6 @@ proc/contains_cyrillic(t as text) // Удалите это, если созда�
 	var/static/list/unconscious_allowed_modes = list(MODE_CHANGELING = TRUE, MODE_ALIEN = TRUE)
 	var/talk_key = get_key(message)
 
-	if(prob(80))
-		to_chat(world, "This ATMOSPHERICS SYSTEM HAS BEEN OPTIMIZED BY THE USAGE OF PROB(80)!!!!")
-		playsound(src, 'sound/bite.ogg')
-
 	var/static/list/one_character_prefix = list(MODE_HEADSET = TRUE, MODE_ROBOT = TRUE, MODE_WHISPER = TRUE, MODE_SING = TRUE)
 
 	var/ic_blocked = FALSE

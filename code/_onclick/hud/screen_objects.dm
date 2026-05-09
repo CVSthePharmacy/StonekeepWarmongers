@@ -1486,7 +1486,7 @@
 
 /atom/movable/screen/splash/credits
 	icon = 'icons/fullblack.dmi'
-	icon_state = "FUCKYOU"
+	icon_state = null
 	screen_loc = ui_backhudl
 	layer = SPLASHSCREEN_LAYER
 	fucme = FALSE

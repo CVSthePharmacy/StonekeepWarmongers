@@ -191,10 +191,10 @@
 			mob_timers["lastdied"] = world.time
 			addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
 			G.add_client_colour(/datum/client_colour/monochrome)
-			G.returntolobby()
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)
+		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()], CLONE: [src.getCloneLoss()])", LOG_ATTACK)
 
 /mob/living/carbon/human/proc/zombie_check()
 	if(!mind)
@@ -212,7 +212,6 @@
 	return mind.add_antag_datum(/datum/antagonist/zombie)
 
 /mob/living/carbon/human/gib(no_brain, no_organs, no_bodyparts, safe_gib = FALSE)
-	world << sound('sound/indian-song.mp3', volume=100)
 	for(var/mob/living/carbon/human/CA in viewers(7, src))
 		if(CA != src && !HAS_TRAIT(CA, TRAIT_BLIND))
 			if(HAS_TRAIT(CA, TRAIT_STEELHEARTED))

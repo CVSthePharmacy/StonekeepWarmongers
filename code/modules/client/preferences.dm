@@ -204,7 +204,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/used_title
 	switch(current_tab)
 		if (0) // Character Settings#
-			used_title = "FUCK YOU"
+			used_title = "DRAFT NOTICE"
 
 			// Top-level menu table
 
@@ -312,7 +312,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<td width=20% valign='top'>"
 			// Rightmost column, 40% width
 			dat += "<td width=40% valign='top'>"
-			dat += "<h2>YOU SHOULD DIE</h2>"
+			dat += "<h2>Appearance</h2>"
 //			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A><BR>"
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_BODY]'>Always Random Body: [(randomise[RANDOM_BODY]) ? "Yes" : "No"]</A>"
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_BODY_ANTAG]'>When Antagonist: [(randomise[RANDOM_BODY_ANTAG]) ? "Yes" : "No"]</A><br>"
@@ -865,7 +865,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		dat += "<b>WAIT FOR ROUND START</b>"
 	else
-		dat += "<a href='byond://?src=[REF(N)];late_join=1'>COLONIAL MARINES</a>"
+		dat += "<a href='byond://?src=[REF(N)];late_join=1'>DUTY CALLS</a>"
 //	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 		dat += "</center>"
 

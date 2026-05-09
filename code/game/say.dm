@@ -19,9 +19,6 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	))
 
 /atom/movable/proc/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)
-	if(prob(80))
-		to_chat(world, "This ATMOSPHERICS SYSTEM HAS BEEN OPTIMIZED BY THE USAGE OF PROB(80)!!!!")
-		playsound(src, 'sound/bite.ogg')
 	if(!can_speak())
 		return
 	if(message == "" || !message)

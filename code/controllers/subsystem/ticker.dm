@@ -150,7 +150,6 @@ SUBSYSTEM_DEF(ticker)
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
 	login_music = pick('sound/music/warmongrels.ogg', 'sound/music/smellofblackpowder.ogg', 'sound/music/drama.ogg', 'sound/music/thomas.ogg', 'sound/music/draft.ogg', 'sound/music/parade.ogg', 'sound/music/pines.ogg', 'sound/music/rising.ogg')
-	login_music = 'sound/DZINY.ogg'
 	SSevents.getHoliday()
 
 	/*
@@ -489,7 +488,7 @@ SUBSYSTEM_DEF(ticker)
 	SSdbcore.SetRoundStart()
 	pickaspect()
 
-	to_chat(world, "<span class='notice'><span class='typewrite'>⏚ OUUUGH MY PENIS!! ⏚</span></span>")
+	to_chat(world, "<span class='notice'><span class='typewrite'>⏚ Praise the Earth! ⏚</span></span>")
 
 	CHECK_TICK
 
