@@ -26,8 +26,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	spookysounds = SPOOKY_WARINDOORS
 	spookynight = SPOOKY_WARINDOORS
 	droning_sound = 'sound/music/powderdry.ogg'
-	droning_sound_dusk = 'sound/music/powderdry.ogg'
-	droning_sound_night = 'sound/music/powderdry.ogg'
+	droning_sound_dusk = 'sound/music/daybreakoverbloodyfields.ogg'
+	droning_sound_night = 'sound/music/death.ogg'
 	plane = INDOOR_PLANE
 	converted_type = /area/rogue/outdoors
 
