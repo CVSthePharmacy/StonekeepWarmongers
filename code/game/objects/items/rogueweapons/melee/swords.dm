@@ -624,7 +624,7 @@
 //Rapiers
 /obj/item/rogueweapon/sword/rapier
 	name = "rapier"
-	desc = "A precise rapier, favored by the small, eloquent and bloodthirsty."
+	desc = "A precise rapier, favored by the small, eloquent and bloodthirsty. Don't make fun of the name."
 	icon_state = "rapier"
 	smeltresult = /obj/item/ingot/steel
 	possible_item_intents = list(/datum/intent/sword/thrust/rapier, /datum/intent/sword/cut/rapier)

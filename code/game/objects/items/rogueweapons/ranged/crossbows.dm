@@ -56,6 +56,7 @@
 /datum/intent/shoot/musket/shotgun
 	chargedrain = 3 // heavy piece of shit
 	charging_slowdown = 1
+	chargetime = 2 // :)
 	severity = "mobwarning_hi"
 
 /datum/intent/shoot/musket/pistol

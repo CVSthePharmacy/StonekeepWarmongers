@@ -292,7 +292,7 @@
 							M.onkick(src)
 				else
 					A.onkick(src)
-				OffBalance(5)
+				OffBalance(1)
 				return
 			if(INTENT_JUMP)
 				if(A == src || A == src.loc)

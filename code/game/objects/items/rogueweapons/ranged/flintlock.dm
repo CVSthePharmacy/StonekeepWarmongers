@@ -452,3 +452,9 @@
 	name = "nockbark"
 	desc = "Named for it's ability to cause quite the nock...  bark. This joke really doesn't fucking work, does it?"
 	icon_state = "nockgun"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate/Initialize()
+	. = ..()
+	if(prob(50))
+		name = "plunderbark"
+		desc = "Named for it's ability to cause quite the plunder."
