@@ -19,7 +19,7 @@
 		. += "<span class='info'>It is loaded.</span>"
 	if(shootingdown)
 		. += "<span class='info'>It will shoot the things below.</span>"
-	. += "<span class='tutorial'>Load with big lead balls, then use a torch, lamptern or flint to fire.</span>"
+	. += "<span class='tutorial'>Load with big lead balls, then use a torch, lantern or flint to fire.</span>"
 	. += "<span class='tutorial'>Use rightclick to make it shoot at the tile below if infront of an open space.</span>"
 
 /obj/structure/cannon/attackby(obj/item/I, mob/user, params)
@@ -161,14 +161,20 @@
 		var/oldy = y
 		var/newy = oldy + plusy
 		var/turf/epicenter = locate(x,newy,z)
+
+		if(!epicenter)
+			to_chat(user, "<span class='danger'>I can't see shit. These coordinates must be bad.</span>")
+			return
+
+		if(epicenter.density)
+			to_chat(user, "<span class='danger'>I can't see shit. I can't just shoot inside a solid object..</span>")
+			return
+
 		if(istype(epicenter, /turf/open/transparent/openspace))
 			epicenter = get_step_multiz(epicenter, DOWN)
 		var/area/rogue/A = get_area(epicenter)
 		if(A.safe_from_mortar)
 			to_chat(user, "<span class='danger'>I can't see shit. Seems like I can't shoot there.</span>")
-			return
-		if(!epicenter)
-			to_chat(user, "<span class='danger'>I can't see shit. These coordinates must be bad.</span>")
 			return
 
 		to_chat(user, "<span class='notice'>I try to look through the magnifying glass on \the [src].</span>")
@@ -190,15 +196,24 @@
 /obj/structure/bombard/attack_right(mob/user)
 	. = ..()
 	var/agka = input(user, "Insert azirath for target (pyrimuth equals location of bombardier)", "WARMONGERS") as null|num
+	if(isnull(agka))
+		return
+
 	agka = abs(agka)
-	if(agka)
-		switch(dir)
-			if(NORTH)
-				plusy = agka
-			if(SOUTH)
-				plusy = -agka
-		to_chat(user, "<span class='info'>New Target: [y + plusy] azirath</span>")
-		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
+
+	var/target_y = y
+
+	switch(dir)
+		if(NORTH)
+			target_y = y + agka
+		if(SOUTH)
+			target_y = y - agka
+
+	target_y = clamp(target_y, 1, world.maxy)
+	plusy = target_y - y
+
+	to_chat(user, "<span class='info'>New Target: [target_y] azirath</span>")
+	playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
 	if(dir == WEST || dir == EAST)
@@ -252,6 +267,11 @@
 	if(A.safe_from_mortar)
 		sleep(2)
 		visible_message("<span class='danger'>\The [src] stutters and sputters! Seems like there's some ancient force preventing anything being bombarded on the target coordinates...</span>")
+		return
+	
+	if(!epicenter || epicenter.density)
+		sleep(2)
+		visible_message("<span class='danger'>\The [src] stutters and sputters!</span>")
 		return
 
 	for(var/mob/living/carbon/H in hearers(7, src))

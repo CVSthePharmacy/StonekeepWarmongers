@@ -26,6 +26,25 @@
 	droning_sound_current = 'sound/music/root.ogg';
 	droning_sound_dawn = 'sound/music/root.ogg'
 	})
+"bu" = (
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/structure/closet/crate/chest,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors/town/safe)
 "by" = (
 /obj/structure/lever{
 	redstone_id = "bridge3";
@@ -183,6 +202,25 @@
 /area/rogue/underworld)
 "eQ" = (
 /obj/effect/landmark/redreinforcement,
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/indoors/town/safe)
+"fa" = (
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/safe)
 "fB" = (
@@ -3117,7 +3155,7 @@ rQ
 rQ
 rQ
 rQ
-rQ
+fa
 rQ
 rQ
 rQ
@@ -3159,7 +3197,7 @@ dC
 dC
 dC
 dC
-dC
+bu
 dC
 dC
 dC
