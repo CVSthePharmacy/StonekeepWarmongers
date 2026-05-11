@@ -33,8 +33,8 @@
 	haloalertsound = 'sound/vo/halo/hail2theking.mp3'
 
 /datum/warmode/noreturn
-	name = "Point of No Return"
-	shorthand = "PONR"
+	name = "Capture the Flag"
+	shorthand = "CTF"
 	haloalertsound = 'sound/vo/halo/ctf.mp3'
 	blurb = "Capture the enemy flag and take it to your PONR!"
 

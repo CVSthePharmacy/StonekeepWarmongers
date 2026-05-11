@@ -35,8 +35,8 @@
 // CTF
 
 /obj/structure/warobjective/ponr
-	name = "Regimer Point of No Return"
-	desc = "A very important flag."
+	name = "Regimer Flong"
+	desc = "A very important flong."
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "ponrblue"
 	anchored = TRUE
@@ -105,8 +105,8 @@
 			SEND_SOUND(reg, 'sound/misc/hello.ogg')
 
 /obj/structure/warobjective/ponr/red
-	name = "Union's Point of No Return"
-	desc = "A very important flag."
+	name = "Union's Flang"
+	desc = "A very important flang."
 	icon_state = "ponrred"
 
 /obj/structure/warobjective/ponr/red/attack_hand(mob/user)
