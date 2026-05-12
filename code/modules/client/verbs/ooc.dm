@@ -24,9 +24,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		var/mob/living/carbon/human/H = mob
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				img = "heartfelt"
+				img = "union"
 			if(BLUE_WARTEAM)
-				img = "skull"
+				img = "regime"
 			else
 				img = "normie"
 	return img
