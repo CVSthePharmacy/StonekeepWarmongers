@@ -303,6 +303,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = GetSidearmForWarfarePPU()
 	backr = /obj/item/quiver/bullets
+	backl = /obj/item/storage/backpack/rogue/satchel
 	beltr = /obj/item/rogueweapon/sword/sabre/warcrime
 	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	if(H.dna.species.id == "fat")
@@ -892,6 +893,7 @@
 	beltr = GetSidearmForWarfareRegime()
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	backl = /obj/item/quiver/bullets
+	backr = /obj/item/storage/backpack/rogue/satchel
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
 	if(H.dna.species.id == "fat")
 		cloak = /obj/item/clothing/cloak/war/regime/cloak/fat

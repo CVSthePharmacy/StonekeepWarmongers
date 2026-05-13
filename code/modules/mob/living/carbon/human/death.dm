@@ -93,7 +93,7 @@
 			testing("Red lord is dead!")
 			for(var/client/X in C.unionists)
 				var/mob/living/carbon/human/V = X.mob
-				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				to_chat(V, "<span class='red'>OUR OFFICIAL IS DEAD! WE ARE DOOMED! DOOMED!</span>")
 				if(aspect_chosen(/datum/round_aspect/halo))
 					V.playsound_local(get_turf(V), 'sound/vo/halo/blowmeaway.mp3', 20, FALSE, pressure_affected = FALSE)
 				else

@@ -1673,24 +1673,27 @@
 /atom/movable/screen/stress/Click(location,control,params)
 	var/list/modifiers = params2list(params)
 
+	var/list/msg = list()
+
 	if(ishuman(usr))
 		var/mob/living/carbon/human/M = usr
 		if(modifiers["left"])
-			to_chat(M, "*----*")
-			to_chat(M, "<span class='info'>I'm indifferent. I hate myself, here's all that's bugging me right now. Life sucks.</span>")
-			to_chat(M, "*--------*")
+			msg += "<span class='info'>*----*</span>"
+			msg += "<span class='info'>I'm indifferent. I hate myself, here's all that's bugging me right now. Life sucks.</span>"
+			msg += "<span class='info'>*--------*</span>"
 			if(!length(M.stressors))
-				to_chat(M, "<span class='info'>I'm not feeling much of anything right now.</span>")
+				msg += "<span class='info'>I'm not feeling much of anything right now.</span>"
 			for(var/datum/stressevent/stressevent in M.stressors)
 				if(!stressevent.can_show())
 					continue
 				var/count = stressevent.stacks
 				var/ddesc = islist(stressevent.desc) ? pick(stressevent.desc) : stressevent.desc
 				if(count > 1)
-					to_chat(M, "[ddesc] (x[count])")
+					msg += "[ddesc] (x[count])"
 				else
-					to_chat(M, "[ddesc]")
-			to_chat(M, "*--------*")
+					msg += "[ddesc]"
+			msg += "<span class='info'>*--------*</span>"
+			to_chat(M, examine_block(msg.Join("\n")))
 		if(modifiers["right"])
 			if(M.get_triumphs() < 2)
 				to_chat(M, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
