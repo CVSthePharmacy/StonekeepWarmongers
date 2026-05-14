@@ -1,80 +1,72 @@
 /client
 	var/list/played_loops = list() //uses dlink to link to the sound
 
-/**
- * playsound is a proc used to play a 3D sound in a specific range. This uses SOUND_RANGE + extra_range to determine that.
- *
- * Arguments:
- * * source - Origin of sound.
- * * soundin - Either a file, or a string that can be used to get an SFX.
- * * vol - The volume of the sound, excluding falloff_exponent and pressure affection.
- * * vary - bool that determines if the sound changes pitch every time it plays.
- * * extrarange - modifier for sound range. This gets added on top of SOUND_RANGE.
- * * falloff_exponent - Rate of falloff_exponent for the audio. Higher means quicker drop to low volume. Should generally be over 1 to indicate a quick dive to 0 rather than a slow dive.
- * * frequency - playback speed of audio.
- * * channel - The channel the sound is played at.
- * * pressure_affected - Whether or not difference in pressure affects the sound (E.g. if you can hear in space).
- * * ignore_walls - Whether or not the sound can pass through walls.
- * * falloff_distance - Distance at which falloff_exponent begins. Sound is at peak volume (in regards to falloff_exponent) aslong as it is in this range.
- */
-/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff_exponent = SOUND_FALLOFF_EXPONENT, frequency = null, channel, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE, soundping = FALSE, repeat)
+
+/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, frequency = null, channel, pressure_affected = FALSE, ignore_walls = TRUE, soundping = FALSE, repeat)
 	if(isarea(source))
 		CRASH("playsound(): source is an area")
 
 	var/turf/turf_source = get_turf(source)
-	if(!turf_source)
-		return
+	if(isturf(source))
+		turf_source = source
 
-	if(vol < SOUND_AUDIBLE_VOLUME_MIN) // never let sound go below SOUND_AUDIBLE_VOLUME_MIN or bad things will happen
+	if (!turf_source)
 		return
 
 	//allocate a channel if necessary now so its the same for everyone
 	channel = channel || open_sound_channel()
 
-	// Looping through the player list has the added bonus of working for mobs inside containers
+ 	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = soundin
 	if(!istype(S))
 		S = sound(get_sfx(soundin))
-	if(!istype(S))
-		CRASH("playsound(): sound is still a list after get_sfx")
-
-	var/maxdistance = SOUND_RANGE + extrarange
+	if(!extrarange)
+		extrarange = 1
+	var/maxdistance = (world.view + extrarange)
 	var/source_z = turf_source.z
 	var/list/listeners = SSmobs.clients_by_zlevel[source_z].Copy()
 
-	var/turf/above_turf = SSmapping.get_turf_above(turf_source)
-	var/turf/below_turf = SSmapping.get_turf_below(turf_source)
+	var/turf/above_turf = turf_source.above()
+	var/turf/below_turf = turf_source.below()
 
-	var/audible_distance = CALCULATE_MAX_SOUND_AUDIBLE_DISTANCE(vol, maxdistance, falloff_distance, max(falloff_exponent, 1))
+	if(above_turf)
+		if(!is_in_zweb(source_z,above_turf.z))
+			above_turf=null
+	if(below_turf)
+		if(!is_in_zweb(source_z,below_turf.z))
+			below_turf=null
 
 	if(soundping)
 		ping_sound(source)
 
-	var/list/muffled_listeners = list() //this is very rudimentary list of muffled listeners above and below to mimic sound muffling (this is done through modifying the playsounds for them)
-	if(!ignore_walls) //these sounds don't carry through walls or vertically
-		listeners = listeners & hearers(audible_distance,turf_source)
+	if(!ignore_walls) //these sounds don't carry through walls
+		listeners = listeners & hearers(maxdistance,turf_source)
+
+		if(above_turf && istransparentturf(above_turf))
+			listeners += hearers(maxdistance,above_turf)
+
+		if(below_turf && istransparentturf(turf_source))
+			listeners += hearers(maxdistance,below_turf)
+
 	else
 		if(above_turf)
 			listeners += SSmobs.clients_by_zlevel[above_turf.z]
-			listeners += SSmobs.dead_players_by_zlevel[above_turf.z]
 
 		if(below_turf)
 			listeners += SSmobs.clients_by_zlevel[below_turf.z]
-			listeners += SSmobs.dead_players_by_zlevel[below_turf.z]
 
-	listeners += SSmobs.dead_players_by_zlevel[source_z]
 	. = list()
 
-	for(var/mob/M as anything in listeners)
-		if(get_dist(M, turf_source) <= audible_distance)
-			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff_exponent, channel, pressure_affected, S, max_distance = maxdistance, falloff_distance = falloff_distance, repeat = repeat))
+	for(var/P in listeners)
+		var/mob/M = P
+		if(get_dist(M, turf_source) <= maxdistance)
+			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat))
 				. += M
-
-	for(var/mob/M as anything in muffled_listeners)
-		if(get_dist(M, turf_source) <= audible_distance)
-			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff_exponent, channel, pressure_affected, S, max_distance = maxdistance, falloff_distance = falloff_distance, repeat = repeat, muffled = TRUE))
+	for(var/P in SSmobs.dead_players_by_zlevel[source_z])
+		var/mob/M = P
+		if(get_dist(M, turf_source) <= maxdistance)
+			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat))
 				. += M
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SOUND_PLAYED, source, soundin)
 
 /proc/playsound_area(var/area/area, sound)
 	for(var/mob/M in area)
@@ -107,27 +99,15 @@
 	. = ..()
 	animate(src, alpha = 0, time = duration, easing = EASE_IN)
 */
-
-/mob/proc/playsound_local(atom/turf_source, soundin, vol as num, vary, frequency, falloff_exponent = SOUND_FALLOFF_EXPONENT, channel, pressure_affected = TRUE, sound/S, max_distance, falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE, distance_multiplier = 1, repeat, muffled)
+/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel, pressure_affected = TRUE, sound/S, repeat)
 	if(!client || !can_hear())
 		return FALSE
 
 	if(!S)
 		S = sound(get_sfx(soundin))
 
-	if(!istype(S))
-		CRASH("playsound_local(): sound is still a list after get_sfx")
-
 	S.wait = 0 //No queue
 	S.channel = channel || open_sound_channel()
-
-	if(muffled)
-		S.environment = 11
-		if(falloff_exponent)
-			falloff_exponent *= 1.5
-		else
-			falloff_exponent = SOUND_FALLOFF_EXPONENT * 1.5
-		vol *= 0.75
 
 	var/vol2use = vol
 	if(client.prefs)
@@ -146,74 +126,91 @@
 	if(frequency)
 		S.frequency = frequency
 
-	var/distance = 0
-
 	if(isturf(turf_source))
 		var/turf/T = get_turf(src)
 
-		//sound volume falloff_exponent with distance
-		distance = max(get_dist(T, turf_source) * distance_multiplier, 0)
+		//sound volume falloff with distance
+		var/distance = get_dist(T, turf_source)
 
-		if(max_distance && falloff_exponent) //If theres no max_distance we're not a 3D sound, so no falloff.
-			S.volume -= CALCULATE_SOUND_VOLUME(vol2use, distance, max_distance, falloff_distance, falloff_exponent)
+		S.volume -= (distance * (0.10 * S.volume)) //10% each step
+/*
+		if(pressure_affected)
+			//Atmosphere affects sound
+			var/pressure_factor = 1
+			var/datum/gas_mixture/hearer_env = T.return_air()
+			var/datum/gas_mixture/source_env = turf_source.return_air()
 
-		if(S.volume < SOUND_AUDIBLE_VOLUME_MIN)
-			return //No sound
+			if(hearer_env && source_env)
+				var/pressure = min(hearer_env.return_pressure(), source_env.return_pressure())
+				if(pressure < ONE_ATMOSPHERE)
+					pressure_factor = max((pressure - SOUND_MINIMUM_PRESSURE)/(ONE_ATMOSPHERE - SOUND_MINIMUM_PRESSURE), 0)
+			else //space
+				pressure_factor = 0
 
-		var/dx = turf_source.x - x
-		if(dx <= 1 && dx >= -1)
+			if(distance <= 1)
+				pressure_factor = max(pressure_factor, 0.15) //touching the source of the sound
+
+			S.volume *= pressure_factor
+			//End Atmosphere affecting sound
+*/
+
+		if(S.volume <= 0)
+			return FALSE //No sound
+
+		var/dx = turf_source.x - T.x // Hearing from the right/left
+		if(dx <= 1 && dx >= -1) //if we're  close enough we're heard in both ears
 			S.x = 0
 		else
 			S.x = dx
-		var/dz = turf_source.y - y
-		if(dz <= 1 && dz >= -1)
+		var/dz = turf_source.y - T.y // Hearing from infront/behind
+		if(dz <= 1 && dz >= -1) //if we're  close enough we're heard in both ears
 			S.z = 0
 		else
 			S.z = dz
-
-		var/dy = turf_source.z - z
+		var/dy = (turf_source.z - T.z) * 2 // Hearing from  above / below, multiplied by 5 because we assume height is further along coords.
 		S.y = dy
 
-		S.falloff = max_distance || 0 //use max_distance, else just use 0 as we are a direct sound so falloff isnt relevant.
+		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 
-	if(repeat && istype(repeat, /datum/looping_sound))
-		var/datum/looping_sound/D = repeat
-		if(src in D.thingshearing) //we are already hearing this loop
-			if(client.played_loops[D])
-				var/sound/DS = client.played_loops[D]["SOUND"]
-				if(DS)
-					var/volly = client.played_loops[D]["VOL"]
-					if(volly != S.volume)
-						DS.x = S.x
-						DS.y = S.y
-						DS.z = S.z
-						DS.falloff = S.falloff
-						client.played_loops[D]["VOL"] = S.volume
-						update_sound_volume(DS, S.volume)
-						if(client.played_loops[D]["MUTESTATUS"]) //we have sound so turn this off
-							client.played_loops[D]["MUTESTATUS"] = null
-		else
-			D.thingshearing += src
+	if(repeat)
+		if(istype(repeat, /datum/looping_sound))
+			var/datum/looping_sound/D = repeat
+			if(src in D.thingshearing) //we are already hearing this loop
+				if(client.played_loops[D])
+					var/sound/DS = client.played_loops[D]["SOUND"]
+					if(DS)
+						var/volly = client.played_loops[D]["VOL"]
+						if(volly != S.volume)
+							DS.x = S.x
+							DS.y = S.y
+							DS.z = S.z
+							DS.falloff = S.falloff
+							client.played_loops[D]["VOL"] = S.volume
+							update_sound_volume(DS, S.volume)
+							if(client.played_loops[D]["MUTESTATUS"]) //we have sound so turn this off
+								client.played_loops[D]["MUTESTATUS"] = null
+						return TRUE
+			else
+				D.thingshearing += src
 			client.played_loops[D] = list()
 			client.played_loops[D]["SOUND"] = S
 			client.played_loops[D]["VOL"] = S.volume
 			client.played_loops[D]["MUTESTATUS"] = null
+//			if(D.persistent_loop) //shut up music because we're hearing ingame music
+//				play_ambience(get_area(src))
 			S.repeat = 1
 
 	SEND_SOUND(src, S)
 
 	return TRUE
 
-/proc/sound_to_playing_players(soundin, volume = 100, vary = FALSE, frequency = 0, channel = 0, pressure_affected = FALSE, sound/S)
+/proc/sound_to_playing_players(soundin, volume = 100, vary = FALSE, frequency = 0, falloff = FALSE, channel = 0, pressure_affected = FALSE, sound/S)
 	if(!S)
 		S = sound(get_sfx(soundin))
 	for(var/m in GLOB.player_list)
 		if(ismob(m) && !isnewplayer(m))
 			var/mob/M = m
-			M.playsound_local(M, null, volume, vary, frequency, null, channel, pressure_affected, S)
-
-/mob/proc/stop_sound_channel(chan)
-	SEND_SOUND(src, sound(null, repeat = 0, wait = 0, channel = chan))
+			M.playsound_local(M, null, volume, vary, frequency, falloff, channel, pressure_affected, S)
 
 /proc/open_sound_channel()
 	var/static/next_channel = 1	//loop through the available 1024 - (the ones we reserve) channels and pray that its not still being used
@@ -221,10 +218,8 @@
 	if(next_channel > CHANNEL_HIGHEST_AVAILABLE)
 		next_channel = 1
 
-/mob/proc/set_sound_channel_volume(channel, volume)
-	var/sound/S = sound(null, FALSE, FALSE, channel, volume)
-	S.status = SOUND_UPDATE
-	SEND_SOUND(src, S)
+/mob/proc/stop_sound_channel(chan)
+	SEND_SOUND(src, sound(null, repeat = 0, wait = 0, channel = chan))
 
 /mob/proc/mute_sound_channel(chan)
 	for(var/sound/S in client.SoundQuery())
@@ -305,13 +300,10 @@
 	UNTIL(SSticker.login_music) //wait for SSticker init to set the login music
 
 	if(prefs && (prefs.toggles & SOUND_LOBBY))
-		SEND_SOUND(src, sound(SSticker.login_music, repeat = 1, wait = 0, volume = prefs.musicvol, channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS
+		SEND_SOUND(src, sound(SSticker.login_music, repeat = 1, wait = 0, volume = 60, channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS
 
 /proc/get_rand_frequency()
 	return rand(43100, 45100) //Frequency stuff only works with 45kbps oggs.
-
-/proc/get_rand_frequency_higher_range()
-	return rand(40000, 48100)
 
 /proc/get_sfx(soundin)
 	if(islist(soundin))

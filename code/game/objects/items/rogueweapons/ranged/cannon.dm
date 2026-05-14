@@ -102,7 +102,7 @@
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 100, 1, get_rand_frequency(), falloff_distance = 1, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 100, 1, get_rand_frequency(), falloff = 1, S = far_smith_sound)
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE, 6)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 	sleep(4)
