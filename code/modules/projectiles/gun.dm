@@ -314,8 +314,6 @@
 	if(semicd)
 		return
 
-	user.unlock_achievement(new /datum/achievement/firstshot())
-
 	var/sprd = 0
 	var/randomized_gun_spread = 0
 	var/rand_spr = rand()
@@ -344,6 +342,7 @@
 //				if(get_dist(user, target) <= 1) //Making sure whether the target is in vicinity for the pointblank shot
 //					shoot_live_shot(user, 1, target, message)
 //				else
+				user.unlock_achievement(new /datum/achievement/firstshot())
 				shoot_live_shot(user, 0, target, message)
 		else
 			shoot_with_empty_chamber(user)
