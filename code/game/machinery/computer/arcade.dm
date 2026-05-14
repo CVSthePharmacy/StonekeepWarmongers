@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 			var/attackamt = rand(2,6)
 			var/weapon = pick(weapons)
 			temp = "You attack with a [weapon] for [attackamt] damage!"
-			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 			updateUsrDialog()
 			if(turtle > 0)
 				turtle--
@@ -207,7 +207,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 			var/pointamt = rand(1,3)
 			var/healamt = rand(6,8)
 			temp = "You use [pointamt] magic to heal for [healamt] damage!"
-			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 			updateUsrDialog()
 			turtle++
 
@@ -222,7 +222,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 			blocked = TRUE
 			var/chargeamt = rand(4,7)
 			temp = "You regain [chargeamt] points."
-			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 			player_mp += chargeamt
 			if(turtle > 0)
 				turtle--
@@ -257,7 +257,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		if(!gameover)
 			gameover = TRUE
 			temp = "[enemy_name] has fallen! Rejoice!"
-			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 
 			if(obj_flags & EMAGGED)
 				new /obj/effect/spawner/newbomb/timer/syndicate(loc)
@@ -274,13 +274,13 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 	else if ((obj_flags & EMAGGED) && (turtle >= 4))
 		var/boomamt = rand(5,10)
 		temp = "[enemy_name] throws a bomb, exploding you for [boomamt] damage!"
-		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 		player_hp -= boomamt
 
 	else if ((enemy_mp <= 5) && (prob(70)))
 		var/stealamt = rand(2,3)
 		temp = "[enemy_name] steals [stealamt] of my power!"
-		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 		player_mp -= stealamt
 		updateUsrDialog()
 
@@ -288,27 +288,27 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 			gameover = TRUE
 			sleep(10)
 			temp = "You have been drained! GAME OVER"
-			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+			playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 			if(obj_flags & EMAGGED)
 				usr.gib()
 			SSblackbox.record_feedback("nested tally", "arcade_results", 1, list("loss", "mana", (obj_flags & EMAGGED ? "emagged":"normal")))
 
 	else if ((enemy_hp <= 10) && (enemy_mp > 4))
 		temp = "[enemy_name] heals for 4 health!"
-		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 		enemy_hp += 4
 		enemy_mp -= 4
 
 	else
 		var/attackamt = rand(3,6)
 		temp = "[enemy_name] attacks for [attackamt] damage!"
-		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 		player_hp -= attackamt
 
 	if ((player_mp <= 0) || (player_hp <= 0))
 		gameover = TRUE
 		temp = "You have been crushed! GAME OVER"
-		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 		if(obj_flags & EMAGGED)
 			usr.gib()
 		SSblackbox.record_feedback("nested tally", "arcade_results", 1, list("loss", "hp", (obj_flags & EMAGGED ? "emagged":"normal")))
@@ -1253,7 +1253,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		var/obj/item/bodypart/chopchop = c_user.get_bodypart(which_hand)
 		chopchop.dismember()
 		qdel(chopchop)
-		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff = 10)
+		playsound(loc, 'sound/blank.ogg', 50, TRUE, extrarange = -3, falloff_distance = 10)
 		for(var/i=1; i<=rand(3,5); i++)
 			prizevend(user)
 	else

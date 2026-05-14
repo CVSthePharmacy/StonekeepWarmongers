@@ -146,7 +146,7 @@
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff_distance = 5, S = far_smith_sound)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/sniper
 	name = "longrepeater"
@@ -299,7 +299,7 @@
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff_distance = 5, S = far_smith_sound)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/boltaction/sniper
 	name = "longboltenbarker"
@@ -440,7 +440,7 @@
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff_distance = 5, S = far_smith_sound)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/getonmobprop(tag)
 	. = ..()
@@ -572,7 +572,7 @@
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff_distance = 5, S = far_smith_sound)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/boltashot/getonmobprop(tag)
 	. = ..()
@@ -680,7 +680,7 @@
 			var/dist = get_dist(M_turf, loc)
 			if(dist < 7)
 				continue
-			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff_distance = 5, S = far_smith_sound)
 
 /obj/item/gun/grenadelauncher/granata
 	name = "barklauncher"
