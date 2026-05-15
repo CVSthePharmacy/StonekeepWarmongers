@@ -795,7 +795,8 @@
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	beltl = /obj/item/rogue/cranker
-	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
+	beltr = /obj/item/rogueweapon/surgery/limbgrabber
+	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
 	mask = /obj/item/clothing/mask/rogue/beakmask
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
@@ -1306,7 +1307,8 @@
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	beltl = /obj/item/rogue/cranker
-	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
+	beltr = /obj/item/rogueweapon/surgery/limbgrabber
+	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
 	mask = /obj/item/clothing/mask/rogue/butcher
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
