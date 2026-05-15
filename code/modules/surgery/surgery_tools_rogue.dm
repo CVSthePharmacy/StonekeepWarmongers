@@ -262,6 +262,7 @@
 		return
 	var/mob/living/carbon/human/H = M
 
+	H.flash_fullscreen("redflash1")
 	if(grabbed)
 		if(!check_zone(user.zone_selected) == grabbed.body_zone)
 			to_chat(user, "<span class='warning'>...Where the fuck am I looking at?</span>")
