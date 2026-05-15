@@ -347,8 +347,8 @@
 	desc = "A round lead shot that has a bag of small fragments attached to it. Safe to say, this will ruin someone's day."
 	caliber = "bagball"
 	icon_state = "cluster"
-	pellets = 7
-	variance = 25
+	pellets = 12
+	variance = 30
 	projectile_type = /obj/projectile/bullet/fragment
 
 /obj/projectile/bullet/reusable/cannonball

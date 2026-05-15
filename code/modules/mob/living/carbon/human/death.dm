@@ -137,7 +137,7 @@
 
 	dna.species.spec_death(gibbed, src)
 	
-	if(lastattackerckey)
+	if(lastattackerckey && src.client)
 		for(var/mob/living/carbon/human/ATK in GLOB.human_list)
 			if(ATK.real_name == lastattacker)
 				if(ATK.warfare_faction != warfare_faction)

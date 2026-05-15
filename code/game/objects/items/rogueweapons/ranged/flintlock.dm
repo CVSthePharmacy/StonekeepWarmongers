@@ -431,8 +431,8 @@
 	icon_state = "blunder"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/gun
 	gripped_intents = list(/datum/intent/shoot/musket/shotgun, /datum/intent/mace/heavy/smash)
-	force = 10
-	force_wielded = 20
+	force = 20
+	force_wielded = 35
 	bayonetable = FALSE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/examine(mob/user)
