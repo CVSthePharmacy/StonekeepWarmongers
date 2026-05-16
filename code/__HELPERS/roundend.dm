@@ -208,13 +208,14 @@
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
 		C.award_triumphs()
-		C.prompt_commends()
 
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
 			SSvote.interface(C) // FORCE them to vote.
+			spawn()
+				C.commendation_popup()
 			if(aspect_chosen(/datum/round_aspect/halo))
 				C.mob.playsound_local(C.mob, 'sound/vo/halo/gameover.mp3', 100, FALSE)
 				spawn(10) C.mob.playsound_local(C.mob, 'sound/vo/halo/blowmeaway.mp3', 100, FALSE)

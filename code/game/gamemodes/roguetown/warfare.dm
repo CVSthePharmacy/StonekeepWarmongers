@@ -37,10 +37,6 @@
 	SSwarmongers.fuckthisshit.setup()
 	return ..()
 
-/datum/game_mode/warmongers/proc/prompt_commends()
-	for(var/client/C in GLOB.clients)
-		C.commendation_popup()
-
 /datum/game_mode/warmongers/proc/award_triumphs()
 	if(whowon == null)
 		for(var/client/C in GLOB.clients)
