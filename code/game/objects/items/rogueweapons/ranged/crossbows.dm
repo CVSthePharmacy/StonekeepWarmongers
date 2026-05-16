@@ -234,7 +234,7 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow // hand crossbow
 	name = "handbow"
 	desc = "A lightweight version of the crossbow of old, easily stored."
 	slot_flags = ITEM_SLOT_HIP
@@ -249,7 +249,7 @@
 	else
 		if(!cocked)
 			to_chat(user, "<span class='info'>I grip the bowstring and pull it back with all my might...</span>")
-			if(do_after(user, 40 - user.STASTR, target = user))
+			if(do_after(user, 35 - (user.STASTR * 2), target = user))
 				playsound(user, 'sound/combat/Ranged/crossbow_medium_reload-01.ogg', 100, FALSE)
 				cocked = TRUE
 		else
