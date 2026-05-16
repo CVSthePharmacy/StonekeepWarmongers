@@ -154,10 +154,12 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		return
 	if(commendedsomeone)
 		return
+	if(alert(src,"Do you want to commend someone?","WARMONGERS", "Yes", "No") == "No")
+		return
 	var/list/selections = GLOB.character_ckey_list.Copy()
 	if(!selections.len)
 		return
-	var/selection = input(src,"Which Character?") as null|anything in sortList(selections)
+	var/selection = input(src,"Which Character?","WARMONGERS") as null|anything in sortList(selections)
 	if(!selection)
 		return
 	if(commendedsomeone)

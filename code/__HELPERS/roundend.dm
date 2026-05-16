@@ -208,6 +208,7 @@
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
 		C.award_triumphs()
+		C.prompt_commends()
 
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)

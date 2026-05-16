@@ -308,7 +308,7 @@
 		grabbed = BP
 		BP.forceMove(src)
 
-		playsound(get_turf(src), pick(list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')), 75, FALSE, -1)
+		playsound(get_turf(src), pick(list('sound/combat/hits/bladed/genthrust (1).ogg','sound/combat/hits/bladed/genthrust (2).ogg',)), 75, FALSE, -1)
 		update_icon()
 	else
 		return ..()

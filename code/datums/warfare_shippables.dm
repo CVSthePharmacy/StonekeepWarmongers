@@ -57,6 +57,10 @@
 			/obj/item/ammo_casing/caseless/rogue/cball
 			)
 
+/datum/warshippable/healther
+	name = "HEALTHER"
+	items = list(/obj/structure/healther)
+
 /datum/warshippable/bombard
 	name = "BOMBARDIER"
 	items = list(/obj/structure/bombard)

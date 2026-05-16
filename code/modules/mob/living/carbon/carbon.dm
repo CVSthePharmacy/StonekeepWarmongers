@@ -507,7 +507,7 @@
 	if(!domhand || !num)
 		return STASTR
 	var/used = STASTR
-	if(num == domhand)
+	if(num == domhand || client?.hasPerk(/datum/warperk/akimbo))
 		return used
 	else
 		used = STASTR - 1
