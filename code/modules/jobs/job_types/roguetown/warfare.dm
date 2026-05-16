@@ -668,6 +668,7 @@
 	backr = /obj/item/quiver/bullets
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm
+	gloves = /obj/item/clothing/gloves/roguetown/leather
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm/alternate
 	if(H.mind)
@@ -1253,6 +1254,7 @@
 	backr = /obj/item/quiver/bullets
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm/alternate
 	if(H.mind)
