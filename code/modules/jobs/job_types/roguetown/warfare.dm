@@ -810,7 +810,11 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
-		H.change_stat("strength", -2)
+		if(aspect_chosen(/datum/round_aspect/suprememedics))
+			H.change_stat("strength", 5)
+			H.cmode_music = 'sound/music/medic.ogg'
+		else
+			H.change_stat("strength", -2)
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
@@ -1323,7 +1327,11 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
-		H.change_stat("strength", -2)
+		if(aspect_chosen(/datum/round_aspect/suprememedics))
+			H.change_stat("strength", 5)
+			H.cmode_music = 'sound/music/medic.ogg'
+		else
+			H.change_stat("strength", -2)
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)

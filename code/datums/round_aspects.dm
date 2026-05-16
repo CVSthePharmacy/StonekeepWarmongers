@@ -31,6 +31,11 @@
 	description = "Everyone knows the commander should be the strongest man in the platoon."
 	weight = 5
 
+/datum/round_aspect/suprememedics
+	name = "Supreme Medics"
+	description = "The healing is not as rewarding as the hurting."
+	weight = 4
+
 /datum/round_aspect/squishyhumans
 	name = "Squishy Soldiers"
 	description = "You're coming in terms with yourself, you're not as resilient as you thought."
