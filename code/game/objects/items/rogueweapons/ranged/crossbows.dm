@@ -249,7 +249,7 @@
 	else
 		if(!cocked)
 			to_chat(user, "<span class='info'>I grip the bowstring and pull it back with all my might...</span>")
-			if(do_after(user, 35 - (user.STASTR * 2), target = user))
+			if(do_after(user, 40 - (user.STASTR * 1.5), target = user))
 				playsound(user, 'sound/combat/Ranged/crossbow_medium_reload-01.ogg', 100, FALSE)
 				cocked = TRUE
 		else
