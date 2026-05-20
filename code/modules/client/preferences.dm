@@ -1184,7 +1184,7 @@ Slots: [job.spawn_positions]</span>
 	if(user.client?.prefs)
 		if(!user.client.prefs.lastclass)
 			return
-	var/choice = tgalert(user, "Use 2 Triumphs to play as this class again?", "Reset LastPlayed", "Do It", "Cancel")
+	var/choice = browser_alert(user, "Use 2 Triumphs to play as this class again?", "Reset LastPlayed", list("Do It", "Cancel"))
 	if(choice == "Cancel")
 		return
 	if(!choice)
@@ -1496,7 +1496,7 @@ Slots: [job.spawn_positions]</span>
 					if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
 						continue
 
-					to_chat(C, "<span class='info'><b>[keyname]</b> shows off their [SStriumphs.get_triumphs(user.ckey)] TRIUMPHs!</span>")
+					to_chat(C, "<span class='info'><b>[keyname]</b> shows off their <b>[SStriumphs.get_triumphs(user.ckey)] TRIUMPHs!</b></span>")
 	
 	else if(href_list["preference"] == "showoff_frags")
 		var/chice = alert(usr, "Show off your FRAGS?", "WARMONGERS","YES", "NO")
@@ -1509,7 +1509,7 @@ Slots: [job.spawn_positions]</span>
 					if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
 						continue
 
-					to_chat(C, "<span class='info'><b>[keyname]</b> flexes their [SStriumphs.get_frags(user.ckey)] FRAGs!</span>")
+					to_chat(C, "<span class='info'><b>[keyname]</b> flexes their <b>[SStriumphs.get_frags(user.ckey)] FRAGs!</b></span>")
 
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)
@@ -1591,7 +1591,7 @@ Slots: [job.spawn_positions]</span>
 				SetKeybinds(user)
 
 			if("keybindings_reset")
-				var/choice = tgalert(user, "Do you really want to reset your keybindings?", "Setup keybindings", "Do It", "Cancel")
+				var/choice = browser_alert(user, "Do you really want to reset your keybindings?", "Setup keybindings", list("Do It", "Cancel"))
 				if(choice == "Cancel")
 					ShowChoices(user,3)
 					return
@@ -2213,7 +2213,7 @@ Slots: [job.spawn_positions]</span>
 					save_preferences()
 
 				if("keybindings_reset")
-					var/choice = tgalert(user, "Do you really want to reset your keybindings?", "Setup keybindings", "Do It", "Cancel")
+					var/choice = browser_alert(user, "Do you really want to reset your keybindings?", "Setup keybindings", "Do It", "Cancel")
 					if(choice == "Cancel")
 						ShowChoices(user,3)
 						return

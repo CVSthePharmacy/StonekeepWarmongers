@@ -145,7 +145,7 @@
 			direct = newdir
 			n = get_step(L, direct)
 
-	var/olddir = mob.dir
+	//var/olddir = mob.dir
 
 	. = ..()
 
@@ -157,10 +157,12 @@
 			//add_delay += 2
 			if(L.m_intent == MOVE_INTENT_RUN)
 				L.toggle_rogmove_intent(MOVE_INTENT_WALK)
+	/* You can sprint when you don't have fixed eye, making you more vulnerable in melee combat.
 	else
 		if(L.dir != olddir)
 			if(L.m_intent == MOVE_INTENT_RUN)
 				L.toggle_rogmove_intent(MOVE_INTENT_WALK)
+	*/
 
 	if((direct & (direct - 1)) && mob.loc == n) //moved diagonally successfully
 		add_delay *= 2

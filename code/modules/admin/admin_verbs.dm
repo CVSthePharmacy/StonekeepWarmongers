@@ -778,7 +778,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/readmin()
 	set name = "Readmin"
-	set category = "Admin"
+	set category = "Control"
 	set desc = ""
 
 	var/datum/admins/A = GLOB.deadmins[ckey]

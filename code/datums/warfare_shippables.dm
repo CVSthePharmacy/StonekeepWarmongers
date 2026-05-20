@@ -49,6 +49,12 @@
 			/obj/item/quiver/bullets
 			)
 
+/datum/warshippable/shotgun_ammo
+	name = "HEAVY AMMUNITION POUCHES"
+	items = list(/obj/item/quiver/shitgunner,
+			/obj/item/quiver/shitgunner
+			)
+
 /datum/warshippable/cannonballs
 	name = "LARGE LEAD BALLS"
 	items = list(/obj/item/ammo_casing/caseless/rogue/cball,
@@ -84,6 +90,12 @@
 	name = "KAITZAR'S ORGAN"
 	items = list(/obj/structure/maxim/alt)
 	faction = BLUE_WARTEAM
+
+/datum/warshippable/maxim_ammo
+	name = "THREE MACHINE AMMO"
+	items = list(/obj/item/rogue/maxim_ammo,
+				/obj/item/rogue/maxim_ammo,
+				/obj/item/rogue/maxim_ammo)
 
 /datum/warshippable/caltrops
 	name = "CALTROPS"

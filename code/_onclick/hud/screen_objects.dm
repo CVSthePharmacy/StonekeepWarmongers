@@ -722,6 +722,12 @@
 		user.toggle_rogmove_intent(MOVE_INTENT_WALK)
 	else
 		user.toggle_rogmove_intent(MOVE_INTENT_SNEAK)
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			for(var/mob/living/carbon/human/enemy in get_turf(user))
+				if(enemy.warfare_faction != H.warfare_faction)
+					H.visible_message("<span class='warning'>[H] [pick("T-bags","tea-bags","teabags")] [enemy]!</span>")
+					enemy.add_stress(/datum/stressevent/disrespect)
 	update_icon_state()
 	user.update_sneak_invis()
 
