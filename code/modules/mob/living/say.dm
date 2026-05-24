@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	"÷" = MODE_VOCALCORDS
 ))
 
-var/regex/cyrillic_re = new(@"\u0400-\u04FF")
+var/regex/cyrillic_re = new(@"[\u0400-\u04FF]")
 
 proc/contains_cyrillic(t as text) // Удалите это, если создаете русский сервер!
     return cyrillic_re.Find(t)
@@ -103,7 +103,7 @@ proc/contains_cyrillic(t as text) // Удалите это, если созда�
 	if(!message || message == "")
 		return
 
-	if(ic_blocked && SSticker.current_state != GAME_STATE_FINISHED || contains_cyrillic(message)) // to allow slang like 'lol' in OOC after game end. THIS FILTERS RUSSIAN FROM THE SERVER!
+	if((ic_blocked && SSticker.current_state != GAME_STATE_FINISHED) || contains_cyrillic(message)) // to allow slang like 'lol' in OOC after game end. THIS FILTERS RUSSIAN FROM THE SERVER!
 		to_chat(src, "<span class='danger'>AAAAGH! MY HEAD HURTS FROM THE WORDS I TRIED TO UTTER!</span>")
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
 		playsound_local(get_turf(src), 'sound/lobotomy.ogg', 60)

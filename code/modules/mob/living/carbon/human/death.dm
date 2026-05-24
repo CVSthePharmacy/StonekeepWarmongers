@@ -174,8 +174,6 @@
 			G.playsound_local(src, 'sound/misc/deth.ogg', 75)
 			if(aspect_chosen(/datum/round_aspect/halo) && prob(45))
 				G.playsound_local(src, 'sound/vo/halo/copedie.mp3', 100)
-			else
-				G.playsound_local(src, 'sound/misc/deth.ogg', 100)
 
 			var/atom/movable/screen/gameover/hog/H = new()
 			var/list/iconstato = list(
