@@ -231,7 +231,7 @@
 	item_flags -= SURGICAL_TOOL //LET'S stab patients for fun
 								// no, but in all seriousness if we dont remove it the behavior is all fucky.
 
-/obj/item/rogueweapon/surgery/limbgrabber/attack_right(mob/user)
+/obj/item/rogueweapon/surgery/limbgrabber/proc/dosage(mob/user)
 	var/input = input(user, "Input dosage in ounces (oz).", "WARMONGERS", dosage) as num
 	input = round(input)
 	if(input > reagents.maximum_volume)
@@ -240,6 +240,12 @@
 	dosage = input
 	to_chat(user, "<span class='info'>It is done! The dosage is now [dosage] oz.</span>")
 	playsound(src, 'sound/misc/keyboard_enter.ogg', 75, FALSE, -3)
+
+/obj/item/rogueweapon/surgery/limbgrabber/attack_right(mob/user)
+	dosage(user)
+
+/obj/item/rogueweapon/surgery/limbgrabber/rmb_self(mob/user)
+	dosage(user)
 
 /obj/item/rogueweapon/surgery/limbgrabber/attack_self(mob/user)
 	if(grabbed)
@@ -251,6 +257,8 @@
 
 		grabbed = null
 		update_icon()
+	else
+		. = ..()
 
 /obj/item/rogueweapon/surgery/limbgrabber/attack(mob/living/M, mob/living/user)
 	if(!istype(user.a_intent, /datum/intent/use))
