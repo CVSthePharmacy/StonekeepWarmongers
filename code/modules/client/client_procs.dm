@@ -1097,11 +1097,14 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	winset(src, "mainwindow", "statusbar=false")
 
 /client/New()
-	..()
+    ..()
 
 	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(!SSwarmongers.oneteammode)
-		if(W.regimians.len < W.unionists.len)
+		var/reg_count = length(W.regimians)
+		var/uni_count = length(W.unionists)
+
+		if(reg_count < uni_count || (reg_count == uni_count && prob(50)))
 			warfare_faction = BLUE_WARTEAM
 			W.regimians += src
 		else
