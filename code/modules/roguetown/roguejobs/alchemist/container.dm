@@ -11,8 +11,10 @@
 	if(ishuman(throwingdatum.thrower))
 		var/mob/living/carbon/human/thrower = throwingdatum.thrower
 		var/list/humans = list()
+		var/list/all_humans = list()
 		var/turf/T = get_turf(src)
 		for(var/mob/living/carbon/human/H in viewers(4, T))
+			all_humans += H
 			if(H.stat != DEAD && H.reagents && H.warfare_faction == thrower.warfare_faction)
 				humans += H
 
@@ -22,9 +24,16 @@
 		var/amount_per_person = reagents.total_volume / length(humans)
 		amount_per_person = round(amount_per_person, 0.1)
 
+		for(var/mob/living/carbon/human/HU in all_humans)
+			HU.adjust_fire_stacks(-2.5)
+			HU.ExtinguishMob()
+			if(HU.stat == DEAD)
+				HU.dust()
+
 		for(var/mob/living/carbon/human/H in humans)
 			var/obj/effect/particle_effect/smoke/S = new(get_turf(T))
 			S.color = mix_color_from_reagents(reagents.reagent_list)
+			S.alpha = rand(50,125)
 
 			var/image/I = image('icons/effects/effects.dmi', H, "smoke", ABOVE_MOB_LAYER)
 			I.color = mix_color_from_reagents(reagents.reagent_list)
@@ -32,9 +41,6 @@
 		
 			var/matrix/M = matrix()
 			M.Scale(2,2)
-
-			H.adjust_fire_stacks(-2.5)
-			H.ExtinguishMob()
 			
 			reagents.trans_to(H, amount_per_person, transfered_by = thrower)
 
