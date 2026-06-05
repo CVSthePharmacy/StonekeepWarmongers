@@ -525,14 +525,14 @@ SUBSYSTEM_DEF(ticker)
 		else
 			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 100, FALSE)
 
-		spawn(10)
-			to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
-			to_chat(world, "<span class='info'>[round_aspect.description]</span>")
-		spawn(15)
-			if(end_party)
-				to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
-			if(SSwarmongers.oneteammode)
-				to_chat(world, "<span class='notice'><B>This time you can only play as the Regimians.</B></span>")
+	spawn(10)
+		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
+		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
+	spawn(15)
+		if(end_party)
+			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
+		if(SSwarmongers.oneteammode)
+			to_chat(world, "<span class='notice'><B>This time you can only play as the Regimians.</B></span>")
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING
