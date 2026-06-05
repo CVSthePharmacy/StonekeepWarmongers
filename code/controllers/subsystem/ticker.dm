@@ -493,41 +493,31 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	var/datum/game_mode/warmongers/W = SSticker.mode
-	
-	var/list/players = GLOB.clients.Copy()
+
+	var/list/players = shuffle(GLOB.clients.Copy())
 	listclearnulls(players)
-	var/list/best_reg = list()
-	var/list/best_uni = list()
-	var/best_diff = INFINITY
 
-	for(var/attempt in 1 to 40)  // 40 attempts is usually more than enough
-		var/list/shuf = shuffle(players)
-		var/list/reg = list()
-		var/list/uni = list()
+	var/list/reg = list()
+	var/list/uni = list()
 
-		for(var/client/C in shuf)
-			if(reg.len <= uni.len)
-				reg += C
-			else
-				uni += C
+	for(var/client/C in players)
+		if(reg.len <= uni.len)
+			reg += C
+		else
+			uni += C
 
-		var/diff = abs(reg.len - uni.len)
-		if(diff < best_diff)
-			best_diff = diff
-			best_reg = reg
-			best_uni = uni
-		if(diff <= 1)
-			break
+	W.regimians = reg
+	W.unionists = uni
 
-	// Assign the best result
-	for(var/client/C in best_reg)
+	for(var/client/C in reg)
 		C.warfare_faction = BLUE_WARTEAM
 		to_chat(C, "<span class='tutorial'>You were automatically balanced to the [BLUE_WARTEAM].</span>")
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
 			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 100, FALSE)
-	for(var/client/C in best_uni)
+
+	for(var/client/C in uni)
 		C.warfare_faction = RED_WARTEAM
 		to_chat(C, "<span class='tutorial'>You were automatically balanced to the [RED_WARTEAM].</span>")
 		if(end_party)
@@ -535,17 +525,14 @@ SUBSYSTEM_DEF(ticker)
 		else
 			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 100, FALSE)
 
-	W.regimians = best_reg
-	W.unionists = best_uni
-
-	spawn(10)
-		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
-		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
-	spawn(15)
-		if(end_party)
-			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
-		if(SSwarmongers.oneteammode)
-			to_chat(world, "<span class='notice'><B>This time you can only play as the Regimians.</B></span>")
+		spawn(10)
+			to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
+			to_chat(world, "<span class='info'>[round_aspect.description]</span>")
+		spawn(15)
+			if(end_party)
+				to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
+			if(SSwarmongers.oneteammode)
+				to_chat(world, "<span class='notice'><B>This time you can only play as the Regimians.</B></span>")
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING
