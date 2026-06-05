@@ -27,7 +27,7 @@
 		for(var/mob/living/carbon/human/HU in all_humans)
 			HU.adjust_fire_stacks(-2.5)
 			HU.ExtinguishMob()
-			if(HU.stat == DEAD)
+			if(HU.stat == DEAD && HU.on_fire)
 				HU.dust()
 
 		for(var/mob/living/carbon/human/H in humans)
