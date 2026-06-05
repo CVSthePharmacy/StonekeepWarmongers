@@ -1113,7 +1113,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 			warfare_faction = RED_WARTEAM
 			W.unionists += src
 		to_chat(src, "<span class='tutorial'>You were automatically balanced to the [warfare_faction] team.</span>")
-    else
+	else
 		warfare_faction = "Regimians"
 	#ifndef TESTING
 	fullscreen()
