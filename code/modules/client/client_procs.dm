@@ -1097,22 +1097,23 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	winset(src, "mainwindow", "statusbar=false")
 
 /client/New()
-	..()
-	var/datum/game_mode/warmongers/W = SSticker.mode
-	if(!SSwarmongers.oneteammode)
-		var/reg_count = length(W.regimians)
-		var/uni_count = length(W.unionists)
-		reg_count = listclearnulls(reg_count)
-		uni_count = listclearnulls(uni_count)
+    ..()
+    var/datum/game_mode/warmongers/W = SSticker.mode
+    if(!SSwarmongers.oneteammode)
+        listclearnulls(W.regimians)   // clean the lists in-place first
+        listclearnulls(W.unionists)
 
-		if(reg_count < uni_count || (reg_count == uni_count && prob(50)))
-			warfare_faction = BLUE_WARTEAM
-			W.regimians += src
-		else
-			warfare_faction = RED_WARTEAM
-			W.unionists += src
-		to_chat(src, "<span class='tutorial'>You were automatically balanced to the [warfare_faction] team.</span>")
-	else
+        var/reg_count = length(W.regimians)  // NOW get the counts
+        var/uni_count = length(W.unionists)
+
+        if(reg_count < uni_count || (reg_count == uni_count && prob(50)))
+            warfare_faction = BLUE_WARTEAM
+            W.regimians += src
+        else
+            warfare_faction = RED_WARTEAM
+            W.unionists += src
+        to_chat(src, "<span class='tutorial'>You were automatically balanced to the [warfare_faction] team.</span>")
+    else
 		warfare_faction = "Regimians"
 	#ifndef TESTING
 	fullscreen()

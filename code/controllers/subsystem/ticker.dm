@@ -495,6 +495,7 @@ SUBSYSTEM_DEF(ticker)
 	var/datum/game_mode/warmongers/W = SSticker.mode
 	
 	var/list/players = GLOB.clients.Copy()
+	listclearnulls(players)
 	var/list/best_reg = list()
 	var/list/best_uni = list()
 	var/best_diff = INFINITY
