@@ -284,7 +284,7 @@
 			if(user.lying)
 				BB.accuracy       += 30
 				BB.bonus_accuracy += 50
-			if(user.rogue_sneaking)
+			if(user.m_intent == MOVE_INTENT_SNEAK)
 				BB.bonus_accuracy += 2
 			if(has_bayonet)
 				BB.bonus_accuracy -= 3   // Bayonet slightly hampers aim.
@@ -556,7 +556,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	. = ..()
-	if(user.rogue_sneaking)
+	if(user.m_intent == MOVE_INTENT_SNEAK)
 		return
 	// Massive recoil hurls the shooter backwards.
 	var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 40)

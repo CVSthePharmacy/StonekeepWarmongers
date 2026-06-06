@@ -200,7 +200,7 @@
 				if(istype(a_intent, /datum/intent/dagger/thrust) && G.wielded == TRUE)
 					var/mob/living/carbon/human/H = L
 					var/obj/item/bodypart/chest = H.get_bodypart(BODY_ZONE_CHEST)
-					if(H.rogue_sneaking)
+					if(H.m_intent == MOVE_INTENT_SNEAK)
 						dropItemToGround(G)
 						visible_message("<span class='warning'>[L] suplexes [src]'s bayonet charge and makes them drop their gun!")
 						Immobilize(20)
