@@ -342,7 +342,7 @@
 	tutorial = "Peasant work takes the life out of you, luckily for you the bier you're paid in tends to make it easier to stomach. And you will admit, outright killing people can be fun."
 	department_flag = REDSS
 	flag = SOLDIER
-	total_positions = 99
+	total_positions = -1
 	spawn_positions = 10
 	faction = "Station"
 	outfit = null
@@ -940,7 +940,7 @@
 	tutorial = "No-lifers and Some-lifers, pressed into service, given weaponry, and pointed at foe. The No-Lifers fight wanting to be Some-lifers, the Some-lifers fight wanting to be Full-Lifers, and the Full-Lifers are back at home relaxing while the former two do the dying. For the KAITZAR!"
 	department_flag = BLUES
 	flag = SOLDIER
-	total_positions = 99
+	total_positions = -1
 	spawn_positions = 10
 	faction = "Station"
 	outfit = null
