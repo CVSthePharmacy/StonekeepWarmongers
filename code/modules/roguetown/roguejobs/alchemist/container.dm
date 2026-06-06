@@ -1,5 +1,8 @@
 // Alright. I'm sorting this shit now because Zeth is either a fucking sociopath or incompetent when it comes to tagging.
 
+/obj/item/reagent_containers/glass/bottle/rogue
+	desc = "Luckily for the shoeless, it's sugar glass! Yummy. Don't eat it though, it's only 95% sugar glass. That 5% can FUCK you up."
+
 /obj/item/reagent_containers/glass/bottle/rogue/examine(mob/user)
 	. = ..()
 	. += "<span class='tutorial'>If it is uncorked then it can be thrown to release it's contents into the surroundings.</span>"
@@ -46,7 +49,6 @@
 
 			animate(I, 30, alpha = 0, transform = M)
 		
-		new /obj/item/shard (T)
 		new /obj/effect/decal/cleanable/glass(T)
 
 		playsound(T, 'sound/items/firesnuff.ogg', 75)

@@ -94,7 +94,7 @@ SUBSYSTEM_DEF(triumphs)
 	. = ..()
 
 	prep_the_triumphs_leaderboard()
-
+	prep_the_frags_leaderboard()
 
 	for(var/cur_path in subtypesof(/datum/triumph_buy))
 		var/datum/triumph_buy/cur_datum = new cur_path // We will do this
@@ -386,6 +386,15 @@ SUBSYSTEM_DEF(triumphs)
 
 	sort_leaderboard()
 
+/datum/controller/subsystem/triumphs/proc/prep_the_frags_leaderboard()
+	var/json_file = file("data/triumph_leaderboards/frags_leaderboard_season_[GLOB.triumph_wipe_season].json")
+	if(!fexists(json_file)) // If theres no file then fuck you!
+		return // we got a empty list up there neways
+
+	frag_leaderboard = json_decode(file2text(json_file))
+
+	sort_leaderboard()
+
 // Adjust leaderboard
 // I want a key here so it looks pretty
 /datum/controller/subsystem/triumphs/proc/adjust_leaderboard(CLIENT_KEY_not_CKEY)
@@ -446,6 +455,23 @@ SUBSYSTEM_DEF(triumphs)
 				continue
 
 		triumph_leaderboard = sorted_list
+
+	if(frag_leaderboard.len > 1) // If we got more than one guy in here time to sort lol
+		var/list/sorted_list = list()
+		for(var/cache_key in frag_leaderboard)
+			if(!sorted_list.len)
+				sorted_list[cache_key] = frag_leaderboard[cache_key]
+
+			for(var/sorted_key in sorted_list)
+				if(sorted_list[sorted_key] < frag_leaderboard[cache_key])
+					sorted_list.Insert(sorted_list.Find(sorted_key), cache_key)
+					sorted_list[cache_key] = frag_leaderboard[cache_key]
+					break
+
+			if(sorted_list.Find(cache_key))
+				continue
+
+		frag_leaderboard = sorted_list
 
 /datum/controller/subsystem/triumphs/proc/sort_fragboard()
 	if(frag_leaderboard.len > 1) // If we got more than one guy in here time to sort lol

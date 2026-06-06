@@ -339,7 +339,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	usr.playsound_local(usr, 'sound/misc/type3.ogg', 65, FALSE)
 	contents += "<center>Dr. Urist's Discount Medical School<BR>"
 	contents += "--------------</center><BR>"
-	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A CRANKeR is a tool used to get you more drugs. Put in a limb and a bottle. Crank it by clicking it in your hand and then grab the potion you attached to it with MMB; which is now filled with cool new drugs! You can choose which drug to manufacture by using RMB. Oh yeah, it also gives the Lord a support point to redeem for new toys. Pretty cool."
+	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A SCHLaNKER is a tool used to get you more drugs. Put in a limb and a bottle. Crank it by clicking it in your hand and then grab the potion you attached to it with MMB; which is now filled with cool new drugs! You can choose which drug to manufacture by using RMB. Oh yeah, it also gives the Lord a support point to redeem for new toys. Pretty cool."
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()
@@ -359,13 +359,15 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	contents += "<b>BATTLE-WIDE STATISTICS</b><BR>"
 	contents += "A.K.A, ARE WE WINNING?<BR>"
 	contents += "--------------<BR>"
-	contents += "</center>"
 	contents += "<b>TOTAL DEATHS:</b> [json["deaths"]]<BR>"
 	contents += "<b>TOTAL SHOTS FIRED:</b> [json["muskshots"]]<BR>"
 	contents += "<b>REGIME VICTORIES:</b> [json["grenz_wins"]]<BR>"
 	contents += "<b>UNION VICTORIES:</b> [json["heart_wins"]]<BR>"
-	contents += "<b>MOST TRIUMPHANT SOLDIER: [SStriumphs.triumph_leaderboard[1]]</b> "
-	contents += "<b>LORD FRAGGER THE WORTHY: [SStriumphs.frag_leaderboard[1]]</b> "
+	contents += "<b>MOST TRIUMPHANT SOLDIER:</b> [SStriumphs.triumph_leaderboard[1]]<BR>"
+	if(!SStriumphs.frag_leaderboard)
+		if(SStriumphs.frag_leaderboard.len > 1)
+			contents += "<b>LORD FRAGGER THE WORTHY:</b> [SStriumphs.frag_leaderboard[1]]<BR>"
+	contents += "</center>"
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()

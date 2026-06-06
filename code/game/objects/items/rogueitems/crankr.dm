@@ -1,6 +1,6 @@
 /obj/item/rogue/cranker
 	name = "SCHLaNKER"
-	desc = "A strange skull-shaped medical device used to grind up bodyparts and teeth to make all sorts of things, including chemical 'bombs' and medicine."
+	desc = "A strange skull-shaped medical device used to grind up bodyparts and teeth to make all sorts of things, including chemicals, medicine, and new glass bootles."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "cranker"
 	w_class = WEIGHT_CLASS_SMALL
@@ -21,6 +21,8 @@
 	if(pot)
 		. += "<span class='info'>It's loaded.</span>"
 		. += "<span class='tutorial'>Use middleclick to unscrew the bottle.</span>"
+	else
+		. += "<span class='tutorial'>Use middleclick to fabricate a new glass bottle.</span>"
 	if(bp)
 		. += "<span class='tutorial'>Use it in-hand to begin grinding.</span>"
 	. += "<span class='tutorial'>Use rightclick to change what you'll be cooking.</span>"

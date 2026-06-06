@@ -172,6 +172,7 @@ SUBSYSTEM_DEF(warmongers)
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
 			SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
+			to_chat(world, "<span class='notice'>OUR NATION'S ARMORY IS EVOLVING! PROTOTYPE WEAPONRY AUTHORIZED!</span>")
 		if(5)
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
