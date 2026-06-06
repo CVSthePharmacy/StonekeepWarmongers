@@ -90,6 +90,8 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+*.cache
+*.cs
 
 # Translations
 *.mo
@@ -233,5 +235,3 @@ code/_compile_options.dm
 
 /prof.dll
 /rust_g.dll
-*.cache
-*.cs
