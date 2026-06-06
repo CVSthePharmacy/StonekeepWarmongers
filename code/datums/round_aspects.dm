@@ -94,7 +94,7 @@
 /datum/round_aspect/rationsurplus
 	name = "Ration Surplus"
 	description = "A ration surplus on both sides has caused the soldiers to be quite well fed!"
-	weight = 7
+	weight = 5
 
 /datum/round_aspect/poorbastards
 	name = "Poor Bastards"
@@ -132,7 +132,7 @@
 /datum/round_aspect/explodabarrels
 	name = "Explodabarrels"
 	description = "The battlefield is scattered with explosive barrels!"
-	weight = 3
+	weight = 6
 	var/spawncount = 1
 
 /datum/round_aspect/explodabarrels/apply()

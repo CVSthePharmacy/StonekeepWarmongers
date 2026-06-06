@@ -58,6 +58,8 @@ SUBSYSTEM_DEF(warmongers)
 
 /datum/controller/subsystem/warmongers/proc/respawn(var/area/airship)
 	for(var/mob/living/carbon/human/H in airship)
+		window_flash(H.client)
+
 		sleep(rand(1,3))
 		H.blind_eyes(1)
 		H.emote("scream")

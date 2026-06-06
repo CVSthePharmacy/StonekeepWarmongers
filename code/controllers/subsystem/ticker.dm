@@ -501,6 +501,10 @@ SUBSYSTEM_DEF(ticker)
 	var/list/uni = list()
 
 	for(var/client/C in players)
+		window_flash(C)
+		if(istype(C.mob, /mob/dead/new_player))
+			var/mob/dead/new_player/NP = C.mob
+			NP.lobby_refresh() // To allow it to change from "WAIT" to "JOIN"
 		if(reg.len <= uni.len)
 			reg += C
 		else
