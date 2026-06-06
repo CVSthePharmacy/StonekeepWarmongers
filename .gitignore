@@ -233,9 +233,5 @@ code/_compile_options.dm
 
 /prof.dll
 /rust_g.dll
-tools/tgs_test/obj/Debug/net8.0/Tgstation.TgsTest.AssemblyInfoInputs.cache
-tools/tgs_test/obj/Debug/net8.0/Tgstation.TgsTest.AssemblyInfo.cs
-tools/tgs_test/obj/Debug/net8.0/Tgstation.TgsTest.AssemblyInfo.cs
-tools/tgs_test/obj/Debug/net8.0/Tgstation.TgsTest.AssemblyInfoInputs.cache
-tools/tgs_test/obj/Debug/net8.0/Tgstation.TgsTest.AssemblyInfo.cs
-tools/tgs_test/obj/Debug/net8.0/Tgstation.TgsTest.AssemblyInfoInputs.cache
+*.cache
+*.cs
