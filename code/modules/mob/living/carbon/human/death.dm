@@ -127,6 +127,9 @@
 
 	. = ..()
 
+	var/lastattackerckey_g = lastattackerckey
+	var/lastattacker_g = lastattacker
+
 	dizziness = 0
 	jitteriness = 0
 
@@ -136,18 +139,6 @@
 			M.go_out()
 
 	dna.species.spec_death(gibbed, src)
-	
-	if(lastattackerckey && src.client)
-		for(var/mob/living/carbon/human/ATK in GLOB.human_list)
-			if(ATK.real_name == lastattacker)
-				if(ATK.warfare_faction != warfare_faction)
-					spawn(5)// sometimes it shows up before the injury text
-						to_chat(ATK, "\n<font color='pink'>1 FRAG(s) gained.</font>")
-					SStriumphs.frag_adjust(1, lastattackerckey)
-				else
-					SStriumphs.frag_adjust(-1, lastattackerckey)
-					spawn(5)// same here
-						to_chat(ATK, "\n<font color='pink'>Friendly fire will not be tolerated!</font>")
 
 	if(aspect_chosen(/datum/round_aspect/exploding))
 		gib(TRUE)
@@ -174,6 +165,24 @@
 			G.playsound_local(src, 'sound/misc/deth.ogg', 75)
 			if(aspect_chosen(/datum/round_aspect/halo) && prob(45))
 				G.playsound_local(src, 'sound/vo/halo/copedie.mp3', 100)
+
+			if(lastattackerckey_g && G.client)
+				var/mob/living/carbon/human/ATK = get_mob_by_ckey(lastattackerckey_g)
+				if(ATK.real_name == lastattacker_g)
+					if(ATK.warfare_faction != warfare_faction)
+						spawn(5)// sometimes it shows up before the injury text
+							to_chat(ATK, "\n<font color='pink'>1 FRAG(s) gained.</font>")
+						SStriumphs.frag_adjust(1, lastattackerckey_g)
+					else
+						spawn()
+							var/message = "\n<font color='pink'>Friendly fire will not be tolerated!</font>"
+							var/forgive = browser_alert(G, "You were team-killed by [ATK.real_name]! Do you forgive them?", "WARMONGERS", list("FORGIVE","PUNISH"))
+							if(forgive == "FORGIVE")
+								message = "\n<font color='pink'>[pick("Your crimes were forgiven.","There is peace, and perhaps more waiting for you. You were forgiven.","It's okay. I forgive you.","I forgive you. Don't do it again though, okay?")]</font>"
+							else
+								SStriumphs.frag_adjust(-1, lastattackerckey_g)
+							spawn(5)// same here
+								to_chat(get_mob_by_ckey(lastattacker_g), message)
 
 			var/atom/movable/screen/gameover/hog/H = new()
 			var/list/iconstato = list(
