@@ -360,16 +360,30 @@
 	name = "\improper grand orb"
 	desc = "A relic of a former age. It hums with the power of ancient quackery."
 	icon = 'icons/roguetown/misc/machines.dmi'
-	icon_state = "ballooner"
+	icon_state = "shower"
+	resistance_flags = INDESTRUCTIBLE
+	maptext_width = 64
+	maptext_x = -16
+	maptext_y = 20
 	var/area/rogue/assault/assault
 
 /obj/structure/capturepoint_shower/Initialize()
 	. = ..()
+	START_PROCESSING(SSprocessing, src)
 	var/area/A = get_area(src)
 	if(istype(A, /area/rogue/assault))
 		var/area/rogue/assault/ASS = A
 		assault = ASS
 	name = "[uppertext(assault.name)] ASSAULT POINT"
+
+/obj/structure/capturepoint_shower/process()
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	if(!istype(C.warmode, /datum/warmode/assault))
+		return
+	var/datum/warmode/assault/ASS = C.warmode // hehe
+	maptext_y = rand(18,22)
+	maptext_x = rand(-18,-19)
+	maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#fcb000b8'>[assault.holder]\n[ASS.attack_progress]/[assault.tocapture_points]</font></div>"
 
 /obj/structure/capturepoint_shower/examine(mob/user)
 	. = ..()
@@ -381,3 +395,25 @@
 	if(assault)
 		. += "<span class='tutorial'>It is controlled by the [assault.holder].</span>"
 		. += "<span class='tutorial'>Progress: [ASS.attack_progress]/[assault.tocapture_points]</span>"
+
+// capture point navigation
+
+/atom/movable/screen/navigate_arrow
+	icon = 'icons/effects/96x96.dmi'
+	name = "navigation sense"
+	icon_state = "navigate_arrow_appear"
+	pixel_x = -32
+	pixel_y = -32
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	screen_loc = rogueui_advsetup
+	var/mob/owner
+
+/atom/movable/screen/navigate_arrow/proc/start_effect(turf/tracked_turf, arrow_color)
+	if (owner)
+		animate(src, transform = matrix(get_angle(owner, tracked_turf), MATRIX_ROTATE), 0.2 SECONDS)
+	color = arrow_color
+	addtimer(CALLBACK(src, PROC_REF(end_effect)), 1.6 SECONDS)
+
+/atom/movable/screen/navigate_arrow/proc/end_effect()
+	icon_state = "navigate_arrow_disappear"
+	QDEL_IN(src, 0.4 SECONDS)
