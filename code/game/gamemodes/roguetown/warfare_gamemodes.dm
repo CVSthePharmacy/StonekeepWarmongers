@@ -100,6 +100,7 @@
 	var/max_blu_spawns = 60
 
 	var/list/capture_points = list()
+	var/list/showers = list()
 	var/total_capture_points = 0
 
 /datum/warmode/assault/beginround()

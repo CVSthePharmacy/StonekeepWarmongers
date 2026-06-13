@@ -716,7 +716,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					facial_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE_F][2]
 			standing += facial_overlay
 
-	if(H.head && !H.client.prefs.helmetless)
+	if(H.head && !H?.client?.prefs?.helmetless)
 		var/obj/item/I = H.head
 		if(isclothing(I))
 			var/obj/item/clothing/C = I

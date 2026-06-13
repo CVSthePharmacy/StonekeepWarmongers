@@ -1,5 +1,6 @@
 /datum/job/roguetown/warmongers/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
+	var/datum/game_mode/warmongers/C = SSticker.mode
 	if(H)
 		var/mob/living/carbon/human/HU = H
 
@@ -43,6 +44,18 @@
 				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = SSwarmongers.blu_warteam_cmode_music
 				HU.speech_sound = list('sound/vo/wc/speech_regimer.ogg')
+
+				if(istype(C.warmode, /datum/warmode/assault))
+					var/datum/warmode/assault/ASS = C.warmode // hehe
+
+					var/atom/movable/screen/navigate_arrow/arrow = new(HU)
+					arrow.hud = HU.hud_used
+					HU.client.screen += arrow
+					for(var/obj/structure/capturepoint_shower/shower in ASS.showers)
+						if(shower.assault.capture_order == ASS.current_capture_point || shower.assault.capture_order == 0)
+							arrow.start_effect(get_turf(shower))
+							break
+
 		// root.ogg is the default combat music for every mob. it basically checks if combat music was set already, and if not, it sets it. Possibly dumb, but it works and nobody is a coder for this codebase except me :)
 		HU.client.preload_sounds()
 
