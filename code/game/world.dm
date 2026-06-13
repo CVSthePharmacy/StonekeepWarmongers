@@ -319,8 +319,6 @@ GLOBAL_VAR(restart_counter)
 	s += "<center><a href=\"https://discord.gg/Rda9Z6SMgD\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
 	s += "<b>Team Deathmatch with Flintlocks, with a focus on satisfying gameplay.<b><br>"
-	s += "<b>Respawns, no perma-death.<b><br>"
-	s += "<b>NEW-FRIENDS WELCOME!<b><br>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		s += "<b>GAME STATUS:</b> STRATEGY ROOM<br>"
