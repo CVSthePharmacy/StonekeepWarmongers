@@ -389,6 +389,11 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/sand,
 /area/rogue/outdoors)
+"fD" = (
+/obj/structure/teambarrier/red,
+/obj/structure/teambarrier/red,
+/turf/closed/indestructible/castlewall,
+/area/rogue/outdoors)
 "fK" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/herringbone,
@@ -660,6 +665,13 @@
 	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"kj" = (
+/obj/machinery/light/rogue/firebowl,
+/obj/structure/fluff/walldeco/beerflag{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors)
 "kq" = (
 /obj/effect/shadow{
 	dir = 4
@@ -695,6 +707,9 @@
 /obj/structure/fluff/walldeco/painting,
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/indoors/town)
+"lz" = (
+/turf/closed/indestructible/castlewall,
+/area/rogue/outdoors)
 "lC" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/blocks,
@@ -706,6 +721,13 @@
 "lH" = (
 /obj/structure/plank,
 /turf/open/transparent/openspace,
+/area/rogue/outdoors)
+"lM" = (
+/obj/machinery/light/rogue/firebowl,
+/obj/structure/fluff/walldeco/beerflag{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors)
 "lR" = (
 /obj/effect/landmark/events/haunts,
@@ -720,6 +742,12 @@
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/assault/waterfort)
+"mm" = (
+/obj/structure/fluff/walldeco/beerflag{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
 "mn" = (
 /obj/effect/shadow{
 	dir = 4
@@ -753,6 +781,12 @@
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
+"mR" = (
+/obj/structure/fluff/walldeco/beerflag{
+	pixel_y = -32
+	},
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "mV" = (
 /obj/effect/turf_decal/arrows/red{
 	dir = 1
@@ -854,6 +888,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
+"ow" = (
+/obj/effect/sunlight/ultra,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
 "ox" = (
 /obj/structure/closet/crate/roguecloset/lord{
 	pixel_x = -10
@@ -1312,6 +1350,12 @@
 /obj/item/ship_in_a_bottle,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"uL" = (
+/obj/effect/landmark/assaultrespawn/defender{
+	respawn_id = "first"
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors)
 "uU" = (
 /obj/structure/fluff/walldeco/stone,
 /turf/open/floor/rogue/blocks/newstone/alt,
@@ -1491,6 +1535,10 @@
 	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"yP" = (
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
 "yS" = (
 /obj/machinery/light/rogue/wallfire,
 /turf/closed/wall/mineral/rogue/stonebrick,
@@ -1642,6 +1690,10 @@
 	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"CB" = (
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
 "CE" = (
 /obj/structure/fluff/statue/knight/r,
 /obj/machinery/light/rogue/wallfire/candle,
@@ -1699,6 +1751,10 @@
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors)
+"Eo" = (
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/town/roofs)
 "Ep" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/ruinedwood,
@@ -1782,6 +1838,10 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"Fr" = (
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "Ft" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
@@ -2014,6 +2074,10 @@
 /obj/structure/fluff/walldeco/stone,
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/indoors/town)
+"Ke" = (
+/obj/structure/teambarrier/red,
+/turf/closed/indestructible/castlewall,
+/area/rogue/outdoors)
 "Kk" = (
 /obj/item/rogueweapon/pick,
 /obj/structure/warfarebarrier/red,
@@ -2159,12 +2223,16 @@
 /turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/outdoors)
 "MH" = (
-/obj/structure/fluff/walldeco/customflag{
+/obj/structure/fluff/walldeco/beerflag{
 	pixel_y = 32
 	},
 /obj/structure/warfarebarrier/red,
 /obj/structure/teambarrier/blue,
 /turf/open/floor/rogue/sand,
+/area/rogue/outdoors)
+"MI" = (
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "MO" = (
 /obj/structure/table/wood/reinforced_alt,
@@ -2328,7 +2396,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town/roofs)
 "OQ" = (
-/obj/structure/fluff/walldeco/customflag{
+/obj/structure/fluff/walldeco/beerflag{
 	pixel_y = 32
 	},
 /turf/open/floor/rogue/sand,
@@ -2338,10 +2406,8 @@
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/indoors/town)
 "Pb" = (
-/obj/effect/landmark/assaultrespawn/defender{
-	respawn_id = "first"
-	},
-/turf/open/floor/rogue/dirt/road,
+/obj/structure/teambarrier/red,
+/turf/closed/mineral/random/rogue/high,
 /area/rogue/outdoors)
 "Pd" = (
 /turf/open/floor/rogue/blocks,
@@ -2556,7 +2622,7 @@
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "SR" = (
-/obj/structure/fluff/walldeco/customflag{
+/obj/structure/fluff/walldeco/beerflag{
 	pixel_y = 32
 	},
 /turf/open/floor/rogue/naturalstone,
@@ -7573,7 +7639,7 @@ hg
 iU
 iU
 Nn
-Pb
+iU
 hg
 Nn
 iU
@@ -13881,16 +13947,16 @@ hx
 hx
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
 uk
 uk
 uk
@@ -14132,6 +14198,8 @@ hx
 hx
 hx
 hx
+Tg
+CB
 uk
 uk
 uk
@@ -14140,9 +14208,7 @@ uk
 uk
 uk
 uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -14384,17 +14450,17 @@ hx
 hx
 hx
 hx
+WF
+Fr
+WF
+WF
+Tg
+WF
 uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -14637,16 +14703,16 @@ hx
 hx
 hx
 hx
+CB
+ow
+Tg
+WF
+WF
+WF
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -14889,16 +14955,16 @@ hx
 hx
 hx
 hx
+Pb
+Pb
+lM
+Tg
+Tg
+WF
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -15142,15 +15208,15 @@ hx
 hx
 hx
 hx
+Pb
+uk
+uk
+Tg
+WF
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -15394,15 +15460,15 @@ hx
 hx
 hx
 uk
+Pb
 uk
 uk
 uk
+WF
+Tg
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -15646,15 +15712,15 @@ hx
 uk
 hx
 uk
+Pb
 uk
 uk
 uk
+WF
+Tg
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -15898,15 +15964,15 @@ uk
 uk
 uk
 uk
+Pb
 uk
 uk
+yP
+WF
+Tg
 uk
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -16150,15 +16216,15 @@ uk
 uk
 uk
 uk
+Pb
+lz
+lz
+lz
+WF
+lz
+lz
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -16400,17 +16466,17 @@ hx
 hx
 hx
 hx
-hx
+mR
 uk
+Pb
+lz
+yP
+Tg
+WF
+Tg
+lz
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -16654,15 +16720,15 @@ hx
 hx
 hx
 hx
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Ke
+lz
+Tg
+Tg
+WF
+WF
+lz
+lz
+Pb
 uk
 uk
 uk
@@ -16905,16 +16971,16 @@ hx
 hx
 hx
 hx
-hx
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+mR
+Ke
+mm
+Tg
+ow
+Tg
+WF
+Tg
+lz
+Pb
 uk
 uk
 uk
@@ -17156,17 +17222,17 @@ hx
 hx
 hx
 hx
+ME
 hx
-hx
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Fr
+WF
+WF
+WF
+WF
+WF
+WF
+lz
+Pb
 uk
 uk
 uk
@@ -17385,8 +17451,8 @@ hx
 Sk
 Pd
 Pd
+Eo
 Sk
-Sk
 hx
 hx
 hx
@@ -17410,15 +17476,15 @@ hx
 hx
 hx
 hx
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Fr
+MI
+WF
+WF
+WF
+uL
+Tg
+lz
+Pb
 uk
 uk
 uk
@@ -17660,17 +17726,17 @@ hx
 hx
 hx
 hx
-hx
+mR
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+fD
+Ke
+Ke
+fD
+mm
+WF
+Tg
+lz
+Pb
 uk
 uk
 uk
@@ -17917,12 +17983,12 @@ uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
+Ke
+yP
+WF
+lz
+lz
+Pb
 uk
 uk
 uk
@@ -18169,12 +18235,12 @@ uk
 uk
 uk
 uk
+Ke
+lz
+WF
+lz
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -18421,12 +18487,12 @@ uk
 uk
 uk
 uk
+Pb
+Tg
+WF
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -18673,12 +18739,12 @@ uk
 uk
 uk
 uk
+Pb
+Tg
+WF
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -18925,12 +18991,12 @@ uk
 uk
 uk
 uk
+Pb
+WF
+WF
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -19177,12 +19243,12 @@ uk
 uk
 uk
 uk
+Pb
+WF
+WF
+Tg
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -19429,12 +19495,12 @@ uk
 uk
 uk
 uk
+Pb
+WF
+Tg
+WF
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -19681,12 +19747,12 @@ uk
 uk
 uk
 uk
+Pb
+WF
+Tg
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -19932,13 +19998,13 @@ hx
 hx
 uk
 uk
+Pb
+Pb
+WF
+Tg
+Tg
 uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -20183,14 +20249,14 @@ hx
 hx
 uk
 uk
+Pb
+Pb
+MI
+WF
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -20434,15 +20500,15 @@ hx
 hx
 uk
 uk
+Pb
+Pb
+WF
+WF
+Tg
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -20686,15 +20752,15 @@ hx
 hx
 hx
 uk
+Pb
+kj
+WF
+ow
 uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -20937,16 +21003,16 @@ hx
 hx
 hx
 hx
+Pb
+Pb
+WF
+WF
 uk
 uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -21189,16 +21255,16 @@ hx
 hx
 hx
 hx
+Pb
+WF
+Tg
+WF
 uk
 uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -21440,6 +21506,9 @@ hx
 hx
 hx
 hx
+ow
+Fr
+WF
 uk
 uk
 uk
@@ -21447,10 +21516,7 @@ uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -21691,6 +21757,10 @@ hx
 hx
 hx
 hx
+Tg
+WF
+Fr
+Tg
 uk
 uk
 uk
@@ -21698,11 +21768,7 @@ uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
+Pb
 uk
 uk
 uk
@@ -21945,16 +22011,16 @@ uk
 uk
 uk
 uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
-uk
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
+Pb
 uk
 uk
 uk
