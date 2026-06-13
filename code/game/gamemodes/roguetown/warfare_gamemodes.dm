@@ -218,6 +218,13 @@
 			SEND_SOUND(world, capture_sound)
 			ASS.current_capture_point++
 
+			for(var/client/regis in C.regimians)
+				var/atom/movable/screen/navigate_arrow/NVA = locate() in regis.screen
+				if(NVA)
+					for(var/obj/structure/capturepoint_shower/shower in ASS.showers)
+						if(shower.assault.capture_order == ASS.current_capture_point || shower.assault.capture_order == 0)
+							NVA.thing = get_turf(shower)
+
 			if(respawn_id_on_cap_attacker)
 				SSwarmongers.landmark_respawn_id_attacker = respawn_id_on_cap_attacker
 			if(respawn_id_on_cap_defender)
