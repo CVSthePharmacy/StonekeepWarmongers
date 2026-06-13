@@ -689,7 +689,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 		var/mob/M = dropping
 		if(ismob(user))
 			var/mob/U = user
-			if(!iscyborg(U) || !U.cmode || U.used_intent.type == INTENT_HARM)
+			if(U.cmode)
 				M.show_inv(U)
 				return TRUE
 		else

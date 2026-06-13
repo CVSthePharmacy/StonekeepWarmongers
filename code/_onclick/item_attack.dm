@@ -306,7 +306,7 @@
 		if(DULLING_PICK) //cannot deal damage if not a pick item. aka rock walls
 			if(user.used_intent.blade_class != BCLASS_PICK)
 				return 0
-			var/mob/living/miner = user
+			//var/mob/living/miner = user
 			//Mining Skill force multiplier.
 			//var/mineskill = miner.mind.get_skill_level(/datum/skill/labor/mining)
 			newforce = newforce * 10
