@@ -2607,7 +2607,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
 "jT" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "jU" = (
@@ -5414,7 +5414,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/ruin)
 "uS" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "uT" = (
@@ -6184,7 +6184,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "xF" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "xG" = (
@@ -9541,7 +9541,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
 "KC" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "KD" = (
@@ -12769,7 +12769,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
 "WO" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town)
 "WP" = (

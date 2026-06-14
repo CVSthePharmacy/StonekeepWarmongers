@@ -1073,7 +1073,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/town/basement)
 "dS" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/town/basement)
 "dT" = (
@@ -6222,7 +6222,7 @@
 	},
 /area/rogue/outdoors/town)
 "vk" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/tile{
 	icon_state = "chess"
 	},
@@ -6560,7 +6560,7 @@
 	},
 /area/rogue/outdoors/town)
 "wr" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "ws" = (

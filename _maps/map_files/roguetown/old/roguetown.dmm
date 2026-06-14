@@ -515,7 +515,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "abQ" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "abR" = (
@@ -8053,7 +8053,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue)
 "azh" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/blocks,
 /area/rogue)
 "azi" = (
@@ -8117,7 +8117,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "azt" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "azu" = (
@@ -8242,7 +8242,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "azS" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "azT" = (
@@ -8487,7 +8487,7 @@
 	},
 /area/rogue)
 "aAO" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "aAP" = (
@@ -8872,7 +8872,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "aBX" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/tile{
 	icon_state = "chess"
 	},
@@ -10349,7 +10349,7 @@
 	},
 /area/rogue/indoors/town)
 "aGv" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
 "aGw" = (
@@ -13529,7 +13529,7 @@
 	},
 /area/rogue)
 "rVT" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach)
 "rZJ" = (
@@ -13847,7 +13847,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave)
 "uNv" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/rtfield)
 "uNA" = (

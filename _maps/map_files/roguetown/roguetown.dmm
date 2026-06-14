@@ -2085,7 +2085,7 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/outdoors/exposed/dwarf)
 "cWu" = (
-/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/events/aspect_spawners,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/town/roofs)
 "cWI" = (
