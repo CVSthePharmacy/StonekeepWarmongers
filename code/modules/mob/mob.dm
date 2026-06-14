@@ -689,7 +689,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 		var/mob/M = dropping
 		if(ismob(user))
 			var/mob/U = user
-			if(U.cmode)
+			if(!U.cmode)
 				M.show_inv(U)
 				return TRUE
 		else
