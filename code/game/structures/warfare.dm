@@ -365,6 +365,7 @@
 	maptext_width = 64
 	maptext_x = -16
 	maptext_y = 20
+	light_color = "#fcb000b8"
 	var/area/rogue/assault/assault
 
 /obj/structure/capturepoint_shower/proc/DoShit()
@@ -374,6 +375,8 @@
 		return
 	var/datum/warmode/assault/AS = C.warmode // hehe
 	START_PROCESSING(SSfastprocess, src)
+
+	set_light(4)
 
 	var/area/A = get_area(src)
 	if(istype(A, /area/rogue/assault))
