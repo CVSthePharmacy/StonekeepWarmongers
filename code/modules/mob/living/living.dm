@@ -1920,7 +1920,6 @@
 //	RegisterSignal(src, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(stop_looking)) //We stop looking up if we move.
 
 /mob/living/proc/look_further(turf/T)
-
 	if(client.perspective != MOB_PERSPECTIVE)
 		stop_looking()
 		return
@@ -1931,6 +1930,9 @@
 		return
 	if(!istype(T))
 		return
+
+	if(!fixedeye)
+		toggle_eye_intent()
 	changeNext_move(CLICK_CD_MELEE)
 
 	if(HAS_TRAIT(src, TRAIT_OFFICER))
