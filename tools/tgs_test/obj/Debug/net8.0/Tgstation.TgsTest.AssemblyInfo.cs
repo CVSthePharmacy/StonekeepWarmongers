@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tgstation.TgsTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+3233a5cced6389330b0e9887d16757a53d05097f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+e9a3b6ed21e3ca2fc0ea63b33ab5f85691f96daa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tgstation.TgsTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tgstation.TgsTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.0")]
