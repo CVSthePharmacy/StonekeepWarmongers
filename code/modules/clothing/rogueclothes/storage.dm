@@ -309,6 +309,15 @@
 	equip_sound = 'sound/blank.ogg'
 	bloody_icon_state = "bodyblood"
 
+/obj/item/storage/backpack/rogue/backpack/examine(mob/user)
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(STR)
+		. += "<span class='tutorial'>Yes, it is a storage device.</span>"
+		. += "<span class='tutorial'>The maximum is [STR.max_items] due to operational concerns, however this is void if the weight reaches [STR.max_combined_w_class].</span>"
+		if(STR.not_while_equipped)
+			. += "<span class='tutorial'>You need to have it in your hand to use it, it's hard to reach.</span>"
+
 /obj/item/storage/backpack/rogue/backpack/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -346,6 +355,12 @@
 	new /obj/item/rogueweapon/surgery/hammer(src)
 
 //.............Warmongers................
+/obj/item/storage/backpack/rogue/backpack/war/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(STR)
+		STR.not_while_equipped = FALSE // That's gonna hurt our backs.
+
 /obj/item/storage/backpack/rogue/backpack/war/ppr
 	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_BACK_R
 	name = "trashsack"

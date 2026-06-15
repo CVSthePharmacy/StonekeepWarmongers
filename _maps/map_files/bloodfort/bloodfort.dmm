@@ -127,6 +127,7 @@
 "mp" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "ms" = (/turf/open/floor/rogue/wood,/area/rogue/indoors/town/safe)
 "mw" = (/obj/effect/decal/cleanable/blood/old{pixel_x = 3; pixel_y = 4},/obj/effect/decal/cleanable/blood/gibs/old,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
+"mD" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "mJ" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood,/area/rogue/indoors/town/safe)
 "mP" = (/obj/structure/table/wood/reinforced_alt,/obj/item/rogueweapon/sword/iron/messer/falchwar{pixel_y = 5},/obj/item/flint,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "mS" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/carpet/inn,/area/rogue/indoors/town)
@@ -176,6 +177,7 @@
 "qY" = (/obj/structure/bookcase,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "rk" = (/turf/open/transparent/openspace,/area/rogue/indoors/town)
 "rl" = (/turf/open/floor/rogue/rooftop/green,/area/rogue/outdoors/town/roofs)
+"ru" = (/obj/structure/stolen_bell,/turf/open/floor/rogue/carpet,/area/rogue/indoors/town/safe)
 "rx" = (/obj/machinery/light/rogue/chand,/obj/effect/landmark/start{name = "blue"},/turf/open/transparent/openspace,/area/rogue/indoors/town)
 "rA" = (/obj/item/ammo_casing/caseless/rogue/cball{pixel_y = -6},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "rC" = (/obj/structure/plank,/turf/open/transparent/openspace,/area/rogue/outdoors)
@@ -183,6 +185,7 @@
 "rK" = (/obj/structure/stairs/stone/church{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town/roofs)
 "rW" = (/obj/structure/gate/bars/preopen{redstone_id = "thronegate"; gid = "thronegate"},/turf/open/floor/rogue/carpet/lord/left,/area/rogue/indoors/town)
 "rX" = (/obj/structure/table/wood/plain,/obj/item/toy/cards/deck{pixel_x = 10; pixel_y = 6},/turf/open/floor/rogue/twig,/area/rogue/indoors/town)
+"sd" = (/obj/structure/fluff/statue/knightalt{plane = -3; layer = 2.8; desc = "Once no doubt a noble warrior. But now? Nothing. Even covered by the banner of the new Union. A now meaningless symbol stamped onto his shield, a symbol once revered for bringing faith and hope, now just a piece of engraved metal. What came of their Gods? Buried, and dead. Nothing remains but this statue, that too will soon be thrown into the pits of despair and the olde. Never to be seen, or admired, or prayed to ever again."},/turf/open/floor/rogue/carpet/lord/right,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "sx" = (/obj/item/ammo_casing/caseless/rogue/cball{pixel_x = 7},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "sI" = (/obj/structure/warfarebarrier/red,/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/dirt,/area/rogue/outdoors)
 "tg" = (/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
@@ -211,6 +214,8 @@
 "uU" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "vg" = (/obj/structure/fluff/walldeco/beerflag{pixel_y = 32},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "vh" = (/obj/structure/mineral_door/wood/deadbolt{dir = 8},/obj/structure/teambarrier/red,/turf/open/floor/rogue/wood,/area/rogue/indoors/town/safe)
+"vl" = (/obj/structure/fluff/statue/knightalt/r{layer = 2.8; plane = -3; desc = "Once no doubt a noble warrior. But now? Nothing. Even covered by the banner of the new Union. A now meaningless symbol stamped onto his shield, a symbol once revered for bringing faith and hope, now just a piece of engraved metal. What came of their Gods? Buried, and dead. Nothing remains but this statue, that too will soon be thrown into the pits of despair and the olde. Never to be seen, or admired, or prayed to ever again."},/turf/open/floor/rogue/carpet/lord/left,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
+"vm" = (/obj/machinery/light/rogue/firebowl/church,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "vz" = (/obj/structure/fluff/walldeco/beerflag{pixel_y = -32},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "vA" = (/obj/item/natural/stone{pixel_y = 6; pixel_x = -29},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "vJ" = (/obj/structure/fluff/hangman,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
@@ -233,6 +238,7 @@
 "wS" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "wV" = (/obj/item/roguebin,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "wZ" = (/obj/structure/fluff/railing/wood,/turf/open/transparent/openspace,/area/rogue/outdoors)
+"xf" = (/obj/effect/landmark/events/aspect_spawners,/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "xj" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/cobblerock,/area/rogue/indoors/town)
 "xl" = (/obj/machinery/light/rogue/torchholder/r,/obj/effect/decal/cleanable/blood/old{pixel_y = 41},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "xm" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
@@ -297,6 +303,7 @@
 "Cr" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "Cu" = (/obj/structure/fluff/railing/wood{dir = 1},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "Cx" = (/obj/structure/fluff/railing/wood,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
+"CC" = (/obj/structure/fluff/walldeco/sparrowflag{desc = "They couldn't reach this flag either. Still the old one. It's going to be a while before they get a ladder tall enough to replace it. This oen is different than the other one. You wonder why that is..."},/turf/closed/wall/mineral/rogue/decostone,/area/rogue/indoors/town)
 "CF" = (/obj/structure/ladder,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "CL" = (/obj/machinery/light/rogue/smelter,/turf/open/floor/rogue/blocks/stonered/tiny,/area/rogue/indoors/town)
 "CP" = (/obj/structure/fluff/hangman,/obj/structure/fluff/hangman{pixel_y = 7; pixel_x = -16},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
@@ -333,6 +340,7 @@
 "FQ" = (/obj/item/roguebin/trash,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "FU" = (/obj/structure/fluff/railing/wood,/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "Ga" = (/obj/structure/ladder,/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
+"Gb" = (/obj/structure/fluff/walldeco/serpflag{desc = "Seems like they couldn't reach that flag... still the old one. Couldn't replace it."},/turf/closed/wall/mineral/rogue/decostone,/area/rogue/indoors/town)
 "Gg" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "Gh" = (/obj/structure/warfarebarrier,/obj/structure/teambarrier/blue,/turf/open/transparent/openspace,/area/rogue/outdoors)
 "Gk" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/cudgel/war{pixel_x = 10},/obj/item/rogueweapon/mace/cudgel/war{pixel_x = 5},/obj/item/rogueweapon/mace/cudgel/war,/obj/item/rogueweapon/mace/cudgel/war{pixel_x = -10},/obj/item/rogueweapon/mace/cudgel/war{pixel_x = -5},/turf/open/floor/rogue/twig,/area/rogue/outdoors)
@@ -375,6 +383,7 @@
 "JQ" = (/obj/structure/warfarebarrier,/obj/structure/fluff/railing/fence{dir = 1},/obj/structure/teambarrier/blue,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "JT" = (/obj/structure/fluff/walldeco/beerflag{pixel_y = 32},/turf/open/floor/rogue/church,/area/rogue/indoors/town)
 "JV" = (/obj/structure/fluff/grindwheel,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
+"JZ" = (/obj/machinery/light/rogue/firebowl/standing{density = 0; pixel_y = 25; pixel_x = 1},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "Kc" = (/obj/structure/chair/wood/rogue/fancy{dir = 2},/turf/open/floor/rogue/wood,/area/rogue/indoors/town/safe)
 "Kn" = (/obj/structure/bed/rogue/inn/double,/obj/item/bedsheet/rogue/double_pelt,/turf/open/floor/rogue/wood,/area/rogue/indoors/town/safe)
 "Ko" = (/obj/structure/stairs/stone/church{dir = 8},/turf/open/transparent/openspace,/area/rogue/indoors/town)
@@ -634,9 +643,9 @@ bmbmbmbmbmbmbmxmxmNAxmxmxmxmbmbmbmbmbmbmbmSBSBVNbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbm
 "}
 (1,1,2) = {"
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgbgbgbgbgbgbgbgbgbgbgbgbgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaVbMScQqEuOQrcQMSVbqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaqaqaqaqEGTQrqaqaqaqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaqaqaqaqEkKQrqaqaqaqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaVbMSqavluOsdxfMSVbqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqabgmDmDqEGTQrmDmDbgqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaJZqaqaqEkKQrqaqaJZqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaqaqaqaqEGTQrqaqaqaqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgUoqaqaqaqaqEGTQrqaqaqaqaWnbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrbgbgqaqaqacQqEGTQrcQqaqaqabgbgFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
@@ -737,13 +746,13 @@ czczczczczczczUIUIUIUIUIUIUIczczczczczczczUIUIUIczczczczczczczczczczczczczczczcz
 (1,1,3) = {"
 kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjrkrkrkrkrkZYrkrkrkrkrkkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
-kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjrkrkrkrkrkrxrkrkrkrkrkkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
+kjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjrkGbrkrkrkrxrkrkrkCCrkkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjhrixEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIixhrkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIKorkrkrkWQrkrkrkrkrkWQrkrkrkGDEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIKorkrkrkrkrkrkrkrkrkrkrkrkrkGDEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjMrEIEIkjkjkjkjkjxnkjkjxnkjkjxnkjkjkjkjkjEIEIMrkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIcPhHCRhHhHmphHhHhHmphHhHCRhHiTEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
-kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIcPhHhHhHhHhHhHhHhHhHhHhHhHhHiTEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
+kjkjkjkjkjkjkjkjkjkjkjEIEIEIEIcPhHhHhHhHhHhHvmhHhHhHhHhHhHiTEIEIEIEIkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjEIEIEIcPhHhHhHJlhHhHhHhHhHJlhHhHhHiTEIEIEIkjkjkjkjkjkjkjkjkjkjkjkj
 kjkjkjkjkjkjkjkjkjkjkjkjLtkjkjYViJYVYVYVYViJiJiJYVYVYVYViJYVkjkjLtkjkjkjkjkjkjkjkjkjkjkjkj
 FrFrFrFrUIUIUIUIUIUIUIUIrCUIUIYVpXBFpOooftigvYigftoopOBFpXYVUIUIrCUIUIUIUIUIUIUIUIFrFrFrFr
@@ -755,7 +764,7 @@ FrFrFrFrUIUIUIUIrCYVDIuDDIuDDIYVpXpXooAhvYvYyhvYvYHXoopXpXYVDIuDDIuDDIYVrCUIUIUI
 FrFrFrFrUIUIUIUIrCYVmsqhqhmsmsYVpXpXznpXpXMoMoMopXpXznpXpXYVmsmsqhqhmsYVrCUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIrCcwqhysAHqhmsvhpXpXpXpXXZyeMByOXZpXxrpXpXmJmsqhMGSiqhtUrCUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIrCYVmsqhqhmsmsYVpXpXpXpXpXMoMoMopXpXpXpXpXYVmsmsqhqhmsYVrCUIUIUIUIFrFrFrFr
-FrFrFrFrFrFrFrUIrCYVuwfauwRtuwYVpXBFpXpXpXpXpXpXpXpXpXBFpXYVuwRtuwRtuwYVrCUIFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrUIrCYVuwfauwRtuwYVpXBFpXpXpXpXpXpXrupXpXBFpXYVuwRtuwRtuwYVrCUIFrFrFrFrFrFrFr
 FrFrFrFrUIUIUIUIrCYVYVYVaSYVYVYVYVYVYVYVYVYVmfYVYVYVYVYVYVYVYVYVaSYVYVYVrCUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIrCUIUIUIUIUIUIUIUIUIYVAdlsmsmsmsgGJmYVUIUIUIUIUIUIUIUIUIrCUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIrCUIUIUIUIUIUIUIUIUIcwmsKcmsmsmsmslCtUUIUIUIUIUIUIUIUIUIrCUIUIUIUIFrFrFrFr

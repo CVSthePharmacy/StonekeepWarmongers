@@ -212,6 +212,10 @@
 		if(ASS.attack_progress >= tocapture_points && (holder != BLUE_WARTEAM))
 			to_chat(world, "<span class='userdanger'>[uppertext("[BLUE_WARTEAM] HAVE CAPTURED THE [src]")]!</span>")
 			holder = BLUE_WARTEAM
+
+			C.blu_bonus += 1
+			C.red_bonus += 3 // They're gonna need it for the final defenses.
+
 			ASS.attack_progress = 0
 			ASS.blu_spawns += 20 // To help incentivize unionists to not just sit on their ass doing nothing
 			on_capture(holder)

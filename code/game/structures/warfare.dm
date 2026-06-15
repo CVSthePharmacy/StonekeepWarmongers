@@ -65,6 +65,8 @@
 		H.filters = list()
 
 		NR.blu_captures++
+		C.blu_bonus += 2
+		C.red_bonus -= 1
 		if(NR.blu_captures >= NR.captures_required)
 			C.do_war_end(H, BLUE_WARTEAM)
 		for(var/client/reg in C.regimians)
@@ -121,6 +123,8 @@
 		H.filters = list()
 
 		NR.red_captures++
+		C.red_bonus += 2
+		C.blu_bonus -= 1
 		if(NR.red_captures >= NR.captures_required)
 			C.do_war_end(H, RED_WARTEAM)
 		for(var/client/unio in C.unionists)

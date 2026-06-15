@@ -343,6 +343,7 @@
 		H.change_stat("constitution", 3)
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 4)
+		H.change_stat("fortune", 3)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
@@ -942,6 +943,7 @@
 		H.change_stat("constitution", 3)
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 4)
+		H.change_stat("fortune", 3)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
