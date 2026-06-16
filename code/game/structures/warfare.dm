@@ -412,6 +412,7 @@
 	pixel_y = -32
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	screen_loc = rogueui_advsetup
+	alpha = 120
 	var/atom/thing
 	var/mob/owner
 
