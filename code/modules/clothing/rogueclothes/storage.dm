@@ -309,7 +309,7 @@
 	equip_sound = 'sound/blank.ogg'
 	bloody_icon_state = "bodyblood"
 
-/obj/item/storage/backpack/rogue/backpack/examine(mob/user)
+/obj/item/storage/backpack/rogue/examine(mob/user)
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	if(STR)

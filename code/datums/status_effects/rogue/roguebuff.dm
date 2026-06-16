@@ -259,13 +259,35 @@
 /datum/status_effect/buff/saint
 	id = "saint"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/saint
-	effectedstats = list("speed" = 1,"constitution" = 1,"endurance" = 1,"strength" = 1)
+	effectedstats = list("speed" = 2,"constitution" = 2,"endurance" = 2,"strength" = 2)
 	duration = 1 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/saint
 	name = "Death of a Saint"
 	desc = "<span class='nicegreen'>They were a saint! A SAINT!</span>\n"
 	icon_state = "intelligence"
+
+/datum/status_effect/buff/adrenaline
+	id = "adrenaline"
+	alert_type = null
+	duration = 7 SECONDS
+
+/datum/status_effect/buff/adrenaline/on_apply()
+	if(prob(67))
+		duration = 6 SECONDS // Does this do anything? Probably not.
+	if(ishuman(owner))
+		var/mob/living/carbon/human/human_owner = owner
+		human_owner.update_disabled_bodyparts()
+	owner.emote("laugh")
+	if(aspect_chosen(/datum/round_aspect/halo))
+		owner.playsound_local(src, 'sound/vo/halo/invincible.mp3', 75)
+	return ..()
+
+/datum/status_effect/buff/adrenaline/on_remove()
+	if(ishuman(owner))
+		var/mob/living/carbon/human/human_owner = owner
+		human_owner.update_disabled_bodyparts()
+	to_chat(owner, "<span class='danger'>[pick("The adrenaline drains, and the pain begins coming back!","AGH!!! MY ADRENALINEN!","MY LIFE!","MŮJ ŽIVOT UŽ UTÍKÁ! ADRENALINE, KDE JSI?!","FUCK! It is beginning to fade!","HELP! HELP! I CAN FEEL MY LEGS!")]</span>")
 
 /datum/status_effect/buff/spawn_protection
 	id = "spawnprotect"
