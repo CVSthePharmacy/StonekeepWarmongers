@@ -809,7 +809,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	head = /obj/item/clothing/head/roguetown/war/tallhat
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/needle/blessed
 	beltl = /obj/item/rogue/cranker
 	beltr = /obj/item/rogueweapon/surgery/limbgrabber
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
@@ -1329,7 +1329,7 @@
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/needle/blessed
 	beltl = /obj/item/rogue/cranker
 	beltr = /obj/item/rogueweapon/surgery/limbgrabber
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)

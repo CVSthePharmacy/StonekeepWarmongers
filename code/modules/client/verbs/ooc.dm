@@ -361,7 +361,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		if("TDM")
 			explanation = "Come on, you know what Team Deathmatch is. Just kill people! When the amount of deaths reaches a certain point, the game is won. This can be the longest gamemode. Time between respawns is 30 seconds in this gamemode instead of one minute."
 
-	alert(src, explanation, "WARMONGERS", "Understood")
+	alert(src, explanation, "WARMONGERS - [gamemode] GAMEMODE", "Understood")
 
 /client/verb/viewstats()
 	set name = "View Persistent Data"

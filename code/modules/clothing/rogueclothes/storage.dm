@@ -329,7 +329,7 @@
 
 /obj/item/storage/backpack/rogue/satchel/surgbag
 	name = "surgery bag"
-	desc = "Contains all the phreakish devices one needs to cut a person up."
+	desc = "Can be used to carry surgical implements, or bombs. Your choice, really."
 	slot_flags = ITEM_SLOT_BACK
 	item_state = "doctorbag"
 	icon_state = "doctorbag"
@@ -341,10 +341,9 @@
 	if(STR)
 		STR.max_combined_w_class = 42
 		STR.max_w_class = WEIGHT_CLASS_NORMAL
-		STR.max_items = 14
+		STR.max_items = 16
 
 /obj/item/storage/backpack/rogue/satchel/surgbag/PopulateContents()
-	new /obj/item/needle/blessed(src)
 	new /obj/item/rogueweapon/surgery/scalpel(src)
 	new /obj/item/rogueweapon/surgery/saw(src)
 	new /obj/item/rogueweapon/surgery/hemostat(src)

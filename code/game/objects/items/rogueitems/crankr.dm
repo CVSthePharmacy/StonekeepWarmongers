@@ -37,7 +37,7 @@
 			counter = 0
 		else
 			to_chat(user, "<span class='tutorial'>TRI PROGRESS+</span>")
-		M.dust(0, FALSE)
+		M.dust(TRUE, FALSE)
 		playsound(get_turf(M), 'sound/magic/heal.ogg', 75, TRUE)
 
 /obj/item/rogue/cranker/MiddleClick(mob/user, params)

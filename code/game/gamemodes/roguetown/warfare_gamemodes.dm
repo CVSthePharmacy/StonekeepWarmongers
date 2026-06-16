@@ -267,6 +267,7 @@
 			grenz -= M
 		else if(M in heart)
 			heart -= M
+			to_chat(M, "<span class='info'>Are you sure? Leaving it unattended is a horrible idea. Most of the time.</span>")
 
 /area/rogue/indoors/airship
 	name = "reinforcement airship"
