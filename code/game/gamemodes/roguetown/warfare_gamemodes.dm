@@ -142,6 +142,8 @@
 	var/capture_order = 0
 	var/capturable = FALSE
 
+	var/warned = FALSE // You only get one warning you filthy bitch
+
 	var/respawn_id_on_cap_attacker // Use a landmark with this ID
 	var/respawn_id_on_cap_defender
 
@@ -217,7 +219,7 @@
 			C.red_bonus += 3 // They're gonna need it for the final defenses.
 
 			ASS.attack_progress = 0
-			ASS.blu_spawns += 20 // To help incentivize unionists to not just sit on their ass doing nothing
+			ASS.blu_spawns += 10 // To help incentivize unionists to not just sit on their ass doing nothing
 			on_capture(holder)
 			SEND_SOUND(world, capture_sound)
 			ASS.current_capture_point++
@@ -249,6 +251,12 @@
 				to_chat(H, "<span class='warning'>[src] can't be captured yet!</span>")
 		else if(H.warfare_faction != holder)
 			to_chat(H, "<span class='tutorial'>Capturing [src]!</span>")
+
+			if(!warned)
+				warned = TRUE
+				for(var/client/client in C.unionists)
+					to_chat(client, "<span class='userdanger'>[uppertext("ATTENTION! THE [BLUE_WARTEAM] ARE CAPTURING THE [src]")]!</span>")
+					SEND_SOUND(client, 'sound/misc/control_points.ogg')
 		else
 			to_chat(H, "<span class='tutorial'>Defending [src]!</span>")
 

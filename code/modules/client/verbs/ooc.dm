@@ -344,6 +344,25 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	popup.set_content(contents)
 	popup.open()
 
+/client/verb/explain_gamemode()
+	set name = "EXPLAIN GAMEMODE"
+	set category = "HELP"
+	var/explanation = "Uh... looks like there isn't any explanation. Sorry."
+	var/gamemode = splittext(SSmapping.config.map_name, "-")[1]
+
+	usr.playsound_local(usr, 'sound/misc/type3.ogg', 65, FALSE)
+	switch(gamemode)
+		if("ASLT")
+			explanation = "Regimians must capture control points to win. Unionists must defend them! Unionists can not re-capture control points, this is the final struggle! NEVER LEAVE A DEFENSE!"
+		if("LD")
+			explanation = "Oh, that's weird. This gamemode is out of circulation!"
+		if("CTF")
+			explanation = "The two teams must capture the flags that are in their respective bases. Capture a flag three times to win!"
+		if("TDM")
+			explanation = "Come on, you know what Team Deathmatch is. Just kill people! When the amount of deaths reaches a certain point, the game is won. This can be the longest gamemode. Time between respawns is 30 seconds in this gamemode instead of one minute."
+
+	alert(src, explanation, "WARMONGERS", "Understood")
+
 /client/verb/viewstats()
 	set name = "View Persistent Data"
 	set category = "Control"
