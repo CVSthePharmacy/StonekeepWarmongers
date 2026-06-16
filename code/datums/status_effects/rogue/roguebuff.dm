@@ -273,8 +273,6 @@
 	duration = 7 SECONDS
 
 /datum/status_effect/buff/adrenaline/on_apply()
-	if(prob(67))
-		duration = 6 SECONDS // Does this do anything? Probably not.
 	if(ishuman(owner))
 		var/mob/living/carbon/human/human_owner = owner
 		human_owner.update_disabled_bodyparts()
