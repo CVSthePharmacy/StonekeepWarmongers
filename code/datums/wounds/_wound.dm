@@ -122,9 +122,6 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 /// Sound that plays when this wound is applied to a mob
 /datum/wound/proc/get_sound_effect(mob/living/affected, obj/item/bodypart/affected_bodypart)
 	if(critical)
-		var/list/crits = affected.get_critical_wounds()
-		if(prob(25 * crits.len))
-			affected.apply_status_effect(/datum/status_effect/buff/adrenaline)
 		if(prob(25))
 			var/obj/effect/temp_visual/warnie/E = new(get_turf(affected))
 			E.icon = 'icons/effects/64x32.dmi'
@@ -189,6 +186,11 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 		affected.bandage_expire() //new bleeding wounds always expire bandages, fuck you
 	if(disabling)
 		affected.update_disabled()
+	if(critical)
+		var/list/crits = affected.owner.get_critical_wounds()
+		if(prob(25 * crits.len))
+			affected.owner.apply_status_effect(/datum/status_effect/buff/adrenaline)
+			affected.owner.update_disabled_bodyparts()
 
 /// Removes this wound from a given bodypart
 /datum/wound/proc/remove_from_bodypart()
