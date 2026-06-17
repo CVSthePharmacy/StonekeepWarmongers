@@ -421,3 +421,43 @@
 	wbalance = 0
 	minstr = 0
 	wdefense = 3
+
+/obj/item/rogueweapon/mace/maul
+	force = 12//Don't one-hand this.
+	force_wielded = 40//I am union man from the smackahoe mountains.
+	possible_item_intents = list(/datum/intent/mace/strike)
+	gripped_intents = list(/datum/intent/maul, /datum/intent/maul/crush)
+	name = "maul"
+	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men."
+	icon_state = "sledge"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	wlength = WLENGTH_LONG
+	swingsound = BLUNTWOOSH_HUGE
+	slot_flags = null//No.
+	minstr = 14
+	wdefense = 6
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	dropshrink = 0.6
+	bigboy = TRUE
+	gripsprite = TRUE
+	max_integrity = 300
+
+/datum/intent/maul
+	name = "strike"
+	blade_class = BCLASS_BLUNT
+	attack_verb = list("strikes", "hammers", "wallops")
+	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
+	chargetime = 0
+	swingdelay = 0
+	icon_state = "instrike"
+
+/datum/intent/maul/crush
+	name = "crush"
+	blade_class = BCLASS_SMASH
+	attack_verb = list("crushes")
+	swingdelay = 12//+2 from mace smash. Walk away from it.
+	damfactor = 1.7//Identical to mace smash.
+	icon_state = "incrush"
