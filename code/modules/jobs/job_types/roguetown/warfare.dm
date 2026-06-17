@@ -592,6 +592,7 @@
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
+	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
 	if(H.dna.species.id == "fat")
@@ -605,6 +606,7 @@
 	beltr = /obj/item/rogueweapon/mace/cudgel/war
 	backr = /obj/item/rogueweapon/mace/maul
 	neck = /obj/item/clothing/neck/roguetown/bervor
+	gloves = /obj/item/clothing/gloves/roguetown/plate
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
