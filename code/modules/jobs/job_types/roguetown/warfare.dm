@@ -602,12 +602,27 @@ allowed_races = ALL_RACES_LIST_NAMES
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
-	beltr = /obj/item/quiver/bullets
-	beltl = /obj/item/rogueweapon/huntingknife/idagger/war
-	backr = GetSniperForWarfarePPU()
-	backl = /obj/item/storage/backpack/rogue/satchel/booze
+	beltr = /obj/item/rogueweapon/mace/cudgel/war
+	backr = /obj/item/rogueweapon/mace/maul
 	neck = /obj/item/clothing/neck/roguetown/bervor
-	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm
+	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.change_stat("strength", 5)
+		H.change_stat("perception", -1)
+		H.change_stat("intelligence", -2)
+		H.change_stat("speed", -4)
+		H.change_stat("constitution", 4)
+		H.change_stat("endurance", 4)
+		H.cmode_music = 'sound/music/combatmaniac.ogg'
+	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 
 //// SNIPER ////
 

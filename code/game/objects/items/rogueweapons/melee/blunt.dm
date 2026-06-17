@@ -433,7 +433,7 @@
 	icon = 'icons/roguetown/weapons/64.dmi'
 	wlength = WLENGTH_LONG
 	swingsound = BLUNTWOOSH_HUGE
-	slot_flags = null//No.
+	slot_flags = ITEM_SLOT_BACK
 	minstr = 14
 	wdefense = 6
 	pixel_y = -16
