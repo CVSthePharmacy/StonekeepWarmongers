@@ -569,6 +569,48 @@
 		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
+////ARMORED MELEE INFANTRY////
+
+/datum/advclass/red/melee
+	name = "Armored Mulcher"
+	tutorial = "Slow moving, armored infantry with Mauls meant to break enemy fortifications and skullfuck anyone who gets in their way."
+	outfit = /datum/outfit/job/roguetown/redmulcher
+allowed_sexes = list(MALE, FEMALE)
+allowed_races = ALL_RACES_LIST_NAMES
+allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+category_tags = list(CTAG_REDSOLDIER)
+maximum_possible_slots = -1
+reinforcements_wave = 0
+allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/redmulcher/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
+	if(H.dna.species.id == "fat")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
+	if(H.dna.species.id == "bulky")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	cloak = /obj/item/clothing/cloak/war/ppr/cloak
+	if(H.dna.species.id == "fat")
+		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
+	if(H.dna.species.id == "bulky")
+		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
+	beltr = /obj/item/quiver/bullets
+	beltl = /obj/item/rogueweapon/huntingknife/idagger/war
+	backr = GetSniperForWarfarePPU()
+	backl = /obj/item/storage/backpack/rogue/satchel/booze
+	neck = /obj/item/clothing/neck/roguetown/bervor
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm
+
 //// SNIPER ////
 
 /datum/advclass/red/sniper
