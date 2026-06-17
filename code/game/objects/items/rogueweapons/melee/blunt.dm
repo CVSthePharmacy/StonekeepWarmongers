@@ -428,7 +428,7 @@
 	possible_item_intents = list(/datum/intent/mace/strike)
 	gripped_intents = list(/datum/intent/maul, /datum/intent/maul/crush)
 	name = "maul"
-	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men."
+	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men, although nobody is stopping you from doing otherwise."
 	icon_state = "sledge"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	wlength = WLENGTH_LONG
