@@ -586,15 +586,13 @@ allowed_races = ALL_RACES_LIST_NAMES
 /datum/outfit/job/roguetown/redmulcher/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
+	pants = /obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	if(H.dna.species.id == "bulky")
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
 	if(H.dna.species.id == "fat")
 		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
