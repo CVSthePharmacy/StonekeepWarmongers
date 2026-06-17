@@ -458,6 +458,6 @@
 	name = "crush"
 	blade_class = BCLASS_SMASH
 	attack_verb = list("crushes")
-	swingdelay = 12//+2 from mace smash. Walk away from it.
+	chargetime = 3
 	damfactor = 1.7//Identical to mace smash.
 	icon_state = "incrush"
