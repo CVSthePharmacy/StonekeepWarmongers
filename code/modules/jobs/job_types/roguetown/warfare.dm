@@ -575,13 +575,13 @@
 	name = "Armored Mulcher"
 	tutorial = "Slow moving, armored infantry with Mauls meant to break enemy fortifications and skullfuck anyone who gets in their way."
 	outfit = /datum/outfit/job/roguetown/redmulcher
-allowed_sexes = list(MALE, FEMALE)
-allowed_races = ALL_RACES_LIST_NAMES
-allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-category_tags = list(CTAG_REDSOLDIER)
-maximum_possible_slots = -1
-reinforcements_wave = 0
-allowed_races = ALL_RACES_LIST_NAMES
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redmulcher/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
