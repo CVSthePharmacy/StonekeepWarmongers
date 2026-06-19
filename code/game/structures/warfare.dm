@@ -400,7 +400,10 @@
 	if(assault.holder == "Regimians")
 		maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#c18700b8'>CAPTURED</font></div>"
 	else
-		maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#fcb000b8'>[assault.holder]\n[ASS.attack_progress]/[assault.tocapture_points]</font></div>"
+		if(ASS.current_capture_point == assault.capture_order || (ASS.current_capture_point == 0 && assault.capture_order == 0))
+			maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#fcb000b8'>[assault.holder]\n[ASS.attack_progress]/[assault.tocapture_points]</font></div>"
+		else
+			maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#fcb000b8'>[assault.holder]\n0/[assault.tocapture_points]</font></div>"
 
 // capture point navigation
 

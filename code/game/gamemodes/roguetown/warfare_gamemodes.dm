@@ -95,9 +95,9 @@
 	var/current_capture_point = 1
 	var/base_player_count = 8
 
-	var/blu_spawns = 60
-	var/min_blu_spawns = 20
-	var/max_blu_spawns = 60
+	var/blu_spawns = 30
+	var/min_blu_spawns = 10
+	var/max_blu_spawns = 30
 
 	var/list/capture_points = list()
 	var/list/showers = list()
@@ -297,7 +297,10 @@
 	droning_sound = 'sound/music/firstwhistle.ogg'
 	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
 	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 90 // might eb too much. 1 second to capture or something idk im not a math guy
+
+	capture_rate = 5 // might eb too much. 1 second to capture or something idk im not a math guy
+	tocapture_points = 100 // 20 seconds to capture
+
 	capture_order = 2
 
 /area/rogue/assault/gates
@@ -305,8 +308,10 @@
 	droning_sound = 'sound/music/firstwhistle.ogg'
 	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
 	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 5
-	tocapture_points = 150 // 30 seconds to capture if my math is correct
+
+	capture_rate = 2
+	tocapture_points = 100 // 50 seconds to capture if my math is correct
+
 	capture_order = 1
 
 // BDAY
@@ -316,7 +321,9 @@
 	droning_sound = 'sound/music/firstwhistle.ogg'
 	droning_sound_dusk = 'sound/music/firstwhistle.ogg'
 	droning_sound_night = 'sound/music/firstwhistle.ogg'
-	capture_rate = 5
-	tocapture_points = 150 // 30 seconds to capture if my math is correct
+
+	capture_rate = 2
+	tocapture_points = 100 // 50 seconds to capture if my math is correct
+
 	capture_order = 1
 	respawn_id_on_cap_attacker = "Watershouse"
