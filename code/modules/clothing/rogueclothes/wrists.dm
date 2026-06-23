@@ -15,6 +15,7 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	blocksound = PLATEHIT
 	anvilrepair = /datum/skill/craft/armorsmithing
+	color = CLOTHING_IRON
 
 /obj/item/clothing/wrists/roguetown/bracers/leather
 	name = "leather bracers"

@@ -69,6 +69,7 @@
 	do_sound = TRUE
 	smeltresult = /obj/item/ingot/steel
 	armor_class = ARMOR_CLASS_MEDIUM
+	color = CLOTHING_IRON
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/chainkini
 	name = "amazon mail"
