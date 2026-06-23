@@ -604,7 +604,7 @@
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltr = /obj/item/rogueweapon/mace/cudgel/war
-	backr = /obj/item/rogueweapon/mace/maul
+	backl = /obj/item/rogueweapon/mace/maul
 	neck = /obj/item/clothing/neck/roguetown/bervor
 	gloves = /obj/item/clothing/gloves/roguetown/plate
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
