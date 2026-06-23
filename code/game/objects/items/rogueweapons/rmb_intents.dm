@@ -82,17 +82,13 @@
 	desc = "(RMB WHILE DEFENSE IS ACTIVE) A deceptive half-attack with no follow-through, meant to force your opponent to open their guard. Useless against someone who is dodging."
 	icon_state = "rmbfeint"
 
-/datum/status_effect/debuff/feinted
+/datum/status_effect/debuff/feinted // You fell for a feint!
 	id = "nofeint"
 	duration = 50
 
-/datum/status_effect/debuff/feintcd
+/datum/status_effect/debuff/feintcd // Feint cooldown for the person that did the feint.
 	id = "feintcd"
 	duration = 100
-
-/datum/status_effect/debuff/riposted
-	id = "riposted"
-	duration = 30
 
 /datum/rmb_intent/riposte
 	name = "defend"

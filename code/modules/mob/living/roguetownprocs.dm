@@ -126,8 +126,8 @@
 				if(!istype(rmb_intent, /datum/rmb_intent/riposte))
 					return FALSE
 			if(has_status_effect(/datum/status_effect/debuff/feinted))
-				return FALSE
-			if(has_status_effect(/datum/status_effect/debuff/riposted))
+				if(prob(50))
+					last_parry = world.time // Cascade, baby.
 				return FALSE
 			last_parry = world.time
 			if(intenty && !intenty.canparry)
@@ -256,7 +256,9 @@
 			if(world.time < last_dodge + dodgetime)
 				if(!istype(rmb_intent, /datum/rmb_intent/riposte))
 					return FALSE
-			if(has_status_effect(/datum/status_effect/debuff/riposted))
+			if(has_status_effect(/datum/status_effect/debuff/feinted))
+				if(prob(50))
+					last_dodge = world.time
 				return FALSE
 			last_dodge = world.time
 			if(src.loc == user.loc)

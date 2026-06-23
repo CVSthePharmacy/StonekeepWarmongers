@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(warmongers)
 	red_airship = locate(/area/rogue/indoors/airship/red)
 	blue_airship = locate(/area/rogue/indoors/airship/blue)
 
-	if(splittext(SSmapping.config.map_name, "-")[1] == "TDM")
+	if(splittext(SSmapping.config.map_name, "-")[1] == "TDM" || aspect_chosen(/datum/round_aspect/squishyhumans))
 		time_between_respawns = 30 SECONDS
 
 /datum/controller/subsystem/warmongers/proc/get_respawn_point(var/mob/living/carbon/human/HU)

@@ -135,6 +135,39 @@
 	animate(S, time = 20, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 20)
 
+	var/pixel_x_diff = 0
+	var/pixel_y_diff = 0
+
+	switch(user.dir)
+		if(NORTH)
+			pixel_y_diff = -16
+			pixel_x_diff = rand(-1,-4)
+		if(SOUTH)
+			pixel_y_diff = 16
+			pixel_x_diff = rand(1,4)
+		if(EAST)
+			pixel_x_diff = -16
+			pixel_y_diff = rand(-1,-4)
+		if(WEST)
+			pixel_x_diff = 16
+			pixel_y_diff = rand(1,4)
+
+	animate(
+		user,
+		pixel_x = pixel_x - pixel_x_diff,
+		pixel_y = pixel_y - pixel_y_diff,
+		time = 2,
+		easing = CIRCULAR_EASING,
+		flags = ANIMATION_PARALLEL
+		)
+	animate(
+		pixel_x = pixel_x + pixel_x_diff,
+		pixel_y = pixel_y + pixel_y_diff,
+		time = 4,
+		easing = SINE_EASING,
+		flags = ANIMATION_PARALLEL
+		)
+
 	SSticker.muskshots++
 
 	for(var/mob/M in GLOB.player_list)
@@ -287,6 +320,35 @@
 	ARE.Turn(rand(-350,350))
 	animate(S, time = 20, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 20)
+
+	var/pixel_x_diff = 0
+	var/pixel_y_diff = 0
+
+	switch(user.dir)
+		if(NORTH)
+			pixel_y_diff = -16
+		if(SOUTH)
+			pixel_y_diff = 16
+		if(EAST)
+			pixel_x_diff = -16
+		if(WEST)
+			pixel_x_diff = 16
+
+	animate(
+		user,
+		pixel_x = pixel_x - pixel_x_diff,
+		pixel_y = pixel_y - pixel_y_diff,
+		time = 0.5,
+		easing = CIRCULAR_EASING,
+		flags = ANIMATION_PARALLEL
+		)
+	animate(
+		pixel_x = pixel_x + pixel_x_diff,
+		pixel_y = pixel_y + pixel_y_diff,
+		time = 1,
+		easing = SINE_EASING,
+		flags = ANIMATION_PARALLEL
+		)
 
 	SSticker.muskshots++
 
