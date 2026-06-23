@@ -270,15 +270,19 @@
 /datum/status_effect/buff/adrenaline
 	id = "adrenaline"
 	alert_type = null
-	duration = 7 SECONDS
+	duration = 35 SECONDS
 
 /datum/status_effect/buff/adrenaline/on_apply()
-	if(ishuman(owner))
-		var/mob/living/carbon/human/human_owner = owner
-		human_owner.update_disabled_bodyparts()
-	owner.emote("laugh")
+	if(!ishuman(owner))
+		return ..()
+	var/mob/living/carbon/human/human_owner = owner
+
+	human_owner.update_disabled_bodyparts()
+	human_owner.emote("laugh")
+	human_owner.set_resting(FALSE, FALSE)
+	to_chat(owner, "<span class='userdanger'>NO! I AM NOT DYING LIKE THIS! THE LAST WILLS OF MY LIFE BEGIN TO BEAT HARDER THAN EVER BEFORE!</span>")
 	if(aspect_chosen(/datum/round_aspect/halo))
-		owner.playsound_local(src, 'sound/vo/halo/invincible.mp3', 75)
+		human_owner.playsound_local(src, 'sound/vo/halo/invincible.mp3', 75)
 	return ..()
 
 /datum/status_effect/buff/adrenaline/on_remove()
