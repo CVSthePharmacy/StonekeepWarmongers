@@ -75,7 +75,7 @@
 //rogtodo sprites for this
 /obj/item/clothing/gloves/roguetown/plate
 	name = "plate gauntlets"
-	desc = "Gauntlets made out of of steel ingots. Offer the best protection against melee attacks and have high integrity."
+	desc = "Gauntlets made out of of iron ingots. Offer decent protection against melee attacks and have high integrity. Don't expect to stop bullets with this."
 	icon_state = "gauntlets"
 	armor = list("melee" = 100, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CHOP, BCLASS_CUT, BCLASS_BLUNT)
@@ -88,6 +88,7 @@
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	anvilrepair = /datum/skill/craft/armorsmithing
+	color = CLOTHING_IRON
 
 /obj/item/clothing/gloves/roguetown/grenzelgloves
 	name = "grenzelhoft gloves"

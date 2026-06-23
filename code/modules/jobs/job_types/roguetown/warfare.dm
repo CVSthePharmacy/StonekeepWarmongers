@@ -569,6 +569,64 @@
 		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
+////ARMORED MELEE INFANTRY////
+
+/datum/advclass/red/melee
+	name = "Armored Mulcher"
+	tutorial = "Slow moving, armored infantry with Mauls meant to break enemy fortifications and skullfuck anyone who gets in their way."
+	outfit = /datum/outfit/job/roguetown/redmulcher
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+	allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/redmulcher/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	pants = /obj/item/clothing/under/roguetown/chainlegs
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
+	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
+	cloak = /obj/item/clothing/cloak/war/ppr/cloak
+	if(H.dna.species.id == "fat")
+		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
+	if(H.dna.species.id == "bulky")
+		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
+	beltr = /obj/item/rogueweapon/mace/cudgel/war
+	beltl = /obj/item/rogueweapon/woodcut/war
+	backl = /obj/item/rogueweapon/mace/maul
+	neck = /obj/item/clothing/neck/roguetown/bervor
+	gloves = /obj/item/clothing/gloves/roguetown/plate
+	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.change_stat("strength", 5)
+		H.change_stat("perception", -1)
+		H.change_stat("intelligence", -2)
+		H.change_stat("speed", -7)
+		H.change_stat("constitution", 4)
+		H.change_stat("endurance", 4)
+		H.cmode_music = 'sound/music/combatmaniac.ogg'
+	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+
 //// SNIPER ////
 
 /datum/advclass/red/sniper
