@@ -74,6 +74,7 @@
 #define CLOTHING_ORANGE			"#bd6606"
 #define CLOTHING_MAJENTA		"#962e5c"
 #define CLOTHING_HEARTFELT		"#f02f2f"
+#define CLOTHING_IRON			"#8F9779"
 
 #define CLOTHING_WET			"#bbbbbb"
 

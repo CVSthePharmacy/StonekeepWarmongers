@@ -421,3 +421,52 @@
 	wbalance = 0
 	minstr = 0
 	wdefense = 3
+
+/obj/item/rogueweapon/mace/maul
+	force = 12//Don't one-hand this.
+	force_wielded = 40//I am union man from the smackahoe mountains.
+	possible_item_intents = list(/datum/intent/mace/strike)
+	gripped_intents = list(/datum/intent/maul, /datum/intent/maul/crush)
+	name = "maul"
+	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men, although nobody is stopping you from doing otherwise."
+	icon_state = "sledge"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	wlength = WLENGTH_LONG
+	swingsound = BLUNTWOOSH_HUGE
+	slot_flags = ITEM_SLOT_BACK
+	minstr = 14
+	wdefense = 6
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	dropshrink = 0.6
+	bigboy = TRUE
+	gripsprite = TRUE
+	max_integrity = 300
+
+/datum/intent/maul
+	name = "strike"
+	blade_class = BCLASS_BLUNT
+	attack_verb = list("strikes", "hammers", "wallops")
+	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
+	chargetime = 0
+	swingdelay = 0
+	icon_state = "instrike"
+
+/datum/intent/maul/crush
+	name = "crush"
+	blade_class = BCLASS_SMASH
+	attack_verb = list("crushes")
+	chargetime = 3
+	damfactor = 1.7//Identical to mace smash.
+	icon_state = "incrush"
+
+/obj/item/rogueweapon/mace/maul/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("wielded")
+				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)

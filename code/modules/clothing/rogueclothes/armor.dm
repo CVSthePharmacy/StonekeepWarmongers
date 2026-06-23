@@ -60,7 +60,7 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "hauberk"
-	desc = "A longer steel maille that protects the legs."
+	desc = "A longer iron maille that protects the legs."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "hauberk"
 	item_state = "hauberk"
@@ -69,6 +69,7 @@
 	do_sound = TRUE
 	smeltresult = /obj/item/ingot/steel
 	armor_class = ARMOR_CLASS_MEDIUM
+	color = CLOTHING_IRON
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/chainkini
 	name = "amazon mail"

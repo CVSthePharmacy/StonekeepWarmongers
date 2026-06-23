@@ -124,7 +124,7 @@
 
 /obj/item/clothing/under/roguetown/chainlegs
 	name = "chain chausses"
-	desc = "Chain maille chausses made of exquisite steel rings boasting superior protection."
+	desc = "Chain maille chausses made of exquisite iron rings boasting superior protection."
 	gender = PLURAL
 	icon_state = "chain_legs"
 	item_state = "chain_legs"
@@ -140,6 +140,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	r_sleeve_status = SLEEVE_NOMOD
 	l_sleeve_status = SLEEVE_NOMOD
+	color = CLOTHING_IRON
 
 /obj/item/clothing/under/roguetown/chainlegs/iron
 	icon_state = "ichain_legs"
