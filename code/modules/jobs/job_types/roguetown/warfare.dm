@@ -621,7 +621,7 @@
 		H.change_stat("strength", 5)
 		H.change_stat("perception", -1)
 		H.change_stat("intelligence", -2)
-		H.change_stat("speed", -4)
+		H.change_stat("speed", -7)
 		H.change_stat("constitution", 4)
 		H.change_stat("endurance", 4)
 		H.cmode_music = 'sound/music/combatmaniac.ogg'
