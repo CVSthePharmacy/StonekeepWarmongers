@@ -157,9 +157,6 @@
 
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
-	if(recoil)
-		firearm_recoil_camera(user, recoil + 1, recoil, user.dir)
-
 	if(suppressed)
 		playsound(user, suppressed_sound, suppressed_volume, vary_fire_sound, ignore_walls = FALSE)
 	else
@@ -249,8 +246,6 @@
 				addtimer(CALLBACK(G, TYPE_PROC_REF(/obj/item/gun, process_fire), target, user, TRUE, params, null, bonus_spread), loop_counter)
 
 	return process_fire(target, user, TRUE, params, null, bonus_spread)
-
-
 
 /obj/item/gun/can_trigger_gun(mob/living/user)
 	. = ..()
@@ -343,6 +338,8 @@
 //					shoot_live_shot(user, 1, target, message)
 //				else
 				user.unlock_achievement(new /datum/achievement/firstshot())
+				if(recoil)
+					firearm_recoil_camera(user, recoil + 1, recoil, get_dir(get_turf(user),get_turf(target)))
 				shoot_live_shot(user, 0, target, message)
 		else
 			shoot_with_empty_chamber(user)

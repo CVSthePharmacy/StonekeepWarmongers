@@ -135,38 +135,7 @@
 	animate(S, time = 20, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 20)
 
-	var/pixel_x_diff = 0
-	var/pixel_y_diff = 0
-
-	switch(user.dir)
-		if(NORTH)
-			pixel_y_diff = -16
-			pixel_x_diff = rand(-1,-4)
-		if(SOUTH)
-			pixel_y_diff = 16
-			pixel_x_diff = rand(1,4)
-		if(EAST)
-			pixel_x_diff = -16
-			pixel_y_diff = rand(-1,-4)
-		if(WEST)
-			pixel_x_diff = 16
-			pixel_y_diff = rand(1,4)
-
-	animate(
-		user,
-		pixel_x = pixel_x - pixel_x_diff,
-		pixel_y = pixel_y - pixel_y_diff,
-		time = 2,
-		easing = CIRCULAR_EASING,
-		flags = ANIMATION_PARALLEL
-		)
-	animate(
-		pixel_x = pixel_x + pixel_x_diff,
-		pixel_y = pixel_y + pixel_y_diff,
-		time = 4,
-		easing = SINE_EASING,
-		flags = ANIMATION_PARALLEL
-		)
+	firearm_recoil_mob(user)
 
 	SSticker.muskshots++
 
@@ -321,34 +290,7 @@
 	animate(S, time = 20, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 20)
 
-	var/pixel_x_diff = 0
-	var/pixel_y_diff = 0
-
-	switch(user.dir)
-		if(NORTH)
-			pixel_y_diff = -16
-		if(SOUTH)
-			pixel_y_diff = 16
-		if(EAST)
-			pixel_x_diff = -16
-		if(WEST)
-			pixel_x_diff = 16
-
-	animate(
-		user,
-		pixel_x = pixel_x - pixel_x_diff,
-		pixel_y = pixel_y - pixel_y_diff,
-		time = 0.5,
-		easing = CIRCULAR_EASING,
-		flags = ANIMATION_PARALLEL
-		)
-	animate(
-		pixel_x = pixel_x + pixel_x_diff,
-		pixel_y = pixel_y + pixel_y_diff,
-		time = 1,
-		easing = SINE_EASING,
-		flags = ANIMATION_PARALLEL
-		)
+	firearm_recoil_mob(user)
 
 	SSticker.muskshots++
 
@@ -801,7 +743,7 @@
 	F.throw_at(target, 30, 4, user, spin = TRUE)
 	F.lit = TRUE
 	playsound(user.loc, 'sound/foley/shoot_granata.ogg', 75, TRUE, -3)
-	firearm_recoil_camera(user, 1, 3, user.dir)
+	firearm_recoil_camera(user, 1, 3, get_dir(get_turf(user),get_turf(target)))
 	update_icon()
 
 	var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 1)

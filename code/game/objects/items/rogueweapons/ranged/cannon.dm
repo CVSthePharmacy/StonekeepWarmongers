@@ -409,7 +409,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(!H.lying)
-			firearm_recoil_camera(H, 1, 1, H.dir)
+			firearm_recoil_camera(H, 1, 1, angle2dir(true_angle))
 
 	A.preparePixelProjectile(target, T)
 	A.firer = user
