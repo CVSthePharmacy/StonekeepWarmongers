@@ -25,7 +25,7 @@
 			fou = TRUE
 			break
 	if(!fou)
-		to_chat(user, "<b>There is no portal connected to this. Report it as a bugs.</b>")
+		//to_chat(user, "<b>There is no portal connected to this. Report it as a bugs.</b>")
 	. = ..()
 
 
