@@ -1394,6 +1394,7 @@
 	if(attached)
 		visible_message("<span class='notice'>[attached] is detached from [src].</span>")
 		attached = null
+		qdel(bmo)
 		update_icon()
 		return
 
