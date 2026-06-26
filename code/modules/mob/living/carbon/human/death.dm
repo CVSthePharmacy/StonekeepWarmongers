@@ -79,6 +79,8 @@
 					to_chat(unio, "<span class='warning'>The enemy flag has returned to their base.</span>")
 				for(var/client/reg in C.regimians)
 					to_chat(reg, "<span class='info'>Our flag has returned to our base.</span>")
+				if(aspect_chosen(/datum/round_aspect/halo))
+					SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 			if(NR.red_flag == src)
 				NR.red_flag = null
 				filters = list()
@@ -86,8 +88,8 @@
 					to_chat(reg, "<span class='warning'>The enemy flag has returned to their base.</span>")
 				for(var/client/unio in C.unionists)
 					to_chat(unio, "<span class='info'>Our flag has returned to our base.</span>")
-			if(aspect_chosen(/datum/round_aspect/halo))
-				SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
+				if(aspect_chosen(/datum/round_aspect/halo))
+					SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warmongers/red/lord))
 			testing("Red lord is dead!")
