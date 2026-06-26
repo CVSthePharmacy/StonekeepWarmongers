@@ -424,7 +424,7 @@
 
 /obj/item/rogueweapon/mace/maul
 	force = 12//Don't one-hand this.
-	force_wielded = 40//I am union man from the smackahoe mountains.
+	force_wielded = 25//I am union man from the smackahoe mountains.
 	possible_item_intents = list(/datum/intent/mace/strike)
 	gripped_intents = list(/datum/intent/maul, /datum/intent/maul/crush)
 	name = "maul"
@@ -434,8 +434,6 @@
 	wlength = WLENGTH_LONG
 	swingsound = BLUNTWOOSH_HUGE
 	slot_flags = ITEM_SLOT_BACK
-	minstr = 14
-	wdefense = 6
 	pixel_y = -16
 	pixel_x = -16
 	inhand_x_dimension = 64
@@ -450,7 +448,7 @@
 	blade_class = BCLASS_BLUNT
 	attack_verb = list("strikes", "hammers", "wallops")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
-	chargetime = 0
+	chargetime = 1
 	swingdelay = 0
 	icon_state = "instrike"
 
