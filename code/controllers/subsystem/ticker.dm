@@ -471,10 +471,13 @@ SUBSYSTEM_DEF(ticker)
 		if(istype(C.mob, /mob/dead/new_player))
 			var/mob/dead/new_player/NP = C.mob
 			NP.lobby_refresh() // To allow it to change from "WAIT" to "JOIN"
-		if(reg.len <= uni.len)
+		if(SSwarmongers.oneteammode)
 			reg += C
 		else
-			uni += C
+			if(reg.len <= uni.len)
+				reg += C
+			else
+				uni += C
 
 	W.regimians = reg
 	W.unionists = uni
