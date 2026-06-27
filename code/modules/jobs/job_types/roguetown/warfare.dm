@@ -591,8 +591,11 @@
 	if(H.dna.species.id == "bulky")
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+	if(H.dna.species.id == "fat")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
+	if(H.dna.species.id == "bulky")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
 	if(H.dna.species.id == "fat")
@@ -603,7 +606,6 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
-	beltr = /obj/item/rogueweapon/mace/cudgel/war
 	beltl = /obj/item/rogueweapon/woodcut/war
 	backl = /obj/item/rogueweapon/mace/maul
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm

@@ -434,6 +434,7 @@
 	wlength = WLENGTH_LONG
 	swingsound = BLUNTWOOSH_HUGE
 	slot_flags = ITEM_SLOT_BACK
+	can_parry = FALSE
 	pixel_y = -16
 	pixel_x = -16
 	inhand_x_dimension = 64
@@ -448,7 +449,7 @@
 	blade_class = BCLASS_BLUNT
 	attack_verb = list("strikes", "hammers", "wallops")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
-	chargetime = 1
+	chargetime = 1.5
 	swingdelay = 0
 	icon_state = "instrike"
 
@@ -456,8 +457,8 @@
 	name = "crush"
 	blade_class = BCLASS_SMASH
 	attack_verb = list("crushes")
-	chargetime = 3
-	damfactor = 1.7//Identical to mace smash.
+	chargetime = 5
+	damfactor = 1.35//Identical to mace smash.
 	icon_state = "incrush"
 
 /obj/item/rogueweapon/mace/maul/getonmobprop(tag)
