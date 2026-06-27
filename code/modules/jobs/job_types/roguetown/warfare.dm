@@ -586,7 +586,7 @@
 /datum/outfit/job/roguetown/redmulcher/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = /obj/item/clothing/under/roguetown/chainlegs
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	if(H.dna.species.id == "bulky")
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
@@ -606,8 +606,6 @@
 	beltr = /obj/item/rogueweapon/mace/cudgel/war
 	beltl = /obj/item/rogueweapon/woodcut/war
 	backl = /obj/item/rogueweapon/mace/maul
-	neck = /obj/item/clothing/neck/roguetown/bervor
-	gloves = /obj/item/clothing/gloves/roguetown/plate
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -949,11 +947,11 @@
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
-	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 	if(H.dna.species.id == "fat")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
 	if(H.dna.species.id == "bulky")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
 	if(H.dna.species.id == "fat")
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat/alternate
@@ -1048,11 +1046,11 @@
 
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	if(H.dna.species.id == "fat")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
 	if(H.dna.species.id == "bulky")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/regime/scarf
 	if(H.dna.species.id == "fat")
 		cloak = /obj/item/clothing/cloak/war/regime/scarf/fat
@@ -1116,11 +1114,11 @@
 /datum/outfit/job/roguetown/bluzealot/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	if(H.dna.species.id == "fat")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
 	if(H.dna.species.id == "bulky")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	if(H.dna.species.id == "bulky")
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
@@ -1172,11 +1170,11 @@
 /datum/outfit/job/roguetown/bluhussar/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
 	if(H.dna.species.id == "fat")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants/fat
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants/fat
 	if(H.dna.species.id == "bulky")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants/bulky
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	if(H.dna.species.id == "bulky")
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
@@ -1236,9 +1234,9 @@
 /datum/outfit/job/roguetown/blusniper/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	if(H.dna.species.id == "fat")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
 	if(H.dna.species.id == "bulky")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
@@ -1367,9 +1365,9 @@
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	if(H.dna.species.id == "fat")
-		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
 	if(H.dna.species.id == "bulky")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt
