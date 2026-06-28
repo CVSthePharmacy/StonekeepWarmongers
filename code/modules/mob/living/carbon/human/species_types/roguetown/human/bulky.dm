@@ -26,6 +26,7 @@
 	hairyness = "t1"
 	soundpack_m = /datum/voicepack/male
 	soundpack_f = /datum/voicepack/female
+	custom_clothes = TRUE
 	offset_features = list(OFFSET_ID = list(0,1), OFFSET_GLOVES = list(0,1), OFFSET_WRISTS = list(0,1),\
 	OFFSET_CLOAK = list(0,2), OFFSET_FACEMASK = list(0,1), OFFSET_HEAD = list(0,2), \
 	OFFSET_FACE = list(0,3), OFFSET_BELT = list(0,-2), OFFSET_BACK = list(0,1), \

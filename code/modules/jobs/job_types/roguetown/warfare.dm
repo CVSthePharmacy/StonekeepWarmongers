@@ -298,31 +298,15 @@
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
-	if(H.dna.species.id == "bulky")
-		neck = /obj/item/clothing/neck/roguetown/gorget
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	pants = /obj/item/clothing/under/roguetown/trou/war/panties
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/panties/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/panties/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = GetSidearmForWarfarePPU()
 	backr = /obj/item/quiver/bullets
 	backl = /obj/item/storage/backpack/rogue/satchel/booze
 	beltr = /obj/item/rogueweapon/sword/sabre/warcrime
 	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
-	if(H.dna.species.id == "fat")
-		armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies/fat
-	if(H.dna.species.id == "bulky")
-		armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies/bulky
 	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownred
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
@@ -390,28 +374,10 @@
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/scarf/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/scarf/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
@@ -458,26 +424,8 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/scarf/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/scarf/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
@@ -520,30 +468,12 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
 	beltl = GetSidearmForWarfarePPU()
 	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm/alternate
@@ -588,24 +518,10 @@
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/woodcut/war
 	backl = /obj/item/rogueweapon/mace/maul
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
@@ -645,23 +561,9 @@
 
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltr = /obj/item/quiver/bullets
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/war
 	backr = GetSniperForWarfarePPU()
@@ -709,28 +611,10 @@
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	if(W.reinforcementwave != 4)
 		beltl = /obj/item/rogueweapon/sword/sabre/shofficer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
@@ -775,27 +659,9 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/scarf/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/scarf/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/flint
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
@@ -843,27 +709,9 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/ppr/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/ppr/cloak/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	head = /obj/item/clothing/head/roguetown/war/tallhat
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/needle/blessed
@@ -950,33 +798,15 @@
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat/alternate
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/bulky/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/sword/sabre/dec/alt
 	beltr = GetSidearmForWarfareRegime()
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	backl = /obj/item/quiver/bullets
 	backr = /obj/item/storage/backpack/rogue/satchel
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/regime/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/regime/cloak/bulky
 	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownblu
@@ -1049,28 +879,10 @@
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/regime/scarf
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/regime/scarf/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/regime/scarf/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
@@ -1117,23 +929,9 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	cloak = /obj/item/clothing/cloak/war/regime/parchment
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/regime/parchment/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/regime/parchment/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate
 	backl = /obj/item/quiver/shitgunner
 	neck = /obj/item/rogue/barkenpowderflask
@@ -1173,33 +971,15 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants/fat
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = GetSidearmForWarfareRegime()
 	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt/bulky
 	head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm/alternate
 	cloak = /obj/item/clothing/cloak/hussarcloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/hussarcloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/hussarcloak/bulky
 	neck = /obj/item/rogue/barkenpowderflask
 	backr = /obj/item/rogueweapon/spear/pike
 	if(H.mind)
@@ -1237,28 +1017,10 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/regime/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/regime/cloak/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltr = /obj/item/quiver/bullets
 	beltl = /obj/item/rogueweapon/mace/cudgel/pick
 	backr = GetSniperForWarfareRegime()
@@ -1306,24 +1068,10 @@
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
-	if(H.dna.species.id == "fat")
-		cloak = /obj/item/clothing/cloak/war/regime/cloak/fat
-	if(H.dna.species.id == "bulky")
-		cloak = /obj/item/clothing/cloak/war/regime/cloak/bulky
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	if(W.reinforcementwave != 4)
 		beltl = /obj/item/rogueweapon/sword/sabre/officer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
@@ -1368,23 +1116,9 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
-	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
-	if(H.dna.species.id == "bulky")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt
-	if(H.dna.species.id == "fat")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt/fat
-	if(H.dna.species.id == "bulky")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	if(H.dna.species.id == "bulky")
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	if(H.dna.species.id == "fat")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	if(H.dna.species.id == "bulky")
-		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/needle/blessed
 	beltl = /obj/item/rogue/cranker
