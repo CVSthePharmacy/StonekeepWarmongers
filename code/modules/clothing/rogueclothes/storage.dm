@@ -380,13 +380,3 @@
 	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
 	icon_state = "rope"
 	color = "#35322fff"
-
-/obj/item/storage/belt/rogue/leather/rope/war/fat
-	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
-	icon_state = "ropefat"
-	color = "#35322fff"
-
-/obj/item/storage/belt/rogue/leather/rope/war/bulky
-	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
-	icon_state = "ropebulky"
-	color = "#35322fff"
