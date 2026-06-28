@@ -22,7 +22,7 @@
 			to_chat(user, "<b>I teleport to [T].</b>")
 			playsound(src, 'sound/misc/portal_enter.ogg', 100, TRUE)
 			user.forceMove(T.loc)
-			fou = TRUE
+			//fou = TRUE
 			break
 	//if(!fou)
 		//to_chat(user, "<b>There is no portal connected to this. Report it as a bugs.</b>")
