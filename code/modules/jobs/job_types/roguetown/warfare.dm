@@ -808,7 +808,7 @@
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
 	backpack_contents = list(/obj/item/bomb/mollie=3,/obj/item/bomb/poison=1,/obj/item/bomb/homemade=2)
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -1285,6 +1285,74 @@
 		H.change_stat("constitution", 1)
 	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
+
+/// GRENADIER ////
+
+/datum/advclass/blu/grenadier
+	name = "Grenadier"
+	tutorial = "Firewater-cocktail slinging skirmishers who can deny large areas to the enemy."
+	outfit = /datum/outfit/job/roguetown/redfirestarter
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 2
+	allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	if(H.dna.species.id == "fat")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
+	if(H.dna.species.id == "bulky")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
+	cloak = /obj/item/clothing/cloak/war/ppr/scarf
+	if(H.dna.species.id == "fat")
+		cloak = /obj/item/clothing/cloak/war/ppr/scarf/fat
+	if(H.dna.species.id == "bulky")
+		cloak = /obj/item/clothing/cloak/war/ppr/scarf/bulky
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	if(H.dna.species.id == "fat")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
+	if(H.dna.species.id == "bulky")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
+	beltl = /obj/item/flint
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
+	if(prob(50))
+		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
+	beltr = /obj/item/rogueweapon/woodcut/war
+	backl = /obj/item/storage/backpack/rogue/satchel/booze
+	backr = /obj/item/storage/backpack/rogue/satchel/booze
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
+	backpack_contents = list(/obj/item/bomb/mollie=3,/obj/item/bomb/poison=1,/obj/item/bomb/homemade=2)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("perception", 1)
+		H.change_stat("endurance", 1)
+		H.change_stat("constitution", 1)
+		H.cmode_music = 'sound/music/blackpowder.ogg'
+		ADD_TRAIT(H, TRAIT_UNTRAINED, TRAIT_GENERIC)
 
 //// OFFICER ////
 
