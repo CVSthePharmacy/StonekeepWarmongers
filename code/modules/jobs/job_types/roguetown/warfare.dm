@@ -1066,7 +1066,7 @@
 	..()
 
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
-	cloak = /obj/item/clothing/cloak/war/regime/cloak
+	cloak = /obj/item/clothing/cloak/war/regime/scarf
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	beltl = /obj/item/flint
