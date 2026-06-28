@@ -502,7 +502,7 @@
 ////ARMORED MELEE INFANTRY////
 
 /datum/advclass/red/melee
-	name = "Armored Mulcher"
+	name = "Mulcher"
 	tutorial = "Slow moving, armored infantry with Mauls meant to break enemy fortifications and skullfuck anyone who gets in their way."
 	outfit = /datum/outfit/job/roguetown/redmulcher
 	allowed_sexes = list(MALE, FEMALE)
@@ -516,7 +516,7 @@
 /datum/outfit/job/roguetown/redmulcher/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
-	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
@@ -525,6 +525,7 @@
 	beltl = /obj/item/rogueweapon/woodcut/war
 	backl = /obj/item/rogueweapon/mace/maul
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
+	gloves = /obj/item/clothing/gloves/roguetown/leather
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
