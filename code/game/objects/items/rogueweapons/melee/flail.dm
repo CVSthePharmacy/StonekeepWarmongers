@@ -9,6 +9,7 @@
 	//dropshrink = 0.75
 	wlength = WLENGTH_NORMAL
 	w_class = WEIGHT_CLASS_BULKY
+	can_parry = FALSE //brother what are you fucking parrying with it's a ball on a string tied to a tiny stick
 	slot_flags = ITEM_SLOT_HIP
 	associated_skill = /datum/skill/combat/whipsflails
 	smeltresult = /obj/item/ingot/iron
@@ -69,6 +70,7 @@
 	wlength = WLENGTH_LONG
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
+	can_parry = TRUE //okay this is big enough to parry
 	walking_stick = TRUE
 	pixel_y = -16
 	pixel_x = -16

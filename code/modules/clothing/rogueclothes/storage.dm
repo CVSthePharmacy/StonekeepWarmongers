@@ -236,6 +236,36 @@
 	bloody_icon_state = "bodyblood"
 	alternate_worn_layer = UNDER_CLOAK_LAYER
 
+/obj/item/storage/backpack/rogue/bombdolier
+	name = "bombdolier"
+	desc = "A bandolier for your bombs, could shove some other stuff in the pouches too."
+	icon_state = "bombdolier1"
+	item_state = "bombdolier1"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	resistance_flags = NONE
+	max_integrity = 300
+	equip_sound = 'sound/blank.ogg'
+	bloody_icon_state = "bodyblood"
+	alternate_worn_layer = UNDER_CLOAK_LAYER
+
+/obj/item/storage/backpack/rogue/bombdolier/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(STR)
+		STR.max_combined_w_class = 21
+		STR.max_w_class = WEIGHT_CLASS_NORMAL
+		STR.max_items = 5
+
+/obj/item/storage/backpack/rogue/attack_right(mob/user)
+	var/datum/component/storage/CP = GetComponent(/datum/component/storage)
+	if(CP)
+		CP.rmb_show(user)
+		return TRUE
+
 /obj/item/rogue/musicpack
 	name = "musicpack device"
 	desc = "It goes on your back. Use your middle finger to reach into the hole to turn it on."

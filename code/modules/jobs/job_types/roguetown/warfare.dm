@@ -674,7 +674,7 @@
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
 	backpack_contents = list(/obj/item/bomb/mollie=3,/obj/item/bomb/poison=1,/obj/item/bomb/homemade=2)
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -1047,6 +1047,51 @@
 		H.change_stat("constitution", 1)
 	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
+
+/// GRENADIER ////
+
+/datum/advclass/blu/grenadier
+	name = "Grenadier"
+	tutorial = "Bomb-throwing rushers armed with flails to cleave both iron and flesh from the enemy."
+	outfit = /datum/outfit/job/roguetown/blugrenadier
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 2
+	allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/blugrenadier/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
+	cloak = /obj/item/clothing/cloak/war/regime/cloak
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	beltl = /obj/item/flint
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
+	beltr = /obj/item/rogueweapon/flail
+	backr = /obj/item/storage/backpack/rogue/bombdolier
+	backl = /obj/item/storage/backpack/rogue/satchel
+	head = /obj/item/clothing/head/roguetown/helmet/war/smiler
+	backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/fire/weak=2,/obj/item/bomb/smoke=1) //doesn't get the OP firebottles cause those are for firestarters, gets 2 shitty firebombs instead and a smoke bomb for cover.
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE) //it's j-man cause flails can't parry LOL
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("endurance", 2)
+		H.change_stat("constitution", 1)
+		H.cmode_music = 'sound/music/blackpowder.ogg'
+		ADD_TRAIT(H, TRAIT_UNTRAINED, TRAIT_GENERIC)
 
 //// OFFICER ////
 
