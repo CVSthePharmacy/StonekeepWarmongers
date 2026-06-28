@@ -236,7 +236,7 @@
 	bloody_icon_state = "bodyblood"
 	alternate_worn_layer = UNDER_CLOAK_LAYER
 
-/obj/item/storage/backpack/rogue/satchel/bombdolier
+/obj/item/storage/backpack/rogue/bombdolier
 	name = "bombdolier"
 	desc = "A bandolier for your bombs, could shove some other stuff in the pouches too."
 	icon_state = "bombdolier1"
@@ -252,13 +252,19 @@
 	bloody_icon_state = "bodyblood"
 	alternate_worn_layer = UNDER_CLOAK_LAYER
 
-/obj/item/storage/backpack/rogue/satchel/ComponentInitialize()
+/obj/item/storage/backpack/rogue/bombdolier/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	if(STR)
 		STR.max_combined_w_class = 21
 		STR.max_w_class = WEIGHT_CLASS_NORMAL
 		STR.max_items = 5
+
+/obj/item/storage/backpack/rogue/attack_right(mob/user)
+	var/datum/component/storage/CP = GetComponent(/datum/component/storage)
+	if(CP)
+		CP.rmb_show(user)
+		return TRUE
 
 /obj/item/rogue/musicpack
 	name = "musicpack device"

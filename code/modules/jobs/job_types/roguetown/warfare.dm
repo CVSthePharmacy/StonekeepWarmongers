@@ -1310,8 +1310,8 @@
 	beltl = /obj/item/flint
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	beltr = /obj/item/rogueweapon/flail
-	backl = /obj/item/storage/backpack/rogue/satchel/bombdolier
-	backr = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/storage/backpack/rogue/bombdolier
+	backl = /obj/item/storage/backpack/rogue/satchel
 	head = /obj/item/clothing/head/roguetown/helmet/war/smiler
 	backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/fire/weak=2,/obj/item/bomb/smoke=1) //doesn't get the OP firebottles cause those are for firestarters, gets 2 shitty firebombs instead and a smoke bomb for cover.
 	if(H.mind)
