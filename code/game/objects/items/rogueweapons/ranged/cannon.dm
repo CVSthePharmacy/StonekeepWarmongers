@@ -152,6 +152,7 @@
 	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/plusy = 0 // no pussy jokes.
+	var/firing = FALSE
 	var/obj/item/bomb/loaded
 
 /obj/structure/bombard/alt // regime
@@ -247,6 +248,9 @@
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
+		if(firing)
+			to_chat(user, "<span class='danger'>I caught up with you, bastard. You're stupid. You can't do that.</span>")
+			return
 		if(!loaded || !SSwarmongers.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
@@ -256,6 +260,9 @@
 			fire()
 	if(istype(I, /obj/item/flint))
 		var/obj/item/flint/F = I
+		if(firing)
+			to_chat(user, "<span class='danger'>I caught up with you, bastard. You're stupid. You can't do that.</span>")
+			return
 		if(!loaded || !SSwarmongers.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
@@ -284,6 +291,8 @@
 		sleep(2)
 		visible_message("<span class='danger'>\The [src] stutters and sputters!</span>")
 		return
+	
+	firing = TRUE
 
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 1, 1)
@@ -308,6 +317,7 @@
 		loaded.forceMove(epicenter)
 		loaded.light()
 		loaded.explode(TRUE)
+		firing = FALSE
 		QDEL_NULL(loaded)
 
 	var/angle

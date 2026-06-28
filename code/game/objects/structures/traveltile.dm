@@ -14,7 +14,7 @@
 	..()
 
 /obj/structure/fluff/testportal/attack_hand(mob/user)
-	var/fou
+	//var/fou
 	for(var/obj/structure/fluff/testportal/T in shuffle(GLOB.testportals))
 		if(T.aportalloc == aportalloc)
 			if(T == src)
