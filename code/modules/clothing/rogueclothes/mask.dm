@@ -209,7 +209,7 @@
 					var/mob/living/carbon/H = user
 					H.update_inv_wear_mask()
 
-/obj/item/clothing/mask/rogue/beakmask
+/obj/item/clothing/mask/rogue/war/beakmask
 	name = "beak mask"
 	desc = "A beaked mask worn by practitioners of the medicinal arts."
 	icon_state = "beakmask"
@@ -222,7 +222,7 @@
 	name = "mask"
 	icon_state = "redmask"
 
-/obj/item/clothing/mask/rogue/butcher
+/obj/item/clothing/mask/rogue/war/butcher
 	name = "butcher mask"
 	desc = "A high collar to protect from blood splatters."
 	icon_state = "butchermask"
@@ -230,3 +230,39 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/war/regimoffmask
+	name = "officer's mask"
+	desc = "An iron mask designed to intimidate more than to protect."
+	icon_state = "regimemask"
+	item_state = "regimemask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/war/regideathmask
+	name = "death mask"
+	desc = "A skull mask made of iron, only worn by those who do not fear death."
+	icon_state = "regimehussarmask"
+	item_state = "regimehussarmask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/war/ppufunnelmask
+	name = "funnel mask"
+	desc = "Originally conceived as a good way to drink copious amounts of bier, the funnel mask somehow found its way into military service."
+	icon_state = "ppufunnel"
+	item_state = "ppufunnel"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/war/regibasketmask
+	name = "basket mask"
+	desc = "A lightweight mask designed not to constrict vision too much."
+	icon_state = "regimebasket"
+	item_state = "regimebasket"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP

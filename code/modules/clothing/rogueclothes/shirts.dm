@@ -562,3 +562,27 @@
 	r_sleeve_status = SLEEVE_NOMOD
 	l_sleeve_status = SLEEVE_NOMOD
 	body_parts_covered = CHEST|VITALS
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/greatcoat
+	name = "greatcoat"
+	desc = "A heavy blue greatcoat with a red scarf tucked tight around the neck for warmth."
+	icon_state = "ppugreatcoat"
+	item_state = "ppugreatcoat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/greatcoat
+	name = "greatcoat"
+	desc = "A heavy green greatcoat with fur around the neck."
+	icon_state = "regimegreatcoat"
+	item_state = "regimegreatcoat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
