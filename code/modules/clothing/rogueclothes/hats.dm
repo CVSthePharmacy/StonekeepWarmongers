@@ -1347,6 +1347,8 @@
 /obj/item/clothing/head/roguetown/war/shakohat
 	name = "sharpshooter's shako"
 	desc = "A simple red hat worn by snipers."
+	will_hide = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEHAIR
 	icon_state = "ppushako"
 	item_state = "ppushako"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -1358,6 +1360,8 @@
 /obj/item/clothing/head/roguetown/war/cuirassier
 	name = "cuirassier's helmet"
 	desc = "A green plumed helmet worn by heavy cavalry."
+	will_hide = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEHAIR
 	icon_state = "regimecuirassier"
 	item_state = "regimecuirassier"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -1391,6 +1395,8 @@
 /obj/item/clothing/head/roguetown/war/officerkalpak
 	name = "kalpak"
 	desc = "A hat worn by officers in the Regime."
+	will_hide = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEHAIR
 	icon_state = "regimekalpak"
 	item_state = "regimekalpak"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -1402,6 +1408,8 @@
 /obj/item/clothing/head/roguetown/war/hussarkalpak
 	name = "hussar hat"
 	desc = "A short kalpak adorned with a skull and a green flap."
+	will_hide = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEHAIR
 	icon_state = "regimehussarhat"
 	item_state = "regimehussarhat"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
