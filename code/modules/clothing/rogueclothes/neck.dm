@@ -160,6 +160,18 @@
 			update_icon()
 			playsound(get_turf(H), 'sound/foley/struggle.ogg', 100, FALSE, -1)
 
+/obj/item/clothing/neck/roguetown/gorget/ppu
+	name = "gorget"
+	desc = "A simple iron gorget designed to protect your neck."
+	icon_state = "ppugorget"
+	flags_inv = null
+
+/obj/item/clothing/neck/roguetown/gorget/regime
+	name = "gorget"
+	desc = "A simple iron gorget designed to protect your neck."
+	icon_state = "regimegorget"
+	flags_inv = null
+
 /obj/item/clothing/neck/roguetown/psicross
 	name = "psycross"
 	desc = "A strange amulet, seems worthless."

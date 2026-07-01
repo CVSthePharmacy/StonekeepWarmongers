@@ -936,18 +936,19 @@
 
 /obj/item/clothing/cloak/hussarcloak
 	name = "hussar coat"
-	desc = "A heavy coat commonly worn hanging over the shoulder by Hussars."
+	desc = "A coat worn over the shoulder, provides minor protection to the left arm but is really more of a status symbol."
 	icon_state = "hussarcoat"
 	item_state = "hussarcoat"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	body_parts_covered = ARM_LEFT
 	boobed = TRUE
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
 
-/obj/item/clothing/cloak/quackcloak
+/obj/item/clothing/cloak/war/quackcloak
 	name = "quack cloak"
 	desc = "A thick red cloak worn by quacks who practice medicine."
 	icon_state = "quackcoat"
@@ -960,3 +961,9 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
+
+/obj/item/clothing/cloak/war/apron/cook/medical
+	name = "medical apron"
+	desc = "It won't be clean for long."
+	icon_state = "apron_medical"
+	item_state = "apron_medical"

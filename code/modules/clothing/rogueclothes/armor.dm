@@ -671,7 +671,7 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/outrider
 	name = "winged plate"
-	desc = "A fine dullarmor breastplate with affixed wings, the feathers being from plucked geese."
+	desc = "A fine dullarmor breastplate with affixed wings, the feathers being from plucked geese. A wolv pelt is draped over the shoulders. Intimidating."
 	icon_state = "wingedplate"
 	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
@@ -708,3 +708,17 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	armor_class = ARMOR_CLASS_LIGHT
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/cuirass
+	name = "cuirass"
+	desc = "A decently well made cuirass made of iron with a blue sash draped around it. Heavy"
+	icon_state = "ppucuirass"
+	armor_class = ARMOR_CLASS_HEAVY
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/cuirass
+	name = "cuirass"
+	desc = "A decently well made cuirass made of iron with gold detailing. Heavy"
+	icon_state = "regimecuirassierplate"
+	armor_class = ARMOR_CLASS_HEAVY
+	allowed_race = list("standard")

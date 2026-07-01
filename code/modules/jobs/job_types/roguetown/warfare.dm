@@ -719,7 +719,7 @@
 	beltl = /obj/item/rogue/cranker
 	beltr = /obj/item/rogueweapon/surgery/limbgrabber
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
-	mask = /obj/item/clothing/mask/rogue/beakmask
+	mask = /obj/item/clothing/mask/rogue/war/beakmask
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -1170,7 +1170,7 @@
 	beltl = /obj/item/rogue/cranker
 	beltr = /obj/item/rogueweapon/surgery/limbgrabber
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
-	mask = /obj/item/clothing/mask/rogue/butcher
+	mask = /obj/item/clothing/mask/rogue/war/butcher
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

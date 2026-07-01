@@ -1335,3 +1335,141 @@
 	name = "morion"
 	desc = "A regal looking helmet with a caged faceplate."
 	icon_state = "morion2"
+
+/obj/item/clothing/head/roguetown/war/muckhat
+	name = "muckhat"
+	desc = "A simple red hat worn by laborers and soldiers."
+	icon_state = "muckhat"
+	item_state = "muckhat"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+
+/obj/item/clothing/head/roguetown/war/shakohat
+	name = "sharpshooter's shako"
+	desc = "A simple red hat worn by snipers."
+	icon_state = "ppushako"
+	item_state = "ppushako"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/war/cuirassier
+	name = "cuirassier's helmet"
+	desc = "A green plumed helmet worn by heavy cavalry."
+	icon_state = "regimecuirassier"
+	item_state = "regimecuirassier"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/war/pickle
+	name = "spiked helmet"
+	desc = "A helmet crowned with a spike."
+	icon_state = "regimespikehelm"
+	item_state = "regimespikehelm"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/war/suncap
+	name = "suncap"
+	desc = "A wide brimmed hat designed to keep the sun off your head."
+	icon_state = "ppusuncap"
+	item_state = "ppusuncap"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/war/officerkalpak
+	name = "kalpak"
+	desc = "A hat worn by officers in the Regime."
+	icon_state = "regimekalpak"
+	item_state = "regimekalpak"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/war/hussarkalpak
+	name = "hussar hat"
+	desc = "A short kalpak adorned with a skull and a green flap."
+	icon_state = "regimehussarhat"
+	item_state = "regimehussarhat"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regimetallhelm
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
+	name = "tower helmet"
+	desc = "A tall helmet reminiscent of the spires in the Regimian capital."
+	will_cover = HEAD|HAIR|NOSE
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	icon_state = "regimetallhelm"
+	sleevetype = null
+	sleeved = null
+	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
+	dynamic_hair_suffix = "+generic"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	anvilrepair = /datum/skill/craft/armorsmithing
+	blocksound = PLATEHIT
+	max_integrity = 200
+
+/obj/item/clothing/head/roguetown/helmet/war/pprcymbalhelm
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
+	name = "bell helmet"
+	desc = "A heavy helmet designed to easily glance sword blows."
+	will_cover = HEAD|HAIR|NOSE
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	icon_state = "ppucymbalhelm"
+	sleevetype = null
+	sleeved = null
+	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
+	dynamic_hair_suffix = "+generic"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	anvilrepair = /datum/skill/craft/armorsmithing
+	blocksound = PLATEHIT
+	max_integrity = 200
+
+/obj/item/clothing/head/roguetown/war/pprpeaked
+	name = "peaked hat"
+	desc = "A peaked hat with the symbol of two scythes on it."
+	icon_state = "ppupeaked"
+	item_state = "ppupeaked"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+
+/obj/item/clothing/head/roguetown/war/regimepeaked
+	name = "peaked hat"
+	desc = "A peaked hat with the cannon barrel logo of the Regime on it."
+	icon_state = "regimepeaked"
+	item_state = "regimepeaked"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
