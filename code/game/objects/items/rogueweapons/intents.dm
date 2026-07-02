@@ -289,11 +289,12 @@
 	icon_state = "inshoot"
 	tranged = 1
 	warnie = "aimwarn"
-	chargetime = 0.1
+	chargetime = 0
 	no_early_release = FALSE
 	noaa = TRUE
 	charging_slowdown = 2
 	warnoffset = 2
+	clickcd = 0
 	var/severity = "mobwarning"
 
 /datum/intent/shoot/prewarning()

@@ -98,6 +98,12 @@
 		var/mob/living/carbon/C = owner
 		C.remove_stress(/datum/stressevent/ozium)
 
+/datum/status_effect/buff/smonkium
+	id = "smonkium"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks
+	effectedstats = list("perception" = 3, "speed" = -1)
+	duration = 2 MINUTES
+
 /datum/status_effect/buff/moondust
 	id = "moondust"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks

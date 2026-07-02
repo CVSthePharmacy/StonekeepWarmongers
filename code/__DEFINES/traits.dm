@@ -22,6 +22,7 @@
 #define TRAIT_DODGEEXPERT              "Fast Reflexes"
 #define TRAIT_VILLAIN					"Villain"
 #define TRAIT_CRITICAL_RESISTANCE		"Critical Resistance"
+#define TRAIT_MEDIC						"Medic"
 #define TRAIT_CRITICAL_WEAKNESS		"Critical Weakness"
 #define TRAIT_MANIAC_AWOKEN			"Awoken"
 #define TRAIT_NOROGSTAM				"Indefatigable" //for ai
@@ -73,6 +74,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_HEAVYARMOR = "I can move freely in heavy armor.",
 	TRAIT_DODGEEXPERT = "I can dodge easly while only wearing light armor.",
 	TRAIT_VILLAIN = "I am a devious, conniving villain!",
+	TRAIT_MEDIC = "Do not be afraid. I am the cure.",
 	TRAIT_JESTER = "I AM JESTER BLOODED! HONK HONK!!! HAHAHAHAHAAAAAAAAAA!",
 	TRAIT_OFFICER = "I know how to see the battlefield and judge it so I can improve our chances of winning.",
 	TRAIT_SNIPER = "Helmets won't stop that lead ball getting inside your noggin, I'll make sure of that.",

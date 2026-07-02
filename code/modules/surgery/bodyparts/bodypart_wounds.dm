@@ -187,9 +187,10 @@
 	var/used
 	var/total_dam = get_damage()
 	var/damage_dividend = (total_dam / max_damage)
+	var/resistance = HAS_TRAIT(owner, TRAIT_CRITICAL_RESISTANCE) // resistance ensures we will not get limb disabling wounds
 	if(user && dam)
 		if(user.goodluck(2))
-			dam += 10
+			dam += rand(1,20)
 	if(bclass in GLOB.dislocation_bclasses)
 		used = round(damage_dividend * 20 + (dam / 6), 1)
 		if(user && istype(user.rmb_intent, /datum/rmb_intent/strong))
@@ -208,7 +209,8 @@
 			used += 10
 		if(prob(used))
 			attempted_wounds += /datum/wound/dislocation
-			attempted_wounds += /datum/wound/fracture
+			if(!resistance)
+				attempted_wounds += /datum/wound/fracture
 	if(bclass in GLOB.artery_bclasses)
 		used = round(damage_dividend * 20 + (dam / 6), 1)
 		if(user)
@@ -216,7 +218,7 @@
 				used += 10
 		if(prob(used))
 			attempted_wounds += /datum/wound/artery
-		else if(prob(used+15))
+		else if(prob(used+15) && !resistance)
 			attempted_wounds += /datum/wound/tendon
 
 	for(var/wound_type in shuffle(attempted_wounds))

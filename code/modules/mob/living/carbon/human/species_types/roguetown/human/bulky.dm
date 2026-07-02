@@ -37,8 +37,8 @@
 	OFFSET_FACE_F = list(0,3), OFFSET_BELT_F = list(0,-4), OFFSET_BACK_F = list(0,1), \
 	OFFSET_NECK_F = list(0,2), OFFSET_MOUTH_F = list(0,0), OFFSET_PANTS_F = list(0,0), \
 	OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,0))
-	specstats = list("strength" = 4, "perception" = -3, "intelligence" = -9, "constitution" = 5, "endurance" = -2, "speed" = -5, "fortune" = -5)
-	specstats_f = list("strength" = 4, "perception" = -3, "intelligence" = -9, "constitution" = 5, "endurance" = -2, "speed" = -5, "fortune" = -5)
+	specstats = list("strength" = 4, "perception" = -3, "intelligence" = -9, "constitution" = 5, "endurance" = -2, "speed" = -5, "fortune" = -3)
+	specstats_f = list("strength" = 4, "perception" = -3, "intelligence" = -9, "constitution" = 5, "endurance" = -2, "speed" = -5, "fortune" = -3)
 	enflamed_icon = "widefire"
 
 /datum/species/human/northern/bulky/check_roundstart_eligible()

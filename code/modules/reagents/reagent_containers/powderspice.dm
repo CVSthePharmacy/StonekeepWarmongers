@@ -9,65 +9,12 @@
 	list_reagents = list(/datum/reagent/druqks = 15)
 	sellprice = 10
 
-/datum/reagent/druqks
-	name = "Drukqs"
-	description = ""
-	color = "#60A584" // rgb: 96, 165, 132
-	overdose_threshold = 0
-	metabolization_rate = 0.2
-
-/datum/reagent/druqks/overdose_process(mob/living/M)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25*REM)
-	M.adjustToxLoss(0.25*REM, 0)
-	..()
-	. = 1
-
-/datum/reagent/druqks/on_mob_life(mob/living/carbon/M)
-	M.set_drugginess(30)
-	if(prob(5))
-		if(M.gender == FEMALE)
-			M.emote(pick("twitch_s","giggle"))
-		else
-			M.emote(pick("twitch_s","chuckle"))
-	if(M.has_flaw(/datum/charflaw/addiction/junkie))
-		M.sate_addiction()
-	M.apply_status_effect(/datum/status_effect/buff/druqks)
-	..()
-
 /atom/movable/screen/fullscreen/druqks
 	icon_state = "spa"
 	plane = FLOOR_PLANE
 	layer = ABOVE_OPEN_TURF_LAYER
 	blend_mode = 0
 	show_when_dead = FALSE
-
-/datum/reagent/druqks/overdose_start(mob/living/M)
-	M.flash_fullscreen("hey")
-	M.visible_message("<span class='warning'>Blood runs from [M]'s nose.</span>")
-
-/datum/reagent/druqks/overdose_process(mob/living/M)
-	M.adjustToxLoss(10, 0)
-
-/datum/reagent/druqks/on_mob_metabolize(mob/living/M)
-	M.overlay_fullscreen("druqk", /atom/movable/screen/fullscreen/druqks)
-	M.set_drugginess(30)
-	M.update_body_parts_head_only()
-	if(M.client)
-		ADD_TRAIT(M, TRAIT_DRUQK, "based")
-		SSdroning.area_entered(get_area(M), M.client)
-//			if(M.client.screen && M.client.screen.len)
-//				var/atom/movable/screen/plane_master/game_world/PM = locate(/atom/movable/screen/plane_master/game_world) in M.client.screen
-//				PM.backdrop(M.client.mob)
-
-/datum/reagent/druqks/on_mob_end_metabolize(mob/living/M)
-	M.clear_fullscreen("druqk")
-	M.update_body_parts_head_only()
-	if(M.client)
-		REMOVE_TRAIT(M, TRAIT_DRUQK, "based")
-		SSdroning.play_area_sound(get_area(M), M.client)
-//		if(M.client.screen && M.client.screen.len)
-///			var/atom/movable/screen/plane_master/game_world/PM = locate(/atom/movable/screen/plane_master/game_world) in M.client.screen
-//			PM.backdrop(M.client.mob)
 
 /obj/item/reagent_containers/powder/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)
 	. = ..()
@@ -175,37 +122,6 @@
 	list_reagents = list(/datum/reagent/ozium = 15)
 	sellprice = 5
 
-/datum/reagent/ozium
-	name = "Ozium"
-	description = ""
-	color = "#60A584" // rgb: 96, 165, 132
-	overdose_threshold = 0
-	metabolization_rate = 0.2
-
-/datum/reagent/ozium/on_mob_metabolize(mob/living/L)
-	. = ..()
-	L.flash_fullscreen("can_you_see")
-
-/datum/reagent/ozium/overdose_process(mob/living/M)
-	M.adjustToxLoss(0.25*REM, 0)
-	..()
-	. = 1
-
-/datum/reagent/ozium/on_mob_life(mob/living/carbon/M)
-	if(M.has_flaw(/datum/charflaw/addiction/junkie))
-		M.sate_addiction()
-	if(prob(20))
-		M.flash_fullscreen("whiteflash")
-	M.apply_status_effect(/datum/status_effect/buff/ozium)
-	..()
-
-/datum/reagent/ozium/overdose_start(mob/living/M)
-	M.playsound_local(M, 'sound/misc/heroin_rush.ogg', 100, FALSE)
-	M.visible_message("<span class='warning'>Blood runs from [M]'s nose.</span>")
-
-/datum/reagent/ozium/overdose_process(mob/living/M)
-	M.adjustToxLoss(10, 0)
-
 /obj/item/reagent_containers/powder/moondust
 	name = "moondust"
 	desc = ""
@@ -215,36 +131,6 @@
 	volume = 15
 	list_reagents = list(/datum/reagent/moondust = 15)
 	sellprice = 5
-
-/datum/reagent/moondust/overdose_process(mob/living/M)
-	M.adjustToxLoss(0.25*REM, 0)
-	..()
-	. = 1
-
-/datum/reagent/moondust/on_mob_metabolize(mob/living/M)
-	M.flash_fullscreen("can_you_see")
-	animate(M.client, pixel_y = 1, time = 1, loop = -1, flags = ANIMATION_RELATIVE)
-	animate(pixel_y = -1, time = 1, flags = ANIMATION_RELATIVE)
-
-/datum/reagent/moondust/on_mob_end_metabolize(mob/living/M)
-	animate(M.client)
-
-/datum/reagent/moondust/on_mob_life(mob/living/carbon/M)
-	if(M.reagents.has_reagent(/datum/reagent/moondust_purest))
-		M.Sleeping(40, 0)
-	if(M.has_flaw(/datum/charflaw/addiction/junkie))
-		M.sate_addiction()
-	M.apply_status_effect(/datum/status_effect/buff/moondust)
-	if(prob(10))
-		M.flash_fullscreen("whiteflash")
-	..()
-
-/datum/reagent/moondust/overdose_start(mob/living/M)
-	M.playsound_local(M, 'sound/misc/heroin_rush.ogg', 100, FALSE)
-	M.visible_message("<span class='warning'>Blood runs from [M]'s nose.</span>")
-
-/datum/reagent/moondust/overdose_process(mob/living/M)
-	M.adjustToxLoss(10, 0)
 
 /obj/item/reagent_containers/powder/moondust_purest
 	name = "moondust"

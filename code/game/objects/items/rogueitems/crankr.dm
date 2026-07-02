@@ -1,3 +1,5 @@
+#define CRANKER_CHEMS		list("HEALTH","DUST OF MOON","OZ","LOVE","SMONKAID","SYNADRENALINEN")
+
 /obj/item/rogue/cranker
 	name = "SCHLaNKER"
 	desc = "A strange skull-shaped medical device used to grind up bodyparts and teeth to make all sorts of things, including chemicals, medicine, and new glass bootles."
@@ -61,7 +63,7 @@
 
 /obj/item/rogue/cranker/attack_right(mob/user)
 	. = ..()
-	var/chosen = input(user, "What are we cooking today?", "WARMONGERS") as null|anything in list("HEALTH","DUST OF MOON","OZ","LOVE")
+	var/chosen = input(user, "What are we cooking today?", "WARMONGERS") as null|anything in CRANKER_CHEMS
 	if(!chosen)
 		return
 	switch(chosen)
@@ -77,6 +79,12 @@
 		if("LOVE")
 			chosen_potion = /datum/reagent/druqks
 			to_chat(user, "<span class='info'>Love defeats all hardship. ENDURANCE+</span>")
+		if("SMONKAID")
+			chosen_potion = /datum/reagent/smonkium
+			to_chat(user, "<span class='info'>Favoured by marksman-merks. PERCEPTION+, SPEED-</span>")
+		if("SYNADRENALINEN")
+			chosen_potion = /datum/reagent/adrenalinen
+			to_chat(user, "<span class='info'>Synthetic natural morphium. A must have for all soldiers! ADRENALINE+</span>")
 
 /obj/item/rogue/cranker/attack_self(mob/living/carbon/human/user)
 	. = ..()
@@ -129,3 +137,130 @@
 		bootle.forceMove(src)
 		pot = bootle
 		return
+
+// MEDICINE
+
+// SMONKAID
+
+/datum/reagent/smonkium
+	name = "Smonkium"
+	description = ""
+	color = "#505050"
+	overdose_threshold = 0
+	metabolization_rate = 0.2
+	taste_description = "...smoke?"
+
+/datum/reagent/smonkium/on_mob_life(mob/living/carbon/M)
+	if(prob(1))
+		M.flash_fullscreen("whiteflash")
+	M.apply_status_effect(/datum/status_effect/buff/ozium)
+	..()
+
+// OZ
+
+/datum/reagent/ozium
+	name = "Ozium"
+	description = ""
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 0
+	metabolization_rate = 0.2
+	taste_description = "beautiful things"
+
+/datum/reagent/ozium/on_mob_metabolize(mob/living/L)
+	. = ..()
+	L.flash_fullscreen("can_you_see")
+
+/datum/reagent/ozium/on_mob_life(mob/living/carbon/M)
+	if(prob(20))
+		M.flash_fullscreen("whiteflash")
+	M.apply_status_effect(/datum/status_effect/buff/ozium)
+	..()
+
+// DUST OF MOON
+
+/datum/reagent/moondust
+	name = "Moondustis"
+	description = ""
+	color = "#ffffff"
+	overdose_threshold = 0
+	metabolization_rate = 0.2
+	taste_description = "moondustits"
+
+/datum/reagent/moondust/on_mob_metabolize(mob/living/M)
+	M.flash_fullscreen("can_you_see")
+	animate(M.client, pixel_y = 1, time = 1, loop = -1, flags = ANIMATION_RELATIVE)
+	animate(pixel_y = -1, time = 1, flags = ANIMATION_RELATIVE)
+
+/datum/reagent/moondust/on_mob_end_metabolize(mob/living/M)
+	animate(M.client)
+
+/datum/reagent/moondust/on_mob_life(mob/living/carbon/M)
+	if(M.reagents.has_reagent(/datum/reagent/moondust_purest))
+		M.Sleeping(40, 0)
+	if(M.has_flaw(/datum/charflaw/addiction/junkie))
+		M.sate_addiction()
+	M.apply_status_effect(/datum/status_effect/buff/moondust)
+	if(prob(10))
+		M.flash_fullscreen("whiteflash")
+	..()
+
+// LOVE
+
+/datum/reagent/druqks
+	name = "Drukqs"
+	description = ""
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 0
+	metabolization_rate = 0.2
+	taste_description = "Love"
+
+/datum/reagent/druqks/on_mob_life(mob/living/carbon/M)
+	M.set_drugginess(30)
+	if(prob(5))
+		if(M.gender == FEMALE)
+			M.emote(pick("twitch_s","giggle"))
+		else
+			M.emote(pick("twitch_s","chuckle"))
+	if(M.has_flaw(/datum/charflaw/addiction/junkie))
+		M.sate_addiction()
+	M.apply_status_effect(/datum/status_effect/buff/druqks)
+	..()
+
+/datum/reagent/druqks/on_mob_metabolize(mob/living/M)
+	M.overlay_fullscreen("druqk", /atom/movable/screen/fullscreen/druqks)
+	M.set_drugginess(30)
+	M.update_body_parts_head_only()
+	if(M.client)
+		ADD_TRAIT(M, TRAIT_DRUQK, "based")
+		SSdroning.area_entered(get_area(M), M.client)
+//			if(M.client.screen && M.client.screen.len)
+//				var/atom/movable/screen/plane_master/game_world/PM = locate(/atom/movable/screen/plane_master/game_world) in M.client.screen
+//				PM.backdrop(M.client.mob)
+
+/datum/reagent/druqks/on_mob_end_metabolize(mob/living/M)
+	M.clear_fullscreen("druqk")
+	M.update_body_parts_head_only()
+	if(M.client)
+		REMOVE_TRAIT(M, TRAIT_DRUQK, "based")
+		SSdroning.play_area_sound(get_area(M), M.client)
+//		if(M.client.screen && M.client.screen.len)
+///			var/atom/movable/screen/plane_master/game_world/PM = locate(/atom/movable/screen/plane_master/game_world) in M.client.screen
+//			PM.backdrop(M.client.mob)
+
+// ADRENALINEN
+
+/datum/reagent/adrenalinen
+	name = "Adrenalinen"
+	description = ""
+	color = "#827979ff" // rgb: 96, 165, 132
+	overdose_threshold = 0
+	metabolization_rate = 1.5
+	taste_description = "mushroomy goodness"
+
+/datum/reagent/adrenalinen/on_mob_life(mob/living/carbon/M)
+	M.apply_status_effect(/datum/status_effect/buff/adrenaline, -1)
+	..()
+
+/datum/reagent/adrenalinen/on_mob_end_metabolize(mob/living/M)
+	M.remove_status_effect(/datum/status_effect/buff/adrenaline)
+	..()
