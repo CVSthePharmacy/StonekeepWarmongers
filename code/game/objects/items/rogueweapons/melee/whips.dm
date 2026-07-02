@@ -59,10 +59,3 @@
 	penfactor = 20
 	reach = 2
 	icon_state = "incrack"
-
-//..............Warmongers..............
-
-/obj/item/rogueweapon/whip/pulverizer
-	name = "Motivator"
-	desc = "A whip with nails driven through it, designed to inspire motivation by presence alone."
-	icon_state = "pulverizer"

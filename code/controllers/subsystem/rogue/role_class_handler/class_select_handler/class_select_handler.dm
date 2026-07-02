@@ -306,6 +306,9 @@
 		return
 
 	if(href_list["yes_to_class_select"]) // Send the data over and wrap it up.
+		if(linked_client)
+			linked_client << browse(null, "window=class_handler_main")
+			linked_client << browse(null, "window=class_select_yea")
 		SSrole_class_handler.finish_class_handler(linked_client.mob, cur_picked_class, src, plus_power, special_selected)
 		return
 

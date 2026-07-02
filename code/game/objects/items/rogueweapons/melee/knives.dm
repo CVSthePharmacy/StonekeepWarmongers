@@ -297,8 +297,13 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/war
 	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut)
-	name = "sapper knife"
-	desc = "A heavy sapper knife for stabbing foes and cutting lumber to size with its serrated edge."
+	name = "knife"
+	desc = "A heavy knife for stabbing guts."
 	force = 15
-	icon_state = "sapperknife"
+	icon_state = "knifep"
 	smeltresult = null
+
+/obj/item/rogueweapon/huntingknife/idagger/war/regime
+	name = "knife"
+	desc = "A heavy knife for slitting throats."
+	icon_state = "knifer"

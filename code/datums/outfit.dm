@@ -125,6 +125,11 @@
 	/// Set to FALSE if your outfit requires runtime parameters
 	var/can_be_admin_equipped = TRUE
 
+	/// Optional loadout selection key used by role/class systems
+	var/loadout_choice
+	/// Optional secondary loadout selection key used by role/class systems
+	var/secondary_loadout_choice
+
 	/**
 	  * extra types for chameleon outfit changes, mostly guns
 	  *

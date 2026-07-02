@@ -29,6 +29,10 @@
 
 	//What categories we are going to sort it in
 	var/list/category_tags = list(CTAG_DISABLED)
+	var/list/loadout_options
+	var/loadout_prompt = "Choose your loadout"
+	var/list/secondary_loadout_options
+	var/secondary_loadout_prompt = "Choose your secondary loadout"
 
 /datum/advclass/proc/equipme(mob/living/carbon/human/H)
 	// input sleeps....
@@ -37,7 +41,40 @@
 		return FALSE
 
 	if(outfit)
-		H.equipOutfit(outfit)
+		var/datum/outfit/loadout_outfit = null
+		if(length(loadout_options) || length(secondary_loadout_options))
+			var/old_invisibility = H.invisibility
+			H.become_blind("advsetup")
+			H.reload_fullscreen()
+			H.invisibility = INVISIBILITY_MAXIMUM
+			loadout_outfit = new outfit
+			if(length(loadout_options))
+				var/loadout_choice = input(H.client, loadout_prompt, "Loadout") as null|anything in loadout_options
+				if(!loadout_choice)
+					loadout_choice = pick(loadout_options)
+				loadout_outfit.loadout_choice = lowertext(loadout_choice)
+			if(length(secondary_loadout_options))
+				var/secondary_loadout_choice = input(H.client, secondary_loadout_prompt, "Secondary Loadout") as null|anything in secondary_loadout_options
+				if(!secondary_loadout_choice)
+					secondary_loadout_choice = pick(secondary_loadout_options)
+				loadout_outfit.secondary_loadout_choice = lowertext(secondary_loadout_choice)
+			if(H.client)
+			{
+				H.client << browse(null, "window=class_handler_main")
+				H.client << browse(null, "window=class_select_yea")
+			}
+			H.equipOutfit(loadout_outfit)
+			if(H.advsetup)
+			{
+				H.advsetup = FALSE
+				var/atom/movable/screen/advsetup/GET_IT_OUT = locate() in H.hud_used.static_inventory // dis line sux its basically a loop anyways if i remember
+				qdel(GET_IT_OUT)
+			}
+			H.cure_blind("advsetup")
+			H.invisibility = old_invisibility
+		else
+			loadout_outfit = outfit
+			H.equipOutfit(loadout_outfit)
 
 	post_equip(H)
 

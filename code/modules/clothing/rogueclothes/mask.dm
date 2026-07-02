@@ -254,7 +254,7 @@
 	desc = "Originally conceived as a good way to drink copious amounts of bier, the funnel mask somehow found its way into military service."
 	icon_state = "ppufunnel"
 	item_state = "ppufunnel"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
 
@@ -263,6 +263,6 @@
 	desc = "A lightweight mask designed not to constrict vision too much."
 	icon_state = "regimebasket"
 	item_state = "regimebasket"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP

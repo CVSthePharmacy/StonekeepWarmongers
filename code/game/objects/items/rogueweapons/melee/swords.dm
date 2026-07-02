@@ -733,19 +733,52 @@
 /obj/item/rogueweapon/sword/sabre/officer
 	name = "sabre"
 	desc = "The guard of this sword doesn't extend to the back of the blade. The reason given is to instill fearlessness when fighting the foe. The truth was it was cheaper."
-	icon_state = "sabre"
+	icon_state = "saberr"
 
 /obj/item/rogueweapon/sword/sabre/shofficer
 	name = "cutter"
 	desc = "A former tool, given new purpose."
-	icon_state = "shitsabre"
+	icon_state = "saberp"
 
 /obj/item/rogueweapon/sword/iron/messer/war
 	name = "messer"
 	desc = "A heavy single edged blade designed for chopping off limbs."
-	icon_state = "imesserwar"
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_HIP
+	icon_state = "messerr"
+
+/obj/item/rogueweapon/sword/iron/messer/war/ppu
+	name = "messer"
+	desc = "A heavy single edged blade designed for chopping off limbs."
+	icon_state = "messerp"
 
 /obj/item/rogueweapon/sword/iron/messer/falchwar
 	name = "falchion"
 	desc = "A heavy sword for chopping and hacking."
-	icon_state = "falchionwar"
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_HIP
+	icon_state = "falchionr"
+
+/obj/item/rogueweapon/sword/iron/messer/falchwar/ppu
+	name = "falchion"
+	desc = "A heavy sword for chopping and hacking."
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_HIP
+	icon_state = "falchionp"
+
+/obj/item/rogueweapon/sword/cutlass/cutwar/ppu
+	name = "heavy sabre"
+	desc = "A heavy sabre used by heavily armored cavalry to break through defensive lines. Almost too unwieldy to be used off hearseback"
+	icon_state = "heavysaberp"
+
+/obj/item/rogueweapon/sword/cutlass/cutwar/regime
+	name = "heavy sabre"
+	desc = "A heavy sabre used by heavily armored cavalry to break through defensive lines. Almost too unwieldy to be used off hearseback"
+	icon_state = "heavysaberr"
+
+/obj/item/rogueweapon/sword/long/reskin/regime
+	name = "dvohandler"
+	desc = "A massive sword requiring two hands to wield. Empires used to rise and fall by such blades."
+	icon_state = "dvor"
+
+/obj/item/rogueweapon/sword/long/reskin/ppu
+	name = "cleaver"
+	desc = "A slab of dulliron situated on a handle. Can hardly be called a sword, this is a tool of pure butchery."
+	icon_state = "cleaver"
