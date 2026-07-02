@@ -102,8 +102,7 @@
 		mode() // Activate held item
 
 /mob/living/carbon/attackby(obj/item/I, mob/user, params)
-	if(!user.cmode && istype(user.rmb_intent, /datum/rmb_intent/weak))
-		var/try_to_fail = !istype(user.rmb_intent, /datum/rmb_intent/weak)
+	if(!user.cmode)
 		var/list/possible_steps = list()
 		for(var/datum/surgery_step/surgery_step as anything in GLOB.surgery_steps)
 			if(!surgery_step.name)
@@ -119,7 +118,7 @@
 					done_step = possible_steps[input]
 			else
 				done_step = possible_steps[possible_steps[1]]
-			if(done_step?.try_op(user, src, user.zone_selected, I, user.used_intent, try_to_fail))
+			if(done_step?.try_op(user, src, user.zone_selected, I, user.used_intent))
 				return TRUE
 		if(I.item_flags & SURGICAL_TOOL)
 			return TRUE

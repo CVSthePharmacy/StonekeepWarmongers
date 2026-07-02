@@ -353,7 +353,6 @@
 				discipline_slime(M)
 	else
 		if(stat == DEAD && !M.cmode)
-			var/try_to_fail = !istype(M.rmb_intent, /datum/rmb_intent/weak)
 			var/list/possible_steps = list()
 			for(var/datum/surgery_step/surgery_step as anything in GLOB.surgery_steps)
 				if(!surgery_step.name)
@@ -369,7 +368,7 @@
 						done_step = possible_steps[input]
 				else
 					done_step = possible_steps[possible_steps[1]]
-				if(done_step?.try_op(M, src, M.zone_selected, null, M.used_intent, try_to_fail))
+				if(done_step?.try_op(M, src, M.zone_selected, null, M.used_intent))
 					return TRUE
 		if(..()) //successful attack
 			attacked += 10
