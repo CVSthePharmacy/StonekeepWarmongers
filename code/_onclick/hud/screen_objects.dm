@@ -1720,7 +1720,17 @@
 	icon = 'icons/mob/roguehud.dmi'
 	icon_state = "rmbintent"
 	var/list/shown_intents = list()
+	var/image/temp
 	var/showing = FALSE
+
+/atom/movable/screen/rmbintent/MouseEntered(location, control, params)
+	. = ..()
+	temp = image('icons/mob/roguehud.dmi', icon_state="lclick")
+	add_overlay(temp)
+
+/atom/movable/screen/rmbintent/MouseExited(params)
+	. = ..()
+	cut_overlay(temp)
 
 /atom/movable/screen/rmbintent/update_icon()
 	testing("overlayscut")

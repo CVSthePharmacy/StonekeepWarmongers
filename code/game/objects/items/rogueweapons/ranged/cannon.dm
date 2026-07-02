@@ -331,7 +331,7 @@
 	var/px = round(64 * cos(angle))
 	var/py = round(64 * sin(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(src))
+	var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_turf(src))
 	var/matrix/ARE = matrix()
 	ARE.Scale(4, 4)
 	ARE.Turn(rand(50,350))
@@ -440,7 +440,7 @@
 	var/px = round(64 * cos(angle))
 	var/py = round(64 * sin(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(src))
+	var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_turf(src))
 	var/matrix/ARE = matrix()
 	ARE.Scale(0.8, 0.8)
 	ARE.Turn(rand(50,350))

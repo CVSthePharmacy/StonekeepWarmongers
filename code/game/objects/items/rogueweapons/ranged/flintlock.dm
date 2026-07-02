@@ -303,23 +303,23 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	..()
-	var/angle
-	switch(user.dir)
-		if(NORTH) angle = 90
-		if(SOUTH) angle = 270
-		if(EAST)  angle = 0
-		if(WEST)  angle = 180
-	angle += rand(-25, 25)
+	spawn()
+		for(var/i=1,i<=4,i++)
+			sleep(rand(0.1,0.4))
+			var/angle = dir2angle(user.dir)
+			angle += rand(-25, 25)
 
-	var/px = round(128 * cos(angle))
-	var/py = round(128 * sin(angle))
+			var/px = round(128 * sin(angle))
+			var/py = round(128 * cos(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_step(user.loc, user.dir))
-	var/matrix/ARE = matrix()
-	ARE.Scale(5, 5)
-	ARE.Turn(rand(-350, 350))
-	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
-	QDEL_IN(S, 50)
+			var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_step(user.loc, user.dir))
+			var/matrix/ARE = matrix()
+			ARE.Scale(5, 5)
+			ARE.Turn(rand(-350, 350))
+
+			var/randtime = rand(30,50)
+			animate(S, time = randtime, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
+			QDEL_IN(S, randtime)
 
 	firearm_recoil_mob(user)
 

@@ -23,11 +23,12 @@
 			else //ingest, patch or inject
 				L.ForceContractDisease(D)
 
-	if(iscarbon(L))
-		var/mob/living/carbon/C = L
-		C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
-		if(C.client?.hasPerk(/datum/warperk/vampire))
-			C.reagents.add_reagent(/datum/reagent/medicine/healthpot, 20)
+	if(method == INGEST)
+		if(iscarbon(L))
+			var/mob/living/carbon/C = L
+			C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
+			if(C.client?.hasPerk(/datum/warperk/vampire))
+				C.reagents.add_reagent(/datum/reagent/medicine/healthpot, 1)
 
 /datum/reagent/blood/on_new(list/data)
 	if(istype(data))

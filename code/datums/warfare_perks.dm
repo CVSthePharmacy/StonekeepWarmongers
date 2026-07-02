@@ -72,6 +72,7 @@
 
 /datum/warperk/vampire/apply(mob/living/carbon/human/H)
 	ADD_TRAIT(H, TRAIT_STRONGBITE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
 
 /datum/warperk/charge
 	name = "Underelicted Duty"

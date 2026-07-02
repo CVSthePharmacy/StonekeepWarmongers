@@ -124,7 +124,6 @@
 	/datum/rmb_intent/aimed,\
 	/datum/rmb_intent/strong,\
 	/datum/rmb_intent/swift,\
-	/datum/rmb_intent/riposte,\
-	/datum/rmb_intent/weak)
+	/datum/rmb_intent/riposte)
 
 	rot_type = /datum/component/rot/corpse

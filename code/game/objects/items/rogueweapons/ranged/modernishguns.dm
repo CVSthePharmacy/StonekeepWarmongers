@@ -117,18 +117,13 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	..()
 	QDEL_NULL(chambered)
-	var/angle
-	switch(user.dir)
-		if(NORTH) angle = 90
-		if(SOUTH) angle = 270
-		if(EAST)  angle = 0
-		if(WEST)  angle = 180
-	angle += rand(-15, 15)
+	var/angle = dir2angle(user.dir)
+	angle += rand(-25, 25)
 
-	var/px = round(128 * cos(angle))
-	var/py = round(128 * sin(angle))
+	var/px = round(128 * sin(angle))
+	var/py = round(128 * cos(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_turf(user))
 	var/matrix/ARE = matrix()
 	ARE.Scale(2, 2)
 	ARE.Turn(rand(-350,350))
@@ -272,18 +267,13 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/boltaction/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	..()
 	QDEL_NULL(chambered)
-	var/angle
-	switch(user.dir)
-		if(NORTH) angle = 90
-		if(SOUTH) angle = 270
-		if(EAST)  angle = 0
-		if(WEST)  angle = 180
-	angle += rand(-15, 15)
+	var/angle = dir2angle(user.dir)
+	angle += rand(-25, 25)
 
-	var/px = round(128 * cos(angle))
-	var/py = round(128 * sin(angle))
+	var/px = round(128 * sin(angle))
+	var/py = round(128 * cos(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_turf(user))
 	var/matrix/ARE = matrix()
 	ARE.Scale(2, 2)
 	ARE.Turn(rand(-350,350))
@@ -413,19 +403,13 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	..()
 	QDEL_NULL(chambered)
-	
-	var/angle
-	switch(user.dir)
-		if(NORTH) angle = 90
-		if(SOUTH) angle = 270
-		if(EAST)  angle = 0
-		if(WEST)  angle = 180
-	angle += rand(-15, 15)
+	var/angle = dir2angle(user.dir)
+	angle += rand(-25, 25)
 
-	var/px = round(64 * cos(angle))
-	var/py = round(64 * sin(angle))
+	var/px = round(64 * sin(angle))
+	var/py = round(64 * cos(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_turf(user))
 	var/matrix/ARE = matrix()
 	ARE.Turn(rand(-350,350))
 	animate(S, time = 10, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
@@ -545,19 +529,13 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/boltashot/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	..()
 	QDEL_NULL(chambered)
-	
-	var/angle
-	switch(user.dir)
-		if(NORTH) angle = 90
-		if(SOUTH) angle = 270
-		if(EAST)  angle = 0
-		if(WEST)  angle = 180
-	angle += rand(-15, 15)
+	var/angle = dir2angle(user.dir)
+	angle += rand(-25, 25)
 
-	var/px = round(64 * cos(angle))
-	var/py = round(64 * sin(angle))
+	var/px = round(64 * sin(angle))
+	var/py = round(64 * cos(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/obj/effect/temp_visual/small_smoke/gunsmoke/S = new(get_turf(user))
 	var/matrix/ARE = matrix()
 	ARE.Turn(rand(-350,350))
 	animate(S, time = 10, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)

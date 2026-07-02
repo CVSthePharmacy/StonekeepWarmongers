@@ -262,6 +262,11 @@
 	icon_state = "smoke"
 	duration = 50
 
+/obj/effect/temp_visual/small_smoke/gunsmoke
+	layer = FLY_LAYER
+	plane = GAME_PLANE_UPPER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 /obj/effect/temp_visual/small_smoke/halfsecond
 	duration = 5
 
