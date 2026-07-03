@@ -653,37 +653,34 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 
 //..........Warmongers...........
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
-	name = "breastplate"
-	desc = "The finest dulliron hammered haphazardly into armor. Don't get your hopes up of it saving your life."
+	name = "heavyplate"
+	desc = "Dulliron hammered into a formidable chestplate. Rather heavy."
 	icon_state = "dullplate"
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	max_integrity = 200
 	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_LIGHT
+	armor_class = ARMOR_CLASS_HEAVY
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
+	name = "lightplate"
+	desc = "A smaller chestpiece designed for fast moving attacks, but it sacrifices some protection to do so."
 	icon_state = "dullplate2"
 	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
 
-/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/outrider
-	name = "winged plate"
-	desc = "A fine dullarmor breastplate with affixed wings, the feathers being from plucked geese. A wolv pelt is draped over the shoulders. Intimidating."
-	icon_state = "wingedplate"
-	armor_class = ARMOR_CLASS_LIGHT
-	allowed_race = list("standard")
-
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
-	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
+	name = "heavyplate"
+	desc = "Dulliron hammered into a formidable chestplate. Rather heavy."
 	icon_state = "dullplate3"
-	armor_class = ARMOR_CLASS_LIGHT
+	armor_class = ARMOR_CLASS_HEAVY
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
-	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
+	name = "lightplate"
+	desc = "A smaller chestpiece designed for fast moving attacks, but it sacrifices some protection to do so."
 	icon_state = "dullplate4"
 	armor_class = ARMOR_CLASS_LIGHT
 	allowed_race = list("standard")
@@ -711,14 +708,21 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/cuirass
 	name = "cuirass"
-	desc = "A decently well made cuirass made of iron with a blue sash draped around it. Heavy"
+	desc = "A decently well made cuirass made of iron with a blue sash draped around it. Heavy."
 	icon_state = "ppucuirass"
 	armor_class = ARMOR_CLASS_HEAVY
 	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/cuirass
 	name = "cuirass"
-	desc = "A decently well made cuirass made of iron with gold detailing. Heavy"
+	desc = "A decently well made cuirass made of iron with gold detailing. Heavy."
 	icon_state = "regimecuirassierplate"
+	armor_class = ARMOR_CLASS_HEAVY
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/cuirass/winged
+	name = "winged plate"
+	desc = "A fine dullarmor breastplate with affixed wings, the feathers being from plucked geese. A wolv pelt is draped over the shoulders. Intimidating."
+	icon_state = "wingedplate"
 	armor_class = ARMOR_CLASS_HEAVY
 	allowed_race = list("standard")

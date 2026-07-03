@@ -395,7 +395,7 @@
 	force = 15
 	force_wielded = 35
 	name = "masher"
-	icon_state = "masher"
+	icon_state = "masherr"
 	desc = "A stick with a leather grip and a spiked head, good for mashing up brains."
 	gripped_intents = null
 	smeltresult = /obj/item/ash
@@ -406,11 +406,16 @@
 	minstr = 0
 	wdefense = 3
 
-/obj/item/rogueweapon/mace/cudgel/pick
+/obj/item/rogueweapon/mace/cudgel/war/ppr
+	name = "masher"
+	icon_state = "masherp"
+	desc = "A wooden club with sharp spikes for bashing up heads."
+
+/obj/item/rogueweapon/mace/cudgel/war/pick
 	force = 20
 	force_wielded = 25
-	name = "pick"
-	icon_state = "pick"
+	name = "warpick"
+	icon_state = "warpickr"
 	desc = "An unwieldy warpick, designed to penetrate armor."
 	possible_item_intents = list(/datum/intent/dagger/thrust/pick)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/dagger/thrust/pick)
@@ -422,6 +427,11 @@
 	minstr = 0
 	wdefense = 3
 
+/obj/item/rogueweapon/mace/cudgel/war/pick/ppr
+	name = "warpick"
+	icon_state = "warpickp"
+	desc = "It is ostensibly just a log with a mining pick hammered through it. Should crack some heads at least."
+
 /obj/item/rogueweapon/mace/maul
 	force = 12//Don't one-hand this.
 	force_wielded = 25//I am union man from the smackahoe mountains.
@@ -429,7 +439,7 @@
 	gripped_intents = list(/datum/intent/maul, /datum/intent/maul/crush)
 	name = "maul"
 	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men, although nobody is stopping you from doing otherwise."
-	icon_state = "sledge"
+	icon_state = "sledgep"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	wlength = WLENGTH_LONG
 	swingsound = BLUNTWOOSH_HUGE
@@ -469,3 +479,9 @@
 				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
 				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+
+/obj/item/rogueweapon/mace/maul/regime
+	name = "maul"
+	desc = "A heavy spiked maul for driving men into the ground as though they were nails."
+	icon_state = "sledger"
+	icon = 'icons/roguetown/weapons/64.dmi'

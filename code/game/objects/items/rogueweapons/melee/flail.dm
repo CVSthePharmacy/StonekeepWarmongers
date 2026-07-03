@@ -64,6 +64,16 @@
 
 //..............Warmongers...............
 
+/obj/item/rogueweapon/flail/war/ppu
+	name = "flail"
+	desc = "A heavy macehead attached with chain to a sturdy handle."
+	icon_state = "flailp"
+
+/obj/item/rogueweapon/flail/war/regime
+	name = "flail"
+	desc = "A heavy macehead attached with chain to a sturdy handle."
+	icon_state = "flailr"
+
 /obj/item/rogueweapon/flail/bigflail
 	name = "greatflail"
 	desc = "A flail fitted to a long wooden staff to provide better leverage."
@@ -79,7 +89,7 @@
 	bigboy = TRUE
 	gripsprite = TRUE
 	gripped_intents = list(/datum/intent/flail/strike, /datum/intent/flail/strike/smash)
-	icon_state = "bigflail"
+	icon_state = "bigflailp"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "itemblood"
@@ -92,6 +102,11 @@
 				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
 				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+
+/obj/item/rogueweapon/flail/bigflail/regime
+	name = "greatflail"
+	desc = "A hollowed out cannonball haphazardly chained to a long wooden pole."
+	icon_state = "bigflailr"
 
 /datum/intent/flail/bellstrike
 	name = "strike"

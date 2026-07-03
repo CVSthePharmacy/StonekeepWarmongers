@@ -207,7 +207,7 @@
 	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
 	name = "hatchet"
 	desc = "The difference between a tool and a weapon is intent."
-	icon_state = "hatchet"
+	icon_state = "hatchetp"
 	icon = 'icons/roguetown/weapons/32.dmi'
 	max_blade_int = 130
 	max_integrity = 200
@@ -220,11 +220,17 @@
 	minstr = 6
 	axe_cut = 10
 
+/obj/item/rogueweapon/woodcut/war/regime
+	name = "hatchet"
+	desc = "A gnarly ax for beheadings and executions."
+	icon_state = "hatchetr"
+	icon = 'icons/roguetown/weapons/32.dmi'
+
 /obj/item/rogueweapon/woodcut/steel/war
 	slot_flags = ITEM_SLOT_BACK
 	name = "war axe"
 	desc = "A heavy axe for cutting down barricades, and cutting up the unworthy."
-	icon_state = "warcutter"
+	icon_state = "warcutterr"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	pixel_y = -16
 	pixel_x = -16
@@ -258,3 +264,9 @@
 				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/rogueweapon/woodcut/steel/war/ppu
+	name = "war axe"
+	desc = "Nicknamed 'Beezer's Razor' by many in the Union, this axe comes with tallymarks already etched into its pigiron head."
+	icon_state = "warcutterp"
+	icon = 'icons/roguetown/weapons/64.dmi'

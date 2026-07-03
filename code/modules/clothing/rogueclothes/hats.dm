@@ -1090,7 +1090,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/war/heavy/regime/sunhelm
 	name = "sun helmet"
-	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it."
+	desc = "The KAITZAR is the sun, for the world revolves around him, as well it should."
 	icon_state = "sun"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
@@ -1346,7 +1346,7 @@
 
 /obj/item/clothing/head/roguetown/war/shakohat
 	name = "sharpshooter's shako"
-	desc = "A simple red hat worn by snipers."
+	desc = "A simple red hat worn by important people."
 	will_hide = HIDEEARS|HIDEHAIR
 	flags_inv = HIDEHAIR
 	icon_state = "ppushako"
@@ -1383,7 +1383,7 @@
 
 /obj/item/clothing/head/roguetown/war/suncap
 	name = "suncap"
-	desc = "A wide brimmed hat designed to keep the sun off your head."
+	desc = "A wide brimmed hat designed to keep the sun off your head. Has the head of a pitchfork emblazoned on it."
 	icon_state = "ppusuncap"
 	item_state = "ppusuncap"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -1481,3 +1481,18 @@
 	item_state = "regimepeaked"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
+
+/obj/item/clothing/head/roguetown/roguehood/war/klava
+	name = "klava"
+	desc = "A hood worn by those expecting to tromp through the underbrush. Can be worn over the head or in a more open position."
+	color = null
+	icon_state = "klava"
+	item_state = "klava"
+	icon = 'icons/roguetown/clothing/head.dmi'
+	body_parts_covered = NECK
+	slot_flags = ITEM_SLOT_HEAD
+	dynamic_hair_suffix = ""
+	edelay_type = 1
+	adjustable = CAN_CADJUST
+	toggle_icon_state = TRUE
+	max_integrity = 100
