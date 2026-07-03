@@ -726,8 +726,8 @@
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
 		beltr = /obj/item/rogueweapon/flail/war/ppu
 		beltl = /obj/item/flint
-		backl = /obj/item/storage/backpack/rogue/bombdolier/ppr
-		backr = /obj/item/storage/backpack/rogue/satchel
+		backr = /obj/item/storage/backpack/rogue/bombdolier/ppr
+		backl = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/smoke=3)
 	else if(loadout == "arsonist")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
@@ -1312,8 +1312,8 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltl = /obj/item/rogueweapon/flail/war/regime
 		beltr = /obj/item/flint
-		backl = /obj/item/storage/backpack/rogue/bombdolier
-		backr = /obj/item/storage/backpack/rogue/satchel
+		backr = /obj/item/storage/backpack/rogue/bombdolier
+		backl = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/smoke=3)
 	else if(loadout == "lightstarter")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
