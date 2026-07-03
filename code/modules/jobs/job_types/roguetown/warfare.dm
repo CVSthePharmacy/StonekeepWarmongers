@@ -849,7 +849,7 @@
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltr = /obj/item/rogueweapon/woodcut/war
-		head = /obj/item/clothing/head/roguetown/war/hood/red
+		head = /obj/item/clothing/head/roguetown/helmet/war/smiler
 	else if(loadout == "medium shocktrooper")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
@@ -1240,7 +1240,7 @@
 		backr = GetSniperForWarfareRegime()
 		backl = /obj/item/storage/backpack/rogue/satchel
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/mask/rogue/war/regibasketmask
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
 		backpack_contents = list(/obj/item/bomb/smoke=2,/obj/item/bomb=1)
 	else if(loadout == "acolyte")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
@@ -1252,7 +1252,7 @@
 		backr = GetMainGunForWarfareRegime()
 		backl = /obj/item/storage/backpack/rogue/satchel
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/war/regimepeaked
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm/alternate
 		backpack_contents = list(/obj/item/bomb/smoke=3)
 
 /datum/outfit/job/roguetown/blusniper/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -1484,7 +1484,7 @@
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltr = /obj/item/rogueweapon/woodcut/war/regime
-		head = /obj/item/clothing/head/roguetown/war/wickerhelm
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
 	else if(loadout == "medium monk")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
