@@ -49,7 +49,7 @@
 			H.invisibility = INVISIBILITY_MAXIMUM
 			loadout_outfit = new outfit
 			if(length(loadout_options))
-				var/loadout_choice = input(H.client, loadout_prompt, "Loadout") as null|anything in loadout_options
+				var/loadout_choice = browser_input_list(H.client, loadout_prompt, "WARMONGERS - LOADOUT", loadout_options)
 				if(!loadout_choice)
 					loadout_choice = pick(loadout_options)
 				loadout_outfit.loadout_choice = lowertext(loadout_choice)
@@ -59,17 +59,13 @@
 					secondary_loadout_choice = pick(secondary_loadout_options)
 				loadout_outfit.secondary_loadout_choice = lowertext(secondary_loadout_choice)
 			if(H.client)
-			{
 				H.client << browse(null, "window=class_handler_main")
 				H.client << browse(null, "window=class_select_yea")
-			}
 			H.equipOutfit(loadout_outfit)
 			if(H.advsetup)
-			{
 				H.advsetup = FALSE
 				var/atom/movable/screen/advsetup/GET_IT_OUT = locate() in H.hud_used.static_inventory // dis line sux its basically a loop anyways if i remember
 				qdel(GET_IT_OUT)
-			}
 			H.cure_blind("advsetup")
 			H.invisibility = old_invisibility
 		else

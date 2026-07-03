@@ -133,21 +133,17 @@ SUBSYSTEM_DEF(role_class_handler)
 
 
 	if(related_handler && related_handler.linked_client)
-	{
 		related_handler.linked_client << browse(null, "window=class_handler_main")
 		related_handler.linked_client << browse(null, "window=class_select_yea")
-	}
 	var/loadout_pending = length(picked_class.loadout_options)
-	picked_class.equipme(H)
 	if(!loadout_pending)
-	{
 		H.advsetup = FALSE // keep the setup hud/blindness hint until loadout/equip completes
 		var/atom/movable/screen/advsetup/GET_IT_OUT = locate() in H.hud_used.static_inventory // dis line sux its basically a loop anyways if i remember
 		qdel(GET_IT_OUT)
 		H.cure_blind("advsetup")
-	}
 	if(H.invisibility == INVISIBILITY_MAXIMUM)
 		H.invisibility = 0
+	picked_class.equipme(H)
 	H.status_flags &= ~GODMODE
 	H.remove_status_effect(/datum/status_effect/incapacitating/immobilized)
 
