@@ -1480,18 +1480,18 @@
 		loadout = pick("light monk", "medium monk", "heavy monk")
 	if(loadout == "light monk")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
+		cloak = /obj/item/clothing/cloak/war/regime/parchment
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltr = /obj/item/rogueweapon/woodcut/war/regime
-		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
+		head = /obj/item/clothing/head/roguetown/helmet/war/regimetallhelm
 	else if(loadout == "medium monk")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
-		head = /obj/item/clothing/head/roguetown/helmet/war/regimetallhelm
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
 		backr = /obj/item/rogueweapon/spear/pike
 		backl = /obj/item/rogueweapon/shield/woodbuckler
 	else if(loadout == "heavy monk")
