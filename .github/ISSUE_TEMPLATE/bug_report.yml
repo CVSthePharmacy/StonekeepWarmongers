@@ -15,8 +15,8 @@ body:
     multiple: true
     description: Where did the bug happen?
     options:
-      - Vanderlin
-      - Rosewood
+      - Uh, in WARMONGERS. Obviously.
+      - WARMONGERS 2, Electric Boogaloo
 
 - type: textarea
   id: issue-summary

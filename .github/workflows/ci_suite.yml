@@ -76,7 +76,7 @@ jobs:
       - name: Ticked File Enforcement
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
-          tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/vanderlin_dme.json
+          tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/stonekeepwarmongers_dme.json
           tools/bootstrap/python tools/ticked_file_enforcement/ticked_file_enforcement.py < tools/ticked_file_enforcement/schemas/unit_tests.json
       - name: Check Define Sanity
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
@@ -87,7 +87,7 @@ jobs:
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
       - name: Lint With OpenDream
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: ./DMCompiler_linux-x64/DMCompiler vanderlin.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh
+        run: ./DMCompiler_linux-x64/DMCompiler stonekeepwarmongers.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh
       - name: Run Map Checks
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
@@ -98,7 +98,7 @@ jobs:
         run: tools/bootstrap/python -m dmi.test
       - name: Check File Directories
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: bash tools/ci/check_filedirs.sh vanderlin.dme
+        run: bash tools/ci/check_filedirs.sh stonekeepwarmongers.dme
       - name: Check Changelogs
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: bash tools/ci/check_changelogs.sh
@@ -176,7 +176,7 @@ jobs:
       - name: Check client Compatibility
         uses: tgstation/byond-client-compatibility-check@v3
         with:
-          dmb-location: vanderlin.dmb
+          dmb-location: stonekeepwarmongers.dmb
           max-required-client-version: ${{needs.collect_data.outputs.max_required_byond_client}}
 
   completion_gate: # Serves as a non-moving target for branch rulesets
