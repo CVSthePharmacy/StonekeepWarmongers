@@ -1322,9 +1322,9 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltl = /obj/item/rogueweapon/woodcut/war/regime
 		beltr = /obj/item/flint
-		backl = /obj/item/storage/backpack/rogue/satchel
+		backl = /obj/item/storage/backpack/rogue/bombdolier
 		head = /obj/item/clothing/head/roguetown/war/pickle
-		backpack_contents = list(/obj/item/bomb/fire=3)
+		backpack_contents = list(/obj/item/bomb/fire=3,/obj/item/bomb/smoke=2)
 
 /datum/outfit/job/roguetown/blugrenadier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
