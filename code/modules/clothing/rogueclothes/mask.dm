@@ -240,11 +240,29 @@
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 
+/obj/item/clothing/mask/rogue/war/pproffmask
+	name = "officer's mask"
+	desc = "An iron mask designed to intimidate more than to protect."
+	icon_state = "pprmask"
+	item_state = "pprmask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
 /obj/item/clothing/mask/rogue/war/regideathmask
 	name = "death mask"
 	desc = "A skull mask made of iron, only worn by those who do not fear death."
 	icon_state = "regimehussarmask"
 	item_state = "regimehussarmask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/war/pprnosemask
+	name = "schnoozer mask"
+	desc = "A dulliron mask with a large nose attached for the purposes of intimidation. And a better sense of smell, no doubt."
+	icon_state = "pprnosemask"
+	item_state = "pprnosemask"
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP

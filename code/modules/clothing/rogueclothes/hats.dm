@@ -1090,7 +1090,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/war/heavy/regime/sunhelm
 	name = "sun helmet"
-	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it."
+	desc = "The KAITZAR is the sun, for the world revolves around him, as well it should."
 	icon_state = "sun"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
