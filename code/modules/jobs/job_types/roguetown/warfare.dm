@@ -463,7 +463,7 @@
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun
 		backl = /obj/item/quiver/shitgunner
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/beak
+		head = /obj/item/clothing/head/roguetown/war/hood/red
 	else if(loadout == "slinger")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
@@ -1104,12 +1104,12 @@
 	if(loadout == "zealot")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		cloak = /obj/item/clothing/cloak/war/regime/parchment
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate
 		backl = /obj/item/quiver/shitgunner
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/war/stitchhood
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
 	else if(loadout == "judge")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
@@ -1461,7 +1461,7 @@
 //// SKIRMISHER ////
 
 /datum/advclass/blu/skirmisher
-	name = "Monk"
+	name = "Zealot"
 	tutorial = "True believers, dedicating their entire being to the KAITZAR. With what little military experience they have, they make up for in zeal."
 	outfit = /datum/outfit/job/roguetown/bluskirmisher
 	allowed_sexes = list(MALE, FEMALE)
@@ -1471,30 +1471,30 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
 	allowed_races = ALL_RACES_LIST_NAMES
-	loadout_options = list("Light Monk", "Medium Monk", "Heavy Monk")
-	loadout_prompt = "Choose your monk loadout"
+	loadout_options = list("Light Zealot", "Medium Zealot", "Heavy Zealot")
+	loadout_prompt = "Choose your Zealot loadout"
 
 /datum/outfit/job/roguetown/bluskirmisher/proc/assign_blue_skirmisher_loadout()
 	var/loadout = loadout_choice
 	if(!loadout)
-		loadout = pick("light monk", "medium monk", "heavy monk")
-	if(loadout == "light monk")
+		loadout = pick("light zealot", "medium zealot", "heavy zealot")
+	if(loadout == "light zealot")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 		cloak = /obj/item/clothing/cloak/war/regime/parchment
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltr = /obj/item/rogueweapon/woodcut/war/regime
-		head = /obj/item/clothing/head/roguetown/helmet/war/regimetallhelm
-	else if(loadout == "medium monk")
+		head = /obj/item/clothing/head/roguetown/war/stitchhood
+	else if(loadout == "medium zealot")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
-		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
+		head = /obj/item/clothing/head/roguetown/helmet/war/regimetallhelm
 		backr = /obj/item/rogueweapon/spear/pike
 		backl = /obj/item/rogueweapon/shield/woodbuckler
-	else if(loadout == "heavy monk")
+	else if(loadout == "heavy zealot")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/greatcoat
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
