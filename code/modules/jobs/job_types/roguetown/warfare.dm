@@ -1314,6 +1314,7 @@
 		beltr = /obj/item/flint
 		backr = /obj/item/storage/backpack/rogue/bombdolier
 		backl = /obj/item/storage/backpack/rogue/satchel
+		head = /obj/item/clothing/head/roguetown/war/pickle
 		backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/smoke=3)
 	else if(loadout == "lightstarter")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
