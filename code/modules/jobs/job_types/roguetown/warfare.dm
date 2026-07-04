@@ -788,7 +788,6 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 		backr = /obj/item/rogueweapon/sword/iron/messer/war/ppu
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 	else if(loadout == "quack")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
@@ -814,6 +813,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		if(aspect_chosen(/datum/round_aspect/suprememedics))
