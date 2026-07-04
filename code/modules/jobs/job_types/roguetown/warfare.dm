@@ -1458,6 +1458,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		if(aspect_chosen(/datum/round_aspect/suprememedics))
